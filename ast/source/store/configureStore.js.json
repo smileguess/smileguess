@@ -1,0 +1,1833 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 1176,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 39,
+      "column": 0
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 49,
+      "end": 111,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 62
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 58,
+          "end": 69,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 9
+            },
+            "end": {
+              "line": 4,
+              "column": 20
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 58,
+            "end": 69,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 20
+              }
+            },
+            "name": "createStore",
+            "leadingComments": null
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 58,
+            "end": 69,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 20
+              }
+            },
+            "name": "createStore",
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": " Configure Store ",
+                "start": 0,
+                "end": 21,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 21
+                  }
+                },
+                "range": [
+                  0,
+                  21
+                ]
+              },
+              {
+                "type": "Block",
+                "value": " Import Dependencies ",
+                "start": 23,
+                "end": 48,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 25
+                  }
+                },
+                "range": [
+                  23,
+                  48
+                ]
+              }
+            ]
+          },
+          "leadingComments": null
+        },
+        {
+          "type": "ImportSpecifier",
+          "start": 71,
+          "end": 86,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 22
+            },
+            "end": {
+              "line": 4,
+              "column": 37
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 71,
+            "end": 86,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 22
+              },
+              "end": {
+                "line": 4,
+                "column": 37
+              }
+            },
+            "name": "applyMiddleware"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 71,
+            "end": 86,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 22
+              },
+              "end": {
+                "line": 4,
+                "column": 37
+              }
+            },
+            "name": "applyMiddleware"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "start": 88,
+          "end": 95,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 39
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 88,
+            "end": 95,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 39
+              },
+              "end": {
+                "line": 4,
+                "column": 46
+              }
+            },
+            "name": "compose"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 88,
+            "end": 95,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 39
+              },
+              "end": {
+                "line": 4,
+                "column": 46
+              }
+            },
+            "name": "compose"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 103,
+        "end": 110,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 54
+          },
+          "end": {
+            "line": 4,
+            "column": 61
+          }
+        },
+        "value": "redux",
+        "rawValue": "redux",
+        "raw": "'redux'"
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " Configure Store ",
+          "start": 0,
+          "end": 21,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 21
+            }
+          },
+          "range": [
+            0,
+            21
+          ]
+        },
+        {
+          "type": "Block",
+          "value": " Import Dependencies ",
+          "start": 23,
+          "end": 48,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 25
+            }
+          },
+          "range": [
+            23,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 112,
+      "end": 145,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 33
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 119,
+          "end": 124,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 7
+            },
+            "end": {
+              "line": 5,
+              "column": 12
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 119,
+            "end": 124,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 7
+              },
+              "end": {
+                "line": 5,
+                "column": 12
+              }
+            },
+            "name": "React"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 130,
+        "end": 144,
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 18
+          },
+          "end": {
+            "line": 5,
+            "column": 32
+          }
+        },
+        "value": "react-native",
+        "rawValue": "react-native",
+        "raw": "'react-native'"
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": " Import Reducer ",
+          "start": 147,
+          "end": 167,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 20
+            }
+          },
+          "range": [
+            147,
+            167
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 168,
+      "end": 215,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 47
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 175,
+          "end": 186,
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 7
+            },
+            "end": {
+              "line": 8,
+              "column": 18
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 175,
+            "end": 186,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 7
+              },
+              "end": {
+                "line": 8,
+                "column": 18
+              }
+            },
+            "name": "rootReducer",
+            "leadingComments": null
+          },
+          "leadingComments": null
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 192,
+        "end": 214,
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 24
+          },
+          "end": {
+            "line": 8,
+            "column": 46
+          }
+        },
+        "value": "../reducers/index.js",
+        "rawValue": "../reducers/index.js",
+        "raw": "'../reducers/index.js'"
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " Import Reducer ",
+          "start": 147,
+          "end": 167,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 20
+            }
+          },
+          "range": [
+            147,
+            167
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": " Import Middleware ",
+          "start": 217,
+          "end": 240,
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 10,
+              "column": 23
+            }
+          },
+          "range": [
+            217,
+            240
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 241,
+      "end": 273,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 32
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 248,
+          "end": 253,
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 7
+            },
+            "end": {
+              "line": 11,
+              "column": 12
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 248,
+            "end": 253,
+            "loc": {
+              "start": {
+                "line": 11,
+                "column": 7
+              },
+              "end": {
+                "line": 11,
+                "column": 12
+              }
+            },
+            "name": "thunk",
+            "leadingComments": null
+          },
+          "leadingComments": null
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 259,
+        "end": 272,
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 18
+          },
+          "end": {
+            "line": 11,
+            "column": 31
+          }
+        },
+        "value": "redux-thunk",
+        "rawValue": "redux-thunk",
+        "raw": "'redux-thunk'"
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " Import Middleware ",
+          "start": 217,
+          "end": 240,
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 10,
+              "column": 23
+            }
+          },
+          "range": [
+            217,
+            240
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 274,
+      "end": 319,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 45
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 281,
+          "end": 289,
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 7
+            },
+            "end": {
+              "line": 12,
+              "column": 15
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 281,
+            "end": 289,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 7
+              },
+              "end": {
+                "line": 12,
+                "column": 15
+              }
+            },
+            "name": "devTools"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 295,
+        "end": 318,
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 21
+          },
+          "end": {
+            "line": 12,
+            "column": 44
+          }
+        },
+        "value": "remote-redux-devtools",
+        "rawValue": "remote-redux-devtools",
+        "raw": "'remote-redux-devtools'"
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": " socket.io assumes navigator.userAgent is a string, supply a dummy one to make it happy\n * and because ES6 module imports are hoisted, we can't make the userAgent assignment\n * in the same file as the react-native and socket.io imports\n ",
+          "start": 321,
+          "end": 562,
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 0
+            },
+            "end": {
+              "line": 17,
+              "column": 3
+            }
+          },
+          "range": [
+            321,
+            562
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 563,
+      "end": 584,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 0
+        },
+        "end": {
+          "line": 18,
+          "column": 21
+        }
+      },
+      "specifiers": [],
+      "source": {
+        "type": "Literal",
+        "start": 570,
+        "end": 583,
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 7
+          },
+          "end": {
+            "line": 18,
+            "column": 20
+          }
+        },
+        "value": "./UserAgent",
+        "rawValue": "./UserAgent",
+        "raw": "'./UserAgent'",
+        "leadingComments": null
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " socket.io assumes navigator.userAgent is a string, supply a dummy one to make it happy\n * and because ES6 module imports are hoisted, we can't make the userAgent assignment\n * in the same file as the react-native and socket.io imports\n ",
+          "start": 321,
+          "end": 562,
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 0
+            },
+            "end": {
+              "line": 17,
+              "column": 3
+            }
+          },
+          "range": [
+            321,
+            562
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 585,
+      "end": 629,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 0
+        },
+        "end": {
+          "line": 19,
+          "column": 44
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 592,
+          "end": 594,
+          "loc": {
+            "start": {
+              "line": 19,
+              "column": 7
+            },
+            "end": {
+              "line": 19,
+              "column": 9
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 592,
+            "end": 594,
+            "loc": {
+              "start": {
+                "line": 19,
+                "column": 7
+              },
+              "end": {
+                "line": 19,
+                "column": 9
+              }
+            },
+            "name": "io"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 600,
+        "end": 628,
+        "loc": {
+          "start": {
+            "line": 19,
+            "column": 15
+          },
+          "end": {
+            "line": 19,
+            "column": 43
+          }
+        },
+        "value": "socket.io-client/socket.io",
+        "rawValue": "socket.io-client/socket.io",
+        "raw": "'socket.io-client/socket.io'"
+      }
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 630,
+      "end": 731,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 0
+        },
+        "end": {
+          "line": 23,
+          "column": 3
+        }
+      },
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 636,
+          "end": 730,
+          "loc": {
+            "start": {
+              "line": 20,
+              "column": 6
+            },
+            "end": {
+              "line": 23,
+              "column": 2
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 636,
+            "end": 642,
+            "loc": {
+              "start": {
+                "line": 20,
+                "column": 6
+              },
+              "end": {
+                "line": 20,
+                "column": 12
+              }
+            },
+            "name": "socket"
+          },
+          "init": {
+            "type": "CallExpression",
+            "start": 645,
+            "end": 730,
+            "loc": {
+              "start": {
+                "line": 20,
+                "column": 15
+              },
+              "end": {
+                "line": 23,
+                "column": 2
+              }
+            },
+            "callee": {
+              "type": "MemberExpression",
+              "start": 645,
+              "end": 655,
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 15
+                },
+                "end": {
+                  "line": 20,
+                  "column": 25
+                }
+              },
+              "object": {
+                "type": "Identifier",
+                "start": 645,
+                "end": 647,
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 17
+                  }
+                },
+                "name": "io"
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 648,
+                "end": 655,
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 18
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 25
+                  }
+                },
+                "name": "connect"
+              },
+              "computed": false
+            },
+            "arguments": [
+              {
+                "type": "Literal",
+                "start": 656,
+                "end": 679,
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 26
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 49
+                  }
+                },
+                "value": "http://localhost:1234",
+                "rawValue": "http://localhost:1234",
+                "raw": "'http://localhost:1234'"
+              },
+              {
+                "type": "ObjectExpression",
+                "start": 681,
+                "end": 729,
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 51
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 1
+                  }
+                },
+                "properties": [
+                  {
+                    "type": "Property",
+                    "start": 685,
+                    "end": 697,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 14
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "Identifier",
+                      "start": 685,
+                      "end": 690,
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 21,
+                          "column": 7
+                        }
+                      },
+                      "name": "jsonp"
+                    },
+                    "value": {
+                      "type": "Literal",
+                      "start": 692,
+                      "end": 697,
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 9
+                        },
+                        "end": {
+                          "line": 21,
+                          "column": 14
+                        }
+                      },
+                      "value": false,
+                      "rawValue": false,
+                      "raw": "false"
+                    },
+                    "kind": "init"
+                  },
+                  {
+                    "type": "Property",
+                    "start": 701,
+                    "end": 726,
+                    "loc": {
+                      "start": {
+                        "line": 22,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 27
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "Identifier",
+                      "start": 701,
+                      "end": 711,
+                      "loc": {
+                        "start": {
+                          "line": 22,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 22,
+                          "column": 12
+                        }
+                      },
+                      "name": "transports"
+                    },
+                    "value": {
+                      "type": "ArrayExpression",
+                      "start": 713,
+                      "end": 726,
+                      "loc": {
+                        "start": {
+                          "line": 22,
+                          "column": 14
+                        },
+                        "end": {
+                          "line": 22,
+                          "column": 27
+                        }
+                      },
+                      "elements": [
+                        {
+                          "type": "Literal",
+                          "start": 714,
+                          "end": 725,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 15
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 26
+                            }
+                          },
+                          "value": "websocket",
+                          "rawValue": "websocket",
+                          "raw": "'websocket'"
+                        }
+                      ]
+                    },
+                    "kind": "init"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "kind": "const"
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 732,
+      "end": 787,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 0
+        },
+        "end": {
+          "line": 24,
+          "column": 55
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 739,
+          "end": 763,
+          "loc": {
+            "start": {
+              "line": 24,
+              "column": 7
+            },
+            "end": {
+              "line": 24,
+              "column": 31
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 739,
+            "end": 763,
+            "loc": {
+              "start": {
+                "line": 24,
+                "column": 7
+              },
+              "end": {
+                "line": 24,
+                "column": 31
+              }
+            },
+            "name": "createSocketIoMiddleware"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 769,
+        "end": 786,
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 37
+          },
+          "end": {
+            "line": 24,
+            "column": 54
+          }
+        },
+        "value": "redux-socket.io",
+        "rawValue": "redux-socket.io",
+        "raw": "'redux-socket.io'"
+      }
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 788,
+      "end": 859,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 0
+        },
+        "end": {
+          "line": 25,
+          "column": 71
+        }
+      },
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 794,
+          "end": 858,
+          "loc": {
+            "start": {
+              "line": 25,
+              "column": 6
+            },
+            "end": {
+              "line": 25,
+              "column": 70
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 794,
+            "end": 812,
+            "loc": {
+              "start": {
+                "line": 25,
+                "column": 6
+              },
+              "end": {
+                "line": 25,
+                "column": 24
+              }
+            },
+            "name": "socketIoMiddleware"
+          },
+          "init": {
+            "type": "CallExpression",
+            "start": 815,
+            "end": 858,
+            "loc": {
+              "start": {
+                "line": 25,
+                "column": 27
+              },
+              "end": {
+                "line": 25,
+                "column": 70
+              }
+            },
+            "callee": {
+              "type": "Identifier",
+              "start": 815,
+              "end": 839,
+              "loc": {
+                "start": {
+                  "line": 25,
+                  "column": 27
+                },
+                "end": {
+                  "line": 25,
+                  "column": 51
+                }
+              },
+              "name": "createSocketIoMiddleware"
+            },
+            "arguments": [
+              {
+                "type": "Identifier",
+                "start": 840,
+                "end": 846,
+                "loc": {
+                  "start": {
+                    "line": 25,
+                    "column": 52
+                  },
+                  "end": {
+                    "line": 25,
+                    "column": 58
+                  }
+                },
+                "name": "socket"
+              },
+              {
+                "type": "Literal",
+                "start": 848,
+                "end": 857,
+                "loc": {
+                  "start": {
+                    "line": 25,
+                    "column": 60
+                  },
+                  "end": {
+                    "line": 25,
+                    "column": 69
+                  }
+                },
+                "value": "server/",
+                "rawValue": "server/",
+                "raw": "'server/'"
+              }
+            ]
+          }
+        }
+      ],
+      "kind": "const"
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "start": 861,
+      "end": 1175,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 0
+        },
+        "end": {
+          "line": 38,
+          "column": 1
+        }
+      },
+      "declaration": {
+        "type": "FunctionDeclaration",
+        "start": 876,
+        "end": 1175,
+        "loc": {
+          "start": {
+            "line": 27,
+            "column": 15
+          },
+          "end": {
+            "line": 38,
+            "column": 1
+          }
+        },
+        "id": {
+          "type": "Identifier",
+          "start": 885,
+          "end": 899,
+          "loc": {
+            "start": {
+              "line": 27,
+              "column": 24
+            },
+            "end": {
+              "line": 27,
+              "column": 38
+            }
+          },
+          "name": "configureStore"
+        },
+        "generator": false,
+        "expression": false,
+        "async": false,
+        "params": [
+          {
+            "type": "Identifier",
+            "start": 900,
+            "end": 912,
+            "loc": {
+              "start": {
+                "line": 27,
+                "column": 39
+              },
+              "end": {
+                "line": 27,
+                "column": 51
+              }
+            },
+            "name": "initialState"
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "start": 914,
+          "end": 1175,
+          "loc": {
+            "start": {
+              "line": 27,
+              "column": 53
+            },
+            "end": {
+              "line": 38,
+              "column": 1
+            }
+          },
+          "body": [
+            {
+              "type": "VariableDeclaration",
+              "start": 918,
+              "end": 1114,
+              "loc": {
+                "start": {
+                  "line": 28,
+                  "column": 2
+                },
+                "end": {
+                  "line": 36,
+                  "column": 4
+                }
+              },
+              "declarations": [
+                {
+                  "type": "VariableDeclarator",
+                  "start": 924,
+                  "end": 1113,
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 36,
+                      "column": 3
+                    }
+                  },
+                  "id": {
+                    "type": "Identifier",
+                    "start": 924,
+                    "end": 932,
+                    "loc": {
+                      "start": {
+                        "line": 28,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 16
+                      }
+                    },
+                    "name": "enhancer"
+                  },
+                  "init": {
+                    "type": "CallExpression",
+                    "start": 935,
+                    "end": 1113,
+                    "loc": {
+                      "start": {
+                        "line": 28,
+                        "column": 19
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 3
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 935,
+                      "end": 942,
+                      "loc": {
+                        "start": {
+                          "line": 28,
+                          "column": 19
+                        },
+                        "end": {
+                          "line": 28,
+                          "column": 26
+                        }
+                      },
+                      "name": "compose"
+                    },
+                    "arguments": [
+                      {
+                        "type": "CallExpression",
+                        "start": 948,
+                        "end": 990,
+                        "loc": {
+                          "start": {
+                            "line": 29,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 29,
+                            "column": 46
+                          }
+                        },
+                        "callee": {
+                          "type": "Identifier",
+                          "start": 948,
+                          "end": 963,
+                          "loc": {
+                            "start": {
+                              "line": 29,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 29,
+                              "column": 19
+                            }
+                          },
+                          "name": "applyMiddleware"
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "start": 964,
+                            "end": 969,
+                            "loc": {
+                              "start": {
+                                "line": 29,
+                                "column": 20
+                              },
+                              "end": {
+                                "line": 29,
+                                "column": 25
+                              }
+                            },
+                            "name": "thunk"
+                          },
+                          {
+                            "type": "Identifier",
+                            "start": 971,
+                            "end": 989,
+                            "loc": {
+                              "start": {
+                                "line": 29,
+                                "column": 27
+                              },
+                              "end": {
+                                "line": 29,
+                                "column": 45
+                              }
+                            },
+                            "name": "socketIoMiddleware"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "CallExpression",
+                        "start": 996,
+                        "end": 1109,
+                        "loc": {
+                          "start": {
+                            "line": 30,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 35,
+                            "column": 6
+                          }
+                        },
+                        "callee": {
+                          "type": "Identifier",
+                          "start": 996,
+                          "end": 1004,
+                          "loc": {
+                            "start": {
+                              "line": 30,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 30,
+                              "column": 12
+                            }
+                          },
+                          "name": "devTools"
+                        },
+                        "arguments": [
+                          {
+                            "type": "ObjectExpression",
+                            "start": 1005,
+                            "end": 1108,
+                            "loc": {
+                              "start": {
+                                "line": 30,
+                                "column": 13
+                              },
+                              "end": {
+                                "line": 35,
+                                "column": 5
+                              }
+                            },
+                            "properties": [
+                              {
+                                "type": "Property",
+                                "start": 1013,
+                                "end": 1032,
+                                "loc": {
+                                  "start": {
+                                    "line": 31,
+                                    "column": 6
+                                  },
+                                  "end": {
+                                    "line": 31,
+                                    "column": 25
+                                  }
+                                },
+                                "method": false,
+                                "shorthand": false,
+                                "computed": false,
+                                "key": {
+                                  "type": "Identifier",
+                                  "start": 1013,
+                                  "end": 1017,
+                                  "loc": {
+                                    "start": {
+                                      "line": 31,
+                                      "column": 6
+                                    },
+                                    "end": {
+                                      "line": 31,
+                                      "column": 10
+                                    }
+                                  },
+                                  "name": "name"
+                                },
+                                "value": {
+                                  "type": "Literal",
+                                  "start": 1019,
+                                  "end": 1032,
+                                  "loc": {
+                                    "start": {
+                                      "line": 31,
+                                      "column": 12
+                                    },
+                                    "end": {
+                                      "line": 31,
+                                      "column": 25
+                                    }
+                                  },
+                                  "value": "Smile Guess",
+                                  "rawValue": "Smile Guess",
+                                  "raw": "'Smile Guess'"
+                                },
+                                "kind": "init"
+                              },
+                              {
+                                "type": "Property",
+                                "start": 1040,
+                                "end": 1054,
+                                "loc": {
+                                  "start": {
+                                    "line": 32,
+                                    "column": 6
+                                  },
+                                  "end": {
+                                    "line": 32,
+                                    "column": 20
+                                  }
+                                },
+                                "method": false,
+                                "shorthand": false,
+                                "computed": false,
+                                "key": {
+                                  "type": "Identifier",
+                                  "start": 1040,
+                                  "end": 1048,
+                                  "loc": {
+                                    "start": {
+                                      "line": 32,
+                                      "column": 6
+                                    },
+                                    "end": {
+                                      "line": 32,
+                                      "column": 14
+                                    }
+                                  },
+                                  "name": "realtime"
+                                },
+                                "value": {
+                                  "type": "Literal",
+                                  "start": 1050,
+                                  "end": 1054,
+                                  "loc": {
+                                    "start": {
+                                      "line": 32,
+                                      "column": 16
+                                    },
+                                    "end": {
+                                      "line": 32,
+                                      "column": 20
+                                    }
+                                  },
+                                  "value": true,
+                                  "rawValue": true,
+                                  "raw": "true"
+                                },
+                                "kind": "init"
+                              },
+                              {
+                                "type": "Property",
+                                "start": 1062,
+                                "end": 1083,
+                                "loc": {
+                                  "start": {
+                                    "line": 33,
+                                    "column": 6
+                                  },
+                                  "end": {
+                                    "line": 33,
+                                    "column": 27
+                                  }
+                                },
+                                "method": false,
+                                "shorthand": false,
+                                "computed": false,
+                                "key": {
+                                  "type": "Identifier",
+                                  "start": 1062,
+                                  "end": 1070,
+                                  "loc": {
+                                    "start": {
+                                      "line": 33,
+                                      "column": 6
+                                    },
+                                    "end": {
+                                      "line": 33,
+                                      "column": 14
+                                    }
+                                  },
+                                  "name": "hostname"
+                                },
+                                "value": {
+                                  "type": "Literal",
+                                  "start": 1072,
+                                  "end": 1083,
+                                  "loc": {
+                                    "start": {
+                                      "line": 33,
+                                      "column": 16
+                                    },
+                                    "end": {
+                                      "line": 33,
+                                      "column": 27
+                                    }
+                                  },
+                                  "value": "localhost",
+                                  "rawValue": "localhost",
+                                  "raw": "'localhost'"
+                                },
+                                "kind": "init"
+                              },
+                              {
+                                "type": "Property",
+                                "start": 1091,
+                                "end": 1101,
+                                "loc": {
+                                  "start": {
+                                    "line": 34,
+                                    "column": 6
+                                  },
+                                  "end": {
+                                    "line": 34,
+                                    "column": 16
+                                  }
+                                },
+                                "method": false,
+                                "shorthand": false,
+                                "computed": false,
+                                "key": {
+                                  "type": "Identifier",
+                                  "start": 1091,
+                                  "end": 1095,
+                                  "loc": {
+                                    "start": {
+                                      "line": 34,
+                                      "column": 6
+                                    },
+                                    "end": {
+                                      "line": 34,
+                                      "column": 10
+                                    }
+                                  },
+                                  "name": "port"
+                                },
+                                "value": {
+                                  "type": "Literal",
+                                  "start": 1097,
+                                  "end": 1101,
+                                  "loc": {
+                                    "start": {
+                                      "line": 34,
+                                      "column": 12
+                                    },
+                                    "end": {
+                                      "line": 34,
+                                      "column": 16
+                                    }
+                                  },
+                                  "value": 8000,
+                                  "rawValue": 8000,
+                                  "raw": "8000"
+                                },
+                                "kind": "init"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "kind": "const"
+            },
+            {
+              "type": "ReturnStatement",
+              "start": 1117,
+              "end": 1173,
+              "loc": {
+                "start": {
+                  "line": 37,
+                  "column": 2
+                },
+                "end": {
+                  "line": 37,
+                  "column": 58
+                }
+              },
+              "argument": {
+                "type": "CallExpression",
+                "start": 1124,
+                "end": 1172,
+                "loc": {
+                  "start": {
+                    "line": 37,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 37,
+                    "column": 57
+                  }
+                },
+                "callee": {
+                  "type": "Identifier",
+                  "start": 1124,
+                  "end": 1135,
+                  "loc": {
+                    "start": {
+                      "line": 37,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 20
+                    }
+                  },
+                  "name": "createStore"
+                },
+                "arguments": [
+                  {
+                    "type": "Identifier",
+                    "start": 1136,
+                    "end": 1147,
+                    "loc": {
+                      "start": {
+                        "line": 37,
+                        "column": 21
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 32
+                      }
+                    },
+                    "name": "rootReducer"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1149,
+                    "end": 1161,
+                    "loc": {
+                      "start": {
+                        "line": 37,
+                        "column": 34
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 46
+                      }
+                    },
+                    "name": "initialState"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1163,
+                    "end": 1171,
+                    "loc": {
+                      "start": {
+                        "line": 37,
+                        "column": 48
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 56
+                      }
+                    },
+                    "name": "enhancer"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      }
+    }
+  ]
+}

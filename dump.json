@@ -1,0 +1,1432 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/action_types/actionTypes.js",
+    "memberof": null,
+    "longname": "app/action_types/actionTypes.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export const SUBMIT_HINT = 'SUBMIT_HINT';\nexport const PLAYER_JOIN_GAME = 'PLAYER_JOIN_GAME';\nexport const JOIN_GAME = 'JOIN_GAME';\nexport const SUBMIT_GUESS = 'SUBMIT_GUESS';\n"
+  },
+  {
+    "__docId__": 1,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "SUBMIT_HINT",
+    "memberof": "app/action_types/actionTypes.js",
+    "longname": "app/action_types/actionTypes.js~SUBMIT_HINT",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/action_types/actionTypes.js",
+    "importStyle": "{SUBMIT_HINT}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 2,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "PLAYER_JOIN_GAME",
+    "memberof": "app/action_types/actionTypes.js",
+    "longname": "app/action_types/actionTypes.js~PLAYER_JOIN_GAME",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/action_types/actionTypes.js",
+    "importStyle": "{PLAYER_JOIN_GAME}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 3,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "JOIN_GAME",
+    "memberof": "app/action_types/actionTypes.js",
+    "longname": "app/action_types/actionTypes.js~JOIN_GAME",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/action_types/actionTypes.js",
+    "importStyle": "{JOIN_GAME}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "SUBMIT_GUESS",
+    "memberof": "app/action_types/actionTypes.js",
+    "longname": "app/action_types/actionTypes.js~SUBMIT_GUESS",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/action_types/actionTypes.js",
+    "importStyle": "{SUBMIT_GUESS}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/actions/__tests__/dealer.js",
+    "memberof": null,
+    "longname": "app/actions/__tests__/dealer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../dealer.js');\nimport { submitHint } from '../dealer.js';\nimport { SUBMIT_HINT } from '../../action_types/actionTypes.js';\n\n\ndescribe('User Action Types', () => {\n  it('should have an action type SUBMIT_HINT', () => {\n    expect(SUBMIT_HINT).toBeDefined();\n    expect(SUBMIT_HINT).toMatch('SUBMIT_HINT');\n  });\n});\n\ndescribe('submitHint Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof submitHint).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof submitHint('leaf')).toEqual('object');\n  });\n  it('should have a type property of SUBMIT_HINT', () => {\n    expect(submitHint('leaf').type).toEqual(SUBMIT_HINT);\n  });\n  it('should have a hint property of passed in hint', () => {\n    expect(submitHint('leaf').hint).toEqual('leaf');\n  });\n});\n"
+  },
+  {
+    "__docId__": 6,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/actions/__tests__/players.js",
+    "memberof": null,
+    "longname": "app/actions/__tests__/players.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../players.js');\nimport { playerJoinGame } from '../players.js';\nimport { PLAYER_JOIN_GAME } from '../../action_types/actionTypes.js';\n\n\ndescribe('Player Action Types', () => {\n  it('should have an action type PLAYER_JOIN_GAME', () => {\n    expect(PLAYER_JOIN_GAME).toBeDefined();\n    expect(PLAYER_JOIN_GAME).toMatch('PLAYER_JOIN_GAME');\n  });\n});\n\nconst someDude1 = {\n  id: 5,\n  username: 'joe',\n};\n\ndescribe('playerJoinGame Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof playerJoinGame).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof playerJoinGame(someDude1)).toEqual('object');\n  });\n  it('should have a type property of PLAYER_JOIN_GAME', () => {\n    expect(playerJoinGame(someDude1).type).toEqual(PLAYER_JOIN_GAME);\n  });\n  it('should have a user with an id property of passed in user', () => {\n    expect(playerJoinGame(someDude1).user.id).toEqual(5);\n  });\n});\n"
+  },
+  {
+    "__docId__": 7,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "someDude1",
+    "memberof": "app/actions/__tests__/players.js",
+    "longname": "app/actions/__tests__/players.js~someDude1",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/actions/__tests__/players.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/actions/__tests__/user.js",
+    "memberof": null,
+    "longname": "app/actions/__tests__/user.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../user.js');\nimport { joinGame, submitGuess } from '../user.js';\nimport { JOIN_GAME, SUBMIT_GUESS } from '../../action_types/actionTypes.js';\n\ndescribe('User Action Types', () => {\n  it('should have an action type JOIN_GAME', () => {\n    expect(JOIN_GAME).toBeDefined();\n    expect(JOIN_GAME).toMatch('JOIN_GAME');\n  });\n  it('should have an action type SUBMIT_GUESS', () => {\n    expect(SUBMIT_GUESS).toBeDefined();\n    expect(SUBMIT_GUESS).toMatch('SUBMIT_GUESS');\n  });\n});\n\ndescribe('joinGame Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof joinGame).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof joinGame(6)).toEqual('object');\n  });\n  it('should have a type property of JOIN_GAME', () => {\n    expect(joinGame(6).type).toEqual(JOIN_GAME);\n  });\n});\n\ndescribe('submitGuess Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof submitGuess).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof submitGuess('tree')).toEqual('object');\n  });\n  it('should have a type property of SUBMIT_GUESS', () => {\n    expect(submitGuess('tree').type).toEqual(SUBMIT_GUESS);\n  });\n  it('should have a guess property of passed in guess', () => {\n    expect(submitGuess('tree').guess).toEqual('tree');\n  });\n});\n"
+  },
+  {
+    "__docId__": 9,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/actions/dealer.js",
+    "memberof": null,
+    "longname": "app/actions/dealer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { SUBMIT_HINT } from '../action_types/actionTypes.js';\n\nexport const submitHint = (hint) => ({\n  type: SUBMIT_HINT,\n  hint,\n});\n"
+  },
+  {
+    "__docId__": 10,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "submitHint",
+    "memberof": "app/actions/dealer.js",
+    "longname": "app/actions/dealer.js~submitHint",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/actions/dealer.js",
+    "importStyle": "{submitHint}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/actions/players.js",
+    "memberof": null,
+    "longname": "app/actions/players.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { PLAYER_JOIN_GAME } from '../action_types/actionTypes.js';\n\n\nexport const playerJoinGame = (user) => ({\n  type: PLAYER_JOIN_GAME,\n  user,\n});\n"
+  },
+  {
+    "__docId__": 12,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "playerJoinGame",
+    "memberof": "app/actions/players.js",
+    "longname": "app/actions/players.js~playerJoinGame",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/actions/players.js",
+    "importStyle": "{playerJoinGame}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/actions/user.js",
+    "memberof": null,
+    "longname": "app/actions/user.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { JOIN_GAME, SUBMIT_GUESS } from '../action_types/actionTypes.js';\n\n\nexport const joinGame = (gameId = null) => ({\n  type: JOIN_GAME,\n  gameId,\n});\n\nexport const submitGuess = (guess) => ({\n  type: SUBMIT_GUESS,\n  guess,\n});\n"
+  },
+  {
+    "__docId__": 14,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "joinGame",
+    "memberof": "app/actions/user.js",
+    "longname": "app/actions/user.js~joinGame",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/actions/user.js",
+    "importStyle": "{joinGame}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 15,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "submitGuess",
+    "memberof": "app/actions/user.js",
+    "longname": "app/actions/user.js~submitGuess",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/actions/user.js",
+    "importStyle": "{submitGuess}",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 16,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/providers/providers.js",
+    "memberof": null,
+    "longname": "app/providers/providers.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* Import Actions */\nimport { joinGame } from '../actions/user.js';\n\n\n/* Home Screen Providers*/\nexport const mapHomeScreen = {\n  mapStateToProps() {\n    return {};\n  },\n  mapDispatchToProps(dispatch) {\n    return {\n      onJoinGame: (id) => {\n        dispatch(joinGame(id));\n      },\n    };\n  },\n};\n"
+  },
+  {
+    "__docId__": 17,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapHomeScreen",
+    "memberof": "app/providers/providers.js",
+    "longname": "app/providers/providers.js~mapHomeScreen",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/providers/providers.js",
+    "importStyle": "{mapHomeScreen}",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 18,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/__tests__/combined.js",
+    "memberof": null,
+    "longname": "app/reducers/__tests__/combined.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../index.js');\nimport reducer from '../index.js';\n\ndescribe('Combined Reducer', () => {\n  it('should be a function', () => {\n    expect(reducer).not.toBeUndefined();\n    expect(typeof reducer).toBe('function');\n  });\n});\n\n"
+  },
+  {
+    "__docId__": 19,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/__tests__/messages.js",
+    "memberof": null,
+    "longname": "app/reducers/__tests__/messages.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../messages.js');\nimport messagesReducer from '../messages.js';\nimport { SUBMIT_GUESS, SUBMIT_HINT } from '../../action_types/actionTypes.js';\n\ndescribe('messages reducer', () => {\n  it('should return the initial state', () => {\n    expect(\n      messagesReducer(undefined, {})\n    ).toEqual([]);\n  });\n  it('should handle SUBMIT_GUESS', () => {\n    expect(\n      messagesReducer([], {\n        type: SUBMIT_GUESS, guess: 'leaf' })\n      ).toEqual(['leaf']);\n  });\n  it('should handle SUBMIT_HINT', () => {\n    expect(\n      messagesReducer([], {\n        type: SUBMIT_HINT, hint: 'tree' })\n      ).toEqual(['tree']);\n  });\n});\n"
+  },
+  {
+    "__docId__": 20,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/__tests__/players.js",
+    "memberof": null,
+    "longname": "app/reducers/__tests__/players.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../players.js');\nimport playerReducer from '../players.js';\n\nconst myInitialState = { 1: {\n  username: 'bob',\n} };\n\ndescribe('Players Reducer', () => {\n  it('should be a function', () => {\n    expect(playerReducer).not.toBeUndefined();\n    expect(typeof playerReducer).toBe('function');\n  });\n  it('should return an object', () => {\n    expect(typeof playerReducer()).toBe('object');\n  });\n  it('should default to returning same object if not passed an action', () => {\n    const myNewState = playerReducer(myInitialState);\n    expect(myNewState).toBe(myInitialState);\n  });\n  it('should not mutate its inputs if given an action', () => {\n    const myAction = { type: 'PLAYER_JOIN_GAME', user: { id: 3, username: 'jay' } };\n    const myNewState = playerReducer(myInitialState, myAction);\n    expect(myNewState).not.toBe(myInitialState);\n  });\n  it('should add the userid to the state if given a \"JOIN_GAME\" action', () => {\n    const myAction = { type: 'PLAYER_JOIN_GAME', user: { id: 2, username: 'joan' } };\n    const myNewState = playerReducer(myInitialState, myAction);\n    expect(myNewState[2].username).toEqual('joan');\n  });\n});\n\n"
+  },
+  {
+    "__docId__": 21,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "myInitialState",
+    "memberof": "app/reducers/__tests__/players.js",
+    "longname": "app/reducers/__tests__/players.js~myInitialState",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/reducers/__tests__/players.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 22,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/index.js",
+    "memberof": null,
+    "longname": "app/reducers/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { combineReducers } from 'redux';\nimport players from './players.js';\nimport messages from './messages.js';\n\nconst rootReducer = combineReducers({\n  players,\n  messages,\n});\n\nexport default rootReducer;\n\n"
+  },
+  {
+    "__docId__": 23,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "rootReducer",
+    "memberof": "app/reducers/index.js",
+    "longname": "app/reducers/index.js~rootReducer",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/reducers/index.js",
+    "importStyle": "rootReducer",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/messages.js",
+    "memberof": null,
+    "longname": "app/reducers/messages.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { SUBMIT_GUESS, SUBMIT_HINT } from '../action_types/actionTypes.js';\n\nconst noAction = {\n  type: 'NO_ACTION',\n};\n\nexport default (state = [], action = noAction) => {\n  switch (action.type) {\n    case SUBMIT_GUESS:\n      return state.concat([action.guess]);\n    case SUBMIT_HINT:\n      return state.concat([action.hint]);\n    default:\n      return state;\n  }\n};\n"
+  },
+  {
+    "__docId__": 25,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "noAction",
+    "memberof": "app/reducers/messages.js",
+    "longname": "app/reducers/messages.js~noAction",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/reducers/messages.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 26,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/players.js",
+    "memberof": null,
+    "longname": "app/reducers/players.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { PLAYER_JOIN_GAME } from '../action_types/actionTypes.js';\n\nconst noAction = {\n  type: 'NO_ACTION',\n};\n\nconst mergeNewUser = (state, user) => {\n  const newUser = {};\n  newUser[user.id] = user;\n  return Object.assign({}, state, newUser);\n};\n\nexport default (state = {}, action = noAction) => {\n  switch (action.type) {\n    case PLAYER_JOIN_GAME:\n      return mergeNewUser(state, action.user);\n    default:\n      return state;\n  }\n};\n"
+  },
+  {
+    "__docId__": 27,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "noAction",
+    "memberof": "app/reducers/players.js",
+    "longname": "app/reducers/players.js~noAction",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/reducers/players.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 28,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mergeNewUser",
+    "memberof": "app/reducers/players.js",
+    "longname": "app/reducers/players.js~mergeNewUser",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/reducers/players.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 29,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/screens/HomeScreen.js",
+    "memberof": null,
+    "longname": "app/screens/HomeScreen.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* Import Dependencies */\nimport { connect } from 'react-redux';\n\n/* Import Provider */\nimport { mapHomeScreen } from '../providers/providers.js';\n\n/* Import Components */\nimport React, {\n  View,\n  StyleSheet,\n  PropTypes,\n} from 'react-native';\nimport Button from 'react-native-button';\n\nconst styles = StyleSheet.create({\n  container: {\n    alignItems: 'center',\n    flexDirection: 'column',\n    justifyContent: 'center',\n    flex: 1,\n  },\n  buttonContainer: {\n    flex: 0,\n  },\n});\n\n\n/**\n * Home Screen is a React functional component.\n * It provides an entry point for joining a random game.\n * In the future, it will display a list of available games to join.\n * @param {{onJoinGame: function()}} onPress event handler for the Join Game button.\n */\nexport const HomeScreen = ({ onJoinGame }) => (\n  <View style={styles.container}>\n    <View style={styles.buttonContainer}>\n      <Button style={styles.button} onPress={onJoinGame}> Join Random Game! </Button>\n    </View>\n  </View>\n);\n\nHomeScreen.propTypes = {\n  onJoinGame: PropTypes.func.isRequired,\n};\n\n/**\n * HomeScreenContainer is a 'container component' which binds the props and\n * actions creators of HomeScreen to the store and dispatcher, respectively.\n * It should be imported in favor of HomeScreen, which is exported only\n * for documentation purposes.\n */\nconst HomeScreenContainer = connect(\n  mapHomeScreen.mapStateToProps,\n  mapHomeScreen.mapDispatchToProps\n)(HomeScreen);\n\nexport default HomeScreenContainer;\n"
+  },
+  {
+    "__docId__": 30,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "styles",
+    "memberof": "app/screens/HomeScreen.js",
+    "longname": "app/screens/HomeScreen.js~styles",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/screens/HomeScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 31,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "HomeScreen",
+    "memberof": "app/screens/HomeScreen.js",
+    "longname": "app/screens/HomeScreen.js~HomeScreen",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/screens/HomeScreen.js",
+    "importStyle": "{HomeScreen}",
+    "description": "Home Screen is a React functional component.\nIt provides an entry point for joining a random game.\nIn the future, it will display a list of available games to join.",
+    "lineNumber": 34,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "{onJoinGame: function()}"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "onPress",
+        "description": "event handler for the Join Game button."
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "HomeScreenContainer",
+    "memberof": "app/screens/HomeScreen.js",
+    "longname": "app/screens/HomeScreen.js~HomeScreenContainer",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/screens/HomeScreen.js",
+    "importStyle": "HomeScreenContainer",
+    "description": "HomeScreenContainer is a 'container component' which binds the props and\nactions creators of HomeScreen to the store and dispatcher, respectively.\nIt should be imported in favor of HomeScreen, which is exported only\nfor documentation purposes.",
+    "lineNumber": 52,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/screens/__tests__/HomeScreenTest.js",
+    "memberof": null,
+    "longname": "app/screens/__tests__/HomeScreenTest.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* Import Test Utils */\nimport TestUtils from 'react-addons-test-utils';\nimport { findWithType } from 'react-shallow-testutils';\n\n/* Import Mocks for Testing */\nimport React from 'react-native'; // <rootdir>/app/__mocks__/react-native.js\nimport Button from 'react-native-button'; // Mocked automatically\n\n/* Must be mocked explicitly because set as an unmocked module in package.json */\njest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js\n\n/* Unmock HomeScreen for unit testing */\njest.unmock('../HomeScreen.js');\nimport HomeScreen from '../HomeScreen.js';\n\n/* Create mock function to pass in as prop for testing */\nconst joinGame = jest.genMockFunction();\n\ndescribe('HomeScreen', () => {\n  let output;\n\n  beforeEach(() => {\n    const renderer = TestUtils.createRenderer();\n    renderer.render(<HomeScreen onJoinGame={joinGame} />);\n    output = renderer.getRenderOutput();\n  });\n\n  afterEach(() => {\n    output = undefined;\n  });\n\n  it('should render', () => {\n    expect(output).toBeDefined();\n  });\n\n  it('should have a \"Join Game\" button', () => {\n    expect(() => { findWithType(output, Button); }).not.toThrow();\n  });\n\n  it('should have an onPress event', () => {\n    const joinButton = findWithType(output, Button);\n    joinButton.props.onPress();\n    expect(joinGame).toBeCalled();\n  });\n});\n"
+  },
+  {
+    "__docId__": 34,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "joinGame",
+    "memberof": "app/screens/__tests__/HomeScreenTest.js",
+    "longname": "app/screens/__tests__/HomeScreenTest.js~joinGame",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/screens/__tests__/HomeScreenTest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 35,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/store/UserAgent.js",
+    "memberof": null,
+    "longname": "app/store/UserAgent.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "window.navigator.userAgent = 'react-native';\n\n"
+  },
+  {
+    "__docId__": 36,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/store/configureStore.js",
+    "memberof": null,
+    "longname": "app/store/configureStore.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* Configure Store */\n\n/* Import Dependencies */\nimport { createStore, applyMiddleware, compose } from 'redux';\nimport React from 'react-native';\n\n/* Import Reducer */\nimport rootReducer from '../reducers/index.js';\n\n/* Import Middleware */\nimport thunk from 'redux-thunk';\nimport devTools from 'remote-redux-devtools';\n\n/* socket.io assumes navigator.userAgent is a string, supply a dummy one to make it happy\n * and because ES6 module imports are hoisted, we can't make the userAgent assignment\n * in the same file as the react-native and socket.io imports\n */\nimport './UserAgent';\nimport io from 'socket.io-client/socket.io';\nconst socket = io.connect('http://localhost:1234', {\n  jsonp: false,\n  transports: ['websocket'],\n});\nimport createSocketIoMiddleware from 'redux-socket.io';\nconst socketIoMiddleware = createSocketIoMiddleware(socket, 'server/');\n\nexport default function configureStore(initialState) {\n  const enhancer = compose(\n    applyMiddleware(thunk, socketIoMiddleware),\n    devTools({\n      name: 'Smile Guess',\n      realtime: true,\n      hostname: 'localhost',\n      port: 8000,\n    })\n  );\n  return createStore(rootReducer, initialState, enhancer);\n}\n"
+  },
+  {
+    "__docId__": 37,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "socket",
+    "memberof": "app/store/configureStore.js",
+    "longname": "app/store/configureStore.js~socket",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/store/configureStore.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 38,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "socketIoMiddleware",
+    "memberof": "app/store/configureStore.js",
+    "longname": "app/store/configureStore.js~socketIoMiddleware",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/store/configureStore.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 39,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "configureStore",
+    "memberof": "app/store/configureStore.js",
+    "longname": "app/store/configureStore.js~configureStore",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/store/configureStore.js",
+    "importStyle": "configureStore",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "params": [
+      {
+        "name": "initialState",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 49,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 59,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 60,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 67,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 69,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 70,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 73,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 74,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 75,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 76,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 77,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 80,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 85,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 89,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 90,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 91,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 92,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 94,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 95,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 96,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  }
+]
