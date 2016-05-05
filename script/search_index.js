@@ -12,6 +12,12 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "smileguess/app/screens/screens.js~screens",
+    "variable/index.html#static-variable-Screens",
+    "<span>Screens</span> <span class=\"search-result-import-path\">smileguess/app/screens/Screens.js</span>",
+    "variable"
+  ],
+  [
     "builtinexternal/ecmascriptexternal.js~array",
     "external/index.html",
     "BuiltinExternal/ECMAScriptExternal.js~Array",
@@ -426,9 +432,27 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/reducers/routes.js",
+    "file/app/reducers/routes.js.html",
+    "app/reducers/routes.js",
+    "file"
+  ],
+  [
+    "app/screens/gamescreen.js",
+    "file/app/screens/GameScreen.js.html",
+    "app/screens/GameScreen.js",
+    "file"
+  ],
+  [
     "app/screens/homescreen.js",
     "file/app/screens/HomeScreen.js.html",
     "app/screens/HomeScreen.js",
+    "file"
+  ],
+  [
+    "app/screens/screens.js",
+    "file/app/screens/Screens.js.html",
+    "app/screens/Screens.js",
     "file"
   ],
   [

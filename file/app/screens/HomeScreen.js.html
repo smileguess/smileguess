@@ -34,6 +34,7 @@
     
   <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -41,6 +42,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">app/screens/HomeScreen.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Import Dependencies */
 import { connect } from &apos;react-redux&apos;;
+import { Actions } from &apos;react-native-router-flux&apos;;
 
 /* Import Provider */
 import { mapHomeScreen } from &apos;../providers/providers.js&apos;;
@@ -65,17 +67,22 @@ const styles = StyleSheet.create({
   },
 });
 
-
 /**
  * Home Screen is a React functional component.
  * It provides an entry point for joining a random game.
  * In the future, it will display a list of available games to join.
  * @param {{onJoinGame: function()}} onPress event handler for the Join Game button.
+ * @desc onPress additionally triggers navigation to GameScreen
  */
 export const HomeScreen = ({ onJoinGame }) =&gt; (
   &lt;View style={styles.container}&gt;
     &lt;View style={styles.buttonContainer}&gt;
-      &lt;Button style={styles.button} onPress={onJoinGame}&gt; Join Random Game! &lt;/Button&gt;
+      &lt;Button
+        onPress={() =&gt; {
+          onJoinGame(4);
+          Actions.showGameScreen();
+        }}
+      &gt;Go to Game Screen!&lt;/Button&gt;
     &lt;/View&gt;
   &lt;/View&gt;
 );

@@ -1,0 +1,2252 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 824,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 24,
+      "column": 0
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 26,
+      "end": 59,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 33
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 33,
+          "end": 38,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 12
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 33,
+            "end": 38,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 7
+              },
+              "end": {
+                "line": 2,
+                "column": 12
+              }
+            },
+            "name": "React",
+            "leadingComments": null
+          },
+          "leadingComments": null
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 44,
+        "end": 58,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 18
+          },
+          "end": {
+            "line": 2,
+            "column": 32
+          }
+        },
+        "value": "react-native",
+        "rawValue": "react-native",
+        "raw": "'react-native'"
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " Import Dependencies ",
+          "start": 0,
+          "end": 25,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 25
+            }
+          },
+          "range": [
+            0,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 60,
+      "end": 118,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 58
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 69,
+          "end": 76,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 9
+            },
+            "end": {
+              "line": 3,
+              "column": 16
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 69,
+            "end": 76,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 16
+              }
+            },
+            "name": "Actions"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 69,
+            "end": 76,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 16
+              }
+            },
+            "name": "Actions"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "start": 78,
+          "end": 83,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 18
+            },
+            "end": {
+              "line": 3,
+              "column": 23
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 78,
+            "end": 83,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 18
+              },
+              "end": {
+                "line": 3,
+                "column": 23
+              }
+            },
+            "name": "Scene"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 78,
+            "end": 83,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 18
+              },
+              "end": {
+                "line": 3,
+                "column": 23
+              }
+            },
+            "name": "Scene"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 91,
+        "end": 117,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 31
+          },
+          "end": {
+            "line": 3,
+            "column": 57
+          }
+        },
+        "value": "react-native-router-flux",
+        "rawValue": "react-native-router-flux",
+        "raw": "'react-native-router-flux'"
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": " Import transition screens ",
+          "start": 120,
+          "end": 151,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 31
+            }
+          },
+          "range": [
+            120,
+            151
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 152,
+      "end": 193,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 41
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 159,
+          "end": 169,
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 7
+            },
+            "end": {
+              "line": 6,
+              "column": 17
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 159,
+            "end": 169,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 7
+              },
+              "end": {
+                "line": 6,
+                "column": 17
+              }
+            },
+            "name": "HomeScreen",
+            "leadingComments": null
+          },
+          "leadingComments": null
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 175,
+        "end": 192,
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 23
+          },
+          "end": {
+            "line": 6,
+            "column": 40
+          }
+        },
+        "value": "./HomeScreen.js",
+        "rawValue": "./HomeScreen.js",
+        "raw": "'./HomeScreen.js'"
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " Import transition screens ",
+          "start": 120,
+          "end": 151,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 31
+            }
+          },
+          "range": [
+            120,
+            151
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 194,
+      "end": 235,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 41
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 201,
+          "end": 211,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 7
+            },
+            "end": {
+              "line": 7,
+              "column": 17
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 201,
+            "end": 211,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 7
+              },
+              "end": {
+                "line": 7,
+                "column": 17
+              }
+            },
+            "name": "GameScreen"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 217,
+        "end": 234,
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 23
+          },
+          "end": {
+            "line": 7,
+            "column": 40
+          }
+        },
+        "value": "./GameScreen.js",
+        "rawValue": "./GameScreen.js",
+        "raw": "'./GameScreen.js'"
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @desc scenes define transition screens\n * @param hideNavBar - hides navigation bar for select screen\n * @param type - defines how screen is added to the navigation pack\n * @param key - required, unique - used to call screen transitions\n * @param title - screen title in navigation bar\n ",
+          "start": 237,
+          "end": 532,
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 0
+            },
+            "end": {
+              "line": 15,
+              "column": 3
+            }
+          },
+          "range": [
+            237,
+            532
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "start": 533,
+      "end": 798,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 21,
+          "column": 2
+        }
+      },
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 539,
+          "end": 797,
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 6
+            },
+            "end": {
+              "line": 21,
+              "column": 1
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 539,
+            "end": 546,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 6
+              },
+              "end": {
+                "line": 16,
+                "column": 13
+              }
+            },
+            "name": "Screens",
+            "leadingComments": null
+          },
+          "init": {
+            "type": "CallExpression",
+            "start": 549,
+            "end": 797,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 16
+              },
+              "end": {
+                "line": 21,
+                "column": 1
+              }
+            },
+            "callee": {
+              "type": "MemberExpression",
+              "start": 549,
+              "end": 563,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 16
+                },
+                "end": {
+                  "line": 16,
+                  "column": 30
+                }
+              },
+              "object": {
+                "type": "Identifier",
+                "start": 549,
+                "end": 556,
+                "loc": {
+                  "start": {
+                    "line": 16,
+                    "column": 16
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 23
+                  }
+                },
+                "name": "Actions"
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 557,
+                "end": 563,
+                "loc": {
+                  "start": {
+                    "line": 16,
+                    "column": 24
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 30
+                  }
+                },
+                "name": "create"
+              },
+              "computed": false
+            },
+            "arguments": [
+              {
+                "type": "JSXElement",
+                "start": 567,
+                "end": 795,
+                "loc": {
+                  "start": {
+                    "line": 17,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 10
+                  }
+                },
+                "openingElement": {
+                  "type": "JSXOpeningElement",
+                  "start": 567,
+                  "end": 585,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 20
+                    }
+                  },
+                  "attributes": [
+                    {
+                      "type": "JSXAttribute",
+                      "start": 574,
+                      "end": 584,
+                      "loc": {
+                        "start": {
+                          "line": 17,
+                          "column": 9
+                        },
+                        "end": {
+                          "line": 17,
+                          "column": 19
+                        }
+                      },
+                      "name": {
+                        "type": "JSXIdentifier",
+                        "start": 574,
+                        "end": 577,
+                        "loc": {
+                          "start": {
+                            "line": 17,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 12
+                          }
+                        },
+                        "name": "key"
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "start": 578,
+                        "end": 584,
+                        "loc": {
+                          "start": {
+                            "line": 17,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 19
+                          }
+                        },
+                        "value": "root",
+                        "rawValue": null,
+                        "raw": "\"root\""
+                      }
+                    }
+                  ],
+                  "name": {
+                    "type": "JSXIdentifier",
+                    "start": 568,
+                    "end": 573,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 3
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 8
+                      }
+                    },
+                    "name": "Scene"
+                  },
+                  "selfClosing": false
+                },
+                "closingElement": {
+                  "type": "JSXClosingElement",
+                  "start": 787,
+                  "end": 795,
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 10
+                    }
+                  },
+                  "name": {
+                    "type": "JSXIdentifier",
+                    "start": 789,
+                    "end": 794,
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 9
+                      }
+                    },
+                    "name": "Scene"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "Literal",
+                    "start": 585,
+                    "end": 590,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 20
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 4
+                      }
+                    },
+                    "value": "\n    ",
+                    "rawValue": null,
+                    "raw": "\n    "
+                  },
+                  {
+                    "type": "JSXElement",
+                    "start": 590,
+                    "end": 684,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 98
+                      }
+                    },
+                    "openingElement": {
+                      "type": "JSXOpeningElement",
+                      "start": 590,
+                      "end": 684,
+                      "loc": {
+                        "start": {
+                          "line": 18,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 98
+                        }
+                      },
+                      "attributes": [
+                        {
+                          "type": "JSXAttribute",
+                          "start": 597,
+                          "end": 607,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 21
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 597,
+                            "end": 607,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 21
+                              }
+                            },
+                            "name": "hideNavBar"
+                          },
+                          "value": null
+                        },
+                        {
+                          "type": "JSXAttribute",
+                          "start": 608,
+                          "end": 622,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 36
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 608,
+                            "end": 612,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 22
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 26
+                              }
+                            },
+                            "name": "type"
+                          },
+                          "value": {
+                            "type": "Literal",
+                            "start": 613,
+                            "end": 622,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 27
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 36
+                              }
+                            },
+                            "value": "replace",
+                            "rawValue": null,
+                            "raw": "\"replace\""
+                          }
+                        },
+                        {
+                          "type": "JSXAttribute",
+                          "start": 623,
+                          "end": 643,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 37
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 57
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 623,
+                            "end": 626,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 37
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 40
+                              }
+                            },
+                            "name": "key"
+                          },
+                          "value": {
+                            "type": "Literal",
+                            "start": 627,
+                            "end": 643,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 41
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 57
+                              }
+                            },
+                            "value": "showHomeScreen",
+                            "rawValue": null,
+                            "raw": "\"showHomeScreen\""
+                          }
+                        },
+                        {
+                          "type": "JSXAttribute",
+                          "start": 644,
+                          "end": 658,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 58
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 72
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 644,
+                            "end": 651,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 58
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 65
+                              }
+                            },
+                            "name": "initial"
+                          },
+                          "value": {
+                            "type": "JSXExpressionContainer",
+                            "start": 652,
+                            "end": 658,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 66
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 72
+                              }
+                            },
+                            "expression": {
+                              "type": "Literal",
+                              "start": 653,
+                              "end": 657,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 67
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 71
+                                }
+                              },
+                              "value": true,
+                              "rawValue": true,
+                              "raw": "true"
+                            }
+                          }
+                        },
+                        {
+                          "type": "JSXAttribute",
+                          "start": 659,
+                          "end": 681,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 73
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 95
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 659,
+                            "end": 668,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 73
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 82
+                              }
+                            },
+                            "name": "component"
+                          },
+                          "value": {
+                            "type": "JSXExpressionContainer",
+                            "start": 669,
+                            "end": 681,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 83
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 95
+                              }
+                            },
+                            "expression": {
+                              "type": "Identifier",
+                              "start": 670,
+                              "end": 680,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 84
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 94
+                                }
+                              },
+                              "name": "HomeScreen"
+                            }
+                          }
+                        }
+                      ],
+                      "name": {
+                        "type": "JSXIdentifier",
+                        "start": 591,
+                        "end": 596,
+                        "loc": {
+                          "start": {
+                            "line": 18,
+                            "column": 5
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 10
+                          }
+                        },
+                        "name": "Scene"
+                      },
+                      "selfClosing": true
+                    },
+                    "closingElement": null,
+                    "children": []
+                  },
+                  {
+                    "type": "Literal",
+                    "start": 684,
+                    "end": 689,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 98
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 4
+                      }
+                    },
+                    "value": "\n    ",
+                    "rawValue": null,
+                    "raw": "\n    "
+                  },
+                  {
+                    "type": "JSXElement",
+                    "start": 689,
+                    "end": 784,
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 99
+                      }
+                    },
+                    "openingElement": {
+                      "type": "JSXOpeningElement",
+                      "start": 689,
+                      "end": 784,
+                      "loc": {
+                        "start": {
+                          "line": 19,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 19,
+                          "column": 99
+                        }
+                      },
+                      "attributes": [
+                        {
+                          "type": "JSXAttribute",
+                          "start": 696,
+                          "end": 707,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 22
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 696,
+                            "end": 700,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 15
+                              }
+                            },
+                            "name": "type"
+                          },
+                          "value": {
+                            "type": "Literal",
+                            "start": 701,
+                            "end": 707,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 16
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 22
+                              }
+                            },
+                            "value": "push",
+                            "rawValue": null,
+                            "raw": "\"push\""
+                          }
+                        },
+                        {
+                          "type": "JSXAttribute",
+                          "start": 708,
+                          "end": 728,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 23
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 43
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 708,
+                            "end": 711,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 23
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 26
+                              }
+                            },
+                            "name": "key"
+                          },
+                          "value": {
+                            "type": "Literal",
+                            "start": 712,
+                            "end": 728,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 27
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 43
+                              }
+                            },
+                            "value": "showGameScreen",
+                            "rawValue": null,
+                            "raw": "\"showGameScreen\""
+                          }
+                        },
+                        {
+                          "type": "JSXAttribute",
+                          "start": 729,
+                          "end": 751,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 44
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 66
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 729,
+                            "end": 738,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 44
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 53
+                              }
+                            },
+                            "name": "component"
+                          },
+                          "value": {
+                            "type": "JSXExpressionContainer",
+                            "start": 739,
+                            "end": 751,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 54
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 66
+                              }
+                            },
+                            "expression": {
+                              "type": "Identifier",
+                              "start": 740,
+                              "end": 750,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 55
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 65
+                                }
+                              },
+                              "name": "GameScreen"
+                            }
+                          }
+                        },
+                        {
+                          "type": "JSXAttribute",
+                          "start": 752,
+                          "end": 781,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 67
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 96
+                            }
+                          },
+                          "name": {
+                            "type": "JSXIdentifier",
+                            "start": 752,
+                            "end": 757,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 67
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 72
+                              }
+                            },
+                            "name": "title"
+                          },
+                          "value": {
+                            "type": "Literal",
+                            "start": 758,
+                            "end": 781,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 73
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 96
+                              }
+                            },
+                            "value": "Welcome to your game!",
+                            "rawValue": null,
+                            "raw": "\"Welcome to your game!\""
+                          }
+                        }
+                      ],
+                      "name": {
+                        "type": "JSXIdentifier",
+                        "start": 690,
+                        "end": 695,
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 5
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 10
+                          }
+                        },
+                        "name": "Scene"
+                      },
+                      "selfClosing": true
+                    },
+                    "closingElement": null,
+                    "children": []
+                  },
+                  {
+                    "type": "Literal",
+                    "start": 784,
+                    "end": 787,
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 99
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 2
+                      }
+                    },
+                    "value": "\n  ",
+                    "rawValue": null,
+                    "raw": "\n  "
+                  }
+                ]
+              }
+            ]
+          },
+          "leadingComments": null
+        }
+      ],
+      "kind": "const",
+      "leadingComments": [],
+      "name": "_",
+      "trailingComments": []
+    },
+    {
+      "type": "Identifier",
+      "start": 800,
+      "end": 823,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 0
+        },
+        "end": {
+          "line": 23,
+          "column": 23
+        }
+      },
+      "declaration": {
+        "type": "Identifier",
+        "start": 815,
+        "end": 822,
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 15
+          },
+          "end": {
+            "line": 23,
+            "column": 22
+          }
+        },
+        "name": "Screens"
+      },
+      "name": "_",
+      "leadingComments": [],
+      "trailingComments": []
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "start": 800,
+      "end": 823,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 0
+        },
+        "end": {
+          "line": 23,
+          "column": 23
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 533,
+        "end": 798,
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 0
+          },
+          "end": {
+            "line": 21,
+            "column": 2
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 539,
+            "end": 797,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 6
+              },
+              "end": {
+                "line": 21,
+                "column": 1
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 539,
+              "end": 546,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 6
+                },
+                "end": {
+                  "line": 16,
+                  "column": 13
+                }
+              },
+              "name": "Screens",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "CallExpression",
+              "start": 549,
+              "end": 797,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 16
+                },
+                "end": {
+                  "line": 21,
+                  "column": 1
+                }
+              },
+              "callee": {
+                "type": "MemberExpression",
+                "start": 549,
+                "end": 563,
+                "loc": {
+                  "start": {
+                    "line": 16,
+                    "column": 16
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 30
+                  }
+                },
+                "object": {
+                  "type": "Identifier",
+                  "start": 549,
+                  "end": 556,
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 23
+                    }
+                  },
+                  "name": "Actions"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 557,
+                  "end": 563,
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 24
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 30
+                    }
+                  },
+                  "name": "create"
+                },
+                "computed": false
+              },
+              "arguments": [
+                {
+                  "type": "JSXElement",
+                  "start": 567,
+                  "end": 795,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 10
+                    }
+                  },
+                  "openingElement": {
+                    "type": "JSXOpeningElement",
+                    "start": 567,
+                    "end": 585,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 20
+                      }
+                    },
+                    "attributes": [
+                      {
+                        "type": "JSXAttribute",
+                        "start": 574,
+                        "end": 584,
+                        "loc": {
+                          "start": {
+                            "line": 17,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 19
+                          }
+                        },
+                        "name": {
+                          "type": "JSXIdentifier",
+                          "start": 574,
+                          "end": 577,
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 17,
+                              "column": 12
+                            }
+                          },
+                          "name": "key"
+                        },
+                        "value": {
+                          "type": "Literal",
+                          "start": 578,
+                          "end": 584,
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 17,
+                              "column": 19
+                            }
+                          },
+                          "value": "root",
+                          "rawValue": null,
+                          "raw": "\"root\""
+                        }
+                      }
+                    ],
+                    "name": {
+                      "type": "JSXIdentifier",
+                      "start": 568,
+                      "end": 573,
+                      "loc": {
+                        "start": {
+                          "line": 17,
+                          "column": 3
+                        },
+                        "end": {
+                          "line": 17,
+                          "column": 8
+                        }
+                      },
+                      "name": "Scene"
+                    },
+                    "selfClosing": false
+                  },
+                  "closingElement": {
+                    "type": "JSXClosingElement",
+                    "start": 787,
+                    "end": 795,
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 10
+                      }
+                    },
+                    "name": {
+                      "type": "JSXIdentifier",
+                      "start": 789,
+                      "end": 794,
+                      "loc": {
+                        "start": {
+                          "line": 20,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 20,
+                          "column": 9
+                        }
+                      },
+                      "name": "Scene"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "Literal",
+                      "start": 585,
+                      "end": 590,
+                      "loc": {
+                        "start": {
+                          "line": 17,
+                          "column": 20
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 4
+                        }
+                      },
+                      "value": "\n    ",
+                      "rawValue": null,
+                      "raw": "\n    "
+                    },
+                    {
+                      "type": "JSXElement",
+                      "start": 590,
+                      "end": 684,
+                      "loc": {
+                        "start": {
+                          "line": 18,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 98
+                        }
+                      },
+                      "openingElement": {
+                        "type": "JSXOpeningElement",
+                        "start": 590,
+                        "end": 684,
+                        "loc": {
+                          "start": {
+                            "line": 18,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 98
+                          }
+                        },
+                        "attributes": [
+                          {
+                            "type": "JSXAttribute",
+                            "start": 597,
+                            "end": 607,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 21
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 597,
+                              "end": 607,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 11
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 21
+                                }
+                              },
+                              "name": "hideNavBar"
+                            },
+                            "value": null
+                          },
+                          {
+                            "type": "JSXAttribute",
+                            "start": 608,
+                            "end": 622,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 22
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 36
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 608,
+                              "end": 612,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 22
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 26
+                                }
+                              },
+                              "name": "type"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "start": 613,
+                              "end": 622,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 27
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 36
+                                }
+                              },
+                              "value": "replace",
+                              "rawValue": null,
+                              "raw": "\"replace\""
+                            }
+                          },
+                          {
+                            "type": "JSXAttribute",
+                            "start": 623,
+                            "end": 643,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 37
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 57
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 623,
+                              "end": 626,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 37
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 40
+                                }
+                              },
+                              "name": "key"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "start": 627,
+                              "end": 643,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 41
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 57
+                                }
+                              },
+                              "value": "showHomeScreen",
+                              "rawValue": null,
+                              "raw": "\"showHomeScreen\""
+                            }
+                          },
+                          {
+                            "type": "JSXAttribute",
+                            "start": 644,
+                            "end": 658,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 58
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 72
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 644,
+                              "end": 651,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 58
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 65
+                                }
+                              },
+                              "name": "initial"
+                            },
+                            "value": {
+                              "type": "JSXExpressionContainer",
+                              "start": 652,
+                              "end": 658,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 66
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 72
+                                }
+                              },
+                              "expression": {
+                                "type": "Literal",
+                                "start": 653,
+                                "end": 657,
+                                "loc": {
+                                  "start": {
+                                    "line": 18,
+                                    "column": 67
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 71
+                                  }
+                                },
+                                "value": true,
+                                "rawValue": true,
+                                "raw": "true"
+                              }
+                            }
+                          },
+                          {
+                            "type": "JSXAttribute",
+                            "start": 659,
+                            "end": 681,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 73
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 95
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 659,
+                              "end": 668,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 73
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 82
+                                }
+                              },
+                              "name": "component"
+                            },
+                            "value": {
+                              "type": "JSXExpressionContainer",
+                              "start": 669,
+                              "end": 681,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 83
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 95
+                                }
+                              },
+                              "expression": {
+                                "type": "Identifier",
+                                "start": 670,
+                                "end": 680,
+                                "loc": {
+                                  "start": {
+                                    "line": 18,
+                                    "column": 84
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 94
+                                  }
+                                },
+                                "name": "HomeScreen"
+                              }
+                            }
+                          }
+                        ],
+                        "name": {
+                          "type": "JSXIdentifier",
+                          "start": 591,
+                          "end": 596,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 5
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 10
+                            }
+                          },
+                          "name": "Scene"
+                        },
+                        "selfClosing": true
+                      },
+                      "closingElement": null,
+                      "children": []
+                    },
+                    {
+                      "type": "Literal",
+                      "start": 684,
+                      "end": 689,
+                      "loc": {
+                        "start": {
+                          "line": 18,
+                          "column": 98
+                        },
+                        "end": {
+                          "line": 19,
+                          "column": 4
+                        }
+                      },
+                      "value": "\n    ",
+                      "rawValue": null,
+                      "raw": "\n    "
+                    },
+                    {
+                      "type": "JSXElement",
+                      "start": 689,
+                      "end": 784,
+                      "loc": {
+                        "start": {
+                          "line": 19,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 19,
+                          "column": 99
+                        }
+                      },
+                      "openingElement": {
+                        "type": "JSXOpeningElement",
+                        "start": 689,
+                        "end": 784,
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 99
+                          }
+                        },
+                        "attributes": [
+                          {
+                            "type": "JSXAttribute",
+                            "start": 696,
+                            "end": 707,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 22
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 696,
+                              "end": 700,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 11
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 15
+                                }
+                              },
+                              "name": "type"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "start": 701,
+                              "end": 707,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 16
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 22
+                                }
+                              },
+                              "value": "push",
+                              "rawValue": null,
+                              "raw": "\"push\""
+                            }
+                          },
+                          {
+                            "type": "JSXAttribute",
+                            "start": 708,
+                            "end": 728,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 23
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 43
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 708,
+                              "end": 711,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 23
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 26
+                                }
+                              },
+                              "name": "key"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "start": 712,
+                              "end": 728,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 27
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 43
+                                }
+                              },
+                              "value": "showGameScreen",
+                              "rawValue": null,
+                              "raw": "\"showGameScreen\""
+                            }
+                          },
+                          {
+                            "type": "JSXAttribute",
+                            "start": 729,
+                            "end": 751,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 44
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 66
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 729,
+                              "end": 738,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 44
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 53
+                                }
+                              },
+                              "name": "component"
+                            },
+                            "value": {
+                              "type": "JSXExpressionContainer",
+                              "start": 739,
+                              "end": 751,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 54
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 66
+                                }
+                              },
+                              "expression": {
+                                "type": "Identifier",
+                                "start": 740,
+                                "end": 750,
+                                "loc": {
+                                  "start": {
+                                    "line": 19,
+                                    "column": 55
+                                  },
+                                  "end": {
+                                    "line": 19,
+                                    "column": 65
+                                  }
+                                },
+                                "name": "GameScreen"
+                              }
+                            }
+                          },
+                          {
+                            "type": "JSXAttribute",
+                            "start": 752,
+                            "end": 781,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 67
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 96
+                              }
+                            },
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "start": 752,
+                              "end": 757,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 67
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 72
+                                }
+                              },
+                              "name": "title"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "start": 758,
+                              "end": 781,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 73
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 96
+                                }
+                              },
+                              "value": "Welcome to your game!",
+                              "rawValue": null,
+                              "raw": "\"Welcome to your game!\""
+                            }
+                          }
+                        ],
+                        "name": {
+                          "type": "JSXIdentifier",
+                          "start": 690,
+                          "end": 695,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 5
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 10
+                            }
+                          },
+                          "name": "Scene"
+                        },
+                        "selfClosing": true
+                      },
+                      "closingElement": null,
+                      "children": []
+                    },
+                    {
+                      "type": "Literal",
+                      "start": 784,
+                      "end": 787,
+                      "loc": {
+                        "start": {
+                          "line": 19,
+                          "column": 99
+                        },
+                        "end": {
+                          "line": 20,
+                          "column": 2
+                        }
+                      },
+                      "value": "\n  ",
+                      "rawValue": null,
+                      "raw": "\n  "
+                    }
+                  ]
+                }
+              ]
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * @desc scenes define transition screens\n * @param hideNavBar - hides navigation bar for select screen\n * @param type - defines how screen is added to the navigation pack\n * @param key - required, unique - used to call screen transitions\n * @param title - screen title in navigation bar\n ",
+            "start": 237,
+            "end": 532,
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 0
+              },
+              "end": {
+                "line": 15,
+                "column": 3
+              }
+            },
+            "range": [
+              237,
+              532
+            ]
+          }
+        ],
+        "trailingComments": []
+      }
+    }
+  ]
+}

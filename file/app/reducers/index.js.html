@@ -34,6 +34,7 @@
     
   <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -42,10 +43,12 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { combineReducers } from &apos;redux&apos;;
 import players from &apos;./players.js&apos;;
 import messages from &apos;./messages.js&apos;;
+import routes from &apos;./routes.js&apos;;
 
 const rootReducer = combineReducers({
   players,
   messages,
+  routes,
 });
 
 export default rootReducer;

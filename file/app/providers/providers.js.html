@@ -34,6 +34,7 @@
     
   <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -46,7 +47,9 @@ import { joinGame } from &apos;../actions/user.js&apos;;
 /* Home Screen Providers*/
 export const mapHomeScreen = {
   mapStateToProps() {
-    return {};
+    return {
+      joinGame,
+    };
   },
   mapDispatchToProps(dispatch) {
     return {
@@ -56,6 +59,7 @@ export const mapHomeScreen = {
     };
   },
 };
+
 </code></pre>
 
 </div>

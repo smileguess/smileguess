@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">app/store/configureStore.js | API Document</title>
+  <title data-ice="title">app/reducers/routes.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -39,44 +39,18 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">app/store/configureStore.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Configure Store */
-
-/* Import Dependencies */
-import { createStore, applyMiddleware, compose } from &apos;redux&apos;;
-import React from &apos;react-native&apos;;
-
-/* Import Reducer */
-import rootReducer from &apos;../reducers/index.js&apos;;
-
-/* Import Middleware */
-import thunk from &apos;redux-thunk&apos;;
-import devTools from &apos;remote-redux-devtools&apos;;
-
-/* socket.io assumes navigator.userAgent is a string, supply a dummy one to make it happy
- * and because ES6 module imports are hoisted, we can&apos;t make the userAgent assignment
- * in the same file as the react-native and socket.io imports
- */
-import &apos;./UserAgent&apos;;
-import io from &apos;socket.io-client/socket.io&apos;;
-const socket = io.connect(&apos;http://localhost:1234&apos;, {
-  jsonp: false,
-  transports: [&apos;websocket&apos;],
-});
-import createSocketIoMiddleware from &apos;redux-socket.io&apos;;
-const socketIoMiddleware = createSocketIoMiddleware(socket, &apos;server/&apos;);
-
-export default function configureStore(initialState) {
-  const enhancer = compose(
-    applyMiddleware(thunk, socketIoMiddleware),
-    devTools({
-      name: &apos;Smile Guess&apos;,
-      realtime: true,
-      hostname: &apos;localhost&apos;,
-      port: 8000,
-    })
-  );
-  return createStore(rootReducer, initialState, enhancer);
+<div class="content" data-ice="content"><h1 data-ice="title">app/reducers/routes.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+export default function reducer(state = { scene: {} }, action = {}) {
+  switch (action.type) {
+    case &apos;focus&apos;:
+      return { 
+        ...state,
+        scene: action.scene,
+      };
+    default:
+      return state;
+  }
 }
 </code></pre>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">app/store/configureStore.js | API Document</title>
+  <title data-ice="title">app/screens/GameScreen.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -39,45 +39,55 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">app/store/configureStore.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Configure Store */
+<div class="content" data-ice="content"><h1 data-ice="title">app/screens/GameScreen.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// THIS IS A DUMMY FILE CREATED OFF HOMESCREEN USED FOR TESTING NAVIGATIONS
 
 /* Import Dependencies */
-import { createStore, applyMiddleware, compose } from &apos;redux&apos;;
-import React from &apos;react-native&apos;;
+import { connect } from &apos;react-redux&apos;;
 
-/* Import Reducer */
-import rootReducer from &apos;../reducers/index.js&apos;;
+import { Actions } from &apos;react-native-router-flux&apos;;
 
-/* Import Middleware */
-import thunk from &apos;redux-thunk&apos;;
-import devTools from &apos;remote-redux-devtools&apos;;
+/* Import Provider */
+import { mapHomeScreen } from &apos;../providers/providers.js&apos;;
 
-/* socket.io assumes navigator.userAgent is a string, supply a dummy one to make it happy
- * and because ES6 module imports are hoisted, we can&apos;t make the userAgent assignment
- * in the same file as the react-native and socket.io imports
- */
-import &apos;./UserAgent&apos;;
-import io from &apos;socket.io-client/socket.io&apos;;
-const socket = io.connect(&apos;http://localhost:1234&apos;, {
-  jsonp: false,
-  transports: [&apos;websocket&apos;],
+/* Import Components */
+import React, {
+  View,
+  StyleSheet,
+  PropTypes,
+} from &apos;react-native&apos;;
+import Button from &apos;react-native-button&apos;;
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: &apos;center&apos;,
+    flexDirection: &apos;column&apos;,
+    justifyContent: &apos;center&apos;,
+    flex: 1,
+  },
+  buttonContainer: {
+    flex: 0,
+  },
 });
-import createSocketIoMiddleware from &apos;redux-socket.io&apos;;
-const socketIoMiddleware = createSocketIoMiddleware(socket, &apos;server/&apos;);
 
-export default function configureStore(initialState) {
-  const enhancer = compose(
-    applyMiddleware(thunk, socketIoMiddleware),
-    devTools({
-      name: &apos;Smile Guess&apos;,
-      realtime: true,
-      hostname: &apos;localhost&apos;,
-      port: 8000,
-    })
-  );
-  return createStore(rootReducer, initialState, enhancer);
-}
+const GameScreen = ({ onJoinGame }) =&gt; (
+  &lt;View style={styles.container}&gt;
+    &lt;View style={styles.buttonContainer}&gt;
+      &lt;Button onPress={onJoinGame}&gt; Don&apos;t join Random Game! &lt;/Button&gt;
+    &lt;/View&gt;
+  &lt;/View&gt;
+);
+
+GameScreen.propTypes = {
+  onJoinGame: PropTypes.func.isRequired,
+};
+
+const GameScreenContainer = connect(
+  mapHomeScreen.mapStateToProps,
+  mapHomeScreen.mapDispatchToProps
+)(GameScreen);
+
+export default GameScreenContainer;
 </code></pre>
 
 </div>
