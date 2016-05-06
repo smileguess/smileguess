@@ -24,9 +24,81 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "smileguess/app/action_types/actiontypes.js~join_game",
+    "variable/index.html#static-variable-JOIN_GAME",
+    "<span>JOIN_GAME</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~join_random_game",
+    "variable/index.html#static-variable-JOIN_RANDOM_GAME",
+    "<span>JOIN_RANDOM_GAME</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~send_clue_message",
+    "variable/index.html#static-variable-SEND_CLUE_MESSAGE",
+    "<span>SEND_CLUE_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~send_guess_message",
+    "variable/index.html#static-variable-SEND_GUESS_MESSAGE",
+    "<span>SEND_GUESS_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~socket_clue_message",
+    "variable/index.html#static-variable-SOCKET_CLUE_MESSAGE",
+    "<span>SOCKET_CLUE_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~socket_declare_winner",
+    "variable/index.html#static-variable-SOCKET_DECLARE_WINNER",
+    "<span>SOCKET_DECLARE_WINNER</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~socket_guess_message",
+    "variable/index.html#static-variable-SOCKET_GUESS_MESSAGE",
+    "<span>SOCKET_GUESS_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~socket_player_join_game",
+    "variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME",
+    "<span>SOCKET_PLAYER_JOIN_GAME</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
     "smileguess/app/screens/screens.js~screens",
     "variable/index.html#static-variable-Screens",
     "<span>Screens</span> <span class=\"search-result-import-path\">smileguess/app/screens/Screens.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/actions/user.js~joingame",
+    "variable/index.html#static-variable-joinGame",
+    "<span>joinGame</span> <span class=\"search-result-import-path\">smileguess/app/actions/user.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/actions/user.js~joinrandomgame",
+    "variable/index.html#static-variable-joinRandomGame",
+    "<span>joinRandomGame</span> <span class=\"search-result-import-path\">smileguess/app/actions/user.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/actions/dealer.js~submitclue",
+    "variable/index.html#static-variable-submitClue",
+    "<span>submitClue</span> <span class=\"search-result-import-path\">smileguess/app/actions/dealer.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/actions/user.js~submitguess",
+    "variable/index.html#static-variable-submitGuess",
+    "<span>submitGuess</span> <span class=\"search-result-import-path\">smileguess/app/actions/user.js</span>",
     "variable"
   ],
   [
@@ -387,12 +459,6 @@ window.esdocSearchIndex = [
     "app/actions/dealer.js",
     "file/app/actions/dealer.js.html",
     "app/actions/dealer.js",
-    "file"
-  ],
-  [
-    "app/actions/players.js",
-    "file/app/actions/players.js.html",
-    "app/actions/players.js",
     "file"
   ],
   [

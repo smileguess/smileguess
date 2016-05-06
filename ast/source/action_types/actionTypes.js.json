@@ -1,14 +1,14 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 176,
+  "end": 1229,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 5,
+      "line": 39,
       "column": 0
     }
   },
@@ -16,347 +16,1395 @@
   "body": [
     {
       "type": "ExportNamedDeclaration",
-      "start": 0,
-      "end": 41,
+      "start": 85,
+      "end": 142,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 1,
-          "column": 41
+          "line": 4,
+          "column": 57
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 7,
-        "end": 41,
+        "start": 92,
+        "end": 142,
         "loc": {
           "start": {
-            "line": 1,
+            "line": 4,
             "column": 7
           },
           "end": {
-            "line": 1,
-            "column": 41
+            "line": 4,
+            "column": 57
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 13,
-            "end": 40,
+            "start": 98,
+            "end": 141,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 4,
                 "column": 13
               },
               "end": {
-                "line": 1,
-                "column": 40
+                "line": 4,
+                "column": 56
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 13,
-              "end": 24,
+              "start": 98,
+              "end": 117,
               "loc": {
                 "start": {
-                  "line": 1,
+                  "line": 4,
                   "column": 13
                 },
                 "end": {
-                  "line": 1,
-                  "column": 24
-                }
-              },
-              "name": "SUBMIT_HINT"
-            },
-            "init": {
-              "type": "Literal",
-              "start": 27,
-              "end": 40,
-              "loc": {
-                "start": {
-                  "line": 1,
-                  "column": 27
-                },
-                "end": {
-                  "line": 1,
-                  "column": 40
-                }
-              },
-              "value": "SUBMIT_HINT",
-              "rawValue": "SUBMIT_HINT",
-              "raw": "'SUBMIT_HINT'"
-            }
-          }
-        ],
-        "kind": "const",
-        "leadingComments": [],
-        "trailingComments": []
-      },
-      "specifiers": [],
-      "source": null
-    },
-    {
-      "type": "ExportNamedDeclaration",
-      "start": 42,
-      "end": 93,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 0
-        },
-        "end": {
-          "line": 2,
-          "column": 51
-        }
-      },
-      "declaration": {
-        "type": "VariableDeclaration",
-        "start": 49,
-        "end": 93,
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 7
-          },
-          "end": {
-            "line": 2,
-            "column": 51
-          }
-        },
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "start": 55,
-            "end": 92,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 13
-              },
-              "end": {
-                "line": 2,
-                "column": 50
-              }
-            },
-            "id": {
-              "type": "Identifier",
-              "start": 55,
-              "end": 71,
-              "loc": {
-                "start": {
-                  "line": 2,
-                  "column": 13
-                },
-                "end": {
-                  "line": 2,
-                  "column": 29
-                }
-              },
-              "name": "PLAYER_JOIN_GAME"
-            },
-            "init": {
-              "type": "Literal",
-              "start": 74,
-              "end": 92,
-              "loc": {
-                "start": {
-                  "line": 2,
+                  "line": 4,
                   "column": 32
-                },
-                "end": {
-                  "line": 2,
-                  "column": 50
                 }
               },
-              "value": "PLAYER_JOIN_GAME",
-              "rawValue": "PLAYER_JOIN_GAME",
-              "raw": "'PLAYER_JOIN_GAME'"
-            }
+              "name": "SOCKET_CLUE_MESSAGE",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 120,
+              "end": 141,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 35
+                },
+                "end": {
+                  "line": 4,
+                  "column": 56
+                }
+              },
+              "value": "SOCKET_CLUE_MESSAGE",
+              "rawValue": "SOCKET_CLUE_MESSAGE",
+              "raw": "'SOCKET_CLUE_MESSAGE'"
+            },
+            "leadingComments": null
           }
         ],
         "kind": "const",
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client: sent from the server when the dealer sends a clue message\n ",
+            "start": 0,
+            "end": 84,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 3
+              }
+            },
+            "range": [
+              0,
+              84
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client: sent from the server when a player sends a guess message\n ",
+            "start": 143,
+            "end": 226,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 7,
+                "column": 3
+              }
+            },
+            "range": [
+              143,
+              226
+            ]
+          }
+        ]
       },
       "specifiers": [],
-      "source": null
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client: sent from the server when the dealer sends a clue message\n ",
+          "start": 0,
+          "end": 84,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 3
+            }
+          },
+          "range": [
+            0,
+            84
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client: sent from the server when a player sends a guess message\n ",
+          "start": 143,
+          "end": 226,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 3
+            }
+          },
+          "range": [
+            143,
+            226
+          ]
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 94,
-      "end": 131,
+      "start": 227,
+      "end": 286,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 3,
-          "column": 37
+          "line": 8,
+          "column": 59
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 101,
-        "end": 131,
+        "start": 234,
+        "end": 286,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 8,
             "column": 7
           },
           "end": {
-            "line": 3,
-            "column": 37
+            "line": 8,
+            "column": 59
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 107,
-            "end": 130,
+            "start": 240,
+            "end": 285,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 8,
                 "column": 13
               },
               "end": {
-                "line": 3,
-                "column": 36
+                "line": 8,
+                "column": 58
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 107,
-              "end": 116,
+              "start": 240,
+              "end": 260,
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 8,
                   "column": 13
                 },
                 "end": {
-                  "line": 3,
-                  "column": 22
+                  "line": 8,
+                  "column": 33
                 }
               },
-              "name": "JOIN_GAME"
+              "name": "SOCKET_GUESS_MESSAGE",
+              "leadingComments": null
             },
             "init": {
               "type": "Literal",
-              "start": 119,
-              "end": 130,
+              "start": 263,
+              "end": 285,
               "loc": {
                 "start": {
-                  "line": 3,
-                  "column": 25
+                  "line": 8,
+                  "column": 36
                 },
                 "end": {
-                  "line": 3,
+                  "line": 8,
+                  "column": 58
+                }
+              },
+              "value": "SOCKET_GUESS_MESSAGE",
+              "rawValue": "SOCKET_GUESS_MESSAGE",
+              "raw": "'SOCKET_GUESS_MESSAGE'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client: sent from the server when a player sends a guess message\n ",
+            "start": 143,
+            "end": 226,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 7,
+                "column": 3
+              }
+            },
+            "range": [
+              143,
+              226
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client: sent from the server when a winner is declared\n ",
+            "start": 287,
+            "end": 360,
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            },
+            "range": [
+              287,
+              360
+            ]
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client: sent from the server when a player sends a guess message\n ",
+          "start": 143,
+          "end": 226,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 3
+            }
+          },
+          "range": [
+            143,
+            226
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client: sent from the server when a winner is declared\n ",
+          "start": 287,
+          "end": 360,
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 3
+            }
+          },
+          "range": [
+            287,
+            360
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 361,
+      "end": 422,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 61
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 368,
+        "end": 422,
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 7
+          },
+          "end": {
+            "line": 12,
+            "column": 61
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 374,
+            "end": 421,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 13
+              },
+              "end": {
+                "line": 12,
+                "column": 60
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 374,
+              "end": 395,
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 13
+                },
+                "end": {
+                  "line": 12,
+                  "column": 34
+                }
+              },
+              "name": "SOCKET_DECLARE_WINNER",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 398,
+              "end": 421,
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 37
+                },
+                "end": {
+                  "line": 12,
+                  "column": 60
+                }
+              },
+              "value": "SOCKET_DECLARE_WINNER",
+              "rawValue": "SOCKET_DECLARE_WINNER",
+              "raw": "'SOCKET_DECLARE_WINNER'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client: sent from the server when a winner is declared\n ",
+            "start": 287,
+            "end": 360,
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            },
+            "range": [
+              287,
+              360
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client: sent from the server when a player joins in on the current game\n ",
+            "start": 423,
+            "end": 513,
+            "loc": {
+              "start": {
+                "line": 13,
+                "column": 0
+              },
+              "end": {
+                "line": 15,
+                "column": 3
+              }
+            },
+            "range": [
+              423,
+              513
+            ]
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client: sent from the server when a winner is declared\n ",
+          "start": 287,
+          "end": 360,
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 3
+            }
+          },
+          "range": [
+            287,
+            360
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client: sent from the server when a player joins in on the current game\n ",
+          "start": 423,
+          "end": 513,
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 0
+            },
+            "end": {
+              "line": 15,
+              "column": 3
+            }
+          },
+          "range": [
+            423,
+            513
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 514,
+      "end": 579,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 65
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 521,
+        "end": 579,
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 7
+          },
+          "end": {
+            "line": 16,
+            "column": 65
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 527,
+            "end": 578,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 13
+              },
+              "end": {
+                "line": 16,
+                "column": 64
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 527,
+              "end": 550,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 13
+                },
+                "end": {
+                  "line": 16,
                   "column": 36
                 }
               },
-              "value": "JOIN_GAME",
-              "rawValue": "JOIN_GAME",
-              "raw": "'JOIN_GAME'"
-            }
+              "name": "SOCKET_PLAYER_JOIN_GAME",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 553,
+              "end": 578,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 39
+                },
+                "end": {
+                  "line": 16,
+                  "column": 64
+                }
+              },
+              "value": "SOCKET_PLAYER_JOIN_GAME",
+              "rawValue": "SOCKET_PLAYER_JOIN_GAME",
+              "raw": "'SOCKET_PLAYER_JOIN_GAME'"
+            },
+            "leadingComments": null
           }
         ],
         "kind": "const",
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client: sent from the server when a player joins in on the current game\n ",
+            "start": 423,
+            "end": 513,
+            "loc": {
+              "start": {
+                "line": 13,
+                "column": 0
+              },
+              "end": {
+                "line": 15,
+                "column": 3
+              }
+            },
+            "range": [
+              423,
+              513
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
+            "start": 581,
+            "end": 665,
+            "loc": {
+              "start": {
+                "line": 18,
+                "column": 0
+              },
+              "end": {
+                "line": 20,
+                "column": 3
+              }
+            },
+            "range": [
+              581,
+              665
+            ]
+          }
+        ]
       },
       "specifiers": [],
-      "source": null
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client: sent from the server when a player joins in on the current game\n ",
+          "start": 423,
+          "end": 513,
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 0
+            },
+            "end": {
+              "line": 15,
+              "column": 3
+            }
+          },
+          "range": [
+            423,
+            513
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
+          "start": 581,
+          "end": 665,
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 0
+            },
+            "end": {
+              "line": 20,
+              "column": 3
+            }
+          },
+          "range": [
+            581,
+            665
+          ]
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 132,
-      "end": 175,
+      "start": 666,
+      "end": 726,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 21,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 21,
+          "column": 60
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 673,
+        "end": 726,
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 7
+          },
+          "end": {
+            "line": 21,
+            "column": 60
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 679,
+            "end": 725,
+            "loc": {
+              "start": {
+                "line": 21,
+                "column": 13
+              },
+              "end": {
+                "line": 21,
+                "column": 59
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 679,
+              "end": 697,
+              "loc": {
+                "start": {
+                  "line": 21,
+                  "column": 13
+                },
+                "end": {
+                  "line": 21,
+                  "column": 31
+                }
+              },
+              "name": "SEND_GUESS_MESSAGE",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 700,
+              "end": 725,
+              "loc": {
+                "start": {
+                  "line": 21,
+                  "column": 34
+                },
+                "end": {
+                  "line": 21,
+                  "column": 59
+                }
+              },
+              "value": "server/sendGuessMessage",
+              "rawValue": "server/sendGuessMessage",
+              "raw": "'server/sendGuessMessage'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
+            "start": 581,
+            "end": 665,
+            "loc": {
+              "start": {
+                "line": 18,
+                "column": 0
+              },
+              "end": {
+                "line": 20,
+                "column": 3
+              }
+            },
+            "range": [
+              581,
+              665
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the dealer wants to broadcast a clue\n ",
+            "start": 727,
+            "end": 810,
+            "loc": {
+              "start": {
+                "line": 22,
+                "column": 0
+              },
+              "end": {
+                "line": 24,
+                "column": 3
+              }
+            },
+            "range": [
+              727,
+              810
+            ]
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
+          "start": 581,
+          "end": 665,
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 0
+            },
+            "end": {
+              "line": 20,
+              "column": 3
+            }
+          },
+          "range": [
+            581,
+            665
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the dealer wants to broadcast a clue\n ",
+          "start": 727,
+          "end": 810,
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 0
+            },
+            "end": {
+              "line": 24,
+              "column": 3
+            }
+          },
+          "range": [
+            727,
+            810
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 811,
+      "end": 869,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 0
+        },
+        "end": {
+          "line": 25,
+          "column": 58
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 818,
+        "end": 869,
+        "loc": {
+          "start": {
+            "line": 25,
+            "column": 7
+          },
+          "end": {
+            "line": 25,
+            "column": 58
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 824,
+            "end": 868,
+            "loc": {
+              "start": {
+                "line": 25,
+                "column": 13
+              },
+              "end": {
+                "line": 25,
+                "column": 57
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 824,
+              "end": 841,
+              "loc": {
+                "start": {
+                  "line": 25,
+                  "column": 13
+                },
+                "end": {
+                  "line": 25,
+                  "column": 30
+                }
+              },
+              "name": "SEND_CLUE_MESSAGE",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 844,
+              "end": 868,
+              "loc": {
+                "start": {
+                  "line": 25,
+                  "column": 33
+                },
+                "end": {
+                  "line": 25,
+                  "column": 57
+                }
+              },
+              "value": "server/sendClueMessage",
+              "rawValue": "server/sendClueMessage",
+              "raw": "'server/sendClueMessage'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the dealer wants to broadcast a clue\n ",
+            "start": 727,
+            "end": 810,
+            "loc": {
+              "start": {
+                "line": 22,
+                "column": 0
+              },
+              "end": {
+                "line": 24,
+                "column": 3
+              }
+            },
+            "range": [
+              727,
+              810
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the player wants to join a random game\n ",
+            "start": 870,
+            "end": 955,
+            "loc": {
+              "start": {
+                "line": 26,
+                "column": 0
+              },
+              "end": {
+                "line": 28,
+                "column": 3
+              }
+            },
+            "range": [
+              870,
+              955
+            ]
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the dealer wants to broadcast a clue\n ",
+          "start": 727,
+          "end": 810,
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 0
+            },
+            "end": {
+              "line": 24,
+              "column": 3
+            }
+          },
+          "range": [
+            727,
+            810
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the player wants to join a random game\n ",
+          "start": 870,
+          "end": 955,
+          "loc": {
+            "start": {
+              "line": 26,
+              "column": 0
+            },
+            "end": {
+              "line": 28,
+              "column": 3
+            }
+          },
+          "range": [
+            870,
+            955
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 956,
+      "end": 1012,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 0
+        },
+        "end": {
+          "line": 29,
+          "column": 56
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 963,
+        "end": 1012,
+        "loc": {
+          "start": {
+            "line": 29,
+            "column": 7
+          },
+          "end": {
+            "line": 29,
+            "column": 56
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 969,
+            "end": 1011,
+            "loc": {
+              "start": {
+                "line": 29,
+                "column": 13
+              },
+              "end": {
+                "line": 29,
+                "column": 55
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 969,
+              "end": 985,
+              "loc": {
+                "start": {
+                  "line": 29,
+                  "column": 13
+                },
+                "end": {
+                  "line": 29,
+                  "column": 29
+                }
+              },
+              "name": "JOIN_RANDOM_GAME",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 988,
+              "end": 1011,
+              "loc": {
+                "start": {
+                  "line": 29,
+                  "column": 32
+                },
+                "end": {
+                  "line": 29,
+                  "column": 55
+                }
+              },
+              "value": "server/joinRandomGame",
+              "rawValue": "server/joinRandomGame",
+              "raw": "'server/joinRandomGame'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the player wants to join a random game\n ",
+            "start": 870,
+            "end": 955,
+            "loc": {
+              "start": {
+                "line": 26,
+                "column": 0
+              },
+              "end": {
+                "line": 28,
+                "column": 3
+              }
+            },
+            "range": [
+              870,
+              955
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
+            "start": 1013,
+            "end": 1106,
+            "loc": {
+              "start": {
+                "line": 30,
+                "column": 0
+              },
+              "end": {
+                "line": 32,
+                "column": 3
+              }
+            },
+            "range": [
+              1013,
+              1106
+            ]
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the player wants to join a random game\n ",
+          "start": 870,
+          "end": 955,
+          "loc": {
+            "start": {
+              "line": 26,
+              "column": 0
+            },
+            "end": {
+              "line": 28,
+              "column": 3
+            }
+          },
+          "range": [
+            870,
+            955
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
+          "start": 1013,
+          "end": 1106,
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 0
+            },
+            "end": {
+              "line": 32,
+              "column": 3
+            }
+          },
+          "range": [
+            1013,
+            1106
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 1107,
+      "end": 1150,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 0
+        },
+        "end": {
+          "line": 33,
           "column": 43
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 139,
-        "end": 175,
+        "start": 1114,
+        "end": 1150,
         "loc": {
           "start": {
-            "line": 4,
+            "line": 33,
             "column": 7
           },
           "end": {
-            "line": 4,
+            "line": 33,
             "column": 43
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 145,
-            "end": 174,
+            "start": 1120,
+            "end": 1149,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 33,
                 "column": 13
               },
               "end": {
-                "line": 4,
+                "line": 33,
                 "column": 42
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 145,
-              "end": 157,
+              "start": 1120,
+              "end": 1129,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 33,
                   "column": 13
                 },
                 "end": {
-                  "line": 4,
-                  "column": 25
+                  "line": 33,
+                  "column": 22
                 }
               },
-              "name": "SUBMIT_GUESS"
+              "name": "JOIN_GAME",
+              "leadingComments": null
             },
             "init": {
               "type": "Literal",
-              "start": 160,
-              "end": 174,
+              "start": 1132,
+              "end": 1149,
               "loc": {
                 "start": {
-                  "line": 4,
-                  "column": 28
+                  "line": 33,
+                  "column": 25
                 },
                 "end": {
-                  "line": 4,
+                  "line": 33,
                   "column": 42
                 }
               },
-              "value": "SUBMIT_GUESS",
-              "rawValue": "SUBMIT_GUESS",
-              "raw": "'SUBMIT_GUESS'"
-            }
+              "value": "server/joinGame",
+              "rawValue": "server/joinGame",
+              "raw": "'server/joinGame'"
+            },
+            "leadingComments": null
           }
         ],
         "kind": "const",
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
+            "start": 1013,
+            "end": 1106,
+            "loc": {
+              "start": {
+                "line": 30,
+                "column": 0
+              },
+              "end": {
+                "line": 32,
+                "column": 3
+              }
+            },
+            "range": [
+              1013,
+              1106
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Client: sample comment for ui (client to client) actions\n ",
+            "start": 1152,
+            "end": 1227,
+            "loc": {
+              "start": {
+                "line": 35,
+                "column": 0
+              },
+              "end": {
+                "line": 37,
+                "column": 3
+              }
+            },
+            "range": [
+              1152,
+              1227
+            ]
+          }
+        ]
       },
       "specifiers": [],
-      "source": null
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
+          "start": 1013,
+          "end": 1106,
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 0
+            },
+            "end": {
+              "line": 32,
+              "column": 3
+            }
+          },
+          "range": [
+            1013,
+            1106
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Client: sample comment for ui (client to client) actions\n ",
+          "start": 1152,
+          "end": 1227,
+          "loc": {
+            "start": {
+              "line": 35,
+              "column": 0
+            },
+            "end": {
+              "line": 37,
+              "column": 3
+            }
+          },
+          "range": [
+            1152,
+            1227
+          ]
+        }
+      ]
     }
   ]
 }

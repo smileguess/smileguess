@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 5,
-  "actualCount": 5,
+  "expectCount": 17,
+  "actualCount": 17,
   "files": {
     "app/screens/GameScreen.js": {
       "expectCount": 2,
@@ -13,7 +13,22 @@
       "actualCount": 2,
       "undocumentLines": []
     },
+    "app/action_types/actionTypes.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
     "app/screens/Screens.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "app/actions/user.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "app/actions/dealer.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

@@ -32,7 +32,19 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_GAME">JOIN_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_RANDOM_GAME">JOIN_RANDOM_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_CLUE_MESSAGE">SEND_CLUE_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
@@ -43,29 +55,29 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/actions/__tests__/dealer.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">jest.unmock(&apos;../dealer.js&apos;);
-import { submitHint } from &apos;../dealer.js&apos;;
-import { SUBMIT_HINT } from &apos;../../action_types/actionTypes.js&apos;;
+import { submitClue } from &apos;../dealer.js&apos;;
+import { SEND_CLUE_MESSAGE } from &apos;../../action_types/actionTypes.js&apos;;
 
 
 describe(&apos;User Action Types&apos;, () =&gt; {
-  it(&apos;should have an action type SUBMIT_HINT&apos;, () =&gt; {
-    expect(SUBMIT_HINT).toBeDefined();
-    expect(SUBMIT_HINT).toMatch(&apos;SUBMIT_HINT&apos;);
+  it(&apos;should have an action type SEND_CLUE_MESSAGE&apos;, () =&gt; {
+    expect(SEND_CLUE_MESSAGE).toBeDefined();
+    expect(SEND_CLUE_MESSAGE).toMatch(&apos;server/sendClueMessage&apos;);
   });
 });
 
-describe(&apos;submitHint Action Creator&apos;, () =&gt; {
+describe(&apos;submitClue Action Creator&apos;, () =&gt; {
   it(&apos;should be a function&apos;, () =&gt; {
-    expect(typeof submitHint).toEqual(&apos;function&apos;);
+    expect(typeof submitClue).toEqual(&apos;function&apos;);
   });
   it(&apos;should return an object&apos;, () =&gt; {
-    expect(typeof submitHint(&apos;leaf&apos;)).toEqual(&apos;object&apos;);
+    expect(typeof submitClue(6, &apos;leaf&apos;)).toEqual(&apos;object&apos;);
   });
-  it(&apos;should have a type property of SUBMIT_HINT&apos;, () =&gt; {
-    expect(submitHint(&apos;leaf&apos;).type).toEqual(SUBMIT_HINT);
+  it(&apos;should have a type property of SEND_CLUE_MESSAGE&apos;, () =&gt; {
+    expect(submitClue(6, &apos;leaf&apos;).type).toEqual(SEND_CLUE_MESSAGE);
   });
   it(&apos;should have a hint property of passed in hint&apos;, () =&gt; {
-    expect(submitHint(&apos;leaf&apos;).hint).toEqual(&apos;leaf&apos;);
+    expect(submitClue(6, &apos;leaf&apos;).message).toEqual(&apos;leaf&apos;);
   });
 });
 </code></pre>
