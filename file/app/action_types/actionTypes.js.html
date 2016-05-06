@@ -32,7 +32,11 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
 </ul>
@@ -40,10 +44,22 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/action_types/actionTypes.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export const SUBMIT_HINT = &apos;SUBMIT_HINT&apos;;
-export const PLAYER_JOIN_GAME = &apos;PLAYER_JOIN_GAME&apos;;
-export const JOIN_GAME = &apos;JOIN_GAME&apos;;
-export const SUBMIT_GUESS = &apos;SUBMIT_GUESS&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * These are messages that we get from the server
+ */
+export const SOCKET_CLUE_MESSAGE = &apos;SOCKET_CLUE_MESSAGE&apos;;
+export const SOCKET_GUESS_MESSAGE = &apos;SOCKET_GUESS_MESSAGE&apos;;
+export const SOCKET_DECLARE_WINNER = &apos;SOCKET_DECLARE_WINNER&apos;;
+export const SOCKET_PLAYER_JOIN_GAME = &apos;SOCKET_PLAYER_JOIN_GAME&apos;;
+
+/**
+ * These are messages that we send to the server
+ */
+export const SEND_GUESS_MESSAGE = &apos;server/sendGuessMessage&apos;;
+export const SEND_CLUE_MESSAGE = &apos;server/sendClueMessage&apos;;
+export const JOIN_RANDOM_GAME = &apos;server/joinRandomGame&apos;;
+export const JOIN_GAME = &apos;server/joinGame&apos;;
+
 </code></pre>
 
 </div>

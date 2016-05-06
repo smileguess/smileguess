@@ -1,5 +1,17 @@
 window.esdocSearchIndex = [
   [
+    "smileguess/app/screens/gamescreen.js~gamescreen",
+    "variable/index.html#static-variable-GameScreen",
+    "<span>GameScreen</span> <span class=\"search-result-import-path\">smileguess/app/screens/GameScreen.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/screens/gamescreen.js~gamescreencontainer",
+    "variable/index.html#static-variable-GameScreenContainer",
+    "<span>GameScreenContainer</span> <span class=\"search-result-import-path\">smileguess/app/screens/GameScreen.js</span>",
+    "variable"
+  ],
+  [
     "smileguess/app/screens/homescreen.js~homescreen",
     "variable/index.html#static-variable-HomeScreen",
     "<span>HomeScreen</span> <span class=\"search-result-import-path\">smileguess/app/screens/HomeScreen.js</span>",
@@ -9,6 +21,18 @@ window.esdocSearchIndex = [
     "smileguess/app/screens/homescreen.js~homescreencontainer",
     "variable/index.html#static-variable-HomeScreenContainer",
     "<span>HomeScreenContainer</span> <span class=\"search-result-import-path\">smileguess/app/screens/HomeScreen.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~send_guess_message",
+    "variable/index.html#static-variable-SEND_GUESS_MESSAGE",
+    "<span>SEND_GUESS_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "smileguess/app/action_types/actiontypes.js~socket_clue_message",
+    "variable/index.html#static-variable-SOCKET_CLUE_MESSAGE",
+    "<span>SOCKET_CLUE_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
@@ -390,6 +414,18 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/components/playerinput.js",
+    "file/app/components/PlayerInput.js.html",
+    "app/components/PlayerInput.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/playerinputtest.js",
+    "file/app/components/__tests__/PlayerInputTest.js.html",
+    "app/components/__tests__/PlayerInputTest.js",
+    "file"
+  ],
+  [
     "app/providers/providers.js",
     "file/app/providers/providers.js.html",
     "app/providers/providers.js",
@@ -453,6 +489,12 @@ window.esdocSearchIndex = [
     "app/screens/screens.js",
     "file/app/screens/Screens.js.html",
     "app/screens/Screens.js",
+    "file"
+  ],
+  [
+    "app/screens/__tests__/gamescreentest.js",
+    "file/app/screens/__tests__/GameScreenTest.js.html",
+    "app/screens/__tests__/GameScreenTest.js",
     "file"
   ],
   [

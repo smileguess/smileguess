@@ -10,23 +10,22 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "export const SUBMIT_HINT = 'SUBMIT_HINT';\nexport const PLAYER_JOIN_GAME = 'PLAYER_JOIN_GAME';\nexport const JOIN_GAME = 'JOIN_GAME';\nexport const SUBMIT_GUESS = 'SUBMIT_GUESS';\n"
+    "content": "/**\n * These are messages that we get from the server\n */\nexport const SOCKET_CLUE_MESSAGE = 'SOCKET_CLUE_MESSAGE';\nexport const SOCKET_GUESS_MESSAGE = 'SOCKET_GUESS_MESSAGE';\nexport const SOCKET_DECLARE_WINNER = 'SOCKET_DECLARE_WINNER';\nexport const SOCKET_PLAYER_JOIN_GAME = 'SOCKET_PLAYER_JOIN_GAME';\n\n/**\n * These are messages that we send to the server\n */\nexport const SEND_GUESS_MESSAGE = 'server/sendGuessMessage';\nexport const SEND_CLUE_MESSAGE = 'server/sendClueMessage';\nexport const JOIN_RANDOM_GAME = 'server/joinRandomGame';\nexport const JOIN_GAME = 'server/joinGame';\n\n"
   },
   {
     "__docId__": 1,
     "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "SUBMIT_HINT",
+    "name": "SOCKET_CLUE_MESSAGE",
     "memberof": "app/action_types/actionTypes.js",
-    "longname": "app/action_types/actionTypes.js~SUBMIT_HINT",
+    "longname": "app/action_types/actionTypes.js~SOCKET_CLUE_MESSAGE",
     "access": null,
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
-    "importStyle": "{SUBMIT_HINT}",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "importStyle": "{SOCKET_CLUE_MESSAGE}",
+    "description": "These are messages that we get from the server",
+    "lineNumber": 4,
     "type": {
       "types": [
         "string"
@@ -38,15 +37,15 @@
     "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "PLAYER_JOIN_GAME",
+    "name": "SOCKET_GUESS_MESSAGE",
     "memberof": "app/action_types/actionTypes.js",
-    "longname": "app/action_types/actionTypes.js~PLAYER_JOIN_GAME",
+    "longname": "app/action_types/actionTypes.js~SOCKET_GUESS_MESSAGE",
     "access": null,
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
-    "importStyle": "{PLAYER_JOIN_GAME}",
+    "importStyle": "{SOCKET_GUESS_MESSAGE}",
     "description": null,
-    "lineNumber": 2,
+    "lineNumber": 5,
     "undocument": true,
     "type": {
       "types": [
@@ -59,15 +58,15 @@
     "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "JOIN_GAME",
+    "name": "SOCKET_DECLARE_WINNER",
     "memberof": "app/action_types/actionTypes.js",
-    "longname": "app/action_types/actionTypes.js~JOIN_GAME",
+    "longname": "app/action_types/actionTypes.js~SOCKET_DECLARE_WINNER",
     "access": null,
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
-    "importStyle": "{JOIN_GAME}",
+    "importStyle": "{SOCKET_DECLARE_WINNER}",
     "description": null,
-    "lineNumber": 3,
+    "lineNumber": 6,
     "undocument": true,
     "type": {
       "types": [
@@ -80,15 +79,15 @@
     "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "SUBMIT_GUESS",
+    "name": "SOCKET_PLAYER_JOIN_GAME",
     "memberof": "app/action_types/actionTypes.js",
-    "longname": "app/action_types/actionTypes.js~SUBMIT_GUESS",
+    "longname": "app/action_types/actionTypes.js~SOCKET_PLAYER_JOIN_GAME",
     "access": null,
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
-    "importStyle": "{SUBMIT_GUESS}",
+    "importStyle": "{SOCKET_PLAYER_JOIN_GAME}",
     "description": null,
-    "lineNumber": 4,
+    "lineNumber": 7,
     "undocument": true,
     "type": {
       "types": [
@@ -98,6 +97,89 @@
   },
   {
     "__docId__": 5,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "SEND_GUESS_MESSAGE",
+    "memberof": "app/action_types/actionTypes.js",
+    "longname": "app/action_types/actionTypes.js~SEND_GUESS_MESSAGE",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/action_types/actionTypes.js",
+    "importStyle": "{SEND_GUESS_MESSAGE}",
+    "description": "These are messages that we send to the server",
+    "lineNumber": 12,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "SEND_CLUE_MESSAGE",
+    "memberof": "app/action_types/actionTypes.js",
+    "longname": "app/action_types/actionTypes.js~SEND_CLUE_MESSAGE",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/action_types/actionTypes.js",
+    "importStyle": "{SEND_CLUE_MESSAGE}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "JOIN_RANDOM_GAME",
+    "memberof": "app/action_types/actionTypes.js",
+    "longname": "app/action_types/actionTypes.js~JOIN_RANDOM_GAME",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/action_types/actionTypes.js",
+    "importStyle": "{JOIN_RANDOM_GAME}",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "JOIN_GAME",
+    "memberof": "app/action_types/actionTypes.js",
+    "longname": "app/action_types/actionTypes.js~JOIN_GAME",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/action_types/actionTypes.js",
+    "importStyle": "{JOIN_GAME}",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 9,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -107,10 +189,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "jest.unmock('../dealer.js');\nimport { submitHint } from '../dealer.js';\nimport { SUBMIT_HINT } from '../../action_types/actionTypes.js';\n\n\ndescribe('User Action Types', () => {\n  it('should have an action type SUBMIT_HINT', () => {\n    expect(SUBMIT_HINT).toBeDefined();\n    expect(SUBMIT_HINT).toMatch('SUBMIT_HINT');\n  });\n});\n\ndescribe('submitHint Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof submitHint).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof submitHint('leaf')).toEqual('object');\n  });\n  it('should have a type property of SUBMIT_HINT', () => {\n    expect(submitHint('leaf').type).toEqual(SUBMIT_HINT);\n  });\n  it('should have a hint property of passed in hint', () => {\n    expect(submitHint('leaf').hint).toEqual('leaf');\n  });\n});\n"
+    "content": "jest.unmock('../dealer.js');\nimport { submitClue } from '../dealer.js';\nimport { SEND_CLUE_MESSAGE } from '../../action_types/actionTypes.js';\n\n\ndescribe('User Action Types', () => {\n  it('should have an action type SEND_CLUE_MESSAGE', () => {\n    expect(SEND_CLUE_MESSAGE).toBeDefined();\n    expect(SEND_CLUE_MESSAGE).toMatch('server/sendClueMessage');\n  });\n});\n\ndescribe('submitClue Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof submitClue).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof submitClue(6, 'leaf')).toEqual('object');\n  });\n  it('should have a type property of SEND_CLUE_MESSAGE', () => {\n    expect(submitClue(6, 'leaf').type).toEqual(SEND_CLUE_MESSAGE);\n  });\n  it('should have a hint property of passed in hint', () => {\n    expect(submitClue(6, 'leaf').message).toEqual('leaf');\n  });\n});\n"
   },
   {
-    "__docId__": 6,
+    "__docId__": 10,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -120,31 +202,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "jest.unmock('../players.js');\nimport { playerJoinGame } from '../players.js';\nimport { PLAYER_JOIN_GAME } from '../../action_types/actionTypes.js';\n\n\ndescribe('Player Action Types', () => {\n  it('should have an action type PLAYER_JOIN_GAME', () => {\n    expect(PLAYER_JOIN_GAME).toBeDefined();\n    expect(PLAYER_JOIN_GAME).toMatch('PLAYER_JOIN_GAME');\n  });\n});\n\nconst someDude1 = {\n  id: 5,\n  username: 'joe',\n};\n\ndescribe('playerJoinGame Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof playerJoinGame).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof playerJoinGame(someDude1)).toEqual('object');\n  });\n  it('should have a type property of PLAYER_JOIN_GAME', () => {\n    expect(playerJoinGame(someDude1).type).toEqual(PLAYER_JOIN_GAME);\n  });\n  it('should have a user with an id property of passed in user', () => {\n    expect(playerJoinGame(someDude1).user.id).toEqual(5);\n  });\n});\n"
+    "content": "// jest.unmock('../players.js');\n// import { playerJoinGame } from '../players.js';\n// import { PLAYER_JOIN_GAME } from '../../action_types/actionTypes.js';\n\n\n// describe('Player Action Types', () => {\n//   it('should have an action type PLAYER_JOIN_GAME', () => {\n//     expect(PLAYER_JOIN_GAME).toBeDefined();\n//     expect(PLAYER_JOIN_GAME).toMatch('PLAYER_JOIN_GAME');\n//   });\n// });\n\n// const someDude1 = {\n//   id: 5,\n//   username: 'joe',\n// };\n\n// describe('playerJoinGame Action Creator', () => {\n//   it('should be a function', () => {\n//     expect(typeof playerJoinGame).toEqual('function');\n//   });\n//   it('should return an object', () => {\n//     expect(typeof playerJoinGame(someDude1)).toEqual('object');\n//   });\n//   it('should have a type property of PLAYER_JOIN_GAME', () => {\n//     expect(playerJoinGame(someDude1).type).toEqual(PLAYER_JOIN_GAME);\n//   });\n//   it('should have a user with an id property of passed in user', () => {\n//     expect(playerJoinGame(someDude1).user.id).toEqual(5);\n//   });\n// });\n"
   },
   {
-    "__docId__": 7,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "someDude1",
-    "memberof": "app/actions/__tests__/players.js",
-    "longname": "app/actions/__tests__/players.js~someDude1",
-    "access": null,
-    "export": false,
-    "importPath": "smileguess/app/actions/__tests__/players.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 8,
+    "__docId__": 11,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -154,10 +215,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "jest.unmock('../user.js');\nimport { joinGame, submitGuess } from '../user.js';\nimport { JOIN_GAME, SUBMIT_GUESS } from '../../action_types/actionTypes.js';\n\ndescribe('User Action Types', () => {\n  it('should have an action type JOIN_GAME', () => {\n    expect(JOIN_GAME).toBeDefined();\n    expect(JOIN_GAME).toMatch('JOIN_GAME');\n  });\n  it('should have an action type SUBMIT_GUESS', () => {\n    expect(SUBMIT_GUESS).toBeDefined();\n    expect(SUBMIT_GUESS).toMatch('SUBMIT_GUESS');\n  });\n});\n\ndescribe('joinGame Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof joinGame).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof joinGame(6)).toEqual('object');\n  });\n  it('should have a type property of JOIN_GAME', () => {\n    expect(joinGame(6).type).toEqual(JOIN_GAME);\n  });\n});\n\ndescribe('submitGuess Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof submitGuess).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof submitGuess('tree')).toEqual('object');\n  });\n  it('should have a type property of SUBMIT_GUESS', () => {\n    expect(submitGuess('tree').type).toEqual(SUBMIT_GUESS);\n  });\n  it('should have a guess property of passed in guess', () => {\n    expect(submitGuess('tree').guess).toEqual('tree');\n  });\n});\n"
+    "content": "jest.unmock('../user.js');\nimport { joinGame, joinRandomGame, submitGuess } from '../user.js';\nimport { JOIN_RANDOM_GAME, JOIN_GAME, SEND_GUESS_MESSAGE } from '../../action_types/actionTypes.js';\n\ndescribe('User Action Types', () => {\n  it('should have an action type JOIN_GAME', () => {\n    expect(JOIN_GAME).toBeDefined();\n    expect(JOIN_GAME).toMatch('server/joinGame');\n  });\n  it('should have an action type JOIN_RANDOM_GAME', () => {\n    expect(JOIN_RANDOM_GAME).toBeDefined();\n    expect(JOIN_RANDOM_GAME).toMatch('server/joinRandomGame');\n  });\n  it('should have an action type SEND_GUESS_MESSAGE', () => {\n    expect(SEND_GUESS_MESSAGE).toBeDefined();\n    expect(SEND_GUESS_MESSAGE).toMatch('server/sendGuessMessage');\n  });\n});\n\ndescribe('joinGame Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof joinGame).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof joinGame(6)).toEqual('object');\n  });\n  it('should have a type property of JOIN_GAME', () => {\n    expect(joinGame(6).type).toEqual(JOIN_GAME);\n  });\n});\n\ndescribe('joinRandomGame Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof joinRandomGame).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof joinRandomGame()).toEqual('object');\n  });\n  it('should have a type property of JOIN_GAME', () => {\n    expect(joinRandomGame().type).toEqual(JOIN_RANDOM_GAME);\n  });\n});\n\ndescribe('submitGuess Action Creator', () => {\n  it('should be a function', () => {\n    expect(typeof submitGuess).toEqual('function');\n  });\n  it('should return an object', () => {\n    expect(typeof submitGuess(6, 'tree')).toEqual('object');\n  });\n  it('should have a type property of SUBMIT_GUESS', () => {\n    expect(submitGuess(6, 'tree').type).toEqual(SEND_GUESS_MESSAGE);\n  });\n  it('should have a guess property of passed in guess', () => {\n    expect(submitGuess(6, 'tree').message).toEqual('tree');\n  });\n});\n"
   },
   {
-    "__docId__": 9,
+    "__docId__": 12,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -167,20 +228,20 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { SUBMIT_HINT } from '../action_types/actionTypes.js';\n\nexport const submitHint = (hint) => ({\n  type: SUBMIT_HINT,\n  hint,\n});\n"
+    "content": "import { SEND_CLUE_MESSAGE } from '../action_types/actionTypes.js';\n\nexport const submitClue = (userid, message) => ({\n  type: SEND_CLUE_MESSAGE,\n  userid,\n  message,\n});\n\n"
   },
   {
-    "__docId__": 10,
+    "__docId__": 13,
     "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "submitHint",
+    "name": "submitClue",
     "memberof": "app/actions/dealer.js",
-    "longname": "app/actions/dealer.js~submitHint",
+    "longname": "app/actions/dealer.js~submitClue",
     "access": null,
     "export": true,
     "importPath": "smileguess/app/actions/dealer.js",
-    "importStyle": "{submitHint}",
+    "importStyle": "{submitClue}",
     "description": null,
     "lineNumber": 3,
     "undocument": true,
@@ -191,7 +252,7 @@
     }
   },
   {
-    "__docId__": 11,
+    "__docId__": 14,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -201,31 +262,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { PLAYER_JOIN_GAME } from '../action_types/actionTypes.js';\n\n\nexport const playerJoinGame = (user) => ({\n  type: PLAYER_JOIN_GAME,\n  user,\n});\n"
+    "content": "// import { PLAYER_JOIN_GAME } from '../action_types/actionTypes.js';\n\n// export const playerJoinGame = (user) => ({\n//   type: PLAYER_JOIN_GAME,\n//   user,\n// });\n"
   },
   {
-    "__docId__": 12,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "playerJoinGame",
-    "memberof": "app/actions/players.js",
-    "longname": "app/actions/players.js~playerJoinGame",
-    "access": null,
-    "export": true,
-    "importPath": "smileguess/app/actions/players.js",
-    "importStyle": "{playerJoinGame}",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 13,
+    "__docId__": 15,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -235,10 +275,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { JOIN_GAME, SUBMIT_GUESS } from '../action_types/actionTypes.js';\n\n\nexport const joinGame = (gameId = null) => ({\n  type: JOIN_GAME,\n  gameId,\n});\n\nexport const submitGuess = (guess) => ({\n  type: SUBMIT_GUESS,\n  guess,\n});\n"
+    "content": "import { JOIN_RANDOM_GAME, JOIN_GAME, SEND_GUESS_MESSAGE } from '../action_types/actionTypes.js';\n\n\nexport const joinGame = (gameId = null) => ({\n  type: JOIN_GAME,\n  gameId,\n});\n\nexport const joinRandomGame = () => ({\n  type: JOIN_RANDOM_GAME,\n});\n\nexport const submitGuess = (userid, message) => ({\n  type: SEND_GUESS_MESSAGE,\n  userid,\n  message,\n});\n\n"
   },
   {
-    "__docId__": 14,
+    "__docId__": 16,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -259,7 +299,28 @@
     }
   },
   {
-    "__docId__": 15,
+    "__docId__": 17,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "joinRandomGame",
+    "memberof": "app/actions/user.js",
+    "longname": "app/actions/user.js~joinRandomGame",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/actions/user.js",
+    "importStyle": "{joinRandomGame}",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 18,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -271,101 +332,62 @@
     "importPath": "smileguess/app/actions/user.js",
     "importStyle": "{submitGuess}",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 13,
     "undocument": true,
     "type": {
       "types": [
         "*"
       ]
     }
-  },
-  {
-    "__docId__": 16,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "app/providers/providers.js",
-    "memberof": null,
-    "longname": "app/providers/providers.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "/* Import Actions */\nimport { joinGame } from '../actions/user.js';\n\n\n/* Home Screen Providers*/\nexport const mapHomeScreen = {\n  mapStateToProps() {\n    return {\n      joinGame,\n    };\n  },\n  mapDispatchToProps(dispatch) {\n    return {\n      onJoinGame: (id) => {\n        dispatch(joinGame(id));\n      },\n    };\n  },\n};\n\n"
-  },
-  {
-    "__docId__": 17,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "mapHomeScreen",
-    "memberof": "app/providers/providers.js",
-    "longname": "app/providers/providers.js~mapHomeScreen",
-    "access": null,
-    "export": true,
-    "importPath": "smileguess/app/providers/providers.js",
-    "importStyle": "{mapHomeScreen}",
-    "description": null,
-    "lineNumber": 6,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 18,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "app/reducers/__tests__/combined.js",
-    "memberof": null,
-    "longname": "app/reducers/__tests__/combined.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "jest.unmock('../index.js');\nimport reducer from '../index.js';\n\ndescribe('Combined Reducer', () => {\n  it('should be a function', () => {\n    expect(reducer).not.toBeUndefined();\n    expect(typeof reducer).toBe('function');\n  });\n});\n\n"
   },
   {
     "__docId__": 19,
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "app/reducers/__tests__/messages.js",
+    "name": "app/components/PlayerInput.js",
     "memberof": null,
-    "longname": "app/reducers/__tests__/messages.js",
+    "longname": "app/components/PlayerInput.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "jest.unmock('../messages.js');\nimport messagesReducer from '../messages.js';\nimport { SUBMIT_GUESS, SUBMIT_HINT } from '../../action_types/actionTypes.js';\n\ndescribe('messages reducer', () => {\n  it('should return the initial state', () => {\n    expect(\n      messagesReducer(undefined, {})\n    ).toEqual([]);\n  });\n  it('should handle SUBMIT_GUESS', () => {\n    expect(\n      messagesReducer([], {\n        type: SUBMIT_GUESS, guess: 'leaf' })\n      ).toEqual(['leaf']);\n  });\n  it('should handle SUBMIT_HINT', () => {\n    expect(\n      messagesReducer([], {\n        type: SUBMIT_HINT, hint: 'tree' })\n      ).toEqual(['tree']);\n  });\n});\n"
+    "content": "/* Import Components */\nimport React, {\n  View,\n  StyleSheet,\n  PropTypes,\n  TextInput,\n} from 'react-native';\nimport Button from 'react-native-button';\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    flexDirection: 'row',\n    justifyContent: 'center',\n    alignItems: 'center',\n    height: 40,\n    backgroundColor: '#c4c4c4',\n    padding: 5,\n  },\n  inputField: {\n    flex: 1,\n    height: 30,\n    borderColor: 'gray',\n    borderWidth: 1,\n    backgroundColor: 'white',\n    alignSelf: 'center',\n    paddingLeft: 15,\n    borderRadius: 4,\n  },\n  send: {\n    padding: 5,\n  },\n});\n\nconst PlayerInput = ({ onSubmitEditing }) => (\n  <View style={styles.container}>\n    <TextInput\n      style={styles.inputField}\n      placeholder=\"Input your guess\"\n      returnKeyType=\"send\"\n      onSubmitEditing={onSubmitEditing}\n    />\n    <Button style={styles.send}>Send</Button>\n  </View>\n);\n\nPlayerInput.propTypes = {\n  onSubmitEditing: PropTypes.func.isRequired,\n};\n\nexport default PlayerInput;\n"
   },
   {
     "__docId__": 20,
-    "kind": "file",
+    "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "app/reducers/__tests__/players.js",
-    "memberof": null,
-    "longname": "app/reducers/__tests__/players.js",
+    "name": "styles",
+    "memberof": "app/components/PlayerInput.js",
+    "longname": "app/components/PlayerInput.js~styles",
     "access": null,
+    "export": false,
+    "importPath": "smileguess/app/components/PlayerInput.js",
+    "importStyle": null,
     "description": null,
-    "lineNumber": 1,
-    "content": "jest.unmock('../players.js');\nimport playerReducer from '../players.js';\n\nconst myInitialState = { 1: {\n  username: 'bob',\n} };\n\ndescribe('Players Reducer', () => {\n  it('should be a function', () => {\n    expect(playerReducer).not.toBeUndefined();\n    expect(typeof playerReducer).toBe('function');\n  });\n  it('should return an object', () => {\n    expect(typeof playerReducer()).toBe('object');\n  });\n  it('should default to returning same object if not passed an action', () => {\n    const myNewState = playerReducer(myInitialState);\n    expect(myNewState).toBe(myInitialState);\n  });\n  it('should not mutate its inputs if given an action', () => {\n    const myAction = { type: 'PLAYER_JOIN_GAME', user: { id: 3, username: 'jay' } };\n    const myNewState = playerReducer(myInitialState, myAction);\n    expect(myNewState).not.toBe(myInitialState);\n  });\n  it('should add the userid to the state if given a \"JOIN_GAME\" action', () => {\n    const myAction = { type: 'PLAYER_JOIN_GAME', user: { id: 2, username: 'joan' } };\n    const myNewState = playerReducer(myInitialState, myAction);\n    expect(myNewState[2].username).toEqual('joan');\n  });\n});\n\n"
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
   },
   {
     "__docId__": 21,
     "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "myInitialState",
-    "memberof": "app/reducers/__tests__/players.js",
-    "longname": "app/reducers/__tests__/players.js~myInitialState",
+    "name": "PlayerInput",
+    "memberof": "app/components/PlayerInput.js",
+    "longname": "app/components/PlayerInput.js~PlayerInput",
     "access": null,
-    "export": false,
-    "importPath": "smileguess/app/reducers/__tests__/players.js",
-    "importStyle": null,
+    "export": true,
+    "importPath": "smileguess/app/components/PlayerInput.js",
+    "importStyle": "PlayerInput",
     "description": null,
-    "lineNumber": 4,
+    "lineNumber": 35,
     "undocument": true,
     "type": {
       "types": [
@@ -378,6 +400,176 @@
     "kind": "file",
     "static": true,
     "variation": null,
+    "name": "app/components/__tests__/PlayerInputTest.js",
+    "memberof": null,
+    "longname": "app/components/__tests__/PlayerInputTest.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* Import Test Utils */\nimport TestUtils from 'react-addons-test-utils';\nimport { findWithType } from 'react-shallow-testutils';\n\n/* Import Mocks for Testing */\nimport React, { TextInput } from 'react-native'; // <rootdir>/app/__mocks__/react-native.js\n\n/* Must be mocked explicitly because set as an unmocked module in package.json */\njest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js\n\n/* Unmock PlayerInput for unit testing */\njest.unmock('../PlayerInput.js');\nimport PlayerInput from '../PlayerInput.js';\n\n/* Create mock function to pass in as prop for testing */\nconst submitGuess = jest.genMockFunction();\n\ndescribe('PlayerInput', () => {\n  let output;\n\n  beforeEach(() => {\n    const renderer = TestUtils.createRenderer();\n    renderer.render(<PlayerInput onSubmitEditing={submitGuess} />);\n    output = renderer.getRenderOutput();\n  });\n\n  afterEach(() => {\n    output = undefined;\n  });\n\n  it('should render', () => {\n    expect(output).toBeDefined();\n  });\n\n  it('should have a \"TextInput\" component', () => {\n    expect(() => { findWithType(output, TextInput); }).not.toThrow();\n  });\n\n  it('should have an onSubmitEditing event', () => {\n    const textInput = findWithType(output, TextInput);\n    textInput.props.onSubmitEditing();\n    expect(submitGuess).toBeCalled();\n  });\n});\n"
+  },
+  {
+    "__docId__": 23,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "submitGuess",
+    "memberof": "app/components/__tests__/PlayerInputTest.js",
+    "longname": "app/components/__tests__/PlayerInputTest.js~submitGuess",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/components/__tests__/PlayerInputTest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/providers/providers.js",
+    "memberof": null,
+    "longname": "app/providers/providers.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* Import Actions */\nimport { joinGame, submitGuess } from '../actions/user.js';\nimport { Actions } from 'react-native-router-flux';\n\n\n/* Home Screen Providers*/\nexport const mapHomeScreen = {\n  mapStateToProps() {\n    return {\n      joinGame,\n    };\n  },\n  mapDispatchToProps(dispatch) {\n    return {\n      onJoinGame: (id) => {\n        dispatch(() => {\n          joinGame(id);\n          Actions.showGameScreen();\n        });\n      },\n    };\n  },\n};\n\n/* Game Screen Providers*/\nexport const mapGameScreen = {\n  mapStateToProps() {\n    return {};\n  },\n  mapDispatchToProps(dispatch) {\n    return {\n      onSubmitGuess: (guess) => {\n        dispatch(submitGuess(guess));\n      },\n    };\n  },\n};\n"
+  },
+  {
+    "__docId__": 25,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapHomeScreen",
+    "memberof": "app/providers/providers.js",
+    "longname": "app/providers/providers.js~mapHomeScreen",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/providers/providers.js",
+    "importStyle": "{mapHomeScreen}",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 26,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapGameScreen",
+    "memberof": "app/providers/providers.js",
+    "longname": "app/providers/providers.js~mapGameScreen",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/providers/providers.js",
+    "importStyle": "{mapGameScreen}",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 27,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/__tests__/combined.js",
+    "memberof": null,
+    "longname": "app/reducers/__tests__/combined.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../index.js');\nimport reducer from '../index.js';\n\ndescribe('Combined Reducer', () => {\n  it('should be a function', () => {\n    expect(reducer).not.toBeUndefined();\n    expect(typeof reducer).toBe('function');\n  });\n});\n\n"
+  },
+  {
+    "__docId__": 28,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/__tests__/messages.js",
+    "memberof": null,
+    "longname": "app/reducers/__tests__/messages.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../messages.js');\nimport messagesReducer from '../messages.js';\nimport { SOCKET_GUESS_MESSAGE, SOCKET_CLUE_MESSAGE } from '../../action_types/actionTypes.js';\n\nlet action = {\n  userid: 5,\n  message: 'leaf',\n};\n\ndescribe('messages reducer', () => {\n  it('should return the initial state', () => {\n    expect(messagesReducer(undefined, {})).toEqual([]);\n  });\n  it('should handle SOCKET_GUESS_MESSAGE', () => {\n    action.type = SOCKET_GUESS_MESSAGE;\n    const newState = messagesReducer([], action);\n    expect(Array.isArray(newState)).toBe(true);\n    expect(newState.length).toEqual(1);\n    expect(newState[0].type).toEqual(1);\n    expect(newState[0].message).toEqual('leaf');\n  });\n  it('should handle SOCKET_CLUE_MESSAGE', () => {\n    action.type = SOCKET_CLUE_MESSAGE;\n    const newState = messagesReducer([], action);\n    expect(Array.isArray(newState)).toBe(true);\n    expect(newState.length).toEqual(1);\n    expect(newState[0].type).toEqual(2);\n    expect(newState[0].message).toEqual('leaf');\n  });\n});\n"
+  },
+  {
+    "__docId__": 29,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "action",
+    "memberof": "app/reducers/__tests__/messages.js",
+    "longname": "app/reducers/__tests__/messages.js~action",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/reducers/__tests__/messages.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 30,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/__tests__/players.js",
+    "memberof": null,
+    "longname": "app/reducers/__tests__/players.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "jest.unmock('../players.js');\nimport playerReducer from '../players.js';\nimport { SOCKET_PLAYER_JOIN_GAME } from '../../action_types/actionTypes.js';\n\nconst myInitialState = { 1: {\n  username: 'bob',\n} };\n\ndescribe('Players Reducer', () => {\n  it('should be a function', () => {\n    expect(playerReducer).not.toBeUndefined();\n    expect(typeof playerReducer).toBe('function');\n  });\n  it('should return an object', () => {\n    expect(typeof playerReducer()).toBe('object');\n  });\n  it('should default to returning same object if not passed an action', () => {\n    const myNewState = playerReducer(myInitialState);\n    expect(myNewState).toBe(myInitialState);\n  });\n  it('should not mutate its inputs if given an action', () => {\n    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, user: { id: 3, username: 'jay' } };\n    const myNewState = playerReducer(myInitialState, myAction);\n    expect(myNewState).not.toBe(myInitialState);\n  });\n  it('should add the userid to the state if given a \"SOCKET_PLAYER_JOIN_GAME\" action', () => {\n    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, user: { id: 2, username: 'joan' } };\n    const myNewState = playerReducer(myInitialState, myAction);\n    expect(myNewState[2].username).toEqual('joan');\n  });\n});\n\n"
+  },
+  {
+    "__docId__": 31,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "myInitialState",
+    "memberof": "app/reducers/__tests__/players.js",
+    "longname": "app/reducers/__tests__/players.js~myInitialState",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/reducers/__tests__/players.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "file",
+    "static": true,
+    "variation": null,
     "name": "app/reducers/index.js",
     "memberof": null,
     "longname": "app/reducers/index.js",
@@ -387,7 +579,7 @@
     "content": "import { combineReducers } from 'redux';\nimport players from './players.js';\nimport messages from './messages.js';\nimport routes from './routes.js';\n\nconst rootReducer = combineReducers({\n  players,\n  messages,\n  routes,\n});\n\nexport default rootReducer;\n\n"
   },
   {
-    "__docId__": 23,
+    "__docId__": 33,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -408,7 +600,7 @@
     }
   },
   {
-    "__docId__": 24,
+    "__docId__": 34,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -418,10 +610,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { SUBMIT_GUESS, SUBMIT_HINT } from '../action_types/actionTypes.js';\n\nconst noAction = {\n  type: 'NO_ACTION',\n};\n\nexport default (state = [], action = noAction) => {\n  switch (action.type) {\n    case SUBMIT_GUESS:\n      return state.concat([action.guess]);\n    case SUBMIT_HINT:\n      return state.concat([action.hint]);\n    default:\n      return state;\n  }\n};\n"
+    "content": "import { SOCKET_CLUE_MESSAGE, SOCKET_GUESS_MESSAGE } from '../action_types/actionTypes.js';\n\nconst noAction = {\n  type: 'NO_ACTION',\n};\n\nexport default (state = [], action = noAction) => {\n  switch (action.type) {\n    case SOCKET_GUESS_MESSAGE:\n      return state.concat([{\n        type: 1,\n        userid: action.userid,\n        message: action.message,\n      }]);\n    case SOCKET_CLUE_MESSAGE:\n      return state.concat([{\n        type: 2,\n        userid: action.userid,\n        message: action.message,\n      }]);\n    default:\n      return state;\n  }\n};\n"
   },
   {
-    "__docId__": 25,
+    "__docId__": 35,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -442,7 +634,7 @@
     }
   },
   {
-    "__docId__": 26,
+    "__docId__": 36,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -452,10 +644,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { PLAYER_JOIN_GAME } from '../action_types/actionTypes.js';\n\nconst noAction = {\n  type: 'NO_ACTION',\n};\n\nconst mergeNewUser = (state, user) => {\n  const newUser = {};\n  newUser[user.id] = user;\n  return Object.assign({}, state, newUser);\n};\n\nexport default (state = {}, action = noAction) => {\n  switch (action.type) {\n    case PLAYER_JOIN_GAME:\n      return mergeNewUser(state, action.user);\n    default:\n      return state;\n  }\n};\n"
+    "content": "import { SOCKET_PLAYER_JOIN_GAME } from '../action_types/actionTypes.js';\n\nconst noAction = {\n  type: 'NO_ACTION',\n};\n\nconst mergeNewUser = (state, user) => {\n  const newUser = {};\n  newUser[user.id] = user;\n  return Object.assign({}, state, newUser);\n};\n\nexport default (state = {}, action = noAction) => {\n  switch (action.type) {\n    case SOCKET_PLAYER_JOIN_GAME:\n      return mergeNewUser(state, action.user);\n    default:\n      return state;\n  }\n};\n"
   },
   {
-    "__docId__": 27,
+    "__docId__": 37,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -476,7 +668,7 @@
     }
   },
   {
-    "__docId__": 28,
+    "__docId__": 38,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -497,7 +689,7 @@
     }
   },
   {
-    "__docId__": 29,
+    "__docId__": 39,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -510,7 +702,7 @@
     "content": "\nexport default function reducer(state = { scene: {} }, action = {}) {\n  switch (action.type) {\n    case 'focus':\n      return { \n        ...state,\n        scene: action.scene,\n      };\n    default:\n      return state;\n  }\n}\n"
   },
   {
-    "__docId__": 30,
+    "__docId__": 40,
     "kind": "function",
     "static": true,
     "variation": null,
@@ -552,7 +744,7 @@
     "generator": false
   },
   {
-    "__docId__": 31,
+    "__docId__": 41,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -562,95 +754,19 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "// THIS IS A DUMMY FILE CREATED OFF HOMESCREEN USED FOR TESTING NAVIGATIONS\n\n/* Import Dependencies */\nimport { connect } from 'react-redux';\n\nimport { Actions } from 'react-native-router-flux';\n\n/* Import Provider */\nimport { mapHomeScreen } from '../providers/providers.js';\n\n/* Import Components */\nimport React, {\n  View,\n  StyleSheet,\n  PropTypes,\n} from 'react-native';\nimport Button from 'react-native-button';\n\nconst styles = StyleSheet.create({\n  container: {\n    alignItems: 'center',\n    flexDirection: 'column',\n    justifyContent: 'center',\n    flex: 1,\n  },\n  buttonContainer: {\n    flex: 0,\n  },\n});\n\nconst GameScreen = ({ onJoinGame }) => (\n  <View style={styles.container}>\n    <View style={styles.buttonContainer}>\n      <Button onPress={onJoinGame}> Don't join Random Game! </Button>\n    </View>\n  </View>\n);\n\nGameScreen.propTypes = {\n  onJoinGame: PropTypes.func.isRequired,\n};\n\nconst GameScreenContainer = connect(\n  mapHomeScreen.mapStateToProps,\n  mapHomeScreen.mapDispatchToProps\n)(GameScreen);\n\nexport default GameScreenContainer;\n"
+    "content": "/* Import Dependencies */\nimport { connect } from 'react-redux';\n\n/* Import Provider */\nimport { mapGameScreen } from '../providers/providers.js';\n\n/* Import Components */\nimport React, {\n  View,\n  StyleSheet,\n  PropTypes,\n  Dimensions,\n} from 'react-native';\nimport PlayerInput from '../components/PlayerInput.js';\n\nconst { width: screenWidth } = Dimensions.get('window');\n\nconst styles = StyleSheet.create({\n  container: {\n    alignItems: 'center',\n    flexDirection: 'column',\n    justifyContent: 'flex-end',\n    flex: 1,\n  },\n  item: {\n    flexDirection: 'row',\n    backgroundColor: 'green',\n    width: screenWidth,\n  },\n});\n\n\n/**\n * GameScreen is a React functional component.\n * It defines the game room players will see while playing the game.\n * It displays messages as well as allows for user input form either the dealer\n * or the players who are guessing.\n * @param {{onSubmitGuess: function()}} props for GameScreen.\n */\nexport const GameScreen = ({ onSubmitGuess }) => (\n  <View style={styles.container}>\n    <View style={styles.item}>\n      <PlayerInput onSubmitEditing={onSubmitGuess} />\n    </View>\n  </View>\n);\n\nGameScreen.propTypes = {\n  onSubmitGuess: PropTypes.func.isRequired,\n};\n\n/**\n * GameScreenContainer is a 'container component' which binds the props and\n * actions creators of GameScreen to the store and dispatcher, respectively.\n * It should be imported in favor of HomeScreen, which is exported only\n * for documentation purposes.\n */\nconst GameScreenContainer = connect(\n  mapGameScreen.mapStateToProps,\n  mapGameScreen.mapDispatchToProps\n)(GameScreen);\n\nexport default GameScreenContainer;\n"
   },
   {
-    "__docId__": 32,
+    "__docId__": 42,
     "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "styles",
+    "name": "width",
     "memberof": "app/screens/GameScreen.js",
-    "longname": "app/screens/GameScreen.js~styles",
+    "longname": "app/screens/GameScreen.js~width",
     "access": null,
     "export": false,
     "importPath": "smileguess/app/screens/GameScreen.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 19,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 33,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "GameScreen",
-    "memberof": "app/screens/GameScreen.js",
-    "longname": "app/screens/GameScreen.js~GameScreen",
-    "access": null,
-    "export": false,
-    "importPath": "smileguess/app/screens/GameScreen.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 31,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 34,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "GameScreenContainer",
-    "memberof": "app/screens/GameScreen.js",
-    "longname": "app/screens/GameScreen.js~GameScreenContainer",
-    "access": null,
-    "export": true,
-    "importPath": "smileguess/app/screens/GameScreen.js",
-    "importStyle": "GameScreenContainer",
-    "description": null,
-    "lineNumber": 43,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 35,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "app/screens/HomeScreen.js",
-    "memberof": null,
-    "longname": "app/screens/HomeScreen.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "/* Import Dependencies */\nimport { connect } from 'react-redux';\nimport { Actions } from 'react-native-router-flux';\n\n/* Import Provider */\nimport { mapHomeScreen } from '../providers/providers.js';\n\n/* Import Components */\nimport React, {\n  View,\n  StyleSheet,\n  PropTypes,\n} from 'react-native';\nimport Button from 'react-native-button';\n\nconst styles = StyleSheet.create({\n  container: {\n    alignItems: 'center',\n    flexDirection: 'column',\n    justifyContent: 'center',\n    flex: 1,\n  },\n  buttonContainer: {\n    flex: 0,\n  },\n});\n\n/**\n * Home Screen is a React functional component.\n * It provides an entry point for joining a random game.\n * In the future, it will display a list of available games to join.\n * @param {{onJoinGame: function()}} onPress event handler for the Join Game button.\n * @desc onPress additionally triggers navigation to GameScreen\n */\nexport const HomeScreen = ({ onJoinGame }) => (\n  <View style={styles.container}>\n    <View style={styles.buttonContainer}>\n      <Button\n        onPress={() => {\n          onJoinGame(4);\n          Actions.showGameScreen();\n        }}\n      >Go to Game Screen!</Button>\n    </View>\n  </View>\n);\n\nHomeScreen.propTypes = {\n  onJoinGame: PropTypes.func.isRequired,\n};\n\n/**\n * HomeScreenContainer is a 'container component' which binds the props and\n * actions creators of HomeScreen to the store and dispatcher, respectively.\n * It should be imported in favor of HomeScreen, which is exported only\n * for documentation purposes.\n */\nconst HomeScreenContainer = connect(\n  mapHomeScreen.mapStateToProps,\n  mapHomeScreen.mapDispatchToProps\n)(HomeScreen);\n\nexport default HomeScreenContainer;\n"
-  },
-  {
-    "__docId__": 36,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "styles",
-    "memberof": "app/screens/HomeScreen.js",
-    "longname": "app/screens/HomeScreen.js~styles",
-    "access": null,
-    "export": false,
-    "importPath": "smileguess/app/screens/HomeScreen.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 16,
@@ -662,7 +778,114 @@
     }
   },
   {
-    "__docId__": 37,
+    "__docId__": 43,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "styles",
+    "memberof": "app/screens/GameScreen.js",
+    "longname": "app/screens/GameScreen.js~styles",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/screens/GameScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 44,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GameScreen",
+    "memberof": "app/screens/GameScreen.js",
+    "longname": "app/screens/GameScreen.js~GameScreen",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/screens/GameScreen.js",
+    "importStyle": "{GameScreen}",
+    "description": "GameScreen is a React functional component.\nIt defines the game room players will see while playing the game.\nIt displays messages as well as allows for user input form either the dealer\nor the players who are guessing.",
+    "lineNumber": 40,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "{onSubmitGuess: function()}"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "props",
+        "description": "for GameScreen."
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 45,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GameScreenContainer",
+    "memberof": "app/screens/GameScreen.js",
+    "longname": "app/screens/GameScreen.js~GameScreenContainer",
+    "access": null,
+    "export": true,
+    "importPath": "smileguess/app/screens/GameScreen.js",
+    "importStyle": "GameScreenContainer",
+    "description": "GameScreenContainer is a 'container component' which binds the props and\nactions creators of GameScreen to the store and dispatcher, respectively.\nIt should be imported in favor of HomeScreen, which is exported only\nfor documentation purposes.",
+    "lineNumber": 58,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/screens/HomeScreen.js",
+    "memberof": null,
+    "longname": "app/screens/HomeScreen.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* Import Dependencies */\nimport { connect } from 'react-redux';\n\n/* Import Provider */\nimport { mapHomeScreen } from '../providers/providers.js';\n\n/* Import Components */\nimport React, {\n  View,\n  StyleSheet,\n  PropTypes,\n} from 'react-native';\nimport Button from 'react-native-button';\n\nconst styles = StyleSheet.create({\n  container: {\n    alignItems: 'center',\n    flexDirection: 'column',\n    justifyContent: 'center',\n    flex: 1,\n  },\n  buttonContainer: {\n    flex: 0,\n  },\n});\n\n/**\n * Home Screen is a React functional component.\n * It provides an entry point for joining a random game.\n * In the future, it will display a list of available games to join.\n * @param {{onJoinGame: function()}} onPress event handler for the Join Game button.\n * @desc onPress additionally triggers navigation to GameScreen\n */\nexport const HomeScreen = ({ onJoinGame }) => (\n  <View style={styles.container}>\n    <View style={styles.buttonContainer}>\n      <Button\n        onPress={onJoinGame}\n      >Go to Game Screen!</Button>\n    </View>\n  </View>\n);\n\nHomeScreen.propTypes = {\n  onJoinGame: PropTypes.func.isRequired,\n};\n\n/**\n * HomeScreenContainer is a 'container component' which binds the props and\n * actions creators of HomeScreen to the store and dispatcher, respectively.\n * It should be imported in favor of HomeScreen, which is exported only\n * for documentation purposes.\n */\nconst HomeScreenContainer = connect(\n  mapHomeScreen.mapStateToProps,\n  mapHomeScreen.mapDispatchToProps\n)(HomeScreen);\n\nexport default HomeScreenContainer;\n"
+  },
+  {
+    "__docId__": 47,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "styles",
+    "memberof": "app/screens/HomeScreen.js",
+    "longname": "app/screens/HomeScreen.js~styles",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/screens/HomeScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 48,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -674,7 +897,7 @@
     "importPath": "smileguess/app/screens/HomeScreen.js",
     "importStyle": "{HomeScreen}",
     "description": "onPress additionally triggers navigation to GameScreen",
-    "lineNumber": 35,
+    "lineNumber": 34,
     "params": [
       {
         "nullable": null,
@@ -694,7 +917,7 @@
     }
   },
   {
-    "__docId__": 38,
+    "__docId__": 49,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -706,7 +929,7 @@
     "importPath": "smileguess/app/screens/HomeScreen.js",
     "importStyle": "HomeScreenContainer",
     "description": "HomeScreenContainer is a 'container component' which binds the props and\nactions creators of HomeScreen to the store and dispatcher, respectively.\nIt should be imported in favor of HomeScreen, which is exported only\nfor documentation purposes.",
-    "lineNumber": 58,
+    "lineNumber": 54,
     "type": {
       "types": [
         "*"
@@ -714,7 +937,7 @@
     }
   },
   {
-    "__docId__": 39,
+    "__docId__": 50,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -727,7 +950,7 @@
     "content": "/* Import Dependencies */\nimport React from 'react-native';\nimport { Actions, Scene } from 'react-native-router-flux';\n\n/* Import transition screens */\nimport HomeScreen from './HomeScreen.js';\nimport GameScreen from './GameScreen.js';\n\n/**\n * @desc scenes define transition screens\n * @param hideNavBar - hides navigation bar for select screen\n * @param type - defines how screen is added to the navigation pack\n * @param key - required, unique - used to call screen transitions\n * @param title - screen title in navigation bar\n */\nconst Screens = Actions.create(\n  <Scene key=\"root\">\n    <Scene hideNavBar type=\"replace\" key=\"showHomeScreen\" initial={true} component={HomeScreen} />\n    <Scene type=\"push\" key=\"showGameScreen\" component={GameScreen} title=\"Welcome to your game!\" />\n  </Scene>\n);\n\nexport default Screens;\n"
   },
   {
-    "__docId__": 40,
+    "__docId__": 51,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -789,7 +1012,41 @@
     }
   },
   {
-    "__docId__": 41,
+    "__docId__": 52,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/screens/__tests__/GameScreenTest.js",
+    "memberof": null,
+    "longname": "app/screens/__tests__/GameScreenTest.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/* Import Test Utils */\nimport TestUtils from 'react-addons-test-utils';\nimport { findWithType } from 'react-shallow-testutils';\n\n/* Import Mocks for Testing */\nimport React from 'react-native'; // <rootdir>/app/__mocks__/react-native.js\nimport PlayerInput from '../../components/PlayerInput.js'; // Mocked automatically\n/* Must be mocked explicitly because set as an unmocked module in package.json */\njest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js\n\n/* Unmock GameScreen for unit testing */\njest.unmock('../GameScreen.js');\nimport GameScreen from '../GameScreen.js';\n\n/* Create mock function to pass in as prop for testing */\nconst submitGuess = jest.genMockFunction();\n\ndescribe('GameScreen', () => {\n  let output;\n\n  beforeEach(() => {\n    const renderer = TestUtils.createRenderer();\n    renderer.render(<GameScreen onSubmitGuess={submitGuess} />);\n    output = renderer.getRenderOutput();\n  });\n\n  afterEach(() => {\n    output = undefined;\n  });\n\n  it('should render', () => {\n    expect(output).toBeDefined();\n  });\n\n  it('should have a \"Player Input\" component', () => {\n    expect(() => { findWithType(output, PlayerInput); }).not.toThrow();\n  });\n});\n"
+  },
+  {
+    "__docId__": 53,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "submitGuess",
+    "memberof": "app/screens/__tests__/GameScreenTest.js",
+    "longname": "app/screens/__tests__/GameScreenTest.js~submitGuess",
+    "access": null,
+    "export": false,
+    "importPath": "smileguess/app/screens/__tests__/GameScreenTest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -802,7 +1059,7 @@
     "content": "/* Import Test Utils */\nimport TestUtils from 'react-addons-test-utils';\nimport { findWithType } from 'react-shallow-testutils';\n\n/* Import Mocks for Testing */\nimport React from 'react-native'; // <rootdir>/app/__mocks__/react-native.js\nimport Button from 'react-native-button'; // Mocked automatically\n\n/* Must be mocked explicitly because set as an unmocked module in package.json */\njest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js\n\n/* Unmock HomeScreen for unit testing */\njest.unmock('../HomeScreen.js');\nimport HomeScreen from '../HomeScreen.js';\n\n/* Create mock function to pass in as prop for testing */\nconst joinGame = jest.genMockFunction();\n\ndescribe('HomeScreen', () => {\n  let output;\n\n  beforeEach(() => {\n    const renderer = TestUtils.createRenderer();\n    renderer.render(<HomeScreen onJoinGame={joinGame} />);\n    output = renderer.getRenderOutput();\n  });\n\n  afterEach(() => {\n    output = undefined;\n  });\n\n  it('should render', () => {\n    expect(output).toBeDefined();\n  });\n\n  it('should have a \"Join Game\" button', () => {\n    expect(() => { findWithType(output, Button); }).not.toThrow();\n  });\n\n  it('should have an onPress event', () => {\n    const joinButton = findWithType(output, Button);\n    joinButton.props.onPress();\n    expect(joinGame).toBeCalled();\n  });\n});\n"
   },
   {
-    "__docId__": 42,
+    "__docId__": 55,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -823,7 +1080,7 @@
     }
   },
   {
-    "__docId__": 43,
+    "__docId__": 56,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -836,7 +1093,7 @@
     "content": "window.navigator.userAgent = 'react-native';\n\n"
   },
   {
-    "__docId__": 44,
+    "__docId__": 57,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -846,10 +1103,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "/* Configure Store */\n\n/* Import Dependencies */\nimport { createStore, applyMiddleware, compose } from 'redux';\nimport React from 'react-native';\n\n/* Import Reducer */\nimport rootReducer from '../reducers/index.js';\n\n/* Import Middleware */\nimport thunk from 'redux-thunk';\nimport devTools from 'remote-redux-devtools';\n\n/* socket.io assumes navigator.userAgent is a string, supply a dummy one to make it happy\n * and because ES6 module imports are hoisted, we can't make the userAgent assignment\n * in the same file as the react-native and socket.io imports\n */\nimport './UserAgent';\nimport io from 'socket.io-client/socket.io';\nconst socket = io.connect('http://localhost:1234', {\n  jsonp: false,\n  transports: ['websocket'],\n});\nimport createSocketIoMiddleware from 'redux-socket.io';\nconst socketIoMiddleware = createSocketIoMiddleware(socket, 'server/');\n\nexport default function configureStore(initialState) {\n  const enhancer = compose(\n    applyMiddleware(thunk, socketIoMiddleware),\n    devTools({\n      name: 'Smile Guess',\n      realtime: true,\n      hostname: 'localhost',\n      port: 8000,\n    })\n  );\n  return createStore(rootReducer, initialState, enhancer);\n}\n"
+    "content": "/* Configure Store */\n\n/* Import Dependencies */\nimport { createStore, applyMiddleware, compose } from 'redux';\n\n/* Import Reducer */\nimport rootReducer from '../reducers/index.js';\n\n/* Import Middleware */\nimport thunk from 'redux-thunk';\nimport devTools from 'remote-redux-devtools';\n\n/* socket.io assumes navigator.userAgent is a string, supply a dummy one to make it happy\n * and because ES6 module imports are hoisted, we can't make the userAgent assignment\n * in the same file as the react-native and socket.io imports\n */\nimport './UserAgent';\nimport io from 'socket.io-client/socket.io';\nconst socket = io.connect('http://localhost:1234', {\n  jsonp: false,\n  transports: ['websocket'],\n});\nimport createSocketIoMiddleware from 'redux-socket.io';\nconst socketIoMiddleware = createSocketIoMiddleware(socket, 'server/');\n\nexport default function configureStore(initialState) {\n  const enhancer = compose(\n    applyMiddleware(thunk, socketIoMiddleware),\n    devTools({\n      name: 'Smile Guess',\n      realtime: true,\n      hostname: 'localhost',\n      port: 8000,\n    })\n  );\n  return createStore(rootReducer, initialState, enhancer);\n}\n"
   },
   {
-    "__docId__": 45,
+    "__docId__": 58,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -861,7 +1118,7 @@
     "importPath": "smileguess/app/store/configureStore.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 20,
+    "lineNumber": 19,
     "undocument": true,
     "type": {
       "types": [
@@ -870,7 +1127,7 @@
     }
   },
   {
-    "__docId__": 46,
+    "__docId__": 59,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -882,7 +1139,7 @@
     "importPath": "smileguess/app/store/configureStore.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 25,
+    "lineNumber": 24,
     "undocument": true,
     "type": {
       "types": [
@@ -891,7 +1148,7 @@
     }
   },
   {
-    "__docId__": 47,
+    "__docId__": 60,
     "kind": "function",
     "static": true,
     "variation": null,
@@ -903,7 +1160,7 @@
     "importPath": "smileguess/app/store/configureStore.js",
     "importStyle": "configureStore",
     "description": null,
-    "lineNumber": 27,
+    "lineNumber": 26,
     "undocument": true,
     "params": [
       {
@@ -921,7 +1178,7 @@
     "generator": false
   },
   {
-    "__docId__": 49,
+    "__docId__": 62,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -934,7 +1191,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 50,
+    "__docId__": 63,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -947,7 +1204,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 51,
+    "__docId__": 64,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -960,7 +1217,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 52,
+    "__docId__": 65,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -973,7 +1230,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 53,
+    "__docId__": 66,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -986,7 +1243,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 54,
+    "__docId__": 67,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -999,7 +1256,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 55,
+    "__docId__": 68,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1012,7 +1269,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 56,
+    "__docId__": 69,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1025,7 +1282,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 57,
+    "__docId__": 70,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1038,7 +1295,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 58,
+    "__docId__": 71,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1051,7 +1308,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 59,
+    "__docId__": 72,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1064,7 +1321,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 60,
+    "__docId__": 73,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1077,7 +1334,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 61,
+    "__docId__": 74,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1090,7 +1347,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 62,
+    "__docId__": 75,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1103,7 +1360,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 63,
+    "__docId__": 76,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1116,7 +1373,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 64,
+    "__docId__": 77,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1129,7 +1386,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 65,
+    "__docId__": 78,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1142,7 +1399,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 66,
+    "__docId__": 79,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1155,7 +1412,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 67,
+    "__docId__": 80,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1168,7 +1425,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 68,
+    "__docId__": 81,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1181,7 +1438,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 69,
+    "__docId__": 82,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1194,7 +1451,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 70,
+    "__docId__": 83,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1207,7 +1464,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 71,
+    "__docId__": 84,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1220,7 +1477,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 72,
+    "__docId__": 85,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1233,7 +1490,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 73,
+    "__docId__": 86,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1246,7 +1503,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 74,
+    "__docId__": 87,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1259,7 +1516,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 75,
+    "__docId__": 88,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1272,7 +1529,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 76,
+    "__docId__": 89,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1285,7 +1542,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 77,
+    "__docId__": 90,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1298,7 +1555,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 78,
+    "__docId__": 91,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1311,7 +1568,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 79,
+    "__docId__": 92,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1324,7 +1581,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 80,
+    "__docId__": 93,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1337,7 +1594,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 81,
+    "__docId__": 94,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1350,7 +1607,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 82,
+    "__docId__": 95,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1363,7 +1620,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 83,
+    "__docId__": 96,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1376,7 +1633,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 84,
+    "__docId__": 97,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1389,7 +1646,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 85,
+    "__docId__": 98,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1402,7 +1659,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 86,
+    "__docId__": 99,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1415,7 +1672,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 87,
+    "__docId__": 100,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1428,7 +1685,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 88,
+    "__docId__": 101,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1441,7 +1698,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 89,
+    "__docId__": 102,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1454,7 +1711,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 90,
+    "__docId__": 103,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1467,7 +1724,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 91,
+    "__docId__": 104,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1480,7 +1737,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 92,
+    "__docId__": 105,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1493,7 +1750,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 93,
+    "__docId__": 106,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1506,7 +1763,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 94,
+    "__docId__": 107,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1519,7 +1776,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 95,
+    "__docId__": 108,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1532,7 +1789,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 97,
+    "__docId__": 110,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1545,7 +1802,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 98,
+    "__docId__": 111,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1558,7 +1815,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 99,
+    "__docId__": 112,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1571,7 +1828,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 100,
+    "__docId__": 113,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1584,7 +1841,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 101,
+    "__docId__": 114,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1597,7 +1854,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 102,
+    "__docId__": 115,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1610,7 +1867,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 103,
+    "__docId__": 116,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1623,7 +1880,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 104,
+    "__docId__": 117,
     "kind": "external",
     "static": true,
     "variation": null,

@@ -32,7 +32,11 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
 </ul>
@@ -40,37 +44,37 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/actions/__tests__/players.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">jest.unmock(&apos;../players.js&apos;);
-import { playerJoinGame } from &apos;../players.js&apos;;
-import { PLAYER_JOIN_GAME } from &apos;../../action_types/actionTypes.js&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// jest.unmock(&apos;../players.js&apos;);
+// import { playerJoinGame } from &apos;../players.js&apos;;
+// import { PLAYER_JOIN_GAME } from &apos;../../action_types/actionTypes.js&apos;;
 
 
-describe(&apos;Player Action Types&apos;, () =&gt; {
-  it(&apos;should have an action type PLAYER_JOIN_GAME&apos;, () =&gt; {
-    expect(PLAYER_JOIN_GAME).toBeDefined();
-    expect(PLAYER_JOIN_GAME).toMatch(&apos;PLAYER_JOIN_GAME&apos;);
-  });
-});
+// describe(&apos;Player Action Types&apos;, () =&gt; {
+//   it(&apos;should have an action type PLAYER_JOIN_GAME&apos;, () =&gt; {
+//     expect(PLAYER_JOIN_GAME).toBeDefined();
+//     expect(PLAYER_JOIN_GAME).toMatch(&apos;PLAYER_JOIN_GAME&apos;);
+//   });
+// });
 
-const someDude1 = {
-  id: 5,
-  username: &apos;joe&apos;,
-};
+// const someDude1 = {
+//   id: 5,
+//   username: &apos;joe&apos;,
+// };
 
-describe(&apos;playerJoinGame Action Creator&apos;, () =&gt; {
-  it(&apos;should be a function&apos;, () =&gt; {
-    expect(typeof playerJoinGame).toEqual(&apos;function&apos;);
-  });
-  it(&apos;should return an object&apos;, () =&gt; {
-    expect(typeof playerJoinGame(someDude1)).toEqual(&apos;object&apos;);
-  });
-  it(&apos;should have a type property of PLAYER_JOIN_GAME&apos;, () =&gt; {
-    expect(playerJoinGame(someDude1).type).toEqual(PLAYER_JOIN_GAME);
-  });
-  it(&apos;should have a user with an id property of passed in user&apos;, () =&gt; {
-    expect(playerJoinGame(someDude1).user.id).toEqual(5);
-  });
-});
+// describe(&apos;playerJoinGame Action Creator&apos;, () =&gt; {
+//   it(&apos;should be a function&apos;, () =&gt; {
+//     expect(typeof playerJoinGame).toEqual(&apos;function&apos;);
+//   });
+//   it(&apos;should return an object&apos;, () =&gt; {
+//     expect(typeof playerJoinGame(someDude1)).toEqual(&apos;object&apos;);
+//   });
+//   it(&apos;should have a type property of PLAYER_JOIN_GAME&apos;, () =&gt; {
+//     expect(playerJoinGame(someDude1).type).toEqual(PLAYER_JOIN_GAME);
+//   });
+//   it(&apos;should have a user with an id property of passed in user&apos;, () =&gt; {
+//     expect(playerJoinGame(someDude1).user.id).toEqual(5);
+//   });
+// });
 </code></pre>
 
 </div>

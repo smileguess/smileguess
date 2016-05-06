@@ -32,7 +32,11 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
 </ul>
@@ -41,7 +45,8 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/providers/providers.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Import Actions */
-import { joinGame } from &apos;../actions/user.js&apos;;
+import { joinGame, submitGuess } from &apos;../actions/user.js&apos;;
+import { Actions } from &apos;react-native-router-flux&apos;;
 
 
 /* Home Screen Providers*/
@@ -54,12 +59,28 @@ export const mapHomeScreen = {
   mapDispatchToProps(dispatch) {
     return {
       onJoinGame: (id) =&gt; {
-        dispatch(joinGame(id));
+        dispatch(() =&gt; {
+          joinGame(id);
+          Actions.showGameScreen();
+        });
       },
     };
   },
 };
 
+/* Game Screen Providers*/
+export const mapGameScreen = {
+  mapStateToProps() {
+    return {};
+  },
+  mapDispatchToProps(dispatch) {
+    return {
+      onSubmitGuess: (guess) =&gt; {
+        dispatch(submitGuess(guess));
+      },
+    };
+  },
+};
 </code></pre>
 
 </div>

@@ -1,14 +1,14 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 176,
+  "end": 584,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 5,
+      "line": 17,
       "column": 0
     }
   },
@@ -16,80 +16,211 @@
   "body": [
     {
       "type": "ExportNamedDeclaration",
-      "start": 0,
-      "end": 41,
+      "start": 58,
+      "end": 115,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 1,
-          "column": 41
+          "line": 4,
+          "column": 57
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 7,
-        "end": 41,
+        "start": 65,
+        "end": 115,
         "loc": {
           "start": {
-            "line": 1,
+            "line": 4,
             "column": 7
           },
           "end": {
-            "line": 1,
-            "column": 41
+            "line": 4,
+            "column": 57
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 13,
-            "end": 40,
+            "start": 71,
+            "end": 114,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 4,
                 "column": 13
               },
               "end": {
-                "line": 1,
-                "column": 40
+                "line": 4,
+                "column": 56
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 13,
-              "end": 24,
+              "start": 71,
+              "end": 90,
               "loc": {
                 "start": {
-                  "line": 1,
+                  "line": 4,
                   "column": 13
                 },
                 "end": {
-                  "line": 1,
-                  "column": 24
+                  "line": 4,
+                  "column": 32
                 }
               },
-              "name": "SUBMIT_HINT"
+              "name": "SOCKET_CLUE_MESSAGE",
+              "leadingComments": null
             },
             "init": {
               "type": "Literal",
-              "start": 27,
-              "end": 40,
+              "start": 93,
+              "end": 114,
               "loc": {
                 "start": {
-                  "line": 1,
-                  "column": 27
+                  "line": 4,
+                  "column": 35
                 },
                 "end": {
-                  "line": 1,
-                  "column": 40
+                  "line": 4,
+                  "column": 56
                 }
               },
-              "value": "SUBMIT_HINT",
-              "rawValue": "SUBMIT_HINT",
-              "raw": "'SUBMIT_HINT'"
+              "value": "SOCKET_CLUE_MESSAGE",
+              "rawValue": "SOCKET_CLUE_MESSAGE",
+              "raw": "'SOCKET_CLUE_MESSAGE'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * These are messages that we get from the server\n ",
+            "start": 0,
+            "end": 57,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 3
+              }
+            },
+            "range": [
+              0,
+              57
+            ]
+          }
+        ],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * These are messages that we get from the server\n ",
+          "start": 0,
+          "end": 57,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 3
+            }
+          },
+          "range": [
+            0,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 116,
+      "end": 175,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 59
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 123,
+        "end": 175,
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 7
+          },
+          "end": {
+            "line": 5,
+            "column": 59
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 129,
+            "end": 174,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 13
+              },
+              "end": {
+                "line": 5,
+                "column": 58
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 129,
+              "end": 149,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 13
+                },
+                "end": {
+                  "line": 5,
+                  "column": 33
+                }
+              },
+              "name": "SOCKET_GUESS_MESSAGE"
+            },
+            "init": {
+              "type": "Literal",
+              "start": 152,
+              "end": 174,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 36
+                },
+                "end": {
+                  "line": 5,
+                  "column": 58
+                }
+              },
+              "value": "SOCKET_GUESS_MESSAGE",
+              "rawValue": "SOCKET_GUESS_MESSAGE",
+              "raw": "'SOCKET_GUESS_MESSAGE'"
             }
           }
         ],
@@ -102,80 +233,512 @@
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 42,
-      "end": 93,
+      "start": 176,
+      "end": 237,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 2,
-          "column": 51
+          "line": 6,
+          "column": 61
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 49,
-        "end": 93,
+        "start": 183,
+        "end": 237,
         "loc": {
           "start": {
-            "line": 2,
+            "line": 6,
             "column": 7
           },
           "end": {
-            "line": 2,
-            "column": 51
+            "line": 6,
+            "column": 61
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 55,
-            "end": 92,
+            "start": 189,
+            "end": 236,
             "loc": {
               "start": {
-                "line": 2,
+                "line": 6,
                 "column": 13
               },
               "end": {
-                "line": 2,
-                "column": 50
+                "line": 6,
+                "column": 60
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 55,
-              "end": 71,
+              "start": 189,
+              "end": 210,
               "loc": {
                 "start": {
-                  "line": 2,
+                  "line": 6,
                   "column": 13
                 },
                 "end": {
-                  "line": 2,
+                  "line": 6,
+                  "column": 34
+                }
+              },
+              "name": "SOCKET_DECLARE_WINNER"
+            },
+            "init": {
+              "type": "Literal",
+              "start": 213,
+              "end": 236,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 37
+                },
+                "end": {
+                  "line": 6,
+                  "column": 60
+                }
+              },
+              "value": "SOCKET_DECLARE_WINNER",
+              "rawValue": "SOCKET_DECLARE_WINNER",
+              "raw": "'SOCKET_DECLARE_WINNER'"
+            }
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 238,
+      "end": 303,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 65
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 245,
+        "end": 303,
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 7
+          },
+          "end": {
+            "line": 7,
+            "column": 65
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 251,
+            "end": 302,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 13
+              },
+              "end": {
+                "line": 7,
+                "column": 64
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 251,
+              "end": 274,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 13
+                },
+                "end": {
+                  "line": 7,
+                  "column": 36
+                }
+              },
+              "name": "SOCKET_PLAYER_JOIN_GAME"
+            },
+            "init": {
+              "type": "Literal",
+              "start": 277,
+              "end": 302,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 39
+                },
+                "end": {
+                  "line": 7,
+                  "column": 64
+                }
+              },
+              "value": "SOCKET_PLAYER_JOIN_GAME",
+              "rawValue": "SOCKET_PLAYER_JOIN_GAME",
+              "raw": "'SOCKET_PLAYER_JOIN_GAME'"
+            }
+          }
+        ],
+        "kind": "const",
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * These are messages that we send to the server\n ",
+            "start": 305,
+            "end": 361,
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            },
+            "range": [
+              305,
+              361
+            ]
+          }
+        ],
+        "leadingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * These are messages that we send to the server\n ",
+          "start": 305,
+          "end": 361,
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 3
+            }
+          },
+          "range": [
+            305,
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 362,
+      "end": 422,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 60
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 369,
+        "end": 422,
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 7
+          },
+          "end": {
+            "line": 12,
+            "column": 60
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 375,
+            "end": 421,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 13
+              },
+              "end": {
+                "line": 12,
+                "column": 59
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 375,
+              "end": 393,
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 13
+                },
+                "end": {
+                  "line": 12,
+                  "column": 31
+                }
+              },
+              "name": "SEND_GUESS_MESSAGE",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 396,
+              "end": 421,
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 34
+                },
+                "end": {
+                  "line": 12,
+                  "column": 59
+                }
+              },
+              "value": "server/sendGuessMessage",
+              "rawValue": "server/sendGuessMessage",
+              "raw": "'server/sendGuessMessage'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * These are messages that we send to the server\n ",
+            "start": 305,
+            "end": 361,
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            },
+            "range": [
+              305,
+              361
+            ]
+          }
+        ],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * These are messages that we send to the server\n ",
+          "start": 305,
+          "end": 361,
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 3
+            }
+          },
+          "range": [
+            305,
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 423,
+      "end": 481,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
+          "column": 58
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 430,
+        "end": 481,
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 7
+          },
+          "end": {
+            "line": 13,
+            "column": 58
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 436,
+            "end": 480,
+            "loc": {
+              "start": {
+                "line": 13,
+                "column": 13
+              },
+              "end": {
+                "line": 13,
+                "column": 57
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 436,
+              "end": 453,
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 13
+                },
+                "end": {
+                  "line": 13,
+                  "column": 30
+                }
+              },
+              "name": "SEND_CLUE_MESSAGE"
+            },
+            "init": {
+              "type": "Literal",
+              "start": 456,
+              "end": 480,
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 33
+                },
+                "end": {
+                  "line": 13,
+                  "column": 57
+                }
+              },
+              "value": "server/sendClueMessage",
+              "rawValue": "server/sendClueMessage",
+              "raw": "'server/sendClueMessage'"
+            }
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 482,
+      "end": 538,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 56
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 489,
+        "end": 538,
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 7
+          },
+          "end": {
+            "line": 14,
+            "column": 56
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 495,
+            "end": 537,
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 13
+              },
+              "end": {
+                "line": 14,
+                "column": 55
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 495,
+              "end": 511,
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 13
+                },
+                "end": {
+                  "line": 14,
                   "column": 29
                 }
               },
-              "name": "PLAYER_JOIN_GAME"
+              "name": "JOIN_RANDOM_GAME"
             },
             "init": {
               "type": "Literal",
-              "start": 74,
-              "end": 92,
+              "start": 514,
+              "end": 537,
               "loc": {
                 "start": {
-                  "line": 2,
+                  "line": 14,
                   "column": 32
                 },
                 "end": {
-                  "line": 2,
-                  "column": 50
+                  "line": 14,
+                  "column": 55
                 }
               },
-              "value": "PLAYER_JOIN_GAME",
-              "rawValue": "PLAYER_JOIN_GAME",
-              "raw": "'PLAYER_JOIN_GAME'"
+              "value": "server/joinRandomGame",
+              "rawValue": "server/joinRandomGame",
+              "raw": "'server/joinRandomGame'"
             }
           }
         ],
@@ -188,58 +751,58 @@
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 94,
-      "end": 131,
+      "start": 539,
+      "end": 582,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 15,
           "column": 0
         },
         "end": {
-          "line": 3,
-          "column": 37
+          "line": 15,
+          "column": 43
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 101,
-        "end": 131,
+        "start": 546,
+        "end": 582,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 15,
             "column": 7
           },
           "end": {
-            "line": 3,
-            "column": 37
+            "line": 15,
+            "column": 43
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 107,
-            "end": 130,
+            "start": 552,
+            "end": 581,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 15,
                 "column": 13
               },
               "end": {
-                "line": 3,
-                "column": 36
+                "line": 15,
+                "column": 42
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 107,
-              "end": 116,
+              "start": 552,
+              "end": 561,
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 15,
                   "column": 13
                 },
                 "end": {
-                  "line": 3,
+                  "line": 15,
                   "column": 22
                 }
               },
@@ -247,107 +810,21 @@
             },
             "init": {
               "type": "Literal",
-              "start": 119,
-              "end": 130,
+              "start": 564,
+              "end": 581,
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 15,
                   "column": 25
                 },
                 "end": {
-                  "line": 3,
-                  "column": 36
-                }
-              },
-              "value": "JOIN_GAME",
-              "rawValue": "JOIN_GAME",
-              "raw": "'JOIN_GAME'"
-            }
-          }
-        ],
-        "kind": "const",
-        "leadingComments": [],
-        "trailingComments": []
-      },
-      "specifiers": [],
-      "source": null
-    },
-    {
-      "type": "ExportNamedDeclaration",
-      "start": 132,
-      "end": 175,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 0
-        },
-        "end": {
-          "line": 4,
-          "column": 43
-        }
-      },
-      "declaration": {
-        "type": "VariableDeclaration",
-        "start": 139,
-        "end": 175,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 7
-          },
-          "end": {
-            "line": 4,
-            "column": 43
-          }
-        },
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "start": 145,
-            "end": 174,
-            "loc": {
-              "start": {
-                "line": 4,
-                "column": 13
-              },
-              "end": {
-                "line": 4,
-                "column": 42
-              }
-            },
-            "id": {
-              "type": "Identifier",
-              "start": 145,
-              "end": 157,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 13
-                },
-                "end": {
-                  "line": 4,
-                  "column": 25
-                }
-              },
-              "name": "SUBMIT_GUESS"
-            },
-            "init": {
-              "type": "Literal",
-              "start": 160,
-              "end": 174,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 28
-                },
-                "end": {
-                  "line": 4,
+                  "line": 15,
                   "column": 42
                 }
               },
-              "value": "SUBMIT_GUESS",
-              "rawValue": "SUBMIT_GUESS",
-              "raw": "'SUBMIT_GUESS'"
+              "value": "server/joinGame",
+              "rawValue": "server/joinGame",
+              "raw": "'server/joinGame'"
             }
           }
         ],

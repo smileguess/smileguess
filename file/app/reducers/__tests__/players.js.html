@@ -32,7 +32,11 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
 </ul>
@@ -42,6 +46,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">app/reducers/__tests__/players.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">jest.unmock(&apos;../players.js&apos;);
 import playerReducer from &apos;../players.js&apos;;
+import { SOCKET_PLAYER_JOIN_GAME } from &apos;../../action_types/actionTypes.js&apos;;
 
 const myInitialState = { 1: {
   username: &apos;bob&apos;,
@@ -60,12 +65,12 @@ describe(&apos;Players Reducer&apos;, () =&gt; {
     expect(myNewState).toBe(myInitialState);
   });
   it(&apos;should not mutate its inputs if given an action&apos;, () =&gt; {
-    const myAction = { type: &apos;PLAYER_JOIN_GAME&apos;, user: { id: 3, username: &apos;jay&apos; } };
+    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, user: { id: 3, username: &apos;jay&apos; } };
     const myNewState = playerReducer(myInitialState, myAction);
     expect(myNewState).not.toBe(myInitialState);
   });
-  it(&apos;should add the userid to the state if given a &quot;JOIN_GAME&quot; action&apos;, () =&gt; {
-    const myAction = { type: &apos;PLAYER_JOIN_GAME&apos;, user: { id: 2, username: &apos;joan&apos; } };
+  it(&apos;should add the userid to the state if given a &quot;SOCKET_PLAYER_JOIN_GAME&quot; action&apos;, () =&gt; {
+    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, user: { id: 2, username: &apos;joan&apos; } };
     const myNewState = playerReducer(myInitialState, myAction);
     expect(myNewState[2].username).toEqual(&apos;joan&apos;);
   });
