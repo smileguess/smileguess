@@ -40,6 +40,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
@@ -56,11 +57,16 @@
 <div class="content" data-ice="content"><h1 data-ice="title">app/reducers/__tests__/players.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">jest.unmock(&apos;../players.js&apos;);
 import playerReducer from &apos;../players.js&apos;;
-import { SOCKET_PLAYER_JOIN_GAME } from &apos;../../action_types/actionTypes.js&apos;;
+import { SOCKET_PLAYER_JOIN_GAME, SOCKET_PLAYER_LEAVE_GAME } from &apos;../../action_types/actionTypes.js&apos;;
 
-const myInitialState = { 1: {
-  username: &apos;bob&apos;,
-} };
+const myInitialState = {
+  someOtherKey: true,
+  players: [1],
+  playersById: { 1: {
+    id: 1,
+    username: &apos;bob&apos;,
+  } },
+};
 
 describe(&apos;Players Reducer&apos;, () =&gt; {
   it(&apos;should be a function&apos;, () =&gt; {
@@ -75,14 +81,26 @@ describe(&apos;Players Reducer&apos;, () =&gt; {
     expect(myNewState).toBe(myInitialState);
   });
   it(&apos;should not mutate its inputs if given an action&apos;, () =&gt; {
-    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, user: { id: 3, username: &apos;jay&apos; } };
+    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, player: { id: 3, username: &apos;jay&apos; } };
     const myNewState = playerReducer(myInitialState, myAction);
     expect(myNewState).not.toBe(myInitialState);
   });
-  it(&apos;should add the userid to the state if given a &quot;SOCKET_PLAYER_JOIN_GAME&quot; action&apos;, () =&gt; {
-    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, user: { id: 2, username: &apos;joan&apos; } };
+  it(&apos;should add the player to the state if given a &quot;SOCKET_PLAYER_JOIN_GAME&quot; action&apos;, () =&gt; {
+    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, player: { id: 2, username: &apos;joan&apos; } };
     const myNewState = playerReducer(myInitialState, myAction);
-    expect(myNewState[2].username).toEqual(&apos;joan&apos;);
+    expect(myNewState.playersById[2].username).toEqual(&apos;joan&apos;);
+  });
+  it(&apos;should keep existing keys when given an action&apos;, () =&gt; {
+    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, player: { id: 2, username: &apos;joan&apos; } };
+    const myNewState = playerReducer(myInitialState, myAction);
+    expect(myNewState.someOtherKey).toBe(true);
+  });
+  it(&apos;should remove the player to the state if given a &quot;SOCKET_PLAYER_LEAVE_GAME&quot; action&apos;, () =&gt; {
+    const myAction = { type: SOCKET_PLAYER_JOIN_GAME, player: { id: 2, username: &apos;joan&apos; } };
+    const myState = playerReducer(myInitialState, myAction);
+    const myNewAction = { type: SOCKET_PLAYER_LEAVE_GAME, userid: 2 };
+    const myNewState = playerReducer(myState, myNewAction);
+    expect(myNewState.playersById[2]).toBe(undefined);
   });
 });
 

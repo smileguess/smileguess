@@ -1,104 +1,110 @@
 window.esdocSearchIndex = [
   [
-    "smileguess/app/screens/gamescreen.js~gamescreen",
+    "./app/screens/gamescreen.js~gamescreen",
     "variable/index.html#static-variable-GameScreen",
-    "<span>GameScreen</span> <span class=\"search-result-import-path\">smileguess/app/screens/GameScreen.js</span>",
+    "<span>GameScreen</span> <span class=\"search-result-import-path\">./app/screens/GameScreen.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/screens/gamescreen.js~gamescreencontainer",
+    "./app/screens/gamescreen.js~gamescreencontainer",
     "variable/index.html#static-variable-GameScreenContainer",
-    "<span>GameScreenContainer</span> <span class=\"search-result-import-path\">smileguess/app/screens/GameScreen.js</span>",
+    "<span>GameScreenContainer</span> <span class=\"search-result-import-path\">./app/screens/GameScreen.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/screens/homescreen.js~homescreen",
+    "./app/screens/homescreen.js~homescreen",
     "variable/index.html#static-variable-HomeScreen",
-    "<span>HomeScreen</span> <span class=\"search-result-import-path\">smileguess/app/screens/HomeScreen.js</span>",
+    "<span>HomeScreen</span> <span class=\"search-result-import-path\">./app/screens/HomeScreen.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/screens/homescreen.js~homescreencontainer",
+    "./app/screens/homescreen.js~homescreencontainer",
     "variable/index.html#static-variable-HomeScreenContainer",
-    "<span>HomeScreenContainer</span> <span class=\"search-result-import-path\">smileguess/app/screens/HomeScreen.js</span>",
+    "<span>HomeScreenContainer</span> <span class=\"search-result-import-path\">./app/screens/HomeScreen.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/action_types/actiontypes.js~join_game",
+    "./app/action_types/actiontypes.js~join_game",
     "variable/index.html#static-variable-JOIN_GAME",
-    "<span>JOIN_GAME</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "<span>JOIN_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/action_types/actiontypes.js~join_random_game",
+    "./app/action_types/actiontypes.js~join_random_game",
     "variable/index.html#static-variable-JOIN_RANDOM_GAME",
-    "<span>JOIN_RANDOM_GAME</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "<span>JOIN_RANDOM_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/action_types/actiontypes.js~send_clue_message",
+    "./app/action_types/actiontypes.js~send_clue_message",
     "variable/index.html#static-variable-SEND_CLUE_MESSAGE",
-    "<span>SEND_CLUE_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "<span>SEND_CLUE_MESSAGE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/action_types/actiontypes.js~send_guess_message",
+    "./app/action_types/actiontypes.js~send_guess_message",
     "variable/index.html#static-variable-SEND_GUESS_MESSAGE",
-    "<span>SEND_GUESS_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "<span>SEND_GUESS_MESSAGE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/action_types/actiontypes.js~socket_clue_message",
+    "./app/action_types/actiontypes.js~socket_clue_message",
     "variable/index.html#static-variable-SOCKET_CLUE_MESSAGE",
-    "<span>SOCKET_CLUE_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "<span>SOCKET_CLUE_MESSAGE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/action_types/actiontypes.js~socket_declare_winner",
+    "./app/action_types/actiontypes.js~socket_declare_winner",
     "variable/index.html#static-variable-SOCKET_DECLARE_WINNER",
-    "<span>SOCKET_DECLARE_WINNER</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "<span>SOCKET_DECLARE_WINNER</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/action_types/actiontypes.js~socket_guess_message",
+    "./app/action_types/actiontypes.js~socket_guess_message",
     "variable/index.html#static-variable-SOCKET_GUESS_MESSAGE",
-    "<span>SOCKET_GUESS_MESSAGE</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "<span>SOCKET_GUESS_MESSAGE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/action_types/actiontypes.js~socket_player_join_game",
+    "./app/action_types/actiontypes.js~socket_player_join_game",
     "variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME",
-    "<span>SOCKET_PLAYER_JOIN_GAME</span> <span class=\"search-result-import-path\">smileguess/app/action_types/actionTypes.js</span>",
+    "<span>SOCKET_PLAYER_JOIN_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/screens/screens.js~screens",
+    "./app/action_types/actiontypes.js~socket_player_leave_game",
+    "variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME",
+    "<span>SOCKET_PLAYER_LEAVE_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "./app/screens/screens.js~screens",
     "variable/index.html#static-variable-Screens",
-    "<span>Screens</span> <span class=\"search-result-import-path\">smileguess/app/screens/Screens.js</span>",
+    "<span>Screens</span> <span class=\"search-result-import-path\">./app/screens/Screens.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/actions/user.js~joingame",
+    "./app/actions/user.js~joingame",
     "variable/index.html#static-variable-joinGame",
-    "<span>joinGame</span> <span class=\"search-result-import-path\">smileguess/app/actions/user.js</span>",
+    "<span>joinGame</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/actions/user.js~joinrandomgame",
+    "./app/actions/user.js~joinrandomgame",
     "variable/index.html#static-variable-joinRandomGame",
-    "<span>joinRandomGame</span> <span class=\"search-result-import-path\">smileguess/app/actions/user.js</span>",
+    "<span>joinRandomGame</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/actions/dealer.js~submitclue",
+    "./app/actions/dealer.js~submitclue",
     "variable/index.html#static-variable-submitClue",
-    "<span>submitClue</span> <span class=\"search-result-import-path\">smileguess/app/actions/dealer.js</span>",
+    "<span>submitClue</span> <span class=\"search-result-import-path\">./app/actions/dealer.js</span>",
     "variable"
   ],
   [
-    "smileguess/app/actions/user.js~submitguess",
+    "./app/actions/user.js~submitguess",
     "variable/index.html#static-variable-submitGuess",
-    "<span>submitGuess</span> <span class=\"search-result-import-path\">smileguess/app/actions/user.js</span>",
+    "<span>submitGuess</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
     "variable"
   ],
   [

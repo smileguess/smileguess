@@ -40,6 +40,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
@@ -54,18 +55,34 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/reducers/players.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SOCKET_PLAYER_JOIN_GAME } from &apos;../action_types/actionTypes.js&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SOCKET_PLAYER_JOIN_GAME, SOCKET_PLAYER_LEAVE_GAME } from &apos;../action_types/actionTypes.js&apos;;
 
-const mergeNewUser = (state, user) =&gt; {
-  const newUser = {};
-  newUser[user.id] = user;
-  return Object.assign({}, state, newUser);
+const mergeNewPlayer = (state, player) =&gt; {
+  const playersById = Object.assign({}, state.playersById);
+  playersById[player.id] = player;
+  return {
+    ...state,
+    players: Object.keys(playersById),
+    playersById,
+  };
+};
+
+const removePlayer = (state, userid) =&gt; {
+  const playersById = Object.assign({}, state.playersById);
+  delete playersById[userid];
+  return {
+    ...state,
+    players: Object.keys(playersById),
+    playersById,
+  };
 };
 
 export default (state = {}, action = {}) =&gt; {
   switch (action.type) {
     case SOCKET_PLAYER_JOIN_GAME:
-      return mergeNewUser(state, action.user);
+      return mergeNewPlayer(state, action.player);
+    case SOCKET_PLAYER_LEAVE_GAME:
+      return removePlayer(state, action.userid);
     default:
       return state;
   }

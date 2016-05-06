@@ -40,6 +40,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
@@ -383,6 +384,32 @@ actions creators of HomeScreen to the store and dispatcher, respectively.</p>
     <td>
       <div>
         <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player leaves the current game</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
            <span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span><span data-ice="signature">(hideNavBar: <span>*</span>, type: <span>*</span>, key: <span>*</span>, title: <span>*</span>): <span>*</span></span>
         </p>
       </div>
@@ -526,7 +553,7 @@ This action is handled by the server</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {GameScreen} from &apos;<span><a href="file/app/screens/GameScreen.js.html#lineNumber41">smileguess/app/screens/GameScreen.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {GameScreen} from &apos;<span><a href="file/app/screens/GameScreen.js.html#lineNumber41">./app/screens/GameScreen.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>GameScreen is a React functional component.
@@ -570,7 +597,7 @@ or the players who are guessing.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import GameScreenContainer from &apos;<span><a href="file/app/screens/GameScreen.js.html#lineNumber59">smileguess/app/screens/GameScreen.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import GameScreenContainer from &apos;<span><a href="file/app/screens/GameScreen.js.html#lineNumber59">./app/screens/GameScreen.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>GameScreenContainer is a &apos;container component&apos; which binds the props and
@@ -614,7 +641,7 @@ for documentation purposes.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {HomeScreen} from &apos;<span><a href="file/app/screens/HomeScreen.js.html#lineNumber34">smileguess/app/screens/HomeScreen.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {HomeScreen} from &apos;<span><a href="file/app/screens/HomeScreen.js.html#lineNumber34">./app/screens/HomeScreen.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>onPress additionally triggers navigation to GameScreen</p>
@@ -655,7 +682,7 @@ for documentation purposes.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import HomeScreenContainer from &apos;<span><a href="file/app/screens/HomeScreen.js.html#lineNumber54">smileguess/app/screens/HomeScreen.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import HomeScreenContainer from &apos;<span><a href="file/app/screens/HomeScreen.js.html#lineNumber54">./app/screens/HomeScreen.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>HomeScreenContainer is a &apos;container component&apos; which binds the props and
@@ -695,11 +722,11 @@ for documentation purposes.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber33">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber37">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {JOIN_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber33">smileguess/app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {JOIN_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber37">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Client-&gt;Server: sent to server when the player wants to join a specific game by ID</p>
@@ -736,11 +763,11 @@ for documentation purposes.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber29">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber33">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {JOIN_RANDOM_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber29">smileguess/app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {JOIN_RANDOM_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber33">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Client-&gt;Server: sent to server when the player wants to join a random game</p>
@@ -777,11 +804,11 @@ for documentation purposes.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SEND_CLUE_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber25">smileguess/app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SEND_CLUE_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber29">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Client-&gt;Server: sent to server when the dealer wants to broadcast a clue</p>
@@ -818,11 +845,11 @@ for documentation purposes.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber25">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SEND_GUESS_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber21">smileguess/app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SEND_GUESS_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber25">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Client-&gt;Server: sent to server when the client wants to broadcast a guess</p>
@@ -863,7 +890,7 @@ for documentation purposes.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_CLUE_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber4">smileguess/app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_CLUE_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber4">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Server-&gt;Client: sent from the server when the dealer sends a clue message</p>
@@ -904,7 +931,7 @@ for documentation purposes.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_DECLARE_WINNER} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber12">smileguess/app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_DECLARE_WINNER} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber12">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Server-&gt;Client: sent from the server when a winner is declared</p>
@@ -945,7 +972,7 @@ for documentation purposes.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_GUESS_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber8">smileguess/app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_GUESS_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber8">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player sends a guess message</p>
@@ -986,10 +1013,51 @@ for documentation purposes.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_PLAYER_JOIN_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber16">smileguess/app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_PLAYER_JOIN_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber16">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player joins in on the current game</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-SOCKET_PLAYER_LEAVE_GAME">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">SOCKET_PLAYER_LEAVE_GAME</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber20">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_PLAYER_LEAVE_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber20">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player leaves the current game</p>
 </div>
 
   
@@ -1027,7 +1095,7 @@ for documentation purposes.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Screens from &apos;<span><a href="file/app/screens/Screens.js.html#lineNumber16">smileguess/app/screens/Screens.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Screens from &apos;<span><a href="file/app/screens/Screens.js.html#lineNumber16">./app/screens/Screens.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>scenes define transition screens</p>
@@ -1068,7 +1136,7 @@ for documentation purposes.</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {joinGame} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber8">smileguess/app/actions/user.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {joinGame} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber8">./app/actions/user.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates an action for joining a specific game by ID
@@ -1110,7 +1178,7 @@ This action is handled by the server</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {joinRandomGame} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber17">smileguess/app/actions/user.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {joinRandomGame} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber17">./app/actions/user.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates an action for joining a random game chosen by the server
@@ -1152,7 +1220,7 @@ This action is handled by the server</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitClue} from &apos;<span><a href="file/app/actions/dealer.js.html#lineNumber7">smileguess/app/actions/dealer.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitClue} from &apos;<span><a href="file/app/actions/dealer.js.html#lineNumber7">./app/actions/dealer.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>This creates an action for the dealer to submit a clue
@@ -1194,7 +1262,7 @@ This action is handeled by the server</p>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitGuess} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber25">smileguess/app/actions/user.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitGuess} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber25">./app/actions/user.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates an action for submitting a guess to the server

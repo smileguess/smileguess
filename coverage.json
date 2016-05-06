@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 17,
-  "actualCount": 17,
+  "expectCount": 18,
+  "actualCount": 18,
   "files": {
     "app/screens/GameScreen.js": {
       "expectCount": 2,
@@ -14,8 +14,8 @@
       "undocumentLines": []
     },
     "app/action_types/actionTypes.js": {
-      "expectCount": 8,
-      "actualCount": 8,
+      "expectCount": 9,
+      "actualCount": 9,
       "undocumentLines": []
     },
     "app/screens/Screens.js": {
