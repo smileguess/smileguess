@@ -10,7 +10,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "/**\n * These are messages that we get from the server\n */\nexport const SOCKET_CLUE_MESSAGE = 'SOCKET_CLUE_MESSAGE';\nexport const SOCKET_GUESS_MESSAGE = 'SOCKET_GUESS_MESSAGE';\nexport const SOCKET_DECLARE_WINNER = 'SOCKET_DECLARE_WINNER';\nexport const SOCKET_PLAYER_JOIN_GAME = 'SOCKET_PLAYER_JOIN_GAME';\n\n/**\n * These are messages that we send to the server\n */\nexport const SEND_GUESS_MESSAGE = 'server/sendGuessMessage';\nexport const SEND_CLUE_MESSAGE = 'server/sendClueMessage';\nexport const JOIN_RANDOM_GAME = 'server/joinRandomGame';\nexport const JOIN_GAME = 'server/joinGame';\n\n"
+    "content": "/**\n * Server Action: sent from the server when the dealer sends a clue message\n */\nexport const SOCKET_CLUE_MESSAGE = 'SOCKET_CLUE_MESSAGE';\n/**\n * Server Action: sent from the server when a player sends a guess message\n */\nexport const SOCKET_GUESS_MESSAGE = 'SOCKET_GUESS_MESSAGE';\n/**\n * Server Action: sent from the server when a winner is declared\n */\nexport const SOCKET_DECLARE_WINNER = 'SOCKET_DECLARE_WINNER';\n/**\n * Server Action: sent from the server when a player joins in on the current game\n */\nexport const SOCKET_PLAYER_JOIN_GAME = 'SOCKET_PLAYER_JOIN_GAME';\n\n/**\n * Client Action: sent to server when the client wants to broadcast a guess\n */\nexport const SEND_GUESS_MESSAGE = 'server/sendGuessMessage';\n/**\n * Client Action: sent to server when the dealer wants to broadcast a clue\n */\nexport const SEND_CLUE_MESSAGE = 'server/sendClueMessage';\n/**\n * Client Action: sent to server when the player wants to join a random game\n */\nexport const JOIN_RANDOM_GAME = 'server/joinRandomGame';\n/**\n * Client Action: sent to server when the player wants to join a specific game by ID\n */\nexport const JOIN_GAME = 'server/joinGame';\n\n"
   },
   {
     "__docId__": 1,
@@ -24,7 +24,7 @@
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
     "importStyle": "{SOCKET_CLUE_MESSAGE}",
-    "description": "These are messages that we get from the server",
+    "description": "Server Action: sent from the server when the dealer sends a clue message",
     "lineNumber": 4,
     "type": {
       "types": [
@@ -44,9 +44,8 @@
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
     "importStyle": "{SOCKET_GUESS_MESSAGE}",
-    "description": null,
-    "lineNumber": 5,
-    "undocument": true,
+    "description": "Server Action: sent from the server when a player sends a guess message",
+    "lineNumber": 8,
     "type": {
       "types": [
         "string"
@@ -65,9 +64,8 @@
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
     "importStyle": "{SOCKET_DECLARE_WINNER}",
-    "description": null,
-    "lineNumber": 6,
-    "undocument": true,
+    "description": "Server Action: sent from the server when a winner is declared",
+    "lineNumber": 12,
     "type": {
       "types": [
         "string"
@@ -86,9 +84,8 @@
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
     "importStyle": "{SOCKET_PLAYER_JOIN_GAME}",
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
+    "description": "Server Action: sent from the server when a player joins in on the current game",
+    "lineNumber": 16,
     "type": {
       "types": [
         "string"
@@ -107,8 +104,8 @@
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
     "importStyle": "{SEND_GUESS_MESSAGE}",
-    "description": "These are messages that we send to the server",
-    "lineNumber": 12,
+    "description": "Client Action: sent to server when the client wants to broadcast a guess",
+    "lineNumber": 21,
     "type": {
       "types": [
         "string"
@@ -127,9 +124,8 @@
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
     "importStyle": "{SEND_CLUE_MESSAGE}",
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
+    "description": "Client Action: sent to server when the dealer wants to broadcast a clue",
+    "lineNumber": 25,
     "type": {
       "types": [
         "string"
@@ -148,9 +144,8 @@
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
     "importStyle": "{JOIN_RANDOM_GAME}",
-    "description": null,
-    "lineNumber": 14,
-    "undocument": true,
+    "description": "Client Action: sent to server when the player wants to join a random game",
+    "lineNumber": 29,
     "type": {
       "types": [
         "string"
@@ -169,9 +164,8 @@
     "export": true,
     "importPath": "smileguess/app/action_types/actionTypes.js",
     "importStyle": "{JOIN_GAME}",
-    "description": null,
-    "lineNumber": 15,
-    "undocument": true,
+    "description": "Client Action: sent to server when the player wants to join a specific game by ID",
+    "lineNumber": 33,
     "type": {
       "types": [
         "string"
@@ -228,7 +222,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { SEND_CLUE_MESSAGE } from '../action_types/actionTypes.js';\n\nexport const submitClue = (userid, message) => ({\n  type: SEND_CLUE_MESSAGE,\n  userid,\n  message,\n});\n\n"
+    "content": "import { SEND_CLUE_MESSAGE } from '../action_types/actionTypes.js';\n\n/**\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n */\nexport const submitClue = (userid, message) => ({\n  type: SEND_CLUE_MESSAGE,\n  userid,\n  message,\n});\n\n"
   },
   {
     "__docId__": 13,
@@ -242,9 +236,8 @@
     "export": true,
     "importPath": "smileguess/app/actions/dealer.js",
     "importStyle": "{submitClue}",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "description": "This creates an action for the dealer to submit a clue\nThis action is handeled by the server",
+    "lineNumber": 7,
     "type": {
       "types": [
         "*"
@@ -275,7 +268,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { JOIN_RANDOM_GAME, JOIN_GAME, SEND_GUESS_MESSAGE } from '../action_types/actionTypes.js';\n\n\nexport const joinGame = (gameId = null) => ({\n  type: JOIN_GAME,\n  gameId,\n});\n\nexport const joinRandomGame = () => ({\n  type: JOIN_RANDOM_GAME,\n});\n\nexport const submitGuess = (userid, message) => ({\n  type: SEND_GUESS_MESSAGE,\n  userid,\n  message,\n});\n\n"
+    "content": "import { JOIN_RANDOM_GAME, JOIN_GAME, SEND_GUESS_MESSAGE } from '../action_types/actionTypes.js';\n\n/**\n * Creates an action for joining a specific game by ID\n * This action is handled by the server\n * @param {number} gameid The ID of the game to join\n */\nexport const joinGame = (gameId = null) => ({\n  type: JOIN_GAME,\n  gameId,\n});\n\n/**\n * Creates an action for joining a random game chosen by the server\n * This action is handled by the server\n */\nexport const joinRandomGame = () => ({\n  type: JOIN_RANDOM_GAME,\n});\n\n/**\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n */\nexport const submitGuess = (userid, message) => ({\n  type: SEND_GUESS_MESSAGE,\n  userid,\n  message,\n});\n\n"
   },
   {
     "__docId__": 16,
@@ -289,9 +282,20 @@
     "export": true,
     "importPath": "smileguess/app/actions/user.js",
     "importStyle": "{joinGame}",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "Creates an action for joining a specific game by ID\nThis action is handled by the server",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "gameid",
+        "description": "The ID of the game to join"
+      }
+    ],
     "type": {
       "types": [
         "*"
@@ -310,9 +314,8 @@
     "export": true,
     "importPath": "smileguess/app/actions/user.js",
     "importStyle": "{joinRandomGame}",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
+    "description": "Creates an action for joining a random game chosen by the server\nThis action is handled by the server",
+    "lineNumber": 17,
     "type": {
       "types": [
         "*"
@@ -331,9 +334,8 @@
     "export": true,
     "importPath": "smileguess/app/actions/user.js",
     "importStyle": "{submitGuess}",
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
+    "description": "Creates an action for submitting a guess to the server\nThis action is handled by the server",
+    "lineNumber": 25,
     "type": {
       "types": [
         "*"
@@ -440,7 +442,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "/* Import Actions */\nimport { joinGame, submitGuess } from '../actions/user.js';\nimport { Actions } from 'react-native-router-flux';\n\n\n/* Home Screen Providers*/\nexport const mapHomeScreen = {\n  mapStateToProps() {\n    return {\n      joinGame,\n    };\n  },\n  mapDispatchToProps(dispatch) {\n    return {\n      onJoinGame: (id) => {\n        dispatch(() => {\n          joinGame(id);\n          Actions.showGameScreen();\n        });\n      },\n    };\n  },\n};\n\n/* Game Screen Providers*/\nexport const mapGameScreen = {\n  mapStateToProps() {\n    return {};\n  },\n  mapDispatchToProps(dispatch) {\n    return {\n      onSubmitGuess: (guess) => {\n        dispatch(submitGuess(guess));\n      },\n    };\n  },\n};\n"
+    "content": "/* Import Actions */\nimport { joinGame, joinRandomGame, submitGuess } from '../actions/user.js';\nimport { Actions } from 'react-native-router-flux';\n\n/* Home Screen Providers*/\nexport const mapHomeScreen = {\n  mapStateToProps() {\n    return {};\n  },\n  mapDispatchToProps(dispatch) {\n    return {\n      onJoinRandomGame: () => {\n        dispatch(() => {\n          joinRandomGame();\n          Actions.showGameScreen();\n        });\n      },\n      onJoinGame: (id) => {\n        dispatch(() => {\n          joinGame(id);\n          Actions.showGameScreen();\n        });\n      },\n    };\n  },\n};\n\n/* Game Screen Providers*/\nexport const mapGameScreen = {\n  mapStateToProps() {\n    return {};\n  },\n  mapDispatchToProps(dispatch) {\n    return {\n      onSubmitGuess: (guess) => {\n        /**\n         * TODO: remove hardcoded userid\n         */\n        dispatch(submitGuess(6, guess));\n      },\n    };\n  },\n};\n"
   },
   {
     "__docId__": 25,
@@ -455,7 +457,7 @@
     "importPath": "smileguess/app/providers/providers.js",
     "importStyle": "{mapHomeScreen}",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 6,
     "undocument": true,
     "type": {
       "types": [
@@ -476,7 +478,7 @@
     "importPath": "smileguess/app/providers/providers.js",
     "importStyle": "{mapGameScreen}",
     "description": null,
-    "lineNumber": 26,
+    "lineNumber": 29,
     "undocument": true,
     "type": {
       "types": [
@@ -861,7 +863,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "/* Import Dependencies */\nimport { connect } from 'react-redux';\n\n/* Import Provider */\nimport { mapHomeScreen } from '../providers/providers.js';\n\n/* Import Components */\nimport React, {\n  View,\n  StyleSheet,\n  PropTypes,\n} from 'react-native';\nimport Button from 'react-native-button';\n\nconst styles = StyleSheet.create({\n  container: {\n    alignItems: 'center',\n    flexDirection: 'column',\n    justifyContent: 'center',\n    flex: 1,\n  },\n  buttonContainer: {\n    flex: 0,\n  },\n});\n\n/**\n * Home Screen is a React functional component.\n * It provides an entry point for joining a random game.\n * In the future, it will display a list of available games to join.\n * @param {{onJoinGame: function()}} onPress event handler for the Join Game button.\n * @desc onPress additionally triggers navigation to GameScreen\n */\nexport const HomeScreen = ({ onJoinGame }) => (\n  <View style={styles.container}>\n    <View style={styles.buttonContainer}>\n      <Button\n        onPress={onJoinGame}\n      >Go to Game Screen!</Button>\n    </View>\n  </View>\n);\n\nHomeScreen.propTypes = {\n  onJoinGame: PropTypes.func.isRequired,\n};\n\n/**\n * HomeScreenContainer is a 'container component' which binds the props and\n * actions creators of HomeScreen to the store and dispatcher, respectively.\n * It should be imported in favor of HomeScreen, which is exported only\n * for documentation purposes.\n */\nconst HomeScreenContainer = connect(\n  mapHomeScreen.mapStateToProps,\n  mapHomeScreen.mapDispatchToProps\n)(HomeScreen);\n\nexport default HomeScreenContainer;\n"
+    "content": "/* Import Dependencies */\nimport { connect } from 'react-redux';\n\n/* Import Provider */\nimport { mapHomeScreen } from '../providers/providers.js';\n\n/* Import Components */\nimport React, {\n  View,\n  StyleSheet,\n  PropTypes,\n} from 'react-native';\nimport Button from 'react-native-button';\n\nconst styles = StyleSheet.create({\n  container: {\n    alignItems: 'center',\n    flexDirection: 'column',\n    justifyContent: 'center',\n    flex: 1,\n  },\n  buttonContainer: {\n    flex: 0,\n  },\n});\n\n/**\n * Home Screen is a React functional component.\n * It provides an entry point for joining a random game.\n * In the future, it will display a list of available games to join.\n * @param {{onJoinRandomGame: function()}} onPress event handler for the Join Game button.\n * @desc onPress additionally triggers navigation to GameScreen\n */\nexport const HomeScreen = ({ onJoinRandomGame }) => (\n  <View style={styles.container}>\n    <View style={styles.buttonContainer}>\n      <Button\n        onPress={onJoinRandomGame}\n      >Go to Game Screen!</Button>\n    </View>\n  </View>\n);\n\nHomeScreen.propTypes = {\n  onJoinRandomGame: PropTypes.func.isRequired,\n};\n\n/**\n * HomeScreenContainer is a 'container component' which binds the props and\n * actions creators of HomeScreen to the store and dispatcher, respectively.\n * It should be imported in favor of HomeScreen, which is exported only\n * for documentation purposes.\n */\nconst HomeScreenContainer = connect(\n  mapHomeScreen.mapStateToProps,\n  mapHomeScreen.mapDispatchToProps\n)(HomeScreen);\n\nexport default HomeScreenContainer;\n"
   },
   {
     "__docId__": 47,
@@ -902,7 +904,7 @@
       {
         "nullable": null,
         "types": [
-          "{onJoinGame: function()}"
+          "{onJoinRandomGame: function()}"
         ],
         "spread": false,
         "optional": false,
@@ -1056,16 +1058,16 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "/* Import Test Utils */\nimport TestUtils from 'react-addons-test-utils';\nimport { findWithType } from 'react-shallow-testutils';\n\n/* Import Mocks for Testing */\nimport React from 'react-native'; // <rootdir>/app/__mocks__/react-native.js\nimport Button from 'react-native-button'; // Mocked automatically\n\n/* Must be mocked explicitly because set as an unmocked module in package.json */\njest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js\n\n/* Unmock HomeScreen for unit testing */\njest.unmock('../HomeScreen.js');\nimport HomeScreen from '../HomeScreen.js';\n\n/* Create mock function to pass in as prop for testing */\nconst joinGame = jest.genMockFunction();\n\ndescribe('HomeScreen', () => {\n  let output;\n\n  beforeEach(() => {\n    const renderer = TestUtils.createRenderer();\n    renderer.render(<HomeScreen onJoinGame={joinGame} />);\n    output = renderer.getRenderOutput();\n  });\n\n  afterEach(() => {\n    output = undefined;\n  });\n\n  it('should render', () => {\n    expect(output).toBeDefined();\n  });\n\n  it('should have a \"Join Game\" button', () => {\n    expect(() => { findWithType(output, Button); }).not.toThrow();\n  });\n\n  it('should have an onPress event', () => {\n    const joinButton = findWithType(output, Button);\n    joinButton.props.onPress();\n    expect(joinGame).toBeCalled();\n  });\n});\n"
+    "content": "/* Import Test Utils */\nimport TestUtils from 'react-addons-test-utils';\nimport { findWithType } from 'react-shallow-testutils';\n\n/* Import Mocks for Testing */\nimport React from 'react-native'; // <rootdir>/app/__mocks__/react-native.js\nimport Button from 'react-native-button'; // Mocked automatically\n\n/* Must be mocked explicitly because set as an unmocked module in package.json */\njest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js\n\n/* Unmock HomeScreen for unit testing */\njest.unmock('../HomeScreen.js');\nimport HomeScreen from '../HomeScreen.js';\n\n/* Create mock function to pass in as prop for testing */\nconst joinRandomGame = jest.genMockFunction();\n\ndescribe('HomeScreen', () => {\n  let output;\n\n  beforeEach(() => {\n    const renderer = TestUtils.createRenderer();\n    renderer.render(<HomeScreen onJoinRandomGame={joinRandomGame} />);\n    output = renderer.getRenderOutput();\n  });\n\n  afterEach(() => {\n    output = undefined;\n  });\n\n  it('should render', () => {\n    expect(output).toBeDefined();\n  });\n\n  it('should have a \"Join Random Game\" button', () => {\n    expect(() => { findWithType(output, Button); }).not.toThrow();\n  });\n\n  it('should have an onPress event', () => {\n    const joinButton = findWithType(output, Button);\n    joinButton.props.onPress();\n    expect(joinRandomGame).toBeCalled();\n  });\n});\n"
   },
   {
     "__docId__": 55,
     "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "joinGame",
+    "name": "joinRandomGame",
     "memberof": "app/screens/__tests__/HomeScreenTest.js",
-    "longname": "app/screens/__tests__/HomeScreenTest.js~joinGame",
+    "longname": "app/screens/__tests__/HomeScreenTest.js~joinRandomGame",
     "access": null,
     "export": false,
     "importPath": "smileguess/app/screens/__tests__/HomeScreenTest.js",
