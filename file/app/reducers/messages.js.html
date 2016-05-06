@@ -32,19 +32,7 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_GAME">JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_RANDOM_GAME">JOIN_RANDOM_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_CLUE_MESSAGE">SEND_CLUE_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
@@ -54,7 +42,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/reducers/messages.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SOCKET_CLUE_MESSAGE, SOCKET_GUESS_MESSAGE } from &apos;../action_types/actionTypes.js&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SUBMIT_GUESS, SUBMIT_HINT } from &apos;../action_types/actionTypes.js&apos;;
 
 const noAction = {
   type: &apos;NO_ACTION&apos;,
@@ -62,18 +50,10 @@ const noAction = {
 
 export default (state = [], action = noAction) =&gt; {
   switch (action.type) {
-    case SOCKET_GUESS_MESSAGE:
-      return state.concat([{
-        type: 1,
-        userid: action.userid,
-        message: action.message,
-      }]);
-    case SOCKET_CLUE_MESSAGE:
-      return state.concat([{
-        type: 2,
-        userid: action.userid,
-        message: action.message,
-      }]);
+    case SUBMIT_GUESS:
+      return state.concat([action.guess]);
+    case SUBMIT_HINT:
+      return state.concat([action.hint]);
     default:
       return state;
   }

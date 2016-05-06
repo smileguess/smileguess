@@ -32,19 +32,7 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_GAME">JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_RANDOM_GAME">JOIN_RANDOM_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_CLUE_MESSAGE">SEND_CLUE_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
@@ -55,21 +43,17 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/actions/__tests__/user.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">jest.unmock(&apos;../user.js&apos;);
-import { joinGame, joinRandomGame, submitGuess } from &apos;../user.js&apos;;
-import { JOIN_RANDOM_GAME, JOIN_GAME, SEND_GUESS_MESSAGE } from &apos;../../action_types/actionTypes.js&apos;;
+import { joinGame, submitGuess } from &apos;../user.js&apos;;
+import { JOIN_GAME, SUBMIT_GUESS } from &apos;../../action_types/actionTypes.js&apos;;
 
 describe(&apos;User Action Types&apos;, () =&gt; {
   it(&apos;should have an action type JOIN_GAME&apos;, () =&gt; {
     expect(JOIN_GAME).toBeDefined();
-    expect(JOIN_GAME).toMatch(&apos;server/joinGame&apos;);
+    expect(JOIN_GAME).toMatch(&apos;JOIN_GAME&apos;);
   });
-  it(&apos;should have an action type JOIN_RANDOM_GAME&apos;, () =&gt; {
-    expect(JOIN_RANDOM_GAME).toBeDefined();
-    expect(JOIN_RANDOM_GAME).toMatch(&apos;server/joinRandomGame&apos;);
-  });
-  it(&apos;should have an action type SEND_GUESS_MESSAGE&apos;, () =&gt; {
-    expect(SEND_GUESS_MESSAGE).toBeDefined();
-    expect(SEND_GUESS_MESSAGE).toMatch(&apos;server/sendGuessMessage&apos;);
+  it(&apos;should have an action type SUBMIT_GUESS&apos;, () =&gt; {
+    expect(SUBMIT_GUESS).toBeDefined();
+    expect(SUBMIT_GUESS).toMatch(&apos;SUBMIT_GUESS&apos;);
   });
 });
 
@@ -85,30 +69,18 @@ describe(&apos;joinGame Action Creator&apos;, () =&gt; {
   });
 });
 
-describe(&apos;joinRandomGame Action Creator&apos;, () =&gt; {
-  it(&apos;should be a function&apos;, () =&gt; {
-    expect(typeof joinRandomGame).toEqual(&apos;function&apos;);
-  });
-  it(&apos;should return an object&apos;, () =&gt; {
-    expect(typeof joinRandomGame()).toEqual(&apos;object&apos;);
-  });
-  it(&apos;should have a type property of JOIN_GAME&apos;, () =&gt; {
-    expect(joinRandomGame().type).toEqual(JOIN_RANDOM_GAME);
-  });
-});
-
 describe(&apos;submitGuess Action Creator&apos;, () =&gt; {
   it(&apos;should be a function&apos;, () =&gt; {
     expect(typeof submitGuess).toEqual(&apos;function&apos;);
   });
   it(&apos;should return an object&apos;, () =&gt; {
-    expect(typeof submitGuess(6, &apos;tree&apos;)).toEqual(&apos;object&apos;);
+    expect(typeof submitGuess(&apos;tree&apos;)).toEqual(&apos;object&apos;);
   });
   it(&apos;should have a type property of SUBMIT_GUESS&apos;, () =&gt; {
-    expect(submitGuess(6, &apos;tree&apos;).type).toEqual(SEND_GUESS_MESSAGE);
+    expect(submitGuess(&apos;tree&apos;).type).toEqual(SUBMIT_GUESS);
   });
   it(&apos;should have a guess property of passed in guess&apos;, () =&gt; {
-    expect(submitGuess(6, &apos;tree&apos;).message).toEqual(&apos;tree&apos;);
+    expect(submitGuess(&apos;tree&apos;).guess).toEqual(&apos;tree&apos;);
   });
 });
 </code></pre>

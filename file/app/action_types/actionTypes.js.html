@@ -32,19 +32,7 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_GAME">JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_RANDOM_GAME">JOIN_RANDOM_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_CLUE_MESSAGE">SEND_CLUE_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
@@ -54,40 +42,10 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/action_types/actionTypes.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * Server Action: sent from the server when the dealer sends a clue message
- */
-export const SOCKET_CLUE_MESSAGE = &apos;SOCKET_CLUE_MESSAGE&apos;;
-/**
- * Server Action: sent from the server when a player sends a guess message
- */
-export const SOCKET_GUESS_MESSAGE = &apos;SOCKET_GUESS_MESSAGE&apos;;
-/**
- * Server Action: sent from the server when a winner is declared
- */
-export const SOCKET_DECLARE_WINNER = &apos;SOCKET_DECLARE_WINNER&apos;;
-/**
- * Server Action: sent from the server when a player joins in on the current game
- */
-export const SOCKET_PLAYER_JOIN_GAME = &apos;SOCKET_PLAYER_JOIN_GAME&apos;;
-
-/**
- * Client Action: sent to server when the client wants to broadcast a guess
- */
-export const SEND_GUESS_MESSAGE = &apos;server/sendGuessMessage&apos;;
-/**
- * Client Action: sent to server when the dealer wants to broadcast a clue
- */
-export const SEND_CLUE_MESSAGE = &apos;server/sendClueMessage&apos;;
-/**
- * Client Action: sent to server when the player wants to join a random game
- */
-export const JOIN_RANDOM_GAME = &apos;server/joinRandomGame&apos;;
-/**
- * Client Action: sent to server when the player wants to join a specific game by ID
- */
-export const JOIN_GAME = &apos;server/joinGame&apos;;
-
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export const SUBMIT_HINT = &apos;SUBMIT_HINT&apos;;
+export const PLAYER_JOIN_GAME = &apos;PLAYER_JOIN_GAME&apos;;
+export const JOIN_GAME = &apos;JOIN_GAME&apos;;
+export const SUBMIT_GUESS = &apos;SUBMIT_GUESS&apos;;
 </code></pre>
 
 </div>
