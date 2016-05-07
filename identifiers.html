@@ -41,11 +41,13 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-updateUIState">updateUIState</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/screens/GameScreen.js~GameScreen.html">GameScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
@@ -55,11 +57,8 @@
 </nav>
 
 <div class="content" data-ice="content"><h1>References</h1>
-
-
-
-<div data-ice="variableSummary"><h2 id="variable">Variable Summary</h2><table class="summary" data-ice="summary">
-  <thead><tr><td data-ice="title" colspan="3">Static Public Variable Summary</td></tr></thead>
+<div data-ice="classSummary"><h2 id="class">Class Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Static Public Class Summary</td></tr></thead>
   <tbody>
   
   <tr data-ice="target">
@@ -73,13 +72,13 @@
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span><span data-ice="signature">(props: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>()</span></span>): <span>*</span></span>
+           <span data-ice="name"><span><a href="class/app/screens/GameScreen.js~GameScreen.html">GameScreen</a></span></span><span data-ice="signature">(props: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>()</span></span>)</span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>GameScreen is a React functional component.</p>
+        <div data-ice="description"><p>GameScreen is a React class component.</p>
 </div>
       </div>
     </td>
@@ -88,7 +87,16 @@
       
     </td>
   </tr>
-<tr data-ice="target">
+</tbody>
+</table>
+</div>
+
+
+<div data-ice="variableSummary"><h2 id="variable">Variable Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Static Public Variable Summary</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
     <td>
       <span class="access" data-ice="access">public</span>
       
@@ -439,6 +447,33 @@ actions creators of HomeScreen to the store and dispatcher, respectively.</p>
     <td>
       <div>
         <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
+the store.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
            <span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span><span data-ice="signature">(gameid: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>*</span></span>
         </p>
       </div>
@@ -528,6 +563,33 @@ This action is handeled by the server</p>
         
         <div data-ice="description"><p>Creates an action for submitting a guess to the server
 This action is handled by the server</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-updateUIState">updateUIState</a></span></span><span data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This creates an action to update some part of the ui state that is being
+tracked in the store.</p>
 </div>
       </div>
     </td>

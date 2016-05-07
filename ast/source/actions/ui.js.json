@@ -1,0 +1,393 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 261,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 11,
+      "column": 0
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 0,
+      "end": 65,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 65
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 9,
+          "end": 24,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 24
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 9,
+            "end": 24,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 24
+              }
+            },
+            "name": "UPDATE_UI_STATE"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 9,
+            "end": 24,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 24
+              }
+            },
+            "name": "UPDATE_UI_STATE"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 32,
+        "end": 64,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 32
+          },
+          "end": {
+            "line": 1,
+            "column": 64
+          }
+        },
+        "value": "../action_types/actionTypes.js",
+        "rawValue": "../action_types/actionTypes.js",
+        "raw": "'../action_types/actionTypes.js'"
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * This creates an action to update some part of the ui state that is being\n * tracked in the store.\n ",
+          "start": 67,
+          "end": 175,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          },
+          "range": [
+            67,
+            175
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 176,
+      "end": 260,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 3
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 183,
+        "end": 260,
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 7
+          },
+          "end": {
+            "line": 10,
+            "column": 3
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 189,
+            "end": 259,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 13
+              },
+              "end": {
+                "line": 10,
+                "column": 2
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 189,
+              "end": 202,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 13
+                },
+                "end": {
+                  "line": 7,
+                  "column": 26
+                }
+              },
+              "name": "updateUIState",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "ArrowFunctionExpression",
+              "start": 205,
+              "end": 259,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 29
+                },
+                "end": {
+                  "line": 10,
+                  "column": 2
+                }
+              },
+              "id": null,
+              "generator": false,
+              "expression": true,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 206,
+                  "end": 213,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 30
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 37
+                    }
+                  },
+                  "name": "payload"
+                }
+              ],
+              "body": {
+                "type": "ObjectExpression",
+                "start": 219,
+                "end": 258,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 43
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 1
+                  }
+                },
+                "properties": [
+                  {
+                    "type": "Property",
+                    "start": 223,
+                    "end": 244,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 23
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "Identifier",
+                      "start": 223,
+                      "end": 227,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 6
+                        }
+                      },
+                      "name": "type"
+                    },
+                    "value": {
+                      "type": "Identifier",
+                      "start": 229,
+                      "end": 244,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 23
+                        }
+                      },
+                      "name": "UPDATE_UI_STATE"
+                    },
+                    "kind": "init"
+                  },
+                  {
+                    "type": "Property",
+                    "start": 248,
+                    "end": 255,
+                    "loc": {
+                      "start": {
+                        "line": 9,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 9
+                      }
+                    },
+                    "method": false,
+                    "shorthand": true,
+                    "computed": false,
+                    "key": {
+                      "type": "Identifier",
+                      "start": 248,
+                      "end": 255,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 9
+                        }
+                      },
+                      "name": "payload"
+                    },
+                    "kind": "init",
+                    "value": {
+                      "type": "Identifier",
+                      "start": 248,
+                      "end": 255,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 9
+                        }
+                      },
+                      "name": "payload"
+                    }
+                  }
+                ],
+                "parenthesizedExpression": true
+              }
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * This creates an action to update some part of the ui state that is being\n * tracked in the store.\n ",
+            "start": 67,
+            "end": 175,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            },
+            "range": [
+              67,
+              175
+            ]
+          }
+        ],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * This creates an action to update some part of the ui state that is being\n * tracked in the store.\n ",
+          "start": 67,
+          "end": 175,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          },
+          "range": [
+            67,
+            175
+          ]
+        }
+      ]
+    }
+  ]
+}

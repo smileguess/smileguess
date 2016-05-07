@@ -1,9 +1,9 @@
 window.esdocSearchIndex = [
   [
     "./app/screens/gamescreen.js~gamescreen",
-    "variable/index.html#static-variable-GameScreen",
+    "class/app/screens/GameScreen.js~GameScreen.html",
     "<span>GameScreen</span> <span class=\"search-result-import-path\">./app/screens/GameScreen.js</span>",
-    "variable"
+    "class"
   ],
   [
     "./app/screens/gamescreen.js~gamescreencontainer",
@@ -84,6 +84,12 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "./app/action_types/actiontypes.js~update_ui_state",
+    "variable/index.html#static-variable-UPDATE_UI_STATE",
+    "<span>UPDATE_UI_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
     "./app/actions/user.js~joingame",
     "variable/index.html#static-variable-joinGame",
     "<span>joinGame</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
@@ -105,6 +111,12 @@ window.esdocSearchIndex = [
     "./app/actions/user.js~submitguess",
     "variable/index.html#static-variable-submitGuess",
     "<span>submitGuess</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
+    "variable"
+  ],
+  [
+    "./app/actions/ui.js~updateuistate",
+    "variable/index.html#static-variable-updateUIState",
+    "<span>updateUIState</span> <span class=\"search-result-import-path\">./app/actions/ui.js</span>",
     "variable"
   ],
   [
@@ -468,9 +480,21 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/actions/ui.js",
+    "file/app/actions/ui.js.html",
+    "app/actions/ui.js",
+    "file"
+  ],
+  [
     "app/actions/user.js",
     "file/app/actions/user.js.html",
     "app/actions/user.js",
+    "file"
+  ],
+  [
+    "app/components/chatslist.js",
+    "file/app/components/ChatsList.js.html",
+    "app/components/ChatsList.js",
     "file"
   ],
   [
@@ -531,6 +555,12 @@ window.esdocSearchIndex = [
     "app/reducers/routes.js",
     "file/app/reducers/routes.js.html",
     "app/reducers/routes.js",
+    "file"
+  ],
+  [
+    "app/reducers/ui.js",
+    "file/app/reducers/ui.js.html",
+    "app/reducers/ui.js",
     "file"
   ],
   [

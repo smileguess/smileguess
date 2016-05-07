@@ -1,0 +1,624 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 361,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 14,
+      "column": 0
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 0,
+      "end": 65,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 65
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 9,
+          "end": 24,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 24
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 9,
+            "end": 24,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 24
+              }
+            },
+            "name": "UPDATE_UI_STATE"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 9,
+            "end": 24,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 24
+              }
+            },
+            "name": "UPDATE_UI_STATE"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 32,
+        "end": 64,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 32
+          },
+          "end": {
+            "line": 1,
+            "column": 64
+          }
+        },
+        "value": "../action_types/actionTypes.js",
+        "rawValue": "../action_types/actionTypes.js",
+        "raw": "'../action_types/actionTypes.js'"
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": " This reduer is a placeholder for any pieces of UI state that need to be shared across\n* screens\n",
+          "start": 67,
+          "end": 168,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 2
+            }
+          },
+          "range": [
+            67,
+            168
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "start": 169,
+      "end": 360,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
+          "column": 2
+        }
+      },
+      "declaration": {
+        "type": "ArrowFunctionExpression",
+        "start": 184,
+        "end": 359,
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 15
+          },
+          "end": {
+            "line": 13,
+            "column": 1
+          }
+        },
+        "id": null,
+        "generator": false,
+        "expression": false,
+        "async": false,
+        "params": [
+          {
+            "type": "AssignmentPattern",
+            "start": 185,
+            "end": 195,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 16
+              },
+              "end": {
+                "line": 6,
+                "column": 26
+              }
+            },
+            "left": {
+              "type": "Identifier",
+              "start": 185,
+              "end": 190,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 16
+                },
+                "end": {
+                  "line": 6,
+                  "column": 21
+                }
+              },
+              "name": "state",
+              "leadingComments": null
+            },
+            "right": {
+              "type": "ObjectExpression",
+              "start": 193,
+              "end": 195,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 24
+                },
+                "end": {
+                  "line": 6,
+                  "column": 26
+                }
+              },
+              "properties": []
+            },
+            "leadingComments": null
+          },
+          {
+            "type": "AssignmentPattern",
+            "start": 197,
+            "end": 208,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 28
+              },
+              "end": {
+                "line": 6,
+                "column": 39
+              }
+            },
+            "left": {
+              "type": "Identifier",
+              "start": 197,
+              "end": 203,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 28
+                },
+                "end": {
+                  "line": 6,
+                  "column": 34
+                }
+              },
+              "name": "action"
+            },
+            "right": {
+              "type": "ObjectExpression",
+              "start": 206,
+              "end": 208,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 37
+                },
+                "end": {
+                  "line": 6,
+                  "column": 39
+                }
+              },
+              "properties": []
+            }
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "start": 213,
+          "end": 359,
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 44
+            },
+            "end": {
+              "line": 13,
+              "column": 1
+            }
+          },
+          "body": [
+            {
+              "type": "SwitchStatement",
+              "start": 217,
+              "end": 357,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 2
+                },
+                "end": {
+                  "line": 12,
+                  "column": 3
+                }
+              },
+              "discriminant": {
+                "type": "MemberExpression",
+                "start": 225,
+                "end": 236,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 21
+                  }
+                },
+                "object": {
+                  "type": "Identifier",
+                  "start": 225,
+                  "end": 231,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 16
+                    }
+                  },
+                  "name": "action"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 232,
+                  "end": 236,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 17
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 21
+                    }
+                  },
+                  "name": "type"
+                },
+                "computed": false
+              },
+              "cases": [
+                {
+                  "type": "SwitchCase",
+                  "start": 244,
+                  "end": 320,
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 54
+                    }
+                  },
+                  "consequent": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 272,
+                      "end": 320,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 6
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 54
+                        }
+                      },
+                      "argument": {
+                        "type": "CallExpression",
+                        "start": 279,
+                        "end": 319,
+                        "loc": {
+                          "start": {
+                            "line": 9,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 53
+                          }
+                        },
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 279,
+                          "end": 292,
+                          "loc": {
+                            "start": {
+                              "line": 9,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 9,
+                              "column": 26
+                            }
+                          },
+                          "object": {
+                            "type": "Identifier",
+                            "start": 279,
+                            "end": 285,
+                            "loc": {
+                              "start": {
+                                "line": 9,
+                                "column": 13
+                              },
+                              "end": {
+                                "line": 9,
+                                "column": 19
+                              }
+                            },
+                            "name": "Object"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 286,
+                            "end": 292,
+                            "loc": {
+                              "start": {
+                                "line": 9,
+                                "column": 20
+                              },
+                              "end": {
+                                "line": 9,
+                                "column": 26
+                              }
+                            },
+                            "name": "assign"
+                          },
+                          "computed": false
+                        },
+                        "arguments": [
+                          {
+                            "type": "ObjectExpression",
+                            "start": 293,
+                            "end": 295,
+                            "loc": {
+                              "start": {
+                                "line": 9,
+                                "column": 27
+                              },
+                              "end": {
+                                "line": 9,
+                                "column": 29
+                              }
+                            },
+                            "properties": []
+                          },
+                          {
+                            "type": "Identifier",
+                            "start": 297,
+                            "end": 302,
+                            "loc": {
+                              "start": {
+                                "line": 9,
+                                "column": 31
+                              },
+                              "end": {
+                                "line": 9,
+                                "column": 36
+                              }
+                            },
+                            "name": "state"
+                          },
+                          {
+                            "type": "MemberExpression",
+                            "start": 304,
+                            "end": 318,
+                            "loc": {
+                              "start": {
+                                "line": 9,
+                                "column": 38
+                              },
+                              "end": {
+                                "line": 9,
+                                "column": 52
+                              }
+                            },
+                            "object": {
+                              "type": "Identifier",
+                              "start": 304,
+                              "end": 310,
+                              "loc": {
+                                "start": {
+                                  "line": 9,
+                                  "column": 38
+                                },
+                                "end": {
+                                  "line": 9,
+                                  "column": 44
+                                }
+                              },
+                              "name": "action"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 311,
+                              "end": 318,
+                              "loc": {
+                                "start": {
+                                  "line": 9,
+                                  "column": 45
+                                },
+                                "end": {
+                                  "line": 9,
+                                  "column": 52
+                                }
+                              },
+                              "name": "payload"
+                            },
+                            "computed": false
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "test": {
+                    "type": "Identifier",
+                    "start": 249,
+                    "end": 264,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 24
+                      }
+                    },
+                    "name": "UPDATE_UI_STATE"
+                  }
+                },
+                {
+                  "type": "SwitchCase",
+                  "start": 325,
+                  "end": 353,
+                  "loc": {
+                    "start": {
+                      "line": 10,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 19
+                    }
+                  },
+                  "consequent": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 340,
+                      "end": 353,
+                      "loc": {
+                        "start": {
+                          "line": 11,
+                          "column": 6
+                        },
+                        "end": {
+                          "line": 11,
+                          "column": 19
+                        }
+                      },
+                      "argument": {
+                        "type": "Identifier",
+                        "start": 347,
+                        "end": 352,
+                        "loc": {
+                          "start": {
+                            "line": 11,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 11,
+                            "column": 18
+                          }
+                        },
+                        "name": "state"
+                      }
+                    }
+                  ],
+                  "test": null
+                }
+              ]
+            }
+          ]
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": " This reduer is a placeholder for any pieces of UI state that need to be shared across\n* screens\n",
+            "start": 67,
+            "end": 168,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 2
+              }
+            },
+            "range": [
+              67,
+              168
+            ]
+          }
+        ],
+        "trailingComments": []
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " This reduer is a placeholder for any pieces of UI state that need to be shared across\n* screens\n",
+          "start": 67,
+          "end": 168,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 2
+            }
+          },
+          "range": [
+            67,
+            168
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 1383,
+  "end": 1465,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 43,
+      "line": 44,
       "column": 0
     }
   },
@@ -1513,22 +1513,22 @@
         "trailingComments": [
           {
             "type": "Block",
-            "value": "*\n * Client->Client: sample comment for ui (client to client) actions\n ",
+            "value": "*\n * Client->Client: sent from the view to update parts of the ui state being tracked in\n * the store.\n ",
             "start": 1306,
-            "end": 1381,
+            "end": 1414,
             "loc": {
               "start": {
                 "line": 39,
                 "column": 0
               },
               "end": {
-                "line": 41,
+                "line": 42,
                 "column": 3
               }
             },
             "range": [
               1306,
-              1381
+              1414
             ]
           }
         ]
@@ -1560,22 +1560,153 @@
       "trailingComments": [
         {
           "type": "Block",
-          "value": "*\n * Client->Client: sample comment for ui (client to client) actions\n ",
+          "value": "*\n * Client->Client: sent from the view to update parts of the ui state being tracked in\n * the store.\n ",
           "start": 1306,
-          "end": 1381,
+          "end": 1414,
           "loc": {
             "start": {
               "line": 39,
               "column": 0
             },
             "end": {
-              "line": 41,
+              "line": 42,
               "column": 3
             }
           },
           "range": [
             1306,
-            1381
+            1414
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 1415,
+      "end": 1464,
+      "loc": {
+        "start": {
+          "line": 43,
+          "column": 0
+        },
+        "end": {
+          "line": 43,
+          "column": 49
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 1422,
+        "end": 1464,
+        "loc": {
+          "start": {
+            "line": 43,
+            "column": 7
+          },
+          "end": {
+            "line": 43,
+            "column": 49
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 1428,
+            "end": 1463,
+            "loc": {
+              "start": {
+                "line": 43,
+                "column": 13
+              },
+              "end": {
+                "line": 43,
+                "column": 48
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 1428,
+              "end": 1443,
+              "loc": {
+                "start": {
+                  "line": 43,
+                  "column": 13
+                },
+                "end": {
+                  "line": 43,
+                  "column": 28
+                }
+              },
+              "name": "UPDATE_UI_STATE",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 1446,
+              "end": 1463,
+              "loc": {
+                "start": {
+                  "line": 43,
+                  "column": 31
+                },
+                "end": {
+                  "line": 43,
+                  "column": 48
+                }
+              },
+              "value": "UPDATE_UI_STATE",
+              "rawValue": "UPDATE_UI_STATE",
+              "raw": "'UPDATE_UI_STATE'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Client: sent from the view to update parts of the ui state being tracked in\n * the store.\n ",
+            "start": 1306,
+            "end": 1414,
+            "loc": {
+              "start": {
+                "line": 39,
+                "column": 0
+              },
+              "end": {
+                "line": 42,
+                "column": 3
+              }
+            },
+            "range": [
+              1306,
+              1414
+            ]
+          }
+        ],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Client: sent from the view to update parts of the ui state being tracked in\n * the store.\n ",
+          "start": 1306,
+          "end": 1414,
+          "loc": {
+            "start": {
+              "line": 39,
+              "column": 0
+            },
+            "end": {
+              "line": 42,
+              "column": 3
+            }
+          },
+          "range": [
+            1306,
+            1414
           ]
         }
       ]

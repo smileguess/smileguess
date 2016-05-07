@@ -41,11 +41,13 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-updateUIState">updateUIState</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/screens/GameScreen.js~GameScreen.html">GameScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
@@ -60,32 +62,6 @@
   <tbody>
   
   <tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreen">GameScreen</a></span></span><span data-ice="signature">(props: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>()</span></span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>GameScreen is a React functional component.</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
     <td>
       <span class="access" data-ice="access">public</span>
       
@@ -436,6 +412,33 @@ actions creators of HomeScreen to the store and dispatcher, respectively.</p>
     <td>
       <div>
         <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
+the store.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
            <span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span><span data-ice="signature">(gameid: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>*</span></span>
         </p>
       </div>
@@ -533,55 +536,38 @@ This action is handled by the server</p>
       
     </td>
   </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-updateUIState">updateUIState</a></span></span><span data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This creates an action to update some part of the ui state that is being
+tracked in the store.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
 </tbody>
 </table>
 </div>
 <div data-ice="details"><h2 data-ice="title">Static Public </h2>
 
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-GameScreen">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">GameScreen</span><span data-ice="signature">(props: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>()</span></span>): <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/screens/GameScreen.js.html#lineNumber41">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {GameScreen} from &apos;<span><a href="file/app/screens/GameScreen.js.html#lineNumber41">./app/screens/GameScreen.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>GameScreen is a React functional component.
-It defines the game room players will see while playing the game.
-It displays messages as well as allows for user input form either the dealer
-or the players who are guessing.</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
 <div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-variable-GameScreenContainer">
     <span class="access" data-ice="access">public</span>
@@ -593,11 +579,11 @@ or the players who are guessing.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/screens/GameScreen.js.html#lineNumber59">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/screens/GameScreen.js.html#lineNumber112">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import GameScreenContainer from &apos;<span><a href="file/app/screens/GameScreen.js.html#lineNumber59">./app/screens/GameScreen.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import GameScreenContainer from &apos;<span><a href="file/app/screens/GameScreen.js.html#lineNumber112">./app/screens/GameScreen.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>GameScreenContainer is a &apos;container component&apos; which binds the props and
@@ -1122,6 +1108,48 @@ for documentation purposes.</p>
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-UPDATE_UI_STATE">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">UPDATE_UI_STATE</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber43">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {UPDATE_UI_STATE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber43">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
+the store.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-variable-joinGame">
     <span class="access" data-ice="access">public</span>
     
@@ -1267,6 +1295,48 @@ This action is handeled by the server</p>
   
   <div data-ice="description"><p>Creates an action for submitting a guess to the server
 This action is handled by the server</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-updateUIState">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">updateUIState</span><span data-ice="signature">: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/actions/ui.js.html#lineNumber7">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {updateUIState} from &apos;<span><a href="file/app/actions/ui.js.html#lineNumber7">./app/actions/ui.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>This creates an action to update some part of the ui state that is being
+tracked in the store.</p>
 </div>
 
   

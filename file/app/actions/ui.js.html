@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../../../">
-  <title data-ice="title">app/screens/__tests__/HomeScreenTest.js | API Document</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">app/actions/ui.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -56,51 +56,16 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">app/screens/__tests__/HomeScreenTest.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Import Test Utils */
-import TestUtils from &apos;react-addons-test-utils&apos;;
-import { findWithType } from &apos;react-shallow-testutils&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">app/actions/ui.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { UPDATE_UI_STATE } from &apos;../action_types/actionTypes.js&apos;;
 
-/* Import Mocks for Testing */
-import React from &apos;react-native&apos;; // &lt;rootdir&gt;/app/__mocks__/react-native.js
-import Button from &apos;react-native-button&apos;; // Mocked automatically
-
-/* Must be mocked explicitly because set as an unmocked module in package.json */
-jest.mock(&apos;react-redux&apos;); // &lt;rootdir&gt;/app/__mocks__/react-redux.js
-
-/* Unmock HomeScreen for unit testing */
-jest.unmock(&apos;../HomeScreen.js&apos;);
-import HomeScreen from &apos;../HomeScreen.js&apos;;
-
-/* Create mock function to pass in as prop for testing */
-const joinRandomGame = jest.genMockFunction();
-
-describe(&apos;HomeScreen&apos;, () =&gt; {
-  let output;
-
-  beforeEach(() =&gt; {
-    const renderer = TestUtils.createRenderer();
-    renderer.render(&lt;HomeScreen onJoinRandomGame={joinRandomGame} /&gt;);
-    output = renderer.getRenderOutput();
-  });
-
-  afterEach(() =&gt; {
-    output = undefined;
-  });
-
-  it(&apos;should render&apos;, () =&gt; {
-    expect(output).toBeDefined();
-  });
-
-  it(&apos;should have a &quot;Join Random Game&quot; button&apos;, () =&gt; {
-    expect(() =&gt; { findWithType(output, Button); }).not.toThrow();
-  });
-
-  it(&apos;should have an onPress event&apos;, () =&gt; {
-    const joinButton = findWithType(output, Button);
-    joinButton.props.onPress();
-    expect(joinRandomGame).toBeCalled();
-  });
+/**
+ * This creates an action to update some part of the ui state that is being
+ * tracked in the store.
+ */
+export const updateUIState = (payload) =&gt; ({
+  type: UPDATE_UI_STATE,
+  payload,
 });
 </code></pre>
 
