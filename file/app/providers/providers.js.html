@@ -52,6 +52,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StatsScreenContainer">StatsScreenContainer</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -60,6 +61,7 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Import Actions */
 import { joinGame, joinRandomGame, submitGuess } from &apos;../actions/user.js&apos;;
 import { Actions } from &apos;react-native-router-flux&apos;;
+
 
 /* Home Screen Providers*/
 export const mapHomeScreen = {
@@ -100,6 +102,55 @@ export const mapGameScreen = {
     };
   },
 };
+
+/* mapStatsScreen below is built out with dummy data
+in the same format as player data is expected to come in.
+This has been done for testing purposes.
+
+Once player data and functionality has been finalised,
+playerStats below will be replaced as follows:
+  mapStateToProps(state) {
+    return {
+      playerStats: state.players.byId.map(id =&gt; state.players.all[id]),
+    };
+  },
+*/
+
+const playersById = [&apos;11&apos;, &apos;12&apos;, &apos;13&apos;, &apos;14&apos;, &apos;15&apos;, &apos;16&apos;, &apos;17&apos;, &apos;18&apos;, &apos;19&apos;, &apos;20&apos;, &apos;21&apos;, &apos;22&apos;, &apos;23&apos;, &apos;24&apos;, &apos;25&apos;, &apos;26&apos;, &apos;27&apos;, &apos;28&apos;, &apos;29&apos;, &apos;30&apos;];
+const playersObj = {
+  11: { username: &apos;Will&apos;, points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: &apos;http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png&apos; } },
+  12: { username: &apos;Travis&apos;, points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: &apos;http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w&apos; } },
+  13: { username: &apos;Brandon&apos;, points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: &apos;http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif&apos; } },
+  14: { username: &apos;Sylvia&apos;, points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: &apos;https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300&apos; } },
+  15: { username: &apos;Will&apos;, points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: &apos;http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png&apos; } },
+  16: { username: &apos;Travis&apos;, points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: &apos;http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w&apos; } },
+  17: { username: &apos;Brandon&apos;, points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: &apos;http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif&apos; } },
+  18: { username: &apos;Sylvia&apos;, points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: &apos;https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300&apos; } },
+  19: { username: &apos;Will&apos;, points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: &apos;http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png&apos; } },
+  20: { username: &apos;Travis&apos;, points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: &apos;http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w&apos; } },
+  21: { username: &apos;Brandon&apos;, points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: &apos;http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif&apos; } },
+  22: { username: &apos;Sylvia&apos;, points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: &apos;https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300&apos; } },
+  23: { username: &apos;Will&apos;, points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: &apos;http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png&apos; } },
+  24: { username: &apos;Travis&apos;, points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: &apos;http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w&apos; } },
+  25: { username: &apos;Brandon&apos;, points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: &apos;http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif&apos; } },
+  26: { username: &apos;Sylvia&apos;, points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: &apos;https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300&apos; } },
+  27: { username: &apos;Will&apos;, points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: &apos;http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png&apos; } },
+  28: { username: &apos;Travis&apos;, points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: &apos;http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w&apos; } },
+  29: { username: &apos;Brandon&apos;, points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: &apos;http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif&apos; } },
+  30: { username: &apos;Sylvia&apos;, points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: &apos;https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300&apos; } },
+};
+/* Stats Screen Providers*/
+export const mapStatsScreen = {
+  mapStateToProps() {
+    return {
+      playerStats: playersById.map(id =&gt; playersObj[id]),
+    };
+  },
+  mapDispatchToProps() {
+    return {};
+  },
+};
+
 </code></pre>
 
 </div>

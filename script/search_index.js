@@ -84,6 +84,12 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "./app/screens/statsscreen.js~statsscreencontainer",
+    "variable/index.html#static-variable-StatsScreenContainer",
+    "<span>StatsScreenContainer</span> <span class=\"search-result-import-path\">./app/screens/StatsScreen.js</span>",
+    "variable"
+  ],
+  [
     "./app/action_types/actiontypes.js~update_ui_state",
     "variable/index.html#static-variable-UPDATE_UI_STATE",
     "<span>UPDATE_UI_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
@@ -582,6 +588,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/screens/statsscreen.js",
+    "file/app/screens/StatsScreen.js.html",
+    "app/screens/StatsScreen.js",
+    "file"
+  ],
+  [
     "app/screens/__tests__/gamescreentest.js",
     "file/app/screens/__tests__/GameScreenTest.js.html",
     "app/screens/__tests__/GameScreenTest.js",
@@ -591,6 +603,12 @@ window.esdocSearchIndex = [
     "app/screens/__tests__/homescreentest.js",
     "file/app/screens/__tests__/HomeScreenTest.js.html",
     "app/screens/__tests__/HomeScreenTest.js",
+    "file"
+  ],
+  [
+    "app/screens/__tests__/statsscreentest.js",
+    "file/app/screens/__tests__/StatsScreenTest.js.html",
+    "app/screens/__tests__/StatsScreenTest.js",
     "file"
   ],
   [

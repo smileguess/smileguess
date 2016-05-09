@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">app/action_types/actionTypes.js | API Document</title>
+  <title data-ice="title">app/screens/StatsScreen.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -57,50 +57,161 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">app/action_types/actionTypes.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * Server-&gt;Client: sent from the server when the dealer sends a clue message
- */
-export const SOCKET_CLUE_MESSAGE = &apos;SOCKET_CLUE_MESSAGE&apos;;
-/**
- * Server-&gt;Client: sent from the server when a player sends a guess message
- */
-export const SOCKET_GUESS_MESSAGE = &apos;SOCKET_GUESS_MESSAGE&apos;;
-/**
- * Server-&gt;Client: sent from the server when a winner is declared
- */
-export const SOCKET_DECLARE_WINNER = &apos;SOCKET_DECLARE_WINNER&apos;;
-/**
- * Server-&gt;Client: sent from the server when a player joins in on the current game
- */
-export const SOCKET_PLAYER_JOIN_GAME = &apos;SOCKET_PLAYER_JOIN_GAME&apos;;
-/**
- * Server-&gt;Client: sent from the server when a player leaves the current game
- */
-export const SOCKET_PLAYER_LEAVE_GAME = &apos;SOCKET_PLAYER_LEAVE_GAME&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">app/screens/StatsScreen.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, { Component } from &apos;react&apos;;
+
+// import components
+import {
+  Image,
+  ListView,
+  StyleSheet,
+  Text,
+  View,
+} from &apos;react-native&apos;;
+
+import { connect } from &apos;react-redux&apos;;
+
+// import provider
+import { mapStatsScreen } from &apos;../providers/providers.js&apos;;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: &apos;row&apos;,
+    justifyContent: &apos;center&apos;,
+    alignItems: &apos;center&apos;,
+    backgroundColor: &apos;#5979A8&apos;,
+    borderBottomColor: &apos;#CFE5FC&apos;,
+    borderBottomWidth: 2,
+  },
+  listView: {
+    backgroundColor: &apos;#5979A8&apos;,
+  },
+  header: {
+    marginTop: 60,
+    flexDirection: &apos;row&apos;,
+    backgroundColor: &apos;#CFE5FC&apos;,
+  },
+  username: {
+    fontSize: 14,
+    color: &apos;#FFFCE9&apos;,
+    fontWeight: &apos;bold&apos;,
+    textAlign: &apos;left&apos;,
+    paddingTop: 13,
+    paddingBottom: 13,
+    paddingLeft: 10,
+    width: 100,
+  },
+  points: {
+    fontSize: 12,
+    color: &apos;#FFFCE9&apos;,
+    fontWeight: &apos;bold&apos;,
+    textAlign: &apos;center&apos;,
+    paddingTop: 14,
+    paddingBottom: 14,
+    width: 80,
+  },
+  wins: {
+    fontSize: 12,
+    color: &apos;#FFFCE9&apos;,
+    fontWeight: &apos;bold&apos;,
+    textAlign: &apos;center&apos;,
+    paddingTop: 14,
+    paddingBottom: 14,
+    width: 80,
+  },
+  emojicoins: {
+    fontSize: 12,
+    color: &apos;#FFFCE9&apos;,
+    fontWeight: &apos;bold&apos;,
+    textAlign: &apos;center&apos;,
+    paddingTop: 14,
+    paddingBottom: 14,
+    paddingRight: 10,
+    width: 80,
+  },
+  thumbnail: {
+    width: 43,
+    height: 43,
+  },
+});
 
 /**
- * Client-&gt;Server: sent to server when the client wants to broadcast a guess
+ * StatsScreen is a React class component.
+ * It displays the stats - like username, current points, wins, total points -
+ * for each participant in a particular game.
  */
-export const SEND_GUESS_MESSAGE = &apos;server/sendGuessMessage&apos;;
-/**
- * Client-&gt;Server: sent to server when the dealer wants to broadcast a clue
- */
-export const SEND_CLUE_MESSAGE = &apos;server/sendClueMessage&apos;;
-/**
- * Client-&gt;Server: sent to server when the player wants to join a random game
- */
-export const JOIN_RANDOM_GAME = &apos;server/joinRandomGame&apos;;
-/**
- * Client-&gt;Server: sent to server when the player wants to join a specific game by ID
- */
-export const JOIN_GAME = &apos;server/joinGame&apos;;
+class StatsScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (row1, row2) =&gt; row1 !== row2,
+      }),
+    };
+  }
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData() {
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows(this.props.playerStats),
+    });
+  }
+
+  renderPlayer(player) {
+    return (
+      &lt;View style={styles.container}&gt;
+        &lt;Image
+          source={{ uri: player.picture.thumbnail }}
+          style={styles.thumbnail}
+        /&gt;
+        &lt;Text style={styles.username}&gt;{player.username}&lt;/Text&gt;
+        &lt;Text style={styles.points}&gt;{player.points}&lt;/Text&gt;
+        &lt;Text style={styles.wins}&gt;{player.wins}&lt;/Text&gt;
+        &lt;Text style={styles.emojicoins}&gt;{player.emojicoins}&lt;/Text&gt;
+      &lt;/View&gt;
+    );
+  }
+
+  renderHeader() {
+    return (
+      &lt;View style={styles.header}&gt;
+        &lt;Text style={styles.thumbnail} /&gt;
+        &lt;Text style={styles.username}&gt;Username&lt;/Text&gt;
+        &lt;Text style={styles.points}&gt;Points&lt;/Text&gt;
+        &lt;Text style={styles.wins}&gt;Wins&lt;/Text&gt;
+        &lt;Text style={styles.emojicoins}&gt;Emojicoins&lt;/Text&gt;
+      &lt;/View&gt;
+    );
+  }
+
+  render() {
+    return (
+      &lt;ListView
+        dataSource={this.state.dataSource}
+        renderRow={this.renderPlayer}
+        renderHeader={this.renderHeader}
+        style={styles.listView}
+      /&gt;
+    );
+  }
+}
 
 /**
- * Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
- * the store.
+ * StatsScreenContainer is a &apos;container component&apos; which binds the props and
+ * actions creators of StatsScreen to the store and dispatcher, respectively.
+ * It should be imported in favor of HomeScreen, which is exported only
+ * for documentation purposes.
  */
-export const UPDATE_UI_STATE = &apos;UPDATE_UI_STATE&apos;;
+const StatsScreenContainer = connect(
+  mapStatsScreen.mapStateToProps,
+  mapStatsScreen.mapDispatchToProps
+)(StatsScreen);
+
+export default StatsScreenContainer;
 </code></pre>
 
 </div>

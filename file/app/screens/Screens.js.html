@@ -52,6 +52,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Screens">Screens</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StatsScreenContainer">StatsScreenContainer</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -64,6 +65,7 @@ import { Actions, Scene } from &apos;react-native-router-flux&apos;;
 /* Import transition screens */
 import HomeScreen from &apos;./HomeScreen.js&apos;;
 import GameScreen from &apos;./GameScreen.js&apos;;
+import StatsScreen from &apos;./StatsScreen.js&apos;;
 
 /**
  * @desc scenes define transition screens
@@ -79,7 +81,10 @@ const Screens = Actions.create(
       type=&quot;push&quot; key=&quot;showGameScreen&quot; component={GameScreen} title=&quot;Your game!&quot;
       onRight={() =&gt; Actions.showStatsScreen()} rightTitle=&quot;Stats&quot;
     /&gt;
-    &lt;Scene type=&quot;push&quot; key=&quot;showStatsScreen&quot; component={HomeScreen} title=&quot;Game Stats&quot; /&gt;
+    &lt;Scene
+      type=&quot;replace&quot; key=&quot;showStatsScreen&quot; component={StatsScreen} title=&quot;Game Stats&quot;
+      onRight={() =&gt; Actions.showGameScreen()} rightTitle=&quot;To Game&quot;
+    /&gt;
   &lt;/Scene&gt;
 );
 

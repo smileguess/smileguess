@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">app/action_types/actionTypes.js | API Document</title>
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">app/screens/__tests__/StatsScreenTest.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -57,50 +57,45 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">app/action_types/actionTypes.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * Server-&gt;Client: sent from the server when the dealer sends a clue message
- */
-export const SOCKET_CLUE_MESSAGE = &apos;SOCKET_CLUE_MESSAGE&apos;;
-/**
- * Server-&gt;Client: sent from the server when a player sends a guess message
- */
-export const SOCKET_GUESS_MESSAGE = &apos;SOCKET_GUESS_MESSAGE&apos;;
-/**
- * Server-&gt;Client: sent from the server when a winner is declared
- */
-export const SOCKET_DECLARE_WINNER = &apos;SOCKET_DECLARE_WINNER&apos;;
-/**
- * Server-&gt;Client: sent from the server when a player joins in on the current game
- */
-export const SOCKET_PLAYER_JOIN_GAME = &apos;SOCKET_PLAYER_JOIN_GAME&apos;;
-/**
- * Server-&gt;Client: sent from the server when a player leaves the current game
- */
-export const SOCKET_PLAYER_LEAVE_GAME = &apos;SOCKET_PLAYER_LEAVE_GAME&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">app/screens/__tests__/StatsScreenTest.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Import Test Utils */
+import TestUtils from &apos;react-addons-test-utils&apos;;
 
-/**
- * Client-&gt;Server: sent to server when the client wants to broadcast a guess
- */
-export const SEND_GUESS_MESSAGE = &apos;server/sendGuessMessage&apos;;
-/**
- * Client-&gt;Server: sent to server when the dealer wants to broadcast a clue
- */
-export const SEND_CLUE_MESSAGE = &apos;server/sendClueMessage&apos;;
-/**
- * Client-&gt;Server: sent to server when the player wants to join a random game
- */
-export const JOIN_RANDOM_GAME = &apos;server/joinRandomGame&apos;;
-/**
- * Client-&gt;Server: sent to server when the player wants to join a specific game by ID
- */
-export const JOIN_GAME = &apos;server/joinGame&apos;;
+/* Import Mocks for Testing */
+import React from &apos;react-native&apos;; // &lt;rootdir&gt;/app/__mocks__/react-native.js
 
-/**
- * Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
- * the store.
- */
-export const UPDATE_UI_STATE = &apos;UPDATE_UI_STATE&apos;;
+/* Must be mocked explicitly because set as an unmocked module in package.json */
+jest.mock(&apos;react-redux&apos;); // &lt;rootdir&gt;/app/__mocks__/react-redux.js
+
+/* Unmock StasScreen for unit testing */
+jest.unmock(&apos;../StatsScreen.js&apos;);
+import StatsScreen from &apos;../StatsScreen.js&apos;;
+
+describe(&apos;StatsView&apos;, () =&gt; {
+  let statsView;
+
+  const renderScreen = (props, states) =&gt; {
+    const renderer = TestUtils.createRenderer();
+    renderer.render(&lt;StatsScreen { ...props || {} } /&gt;);
+    const instance = renderer._instance._instance;
+    instance.setState(states || {});
+    const output = renderer.getRenderOutput();
+
+    return {
+      output,
+      instance,
+    };
+  };
+
+  it(&apos;should display the list view&apos;, () =&gt; {
+    const states = { dataSource: { test: &apos;test&apos; } };
+    statsView = renderScreen({}, states);
+    const { output } = statsView;
+    expect(output.type.name).toBe(&apos;ListView&apos;);
+    expect(output.props.dataSource).toEqual(states.dataSource);
+  });
+});
+
 </code></pre>
 
 </div>
