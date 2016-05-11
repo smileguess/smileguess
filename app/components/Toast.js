@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   container: {
     height: 100,
     backgroundColor: 'red',
+    padding: 30,
   },
 });
 
@@ -18,9 +19,9 @@ const styles = StyleSheet.create({
  * across the application.
  * @param {string} props.message - text body of the message.
  */
-const Toast = () => (
+const Toast = ({ show, message }) => (
   <View style={styles.container}>
-    <Text> Hello World </Text>
+    <Text> {message} </Text>
   </View>
 );
 

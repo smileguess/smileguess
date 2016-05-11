@@ -40,7 +40,13 @@ const PlayerInput = ({ onSubmitEditing }) => (
       returnKeyType="send"
       onSubmitEditing={(event) => (onSubmitEditing(event.nativeEvent.text))}
     />
-    <Button style={styles.send} onPress={Actions.showGameScreen_toast}>Send</Button>
+    <Button
+      style={styles.send}
+      onPress={() => Actions.showGameScreen_toast({
+        showToast: 'true',
+        toastMessage: 'Sylvia has won the game!',
+      })}
+    >Send</Button>
   </View>
 );
 
