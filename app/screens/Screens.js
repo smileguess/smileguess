@@ -1,5 +1,5 @@
 /* Import Dependencies */
-import React from 'react-native';
+import React, { Dimensions } from 'react-native';
 import { Actions, Scene, Modal } from 'react-native-router-flux';
 
 /* Import transition screens */
@@ -7,6 +7,10 @@ import HomeScreen from './HomeScreen.js';
 import GameScreen from './GameScreen.js';
 import StatsScreen from './StatsScreen.js';
 import DealerChangeScreen from './DealerChangeScreen';
+import Toast from '../components/Toast.js';
+
+const { height, width } = Dimensions.get('window');
+const screenSize = {height, width};
 
 /**
  * @desc scenes define transition screens
@@ -24,7 +28,7 @@ const Screens = Actions.create(
         onRight={() => Actions.toast()} rightTitle="Stats"
       >
         <Scene key="showGameScreen_default" showToast={false} />
-        <Scene key="showGameScreen_toast" hideNavBar />
+        <Scene key="showGameScreen_toast" navBar={Toast} />
       </Scene>
       <Scene
         type="push" key="showStatsScreen" component={StatsScreen} title="Game Stats"

@@ -96,7 +96,6 @@ export class GameScreen extends React.Component {
     });
     return (
       <View style={[styles.container, localStyles.container]} >
-        <Toast show={showToast} message={toastMessage} />
         <ChatsList style={styles.chatContainer} messages={messages} />
         <PlayerInput onSubmitEditing={onSubmitGuess} />
       </View>
