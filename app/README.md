@@ -28,7 +28,7 @@ let sampleState = {
 
   /* This is an object which represents attributes of the
    * current round and game */
-  game: { dealerid: 3, answer: 'Avengers', category: 'Movie', initalClue: '[Emojies...]' },
+  game: { dealerid: 3, prompt: 'Avengers', category: 'Movie', initialClue: '[Emojies...]' },
 
   /* This is a simple array of the messages in the current round. */
   messages: [
@@ -41,6 +41,7 @@ let sampleState = {
   /* This is an object required by react-native-router-flux. It contains 
   relevant 'scenes' which are represented by screens*/
   routes: { scene }
+
 };
 ```
 

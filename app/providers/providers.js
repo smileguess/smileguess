@@ -93,3 +93,32 @@ export const mapStatsScreen = {
   },
 };
 
+/* mapDealerPrompt below is built out with dummy data
+in the same format as game data is expected to come in.
+This has been done for testing purposes.
+See comments inside mapStateToProps function for more detail
+as to how function will need to be modified once we have
+data coming from the server
+*/
+const game = {
+  dealerid: 5,
+  prompt: 'Like Water for Chocolate',
+  category: 'Movies',
+  initialClue: '👽🏰🎍',
+};
+
+/* DealerPrompt Providers*/
+export const mapDealerPrompt = {
+  mapStateToProps() {
+    return {
+      // Code below needs to be replaced as outlined
+      // there is integratin with state
+      // line 113 becomes: mapStateToProps(state) {
+      // line 119 becomes: prompt: state.game.prompt,
+      prompt: game.prompt,
+    };
+  },
+  mapDispatchToProps() {
+    return {};
+  },
+};

@@ -6,6 +6,7 @@ import { Actions, Scene } from 'react-native-router-flux';
 import HomeScreen from './HomeScreen.js';
 import GameScreen from './GameScreen.js';
 import StatsScreen from './StatsScreen.js';
+import DealerChangeScreen from './DealerChangeScreen';
 
 /**
  * @desc scenes define transition screens
@@ -23,7 +24,7 @@ const Screens = Actions.create(
     />
     <Scene
       type="replace" key="showStatsScreen" component={StatsScreen} title="Game Stats"
-      onRight={() => Actions.showGameScreen()} rightTitle="To Game"
+      onRight={() => Actions.showGameScreen()} rightTitle="Game"
     />
   </Scene>
 );

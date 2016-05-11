@@ -2,7 +2,7 @@ jest.unmock('../game.js');
 import gameReducer from '../game.js';
 import { SOCKET_DEALER_RECEIVE_PROMPT } from '../../action_types/actionTypes.js';
 
-let action = {
+const action = {
   dealerid: 5,
   prompt: 'Kill Bill',
   category: 'Movies',
