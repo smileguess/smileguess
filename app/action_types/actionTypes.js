@@ -18,6 +18,10 @@ export const SOCKET_PLAYER_JOIN_GAME = 'SOCKET_PLAYER_JOIN_GAME';
  * Server->Client: sent from the server when a player leaves the current game
  */
 export const SOCKET_PLAYER_LEAVE_GAME = 'SOCKET_PLAYER_LEAVE_GAME';
+/**
+ * Server->Client: dealer receives prompt from the server
+ */
+export const SOCKET_DEALER_RECEIVE_PROMPT = 'SOCKET_DEALER_RECEIVE_PROMPT';
 
 /**
  * Client->Server: sent to server when the client wants to broadcast a guess

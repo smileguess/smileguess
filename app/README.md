@@ -37,6 +37,10 @@ let sampleState = {
     { userid: 2, type: 'guess', message: 'Spiderman' },
     { userid: 1, type: 'guess', message: 'The Avengers' },
   ],
+
+  /* This is an object required by react-native-router-flux. It contains 
+  relevant 'scenes' which are represented by screens*/
+  routes: { scene }
 };
 ```
 
