@@ -16,6 +16,7 @@ import React, {
 } from 'react-native';
 import PlayerInput from '../components/PlayerInput.js';
 import ChatsList from '../components/ChatsList.js';
+import Toast from '../components/Toast.js';
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 
@@ -28,9 +29,6 @@ const styles = StyleSheet.create({
   chatContainer: {
     width: screenWidth,
   },
-  // spacing: {
-  //   flex: 1,
-  // },
 });
 
 /* eslint-disable react/prefer-stateless-function */
@@ -90,7 +88,7 @@ export class GameScreen extends React.Component {
    * based on state changes
    */
   render() {
-    const { messages, onSubmitGuess } = this.props;
+    const { messages, onSubmitGuess, showToast } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
@@ -98,7 +96,7 @@ export class GameScreen extends React.Component {
     });
     return (
       <View style={[styles.container, localStyles.container]} >
-        <View style={styles.spacing} />
+        <Toast showToast={showToast} />
         <ChatsList style={styles.chatContainer} messages={messages} />
         <PlayerInput onSubmitEditing={onSubmitGuess} />
       </View>
@@ -110,6 +108,7 @@ export class GameScreen extends React.Component {
 GameScreen.propTypes = {
   onSubmitGuess: PropTypes.func.isRequired,
   messages: PropTypes.array.isRequired,
+  showToast: PropTypes.bool,
 };
 
 /**

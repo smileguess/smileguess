@@ -21,8 +21,11 @@ const Screens = Actions.create(
       <Scene hideNavBar type="replace" key="showHomeScreen" initial component={HomeScreen} />
       <Scene
         type="push" key="showGameScreen" component={GameScreen} title="Your game!"
-        onRight={() => Actions.showStatsScreen()} rightTitle="Stats"
-      />
+        onRight={() => Actions.toast()} rightTitle="Stats"
+      >
+        <Scene key="showGameScreen_default" showToast={false} />
+        <Scene key="showGameScreen_toast" hideNavBar showToast />
+      </Scene>
       <Scene
         type="push" key="showStatsScreen" component={StatsScreen} title="Game Stats"
       />
