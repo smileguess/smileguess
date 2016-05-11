@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">app/reducers/players.js | API Document</title>
+  <title data-ice="title">app/components/Message.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -59,39 +59,83 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">app/reducers/players.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { SOCKET_PLAYER_JOIN_GAME, SOCKET_PLAYER_LEAVE_GAME } from &apos;../action_types/actionTypes.js&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">app/components/Message.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Import Components */
+import React, {
+  View,
+  StyleSheet,
+  PropTypes,
+  Text,
+} from &apos;react-native&apos;;
 
-const mergeNewPlayer = (state, player) =&gt; {
-  const all = Object.assign({}, state.all);
-  all[player.id] = player;
-  return {
-    ...state,
-    byId: Object.keys(all),
-    all,
-  };
+const styles = StyleSheet.create({
+  message: {
+    margin: 10,
+    padding: 15,
+    borderRadius: 4,
+  },
+  guessText: {
+    color: &apos;white&apos;,
+  },
+  clueText: {
+    color: &apos;#555555&apos;,
+  },
+  dealerMessage: {
+    backgroundColor: &apos;#FFFCE9&apos;,
+    marginLeft: 30,
+    alignSelf: &apos;flex-start&apos;,
+  },
+  userMessage: {
+    alignSelf: &apos;flex-end&apos;,
+    backgroundColor: &apos;#A2C2EB&apos;,
+    marginRight: 30,
+  },
+  opponentMessage: {
+    alignSelf: &apos;flex-start&apos;,
+    backgroundColor: &apos;#8E79A8&apos;,
+    marginLeft: 30,
+
+  },
+});
+
+/**
+ * Message is a React functional component.
+ * It renders a single message with useful metadata.
+ * @param {Object} props - props for this component is a message object.
+ * @param {string} props.type - specifies if message is a clue or a guess.
+ * @param {number} props.userid - identifies the user who sent the message.
+ * @param {string} props.timestamp - UTC timestmap for displaying when message
+ * was sent.
+ * @param {string} props.message - text body of the message.
+ */
+const Message = ({ type, userid, timestamp, message }) =&gt; (
+  &lt;View
+    style={[
+      styles.message,
+      type === &apos;guess&apos; &amp;&amp; userid === 6 &amp;&amp; styles.userMessage,
+      type === &apos;guess&apos; &amp;&amp; userid !== 6 &amp;&amp; styles.opponentMessage,
+      type === &apos;clue&apos; &amp;&amp; userid !== 6 &amp;&amp; styles.dealerMessage,
+    ]}
+  &gt;
+    &lt;Text
+      style={[
+        type === &apos;guess&apos; &amp;&amp; styles.guessText,
+        type === &apos;clue&apos; &amp;&amp; styles.clueText,
+      ]}
+    &gt;
+    {message}
+    &lt;/Text&gt;
+  &lt;/View&gt;
+);
+
+Message.propTypes = {
+  type: PropTypes.string.isRequired,
+  userid: PropTypes.number.isRequired,
+  timestamp: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 };
 
-const removePlayer = (state, userid) =&gt; {
-  const all = Object.assign({}, state.all);
-  delete all[userid];
-  return {
-    ...state,
-    byId: Object.keys(all),
-    all,
-  };
-};
-
-export default (state = {}, action = {}) =&gt; {
-  switch (action.type) {
-    case SOCKET_PLAYER_JOIN_GAME:
-      return mergeNewPlayer(state, action.player);
-    case SOCKET_PLAYER_LEAVE_GAME:
-      return removePlayer(state, action.userid);
-    default:
-      return state;
-  }
-};
+export default Message;
 </code></pre>
 
 </div>

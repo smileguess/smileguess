@@ -1,5 +1,11 @@
 window.esdocSearchIndex = [
   [
+    "./app/components/chatslist.js~chatslist",
+    "class/app/components/ChatsList.js~ChatsList.html",
+    "<span>ChatsList</span> <span class=\"search-result-import-path\">./app/components/ChatsList.js</span>",
+    "class"
+  ],
+  [
     "./app/screens/gamescreen.js~gamescreen",
     "class/app/screens/GameScreen.js~GameScreen.html",
     "<span>GameScreen</span> <span class=\"search-result-import-path\">./app/screens/GameScreen.js</span>",
@@ -33,6 +39,12 @@ window.esdocSearchIndex = [
     "./app/action_types/actiontypes.js~join_random_game",
     "variable/index.html#static-variable-JOIN_RANDOM_GAME",
     "<span>JOIN_RANDOM_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "./app/components/message.js~message",
+    "variable/index.html#static-variable-Message",
+    "<span>Message</span> <span class=\"search-result-import-path\">./app/components/Message.js</span>",
     "variable"
   ],
   [
@@ -504,9 +516,27 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/components/message.js",
+    "file/app/components/Message.js.html",
+    "app/components/Message.js",
+    "file"
+  ],
+  [
     "app/components/playerinput.js",
     "file/app/components/PlayerInput.js.html",
     "app/components/PlayerInput.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/chatslisttest.js",
+    "file/app/components/__tests__/ChatsListTest.js.html",
+    "app/components/__tests__/ChatsListTest.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/messagetest.js",
+    "file/app/components/__tests__/MessageTest.js.html",
+    "app/components/__tests__/MessageTest.js",
     "file"
   ],
   [
@@ -621,6 +651,12 @@ window.esdocSearchIndex = [
     "app/store/configurestore.js",
     "file/app/store/configureStore.js.html",
     "app/store/configureStore.js",
+    "file"
+  ],
+  [
+    "app/testdata/dummydata.js",
+    "file/app/testdata/dummyData.js.html",
+    "app/testdata/dummyData.js",
     "file"
   ]
 ]

@@ -47,6 +47,8 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/ChatsList.js~ChatsList.html">ChatsList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Message">Message</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/screens/GameScreen.js~GameScreen.html">GameScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
@@ -75,12 +77,28 @@ import GameScreen from &apos;../GameScreen.js&apos;;
 /* Create mock function to pass in as prop for testing */
 const submitGuess = jest.genMockFunction();
 
+/* Setup mock data */
+const fakeMessages = [
+  {
+    userid: 1,
+    type: &apos;guess&apos;,
+    message: &apos;I dont know.&apos;,
+  },
+  {
+    userid: 2,
+    type: &apos;guess&apos;,
+    message: &apos;I dont know.&apos;,
+  }];
+
 describe(&apos;GameScreen&apos;, () =&gt; {
   let output;
 
   beforeEach(() =&gt; {
     const renderer = TestUtils.createRenderer();
-    renderer.render(&lt;GameScreen onSubmitGuess={submitGuess} /&gt;);
+    renderer.render(&lt;GameScreen
+      onSubmitGuess={submitGuess}
+      messages={fakeMessages}
+    /&gt;);
     output = renderer.getRenderOutput();
   });
 

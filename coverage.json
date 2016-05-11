@@ -1,8 +1,13 @@
 {
   "coverage": "100%",
-  "expectCount": 21,
-  "actualCount": 21,
+  "expectCount": 23,
+  "actualCount": 23,
   "files": {
+    "app/components/ChatsList.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
     "app/screens/GameScreen.js": {
       "expectCount": 2,
       "actualCount": 2,
@@ -16,6 +21,11 @@
     "app/action_types/actionTypes.js": {
       "expectCount": 10,
       "actualCount": 10,
+      "undocumentLines": []
+    },
+    "app/components/Message.js": {
+      "expectCount": 1,
+      "actualCount": 1,
       "undocumentLines": []
     },
     "app/screens/Screens.js": {

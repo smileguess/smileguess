@@ -47,6 +47,8 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/ChatsList.js~ChatsList.html">ChatsList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Message">Message</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/screens/GameScreen.js~GameScreen.html">GameScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
@@ -60,29 +62,80 @@
 <div class="content" data-ice="content"><h1 data-ice="title">app/components/ChatsList.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Import Components */
 import React, {
-  View,
+  ListView,
   StyleSheet,
   PropTypes,
+  Dimensions,
 } from &apos;react-native&apos;;
+import Message from &apos;./Message.js&apos;;
+
+const { width: screenWidth } = Dimensions.get(&apos;window&apos;);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: &apos;row&apos;,
-    justifyContent: &apos;center&apos;,
+  },
+  contentContainer: {
+    justifyContent: &apos;flex-end&apos;,
+    padding: 6,
     alignItems: &apos;center&apos;,
-    height: 40,
-    backgroundColor: &apos;#c4c4c4&apos;,
-    padding: 5,
+    width: screenWidth,
+    marginTop: 70,
   },
 });
 
-const ChatsList = ({ onSubmitEditing }) =&gt; (
-  &lt;View style={styles.container}&gt;
-  &lt;/View&gt;
-);
+/**
+ * ChatsList is a React class component.
+ * It renders a ListView control using a Message component to render each row.
+ * @param {Object} props - prop for ChatsList component.
+ * @param {Array&lt;Object&gt;} props.messages - An array of messages to render in the  * ChatsList.
+ */
+class ChatsList extends React.Component {
+  constructor(props) {
+    super(props);
+
+    const ds = new ListView.DataSource({ rowHasChanged: (oldRow, newRow) =&gt; oldRow !== newRow });
+    this.state = {
+      dataSource: ds.cloneWithRows(this.props.messages),
+    };
+  }
+
+  /* When component receives new props we need to manually update the ListView
+   * data source since render is not triggered automatically.
+   */
+  componentWillReceiveProps(nextProps) {
+    const ds = new ListView.DataSource({ rowHasChanged: (oldRow, newRow) =&gt; oldRow !== newRow });
+    this.setState({
+      dataSource: ds.cloneWithRows(nextProps.messages),
+    });
+  }
+
+  /* This function defines how a row will be rendered and is passed into
+   * the ListView
+   */
+  renderRow(rowData = {}) {
+    return (
+      &lt;Message {...rowData} /&gt;
+    );
+  }
+
+  /* Renders the ListView component */
+  render() {
+    return (
+      &lt;ListView
+        style={[styles.container]}
+        renderRow={this.renderRow}
+        dataSource={this.state.dataSource}
+        contentContainerStyle={[styles.contentContainer]}
+        keyboardDismissMode=&quot;interactive&quot;
+        enableEmptySections
+      /&gt;
+    );
+  }
+}
 
 ChatsList.propTypes = {
+  messages: PropTypes.array.isRequired,
 };
 
 export default ChatsList;
