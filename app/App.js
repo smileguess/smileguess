@@ -61,7 +61,7 @@ const scenes = Actions.create(
         onRight={() => Actions.showStatsScreen()} rightTitle="Stats"
       >
         <Scene key="showGameScreen_default" showToast={false} />
-        <Scene key="showGameScreen_toast" navBar={Toast} />
+        <Scene key="showGameScreen_toast" navBar={Toast} screenSize={screenSize} />
       </Scene>
       <Scene
         type="push" key="showStatsScreen" component={StatsScreen} title="Game Stats"
@@ -71,8 +71,8 @@ const scenes = Actions.create(
 );
 
 const App = () => (
-  <Provider store={store} screenSize={screenSize}>
-    <RouterWithRedux scenes={scenes} />
+  <Provider store={store} >
+    <RouterWithRedux scenes={scenes} screenSize={screenSize} />
   </Provider>
 );
 

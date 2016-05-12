@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   container: {
     height: 80,
     backgroundColor: 'red',
-    padding: 30,
+    padding: 20,
     flexDirection: 'column',
     position: 'absolute',
     top: 0,
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   row1: {
+    paddingTop: 10,
     flexDirection: 'row',
     justifyContent: 'flex-end',
   },
@@ -35,17 +36,28 @@ const styles = StyleSheet.create({
  * across the application.
  * @param {string} props.message - text body of the message.
  */
-const Toast = ({ show, toastMessage }) => (
-  <View style={styles.container}>
-    <View style={styles.row1}>
-      <Text style={styles.font}> X </Text>
-    </View>
-    <View style={styles.row2}>
-      <Text style={styles.font}> {toastMessage} </Text>
-    </View>
-  </View>
-);
-
+class Toast extends React.Component {
+  render() {
+    const { toastMessage, screenSize } = this.props;
+    return (
+      <View
+        style={[
+          styles.container,
+          {
+            width: screenSize.width,
+          },
+        ]}
+      >
+        <View style={styles.row1}>
+          <Text style={styles.font}> X </Text>
+        </View>
+        <View style={styles.row2}>
+          <Text style={styles.font}> {toastMessage} </Text>
+        </View>
+      </View>
+    );
+  }
+}
 Toast.propTypes = {
   type: PropTypes.string.isRequired,
 };
