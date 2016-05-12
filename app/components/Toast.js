@@ -78,7 +78,7 @@ class Toast extends React.Component {
             <TouchableOpacity
               style={styles.buttonBG}
               onPress={() => Actions.showGameScreen_default({
-                showToast: false,
+                navType: 'nav',
               })}
             >
               <Text style={styles.font}> X </Text>
@@ -93,7 +93,6 @@ class Toast extends React.Component {
   }
 }
 Toast.propTypes = {
-  type: PropTypes.string.isRequired,
   toastMessage: PropTypes.string.isRequired,
   screenSize: PropTypes.object,
 };

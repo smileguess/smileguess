@@ -1,7 +1,5 @@
 import React, {
-  View,
   PropTypes,
-  StyleSheet,
 } from 'react-native';
 import { NavBar } from 'react-native-router-flux';
 import Toast from './Toast.js';
@@ -9,46 +7,30 @@ import Toast from './Toast.js';
 export default class CustomNav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      toastTransform: 0,
-      navTransform: 1,
-    };
+    this.state = { navType: this.props.navType };
+  }
+  componentWillReceiveProps(nextProps) {
+    this.setState({ navType: nextProps.navType });
+  }
+  renderNavigationBar() {
+    switch (this.state.navType) {
+      case 'nav':
+        return NavBar;
+      case 'toast':
+        return Toast;
+      default:
+        return NavBar;
+    }
   }
   render() {
-    const localStyles = StyleSheet.create({
-      container: {
-        width: this.props.screenSize.width,
-        height: 100,
-        position: 'absolute',
-        top: 0,
-        right: 0,
-      },
-      toast: {
-        transform: [
-          { scaleY: 0 },
-        ],
-      },
-      nav: {
-        transform: [
-          { scale: 1 },
-        ],
-      },
-    });
-
+    const Header = this.renderNavigationBar();
     return (
-      <View style={localStyles.container}>
-        <View style={localStyles.toast} >
-          <Toast {...this.props} />
-        </View>
-        <View style={localStyles.nav} >
-          <NavBar {...this.props} />
-        </View>
-      </View>
+      <Header {...this.props} />
     );
   }
 }
 
 CustomNav.propTypes = {
-  showToast: PropTypes.bool.isRequired,
   screenSize: PropTypes.object,
+  navType: PropTypes.string,
 };

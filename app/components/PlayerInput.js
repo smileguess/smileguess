@@ -63,7 +63,7 @@ const PlayerInput = ({ onSubmitEditing, screenSize }) => (
       <Button
         style={styles.send}
         onPress={() => Actions.showGameScreen_toast({
-          showToast: true,
+          navType: 'toast',
           toastMessage: 'Sylvia has won the game!',
         })}
       >Send</Button>

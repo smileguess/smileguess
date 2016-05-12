@@ -65,10 +65,13 @@ const scenes = Actions.create(
         <Scene
           key="showGameScreen_default"
           navBar={CustomNav}
-          showToast={false}
           screenSize={screenSize}
         />
-        <Scene key="showGameScreen_toast" navBar={Toast} screenSize={screenSize} />
+        <Scene
+          key="showGameScreen_toast"
+          navBar={CustomNav}
+          screenSize={screenSize}
+        />
       </Scene>
       <Scene
         type="push" key="showStatsScreen" component={StatsScreen} title="Game Stats"
