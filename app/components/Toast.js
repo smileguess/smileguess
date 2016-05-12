@@ -4,21 +4,30 @@ import React, {
   StyleSheet,
   PropTypes,
   Text,
+  Image,
 } from 'react-native';
 import { BlurView } from 'react-native-blur';
 
 const styles = StyleSheet.create({
   container: {
-    height: 80,
-    backgroundColor: 'red',
+    height: 100,
     padding: 20,
     flexDirection: 'column',
+    justifyContent: 'flex-start',
+    position: 'absolute',
+    top: 0,
+    right: 0,
+  },
+  containerTint: {
+    backgroundColor: 'rgba(0, 129, 28, 0.2)',
+    height: 100,
     position: 'absolute',
     top: 0,
     right: 0,
   },
   font: {
     color: 'white',
+    fontSize: 18,
   },
   row1: {
     paddingTop: 10,
@@ -40,7 +49,16 @@ class Toast extends React.Component {
   render() {
     const { toastMessage, screenSize } = this.props;
     return (
-      <View
+      <Image
+        style={[
+          styles.containerTint,
+          {
+            width: screenSize.width,
+          },
+        ]}
+      >
+      <BlurView
+        blurType="light"
         style={[
           styles.container,
           {
@@ -48,13 +66,14 @@ class Toast extends React.Component {
           },
         ]}
       >
-        <View style={styles.row1}>
-          <Text style={styles.font}> X </Text>
-        </View>
-        <View style={styles.row2}>
-          <Text style={styles.font}> {toastMessage} </Text>
-        </View>
-      </View>
+          <View style={styles.row1}>
+            <Text style={styles.font}> X </Text>
+          </View>
+          <View style={styles.row2}>
+            <Text style={styles.font}> {toastMessage} </Text>
+          </View>
+      </BlurView>
+      </Image>
     );
   }
 }
