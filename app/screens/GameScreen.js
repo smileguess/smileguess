@@ -16,7 +16,6 @@ import React, {
 } from 'react-native';
 import PlayerInput from '../components/PlayerInput.js';
 import ChatsList from '../components/ChatsList.js';
-import Toast from '../components/Toast.js';
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 

@@ -43,9 +43,3 @@ export const JOIN_RANDOM_GAME = 'server/joinRandomGame';
  * Client->Server: sent to server when the player wants to join a specific game by ID
  */
 export const JOIN_GAME = 'server/joinGame';
-
-/**
- * Client->Client: sent from the view to update parts of the ui state being tracked in
- * the store.
- */
-export const UPDATE_UI_STATE = 'UPDATE_UI_STATE';
