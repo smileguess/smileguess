@@ -87,7 +87,7 @@ export class GameScreen extends React.Component {
    * based on state changes
    */
   render() {
-    const { messages, onSubmitGuess, showToast, toastMessage } = this.props;
+    const { messages, onSubmitGuess, showToast, toastMessage, screenSize } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
@@ -96,7 +96,7 @@ export class GameScreen extends React.Component {
     return (
       <View style={[styles.container, localStyles.container]} >
         <ChatsList style={styles.chatContainer} messages={messages} />
-        <PlayerInput onSubmitEditing={onSubmitGuess} />
+        <PlayerInput onSubmitEditing={onSubmitGuess} screenSize={screenSize} />
       </View>
     );
   }

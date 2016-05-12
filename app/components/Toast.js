@@ -30,9 +30,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   row1: {
-    paddingTop: 10,
     flexDirection: 'row',
     justifyContent: 'flex-end',
+  },
+  buttonBG: {
+    padding: 5,
+    borderColor: 'rgba(255, 255, 255, 0.55)',
+    borderWidth: 1,
+    borderRadius: 6,
+    backgroundColor: 'rgba(137, 142, 141, 0.1)',
   },
   row2: {
     flexDirection: 'row',
@@ -66,12 +72,14 @@ class Toast extends React.Component {
           },
         ]}
       >
-          <View style={styles.row1}>
+        <View style={styles.row1}>
+          <View style={styles.buttonBG} >
             <Text style={styles.font}> X </Text>
           </View>
-          <View style={styles.row2}>
-            <Text style={styles.font}> {toastMessage} </Text>
-          </View>
+        </View>
+        <View style={styles.row2}>
+          <Text style={styles.font}> {toastMessage} </Text>
+        </View>
       </BlurView>
       </Image>
     );
