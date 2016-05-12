@@ -5,11 +5,13 @@ import { connect, Provider } from 'react-redux';
 import DeviceInfo from 'react-native-device-info';
 
 /* Import transition screens */
-import HomeScreen from './HomeScreen.js';
-import GameScreen from './GameScreen.js';
-import StatsScreen from './StatsScreen.js';
-import DealerChangeScreen from './DealerChangeScreen';
-import Toast from '../components/Toast.js';
+import HomeScreen from './screens/HomeScreen.js';
+import GameScreen from './screens/GameScreen.js';
+import StatsScreen from './screens/StatsScreen.js';
+import DealerChangeScreen from './screens/DealerChangeScreen';
+import Toast from './components/Toast.js';
+import CustomNav from './components/CustomNav.js';
+
 
 /* Import Store */
 import configureStore from './store/configureStore.js';
@@ -62,7 +64,7 @@ const scenes = Actions.create(
       >
         <Scene
           key="showGameScreen_default"
-          navBar={NavBar}
+          navBar={CustomNav}
           showToast={false}
           screenSize={screenSize}
         />
