@@ -5,8 +5,10 @@ import React, {
   PropTypes,
   Text,
   Image,
+  TouchableOpacity,
 } from 'react-native';
 import { BlurView } from 'react-native-blur';
+import { Actions } from 'react-native-router-flux';
 
 const styles = StyleSheet.create({
   container: {
@@ -63,30 +65,37 @@ class Toast extends React.Component {
           },
         ]}
       >
-      <BlurView
-        blurType="light"
-        style={[
-          styles.container,
-          {
-            width: screenSize.width,
-          },
-        ]}
-      >
-        <View style={styles.row1}>
-          <View style={styles.buttonBG} >
-            <Text style={styles.font}> X </Text>
+        <BlurView
+          blurType="light"
+          style={[
+            styles.container,
+            {
+              width: screenSize.width,
+            },
+          ]}
+        >
+          <View style={styles.row1}>
+            <TouchableOpacity
+              style={styles.buttonBG}
+              onPress={() => Actions.showGameScreen_default({
+                showToast: false,
+              })}
+            >
+              <Text style={styles.font}> X </Text>
+            </TouchableOpacity>
           </View>
-        </View>
-        <View style={styles.row2}>
-          <Text style={styles.font}> {toastMessage} </Text>
-        </View>
-      </BlurView>
+          <View style={styles.row2}>
+            <Text style={styles.font}> {toastMessage} </Text>
+          </View>
+        </BlurView>
       </Image>
     );
   }
 }
 Toast.propTypes = {
   type: PropTypes.string.isRequired,
+  toastMessage: PropTypes.string.isRequired,
+  screenSize: PropTypes.object,
 };
 
 export default Toast;

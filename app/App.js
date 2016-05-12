@@ -1,6 +1,6 @@
 /* Import Dependencies */
 import React, { Dimensions } from 'react-native';
-import { Actions, Scene, Modal, Router } from 'react-native-router-flux';
+import { Actions, Scene, Modal, Router, NavBar } from 'react-native-router-flux';
 import { connect, Provider } from 'react-redux';
 import DeviceInfo from 'react-native-device-info';
 
@@ -60,7 +60,12 @@ const scenes = Actions.create(
         type="push" key="showGameScreen" component={GameScreen} title="Your game!"
         onRight={() => Actions.showStatsScreen()} rightTitle="Stats"
       >
-        <Scene key="showGameScreen_default" showToast={false} />
+        <Scene
+          key="showGameScreen_default"
+          navBar={NavBar}
+          showToast={false}
+          screenSize={screenSize}
+        />
         <Scene key="showGameScreen_toast" navBar={Toast} screenSize={screenSize} />
       </Scene>
       <Scene
