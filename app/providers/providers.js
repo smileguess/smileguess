@@ -1,5 +1,5 @@
 /* Import Actions */
-import { joinGame, joinRandomGame, submitGuess } from '../actions/user.js';
+import { submitGuess } from '../actions/user.js';
 import { Actions } from 'react-native-router-flux';
 
 
@@ -12,13 +12,11 @@ export const mapHomeScreen = {
     return {
       onJoinRandomGame: () => {
         dispatch(() => {
-          dispatch(joinRandomGame());
           Actions.showGameScreen();
         });
       },
-      onJoinGame: (id) => {
+      onJoinGame: () => {
         dispatch(() => {
-          dispatch(joinGame(id));
           Actions.showGameScreen();
         });
       },
