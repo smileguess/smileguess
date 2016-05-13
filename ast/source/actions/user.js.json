@@ -1,14 +1,14 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 510,
+  "end": 730,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 23,
+      "line": 34,
       "column": 0
     }
   },
@@ -17,60 +17,60 @@
     {
       "type": "ImportDeclaration",
       "start": 0,
-      "end": 87,
+      "end": 113,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 1,
-          "column": 87
+          "line": 5,
+          "column": 40
         }
       },
       "specifiers": [
         {
           "type": "ImportSpecifier",
-          "start": 9,
-          "end": 26,
+          "start": 11,
+          "end": 28,
           "loc": {
             "start": {
-              "line": 1,
-              "column": 9
+              "line": 2,
+              "column": 2
             },
             "end": {
-              "line": 1,
-              "column": 26
+              "line": 2,
+              "column": 19
             }
           },
           "imported": {
             "type": "Identifier",
-            "start": 9,
-            "end": 26,
+            "start": 11,
+            "end": 28,
             "loc": {
               "start": {
-                "line": 1,
-                "column": 9
+                "line": 2,
+                "column": 2
               },
               "end": {
-                "line": 1,
-                "column": 26
+                "line": 2,
+                "column": 19
               }
             },
             "name": "SEND_CLUE_MESSAGE"
           },
           "local": {
             "type": "Identifier",
-            "start": 9,
-            "end": 26,
+            "start": 11,
+            "end": 28,
             "loc": {
               "start": {
-                "line": 1,
-                "column": 9
+                "line": 2,
+                "column": 2
               },
               "end": {
-                "line": 1,
-                "column": 26
+                "line": 2,
+                "column": 19
               }
             },
             "name": "SEND_CLUE_MESSAGE"
@@ -78,65 +78,112 @@
         },
         {
           "type": "ImportSpecifier",
-          "start": 28,
-          "end": 46,
+          "start": 32,
+          "end": 50,
           "loc": {
             "start": {
-              "line": 1,
-              "column": 28
+              "line": 3,
+              "column": 2
             },
             "end": {
-              "line": 1,
-              "column": 46
+              "line": 3,
+              "column": 20
             }
           },
           "imported": {
             "type": "Identifier",
-            "start": 28,
-            "end": 46,
+            "start": 32,
+            "end": 50,
             "loc": {
               "start": {
-                "line": 1,
-                "column": 28
+                "line": 3,
+                "column": 2
               },
               "end": {
-                "line": 1,
-                "column": 46
+                "line": 3,
+                "column": 20
               }
             },
             "name": "SEND_GUESS_MESSAGE"
           },
           "local": {
             "type": "Identifier",
-            "start": 28,
-            "end": 46,
+            "start": 32,
+            "end": 50,
             "loc": {
               "start": {
-                "line": 1,
-                "column": 28
+                "line": 3,
+                "column": 2
               },
               "end": {
-                "line": 1,
-                "column": 46
+                "line": 3,
+                "column": 20
               }
             },
             "name": "SEND_GUESS_MESSAGE"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "start": 54,
+          "end": 71,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 2
+            },
+            "end": {
+              "line": 4,
+              "column": 19
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 54,
+            "end": 71,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 2
+              },
+              "end": {
+                "line": 4,
+                "column": 19
+              }
+            },
+            "name": "DEQUEUE_GAME_MEMO"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 54,
+            "end": 71,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 2
+              },
+              "end": {
+                "line": 4,
+                "column": 19
+              }
+            },
+            "name": "DEQUEUE_GAME_MEMO"
           }
         }
       ],
       "importKind": "value",
       "source": {
         "type": "Literal",
-        "start": 54,
-        "end": 86,
+        "start": 80,
+        "end": 112,
         "loc": {
           "start": {
-            "line": 1,
-            "column": 54
+            "line": 5,
+            "column": 7
           },
           "end": {
-            "line": 1,
-            "column": 86
+            "line": 5,
+            "column": 39
           }
         },
         "value": "../action_types/actionTypes.js",
@@ -147,79 +194,79 @@
         {
           "type": "Block",
           "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
-          "start": 89,
-          "end": 194,
+          "start": 115,
+          "end": 220,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 7,
               "column": 0
             },
             "end": {
-              "line": 6,
+              "line": 10,
               "column": 3
             }
           },
           "range": [
-            89,
-            194
+            115,
+            220
           ]
         }
       ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 195,
-      "end": 298,
+      "start": 221,
+      "end": 324,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 15,
           "column": 3
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 202,
-        "end": 298,
+        "start": 228,
+        "end": 324,
         "loc": {
           "start": {
-            "line": 7,
+            "line": 11,
             "column": 7
           },
           "end": {
-            "line": 11,
+            "line": 15,
             "column": 3
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 208,
-            "end": 297,
+            "start": 234,
+            "end": 323,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 11,
                 "column": 13
               },
               "end": {
-                "line": 11,
+                "line": 15,
                 "column": 2
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 208,
-              "end": 219,
+              "start": 234,
+              "end": 245,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 11,
                   "column": 13
                 },
                 "end": {
-                  "line": 7,
+                  "line": 11,
                   "column": 24
                 }
               },
@@ -228,15 +275,15 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 222,
-              "end": 297,
+              "start": 248,
+              "end": 323,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 11,
                   "column": 27
                 },
                 "end": {
-                  "line": 11,
+                  "line": 15,
                   "column": 2
                 }
               },
@@ -247,15 +294,15 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 223,
-                  "end": 229,
+                  "start": 249,
+                  "end": 255,
                   "loc": {
                     "start": {
-                      "line": 7,
+                      "line": 11,
                       "column": 28
                     },
                     "end": {
-                      "line": 7,
+                      "line": 11,
                       "column": 34
                     }
                   },
@@ -263,15 +310,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 231,
-                  "end": 238,
+                  "start": 257,
+                  "end": 264,
                   "loc": {
                     "start": {
-                      "line": 7,
+                      "line": 11,
                       "column": 36
                     },
                     "end": {
-                      "line": 7,
+                      "line": 11,
                       "column": 43
                     }
                   },
@@ -280,30 +327,30 @@
               ],
               "body": {
                 "type": "ObjectExpression",
-                "start": 244,
-                "end": 296,
+                "start": 270,
+                "end": 322,
                 "loc": {
                   "start": {
-                    "line": 7,
+                    "line": 11,
                     "column": 49
                   },
                   "end": {
-                    "line": 11,
+                    "line": 15,
                     "column": 1
                   }
                 },
                 "properties": [
                   {
                     "type": "Property",
-                    "start": 248,
-                    "end": 272,
+                    "start": 274,
+                    "end": 298,
                     "loc": {
                       "start": {
-                        "line": 8,
+                        "line": 12,
                         "column": 2
                       },
                       "end": {
-                        "line": 8,
+                        "line": 12,
                         "column": 26
                       }
                     },
@@ -312,15 +359,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 248,
-                      "end": 252,
+                      "start": 274,
+                      "end": 278,
                       "loc": {
                         "start": {
-                          "line": 8,
+                          "line": 12,
                           "column": 2
                         },
                         "end": {
-                          "line": 8,
+                          "line": 12,
                           "column": 6
                         }
                       },
@@ -328,15 +375,15 @@
                     },
                     "value": {
                       "type": "Identifier",
-                      "start": 254,
-                      "end": 272,
+                      "start": 280,
+                      "end": 298,
                       "loc": {
                         "start": {
-                          "line": 8,
+                          "line": 12,
                           "column": 8
                         },
                         "end": {
-                          "line": 8,
+                          "line": 12,
                           "column": 26
                         }
                       },
@@ -346,15 +393,15 @@
                   },
                   {
                     "type": "Property",
-                    "start": 276,
-                    "end": 282,
+                    "start": 302,
+                    "end": 308,
                     "loc": {
                       "start": {
-                        "line": 9,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 9,
+                        "line": 13,
                         "column": 8
                       }
                     },
@@ -363,15 +410,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 276,
-                      "end": 282,
+                      "start": 302,
+                      "end": 308,
                       "loc": {
                         "start": {
-                          "line": 9,
+                          "line": 13,
                           "column": 2
                         },
                         "end": {
-                          "line": 9,
+                          "line": 13,
                           "column": 8
                         }
                       },
@@ -380,15 +427,15 @@
                     "kind": "init",
                     "value": {
                       "type": "Identifier",
-                      "start": 276,
-                      "end": 282,
+                      "start": 302,
+                      "end": 308,
                       "loc": {
                         "start": {
-                          "line": 9,
+                          "line": 13,
                           "column": 2
                         },
                         "end": {
-                          "line": 9,
+                          "line": 13,
                           "column": 8
                         }
                       },
@@ -397,15 +444,15 @@
                   },
                   {
                     "type": "Property",
-                    "start": 286,
-                    "end": 293,
+                    "start": 312,
+                    "end": 319,
                     "loc": {
                       "start": {
-                        "line": 10,
+                        "line": 14,
                         "column": 2
                       },
                       "end": {
-                        "line": 10,
+                        "line": 14,
                         "column": 9
                       }
                     },
@@ -414,15 +461,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 286,
-                      "end": 293,
+                      "start": 312,
+                      "end": 319,
                       "loc": {
                         "start": {
-                          "line": 10,
+                          "line": 14,
                           "column": 2
                         },
                         "end": {
-                          "line": 10,
+                          "line": 14,
                           "column": 9
                         }
                       },
@@ -431,15 +478,15 @@
                     "kind": "init",
                     "value": {
                       "type": "Identifier",
-                      "start": 286,
-                      "end": 293,
+                      "start": 312,
+                      "end": 319,
                       "loc": {
                         "start": {
-                          "line": 10,
+                          "line": 14,
                           "column": 2
                         },
                         "end": {
-                          "line": 10,
+                          "line": 14,
                           "column": 9
                         }
                       },
@@ -458,21 +505,21 @@
           {
             "type": "Block",
             "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
-            "start": 89,
-            "end": 194,
+            "start": 115,
+            "end": 220,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 7,
                 "column": 0
               },
               "end": {
-                "line": 6,
+                "line": 10,
                 "column": 3
               }
             },
             "range": [
-              89,
-              194
+              115,
+              220
             ]
           }
         ],
@@ -480,21 +527,21 @@
           {
             "type": "Block",
             "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
-            "start": 300,
-            "end": 406,
+            "start": 326,
+            "end": 432,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 17,
                 "column": 0
               },
               "end": {
-                "line": 16,
+                "line": 20,
                 "column": 3
               }
             },
             "range": [
-              300,
-              406
+              326,
+              432
             ]
           }
         ]
@@ -505,21 +552,21 @@
         {
           "type": "Block",
           "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
-          "start": 89,
-          "end": 194,
+          "start": 115,
+          "end": 220,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 7,
               "column": 0
             },
             "end": {
-              "line": 6,
+              "line": 10,
               "column": 3
             }
           },
           "range": [
-            89,
-            194
+            115,
+            220
           ]
         }
       ],
@@ -527,79 +574,79 @@
         {
           "type": "Block",
           "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
-          "start": 300,
-          "end": 406,
+          "start": 326,
+          "end": 432,
           "loc": {
             "start": {
-              "line": 13,
+              "line": 17,
               "column": 0
             },
             "end": {
-              "line": 16,
+              "line": 20,
               "column": 3
             }
           },
           "range": [
-            300,
-            406
+            326,
+            432
           ]
         }
       ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 407,
-      "end": 508,
+      "start": 433,
+      "end": 534,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 21,
           "column": 0
         },
         "end": {
-          "line": 21,
+          "line": 25,
           "column": 3
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 414,
-        "end": 508,
+        "start": 440,
+        "end": 534,
         "loc": {
           "start": {
-            "line": 17,
+            "line": 21,
             "column": 7
           },
           "end": {
-            "line": 21,
+            "line": 25,
             "column": 3
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 420,
-            "end": 507,
+            "start": 446,
+            "end": 533,
             "loc": {
               "start": {
-                "line": 17,
+                "line": 21,
                 "column": 13
               },
               "end": {
-                "line": 21,
+                "line": 25,
                 "column": 2
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 420,
-              "end": 430,
+              "start": 446,
+              "end": 456,
               "loc": {
                 "start": {
-                  "line": 17,
+                  "line": 21,
                   "column": 13
                 },
                 "end": {
-                  "line": 17,
+                  "line": 21,
                   "column": 23
                 }
               },
@@ -608,15 +655,15 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 433,
-              "end": 507,
+              "start": 459,
+              "end": 533,
               "loc": {
                 "start": {
-                  "line": 17,
+                  "line": 21,
                   "column": 26
                 },
                 "end": {
-                  "line": 21,
+                  "line": 25,
                   "column": 2
                 }
               },
@@ -627,15 +674,15 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 434,
-                  "end": 440,
+                  "start": 460,
+                  "end": 466,
                   "loc": {
                     "start": {
-                      "line": 17,
+                      "line": 21,
                       "column": 27
                     },
                     "end": {
-                      "line": 17,
+                      "line": 21,
                       "column": 33
                     }
                   },
@@ -643,15 +690,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 442,
-                  "end": 449,
+                  "start": 468,
+                  "end": 475,
                   "loc": {
                     "start": {
-                      "line": 17,
+                      "line": 21,
                       "column": 35
                     },
                     "end": {
-                      "line": 17,
+                      "line": 21,
                       "column": 42
                     }
                   },
@@ -660,30 +707,30 @@
               ],
               "body": {
                 "type": "ObjectExpression",
-                "start": 455,
-                "end": 506,
+                "start": 481,
+                "end": 532,
                 "loc": {
                   "start": {
-                    "line": 17,
+                    "line": 21,
                     "column": 48
                   },
                   "end": {
-                    "line": 21,
+                    "line": 25,
                     "column": 1
                   }
                 },
                 "properties": [
                   {
                     "type": "Property",
-                    "start": 459,
-                    "end": 482,
+                    "start": 485,
+                    "end": 508,
                     "loc": {
                       "start": {
-                        "line": 18,
+                        "line": 22,
                         "column": 2
                       },
                       "end": {
-                        "line": 18,
+                        "line": 22,
                         "column": 25
                       }
                     },
@@ -692,15 +739,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 459,
-                      "end": 463,
+                      "start": 485,
+                      "end": 489,
                       "loc": {
                         "start": {
-                          "line": 18,
+                          "line": 22,
                           "column": 2
                         },
                         "end": {
-                          "line": 18,
+                          "line": 22,
                           "column": 6
                         }
                       },
@@ -708,15 +755,15 @@
                     },
                     "value": {
                       "type": "Identifier",
-                      "start": 465,
-                      "end": 482,
+                      "start": 491,
+                      "end": 508,
                       "loc": {
                         "start": {
-                          "line": 18,
+                          "line": 22,
                           "column": 8
                         },
                         "end": {
-                          "line": 18,
+                          "line": 22,
                           "column": 25
                         }
                       },
@@ -726,15 +773,15 @@
                   },
                   {
                     "type": "Property",
-                    "start": 486,
-                    "end": 492,
+                    "start": 512,
+                    "end": 518,
                     "loc": {
                       "start": {
-                        "line": 19,
+                        "line": 23,
                         "column": 2
                       },
                       "end": {
-                        "line": 19,
+                        "line": 23,
                         "column": 8
                       }
                     },
@@ -743,15 +790,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 486,
-                      "end": 492,
+                      "start": 512,
+                      "end": 518,
                       "loc": {
                         "start": {
-                          "line": 19,
+                          "line": 23,
                           "column": 2
                         },
                         "end": {
-                          "line": 19,
+                          "line": 23,
                           "column": 8
                         }
                       },
@@ -760,15 +807,15 @@
                     "kind": "init",
                     "value": {
                       "type": "Identifier",
-                      "start": 486,
-                      "end": 492,
+                      "start": 512,
+                      "end": 518,
                       "loc": {
                         "start": {
-                          "line": 19,
+                          "line": 23,
                           "column": 2
                         },
                         "end": {
-                          "line": 19,
+                          "line": 23,
                           "column": 8
                         }
                       },
@@ -777,15 +824,15 @@
                   },
                   {
                     "type": "Property",
-                    "start": 496,
-                    "end": 503,
+                    "start": 522,
+                    "end": 529,
                     "loc": {
                       "start": {
-                        "line": 20,
+                        "line": 24,
                         "column": 2
                       },
                       "end": {
-                        "line": 20,
+                        "line": 24,
                         "column": 9
                       }
                     },
@@ -794,15 +841,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 496,
-                      "end": 503,
+                      "start": 522,
+                      "end": 529,
                       "loc": {
                         "start": {
-                          "line": 20,
+                          "line": 24,
                           "column": 2
                         },
                         "end": {
-                          "line": 20,
+                          "line": 24,
                           "column": 9
                         }
                       },
@@ -811,15 +858,15 @@
                     "kind": "init",
                     "value": {
                       "type": "Identifier",
-                      "start": 496,
-                      "end": 503,
+                      "start": 522,
+                      "end": 529,
                       "loc": {
                         "start": {
-                          "line": 20,
+                          "line": 24,
                           "column": 2
                         },
                         "end": {
-                          "line": 20,
+                          "line": 24,
                           "column": 9
                         }
                       },
@@ -838,21 +885,266 @@
           {
             "type": "Block",
             "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
-            "start": 300,
-            "end": 406,
+            "start": 326,
+            "end": 432,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 17,
                 "column": 0
               },
               "end": {
-                "line": 16,
+                "line": 20,
                 "column": 3
               }
             },
             "range": [
-              300,
-              406
+              326,
+              432
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * This creates an action which removes a memo from the notifications\n * queue once it has been dismissed by the user.\n ",
+            "start": 536,
+            "end": 662,
+            "loc": {
+              "start": {
+                "line": 27,
+                "column": 0
+              },
+              "end": {
+                "line": 30,
+                "column": 3
+              }
+            },
+            "range": [
+              536,
+              662
+            ]
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
+          "start": 326,
+          "end": 432,
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 0
+            },
+            "end": {
+              "line": 20,
+              "column": 3
+            }
+          },
+          "range": [
+            326,
+            432
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * This creates an action which removes a memo from the notifications\n * queue once it has been dismissed by the user.\n ",
+          "start": 536,
+          "end": 662,
+          "loc": {
+            "start": {
+              "line": 27,
+              "column": 0
+            },
+            "end": {
+              "line": 30,
+              "column": 3
+            }
+          },
+          "range": [
+            536,
+            662
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 663,
+      "end": 729,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 0
+        },
+        "end": {
+          "line": 33,
+          "column": 3
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 670,
+        "end": 729,
+        "loc": {
+          "start": {
+            "line": 31,
+            "column": 7
+          },
+          "end": {
+            "line": 33,
+            "column": 3
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 676,
+            "end": 728,
+            "loc": {
+              "start": {
+                "line": 31,
+                "column": 13
+              },
+              "end": {
+                "line": 33,
+                "column": 2
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 676,
+              "end": 687,
+              "loc": {
+                "start": {
+                  "line": 31,
+                  "column": 13
+                },
+                "end": {
+                  "line": 31,
+                  "column": 24
+                }
+              },
+              "name": "dequeueMemo",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "ArrowFunctionExpression",
+              "start": 690,
+              "end": 728,
+              "loc": {
+                "start": {
+                  "line": 31,
+                  "column": 27
+                },
+                "end": {
+                  "line": 33,
+                  "column": 2
+                }
+              },
+              "id": null,
+              "generator": false,
+              "expression": true,
+              "async": false,
+              "params": [],
+              "body": {
+                "type": "ObjectExpression",
+                "start": 697,
+                "end": 727,
+                "loc": {
+                  "start": {
+                    "line": 31,
+                    "column": 34
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 1
+                  }
+                },
+                "properties": [
+                  {
+                    "type": "Property",
+                    "start": 701,
+                    "end": 724,
+                    "loc": {
+                      "start": {
+                        "line": 32,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 25
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "Identifier",
+                      "start": 701,
+                      "end": 705,
+                      "loc": {
+                        "start": {
+                          "line": 32,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 32,
+                          "column": 6
+                        }
+                      },
+                      "name": "type"
+                    },
+                    "value": {
+                      "type": "Identifier",
+                      "start": 707,
+                      "end": 724,
+                      "loc": {
+                        "start": {
+                          "line": 32,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 32,
+                          "column": 25
+                        }
+                      },
+                      "name": "DEQUEUE_GAME_MEMO"
+                    },
+                    "kind": "init"
+                  }
+                ],
+                "parenthesizedExpression": true
+              }
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * This creates an action which removes a memo from the notifications\n * queue once it has been dismissed by the user.\n ",
+            "start": 536,
+            "end": 662,
+            "loc": {
+              "start": {
+                "line": 27,
+                "column": 0
+              },
+              "end": {
+                "line": 30,
+                "column": 3
+              }
+            },
+            "range": [
+              536,
+              662
             ]
           }
         ],
@@ -863,22 +1155,22 @@
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
-          "start": 300,
-          "end": 406,
+          "value": "*\n * This creates an action which removes a memo from the notifications\n * queue once it has been dismissed by the user.\n ",
+          "start": 536,
+          "end": 662,
           "loc": {
             "start": {
-              "line": 13,
+              "line": 27,
               "column": 0
             },
             "end": {
-              "line": 16,
+              "line": 30,
               "column": 3
             }
           },
           "range": [
-            300,
-            406
+            536,
+            662
           ]
         }
       ]

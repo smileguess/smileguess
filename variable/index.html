@@ -33,14 +33,15 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-App">App</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GAME_MEMO">GAME_MEMO</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEQUEUE_GAME_MEMO">DEQUEUE_GAME_MEMO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GAME_MEMO">GAME_MEMO</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_CLUE_MESSAGE">SEND_CLUE_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_GAME_STATE">UPDATE_GAME_STATE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_MESSAGE_STATE">UPDATE_MESSAGE_STATE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_USER_STATE">UPDATE_USER_STATE</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dequeueMemo">dequeueMemo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/ChatsList.js~ChatsList.html">ChatsList</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/CustomNav.js~CustomNav.html">CustomNav</a></span></span></li>
@@ -83,6 +84,32 @@
         
         <div data-ice="description"><p>App is the entrypoint for both the ios and (in the future) Android versions
 of the app.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-DEQUEUE_GAME_MEMO">DEQUEUE_GAME_MEMO</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Client-&gt;Client: Indicates that the user has read the most recent notificaiton.</p>
 </div>
       </div>
     </td>
@@ -418,14 +445,13 @@ actions creators of StatsScreen to the store and dispatcher, respectively.</p>
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_USER_STATE">UPDATE_USER_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
-the store.</p>
+        <div data-ice="description"><p>Server-&gt;Client: integrates <code>action.payload</code> into the user part of the store</p>
 </div>
       </div>
     </td>
@@ -445,13 +471,14 @@ the store.</p>
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_USER_STATE">UPDATE_USER_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-dequeueMemo">dequeueMemo</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Server-&gt;Client: integrates <code>action.payload</code> into the user part of the store</p>
+        <div data-ice="description"><p>This creates an action which removes a memo from the notifications
+queue once it has been dismissed by the user.</p>
 </div>
       </div>
     </td>
@@ -530,16 +557,57 @@ This action is handled by the server</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/App.js.html#lineNumber91">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/App.js.html#lineNumber95">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import App from &apos;<span><a href="file/app/App.js.html#lineNumber91">./app/App.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import App from &apos;<span><a href="file/app/App.js.html#lineNumber95">./app/App.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>App is the entrypoint for both the ios and (in the future) Android versions
 of the app. It is rendered only once when the app is loaded and instantiates
 all of the applicaiton routes, the store and the provider.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-DEQUEUE_GAME_MEMO">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">DEQUEUE_GAME_MEMO</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber31">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {DEQUEUE_GAME_MEMO} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber31">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>Client-&gt;Client: Indicates that the user has read the most recent notificaiton.</p>
 </div>
 
   
@@ -1069,48 +1137,6 @@ for documentation purposes.</p>
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-UPDATE_UI_STATE">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">UPDATE_UI_STATE</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber32">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {UPDATE_UI_STATE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber32">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
-the store.</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-variable-UPDATE_USER_STATE">
     <span class="access" data-ice="access">public</span>
     
@@ -1152,6 +1178,48 @@ the store.</p>
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-dequeueMemo">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">dequeueMemo</span><span data-ice="signature">: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber31">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {dequeueMemo} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber31">./app/actions/user.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>This creates an action which removes a memo from the notifications
+queue once it has been dismissed by the user.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-variable-submitClue">
     <span class="access" data-ice="access">public</span>
     
@@ -1162,11 +1230,11 @@ the store.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber17">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber21">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitClue} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber17">./app/actions/user.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitClue} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber21">./app/actions/user.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>This creates an action for the dealer to submit a clue
@@ -1204,11 +1272,11 @@ This action is handeled by the server</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber7">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber11">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitGuess} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber7">./app/actions/user.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitGuess} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber11">./app/actions/user.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates an action for submitting a guess to the server

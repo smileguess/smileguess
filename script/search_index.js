@@ -18,6 +18,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "./app/action_types/actiontypes.js~dequeue_game_memo",
+    "variable/index.html#static-variable-DEQUEUE_GAME_MEMO",
+    "<span>DEQUEUE_GAME_MEMO</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
     "./app/components/emoji.js~emoji",
     "variable/index.html#static-variable-Emoji",
     "<span>Emoji</span> <span class=\"search-result-import-path\">./app/components/Emoji.js</span>",
@@ -114,15 +120,15 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "./app/action_types/actiontypes.js~update_ui_state",
-    "variable/index.html#static-variable-UPDATE_UI_STATE",
-    "<span>UPDATE_UI_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
     "./app/action_types/actiontypes.js~update_user_state",
     "variable/index.html#static-variable-UPDATE_USER_STATE",
     "<span>UPDATE_USER_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "./app/actions/user.js~dequeuememo",
+    "variable/index.html#static-variable-dequeueMemo",
+    "<span>dequeueMemo</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
     "variable"
   ],
   [

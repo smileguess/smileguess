@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 23,
-  "actualCount": 23,
+  "expectCount": 24,
+  "actualCount": 24,
   "files": {
     "app/App.js": {
       "expectCount": 1,
@@ -16,6 +16,11 @@
     "app/components/CustomNav.js": {
       "expectCount": 1,
       "actualCount": 1,
+      "undocumentLines": []
+    },
+    "app/action_types/actionTypes.js": {
+      "expectCount": 7,
+      "actualCount": 7,
       "undocumentLines": []
     },
     "app/components/Emoji.js": {
@@ -36,11 +41,6 @@
     "app/components/EmojiKeys.js": {
       "expectCount": 1,
       "actualCount": 1,
-      "undocumentLines": []
-    },
-    "app/action_types/actionTypes.js": {
-      "expectCount": 7,
-      "actualCount": 7,
       "undocumentLines": []
     },
     "app/screens/GameScreen.js": {
@@ -69,8 +69,8 @@
       "undocumentLines": []
     },
     "app/actions/user.js": {
-      "expectCount": 2,
-      "actualCount": 2,
+      "expectCount": 3,
+      "actualCount": 3,
       "undocumentLines": []
     }
   }
