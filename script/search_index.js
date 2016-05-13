@@ -1,8 +1,44 @@
 window.esdocSearchIndex = [
   [
+    "./app/app.js~app",
+    "variable/index.html#static-variable-App",
+    "<span>App</span> <span class=\"search-result-import-path\">./app/App.js</span>",
+    "variable"
+  ],
+  [
     "./app/components/chatslist.js~chatslist",
     "class/app/components/ChatsList.js~ChatsList.html",
     "<span>ChatsList</span> <span class=\"search-result-import-path\">./app/components/ChatsList.js</span>",
+    "class"
+  ],
+  [
+    "./app/components/customnav.js~customnav",
+    "class/app/components/CustomNav.js~CustomNav.html",
+    "<span>CustomNav</span> <span class=\"search-result-import-path\">./app/components/CustomNav.js</span>",
+    "class"
+  ],
+  [
+    "./app/components/emoji.js~emoji",
+    "variable/index.html#static-variable-Emoji",
+    "<span>Emoji</span> <span class=\"search-result-import-path\">./app/components/Emoji.js</span>",
+    "variable"
+  ],
+  [
+    "./app/components/emojiinput.js~emojiinput",
+    "variable/index.html#static-variable-EmojiInput",
+    "<span>EmojiInput</span> <span class=\"search-result-import-path\">./app/components/EmojiInput.js</span>",
+    "variable"
+  ],
+  [
+    "./app/components/emojikeyboard.js~emojikeyboard",
+    "class/app/components/EmojiKeyboard.js~EmojiKeyboard.html",
+    "<span>EmojiKeyboard</span> <span class=\"search-result-import-path\">./app/components/EmojiKeyboard.js</span>",
+    "class"
+  ],
+  [
+    "./app/components/emojikeys.js~emojikeys",
+    "class/app/components/EmojiKeys.js~EmojiKeys.html",
+    "<span>EmojiKeys</span> <span class=\"search-result-import-path\">./app/components/EmojiKeys.js</span>",
     "class"
   ],
   [
@@ -66,6 +102,12 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "./app/action_types/actiontypes.js~socket_dealer_receive_prompt",
+    "variable/index.html#static-variable-SOCKET_DEALER_RECEIVE_PROMPT",
+    "<span>SOCKET_DEALER_RECEIVE_PROMPT</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
     "./app/action_types/actiontypes.js~socket_declare_winner",
     "variable/index.html#static-variable-SOCKET_DECLARE_WINNER",
     "<span>SOCKET_DECLARE_WINNER</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
@@ -90,21 +132,21 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "./app/screens/screens.js~screens",
-    "variable/index.html#static-variable-Screens",
-    "<span>Screens</span> <span class=\"search-result-import-path\">./app/screens/Screens.js</span>",
-    "variable"
-  ],
-  [
     "./app/screens/statsscreen.js~statsscreencontainer",
     "variable/index.html#static-variable-StatsScreenContainer",
     "<span>StatsScreenContainer</span> <span class=\"search-result-import-path\">./app/screens/StatsScreen.js</span>",
     "variable"
   ],
   [
-    "./app/action_types/actiontypes.js~update_ui_state",
-    "variable/index.html#static-variable-UPDATE_UI_STATE",
-    "<span>UPDATE_UI_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "./app/components/toast.js~toast",
+    "class/app/components/Toast.js~Toast.html",
+    "<span>Toast</span> <span class=\"search-result-import-path\">./app/components/Toast.js</span>",
+    "class"
+  ],
+  [
+    "./app/action_types/actiontypes.js~update_user_state",
+    "variable/index.html#static-variable-UPDATE_USER_STATE",
+    "<span>UPDATE_USER_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
@@ -129,12 +171,6 @@ window.esdocSearchIndex = [
     "./app/actions/user.js~submitguess",
     "variable/index.html#static-variable-submitGuess",
     "<span>submitGuess</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
-    "variable"
-  ],
-  [
-    "./app/actions/ui.js~updateuistate",
-    "variable/index.html#static-variable-updateUIState",
-    "<span>updateUIState</span> <span class=\"search-result-import-path\">./app/actions/ui.js</span>",
     "variable"
   ],
   [
@@ -468,6 +504,12 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
+    "app/app.js",
+    "file/app/App.js.html",
+    "app/App.js",
+    "file"
+  ],
+  [
     "app/action_types/actiontypes.js",
     "file/app/action_types/actionTypes.js.html",
     "app/action_types/actionTypes.js",
@@ -498,21 +540,57 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "app/actions/ui.js",
-    "file/app/actions/ui.js.html",
-    "app/actions/ui.js",
-    "file"
-  ],
-  [
     "app/actions/user.js",
     "file/app/actions/user.js.html",
     "app/actions/user.js",
     "file"
   ],
   [
+    "app/assets/emojifile_array.js",
+    "file/app/assets/emojifile_array.js.html",
+    "app/assets/emojifile_array.js",
+    "file"
+  ],
+  [
     "app/components/chatslist.js",
     "file/app/components/ChatsList.js.html",
     "app/components/ChatsList.js",
+    "file"
+  ],
+  [
+    "app/components/customnav.js",
+    "file/app/components/CustomNav.js.html",
+    "app/components/CustomNav.js",
+    "file"
+  ],
+  [
+    "app/components/dealerprompt.js",
+    "file/app/components/DealerPrompt.js.html",
+    "app/components/DealerPrompt.js",
+    "file"
+  ],
+  [
+    "app/components/emoji.js",
+    "file/app/components/Emoji.js.html",
+    "app/components/Emoji.js",
+    "file"
+  ],
+  [
+    "app/components/emojiinput.js",
+    "file/app/components/EmojiInput.js.html",
+    "app/components/EmojiInput.js",
+    "file"
+  ],
+  [
+    "app/components/emojikeyboard.js",
+    "file/app/components/EmojiKeyboard.js.html",
+    "app/components/EmojiKeyboard.js",
+    "file"
+  ],
+  [
+    "app/components/emojikeys.js",
+    "file/app/components/EmojiKeys.js.html",
+    "app/components/EmojiKeys.js",
     "file"
   ],
   [
@@ -528,9 +606,51 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/components/toast.js",
+    "file/app/components/Toast.js.html",
+    "app/components/Toast.js",
+    "file"
+  ],
+  [
     "app/components/__tests__/chatslisttest.js",
     "file/app/components/__tests__/ChatsListTest.js.html",
     "app/components/__tests__/ChatsListTest.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/customnavtest.js",
+    "file/app/components/__tests__/CustomNavTest.js.html",
+    "app/components/__tests__/CustomNavTest.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/dealerprompttest.js",
+    "file/app/components/__tests__/DealerPromptTest.js.html",
+    "app/components/__tests__/DealerPromptTest.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/emojiinputtest.js",
+    "file/app/components/__tests__/EmojiInputTest.js.html",
+    "app/components/__tests__/EmojiInputTest.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/emojikeyboardtest.js",
+    "file/app/components/__tests__/EmojiKeyboardTest.js.html",
+    "app/components/__tests__/EmojiKeyboardTest.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/emojikeystest.js",
+    "file/app/components/__tests__/EmojiKeysTest.js.html",
+    "app/components/__tests__/EmojiKeysTest.js",
+    "file"
+  ],
+  [
+    "app/components/__tests__/emojitest.js",
+    "file/app/components/__tests__/EmojiTest.js.html",
+    "app/components/__tests__/EmojiTest.js",
     "file"
   ],
   [
@@ -546,6 +666,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/components/__tests__/toasttest.js",
+    "file/app/components/__tests__/ToastTest.js.html",
+    "app/components/__tests__/ToastTest.js",
+    "file"
+  ],
+  [
     "app/providers/providers.js",
     "file/app/providers/providers.js.html",
     "app/providers/providers.js",
@@ -558,6 +684,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/reducers/__tests__/game.js",
+    "file/app/reducers/__tests__/game.js.html",
+    "app/reducers/__tests__/game.js",
+    "file"
+  ],
+  [
     "app/reducers/__tests__/messages.js",
     "file/app/reducers/__tests__/messages.js.html",
     "app/reducers/__tests__/messages.js",
@@ -567,6 +699,12 @@ window.esdocSearchIndex = [
     "app/reducers/__tests__/players.js",
     "file/app/reducers/__tests__/players.js.html",
     "app/reducers/__tests__/players.js",
+    "file"
+  ],
+  [
+    "app/reducers/game.js",
+    "file/app/reducers/game.js.html",
+    "app/reducers/game.js",
     "file"
   ],
   [
@@ -594,9 +732,15 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "app/reducers/ui.js",
-    "file/app/reducers/ui.js.html",
-    "app/reducers/ui.js",
+    "app/reducers/user.js",
+    "file/app/reducers/user.js.html",
+    "app/reducers/user.js",
+    "file"
+  ],
+  [
+    "app/screens/dealerchangescreen.js",
+    "file/app/screens/DealerChangeScreen.js.html",
+    "app/screens/DealerChangeScreen.js",
     "file"
   ],
   [
@@ -609,12 +753,6 @@ window.esdocSearchIndex = [
     "app/screens/homescreen.js",
     "file/app/screens/HomeScreen.js.html",
     "app/screens/HomeScreen.js",
-    "file"
-  ],
-  [
-    "app/screens/screens.js",
-    "file/app/screens/Screens.js.html",
-    "app/screens/Screens.js",
     "file"
   ],
   [

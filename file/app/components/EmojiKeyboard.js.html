@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">app/components/EmojiKeyboard.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-App">App</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_GAME">JOIN_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_RANDOM_GAME">JOIN_RANDOM_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_CLUE_MESSAGE">SEND_CLUE_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DEALER_RECEIVE_PROMPT">SOCKET_DEALER_RECEIVE_PROMPT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_USER_STATE">UPDATE_USER_STATE</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/ChatsList.js~ChatsList.html">ChatsList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/CustomNav.js~CustomNav.html">CustomNav</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/EmojiKeyboard.js~EmojiKeyboard.html">EmojiKeyboard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/EmojiKeys.js~EmojiKeys.html">EmojiKeys</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/Toast.js~Toast.html">Toast</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Emoji">Emoji</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EmojiInput">EmojiInput</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Message">Message</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">screens</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/screens/GameScreen.js~GameScreen.html">GameScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StatsScreenContainer">StatsScreenContainer</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">app/components/EmojiKeyboard.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* Import Components */
+import React, {
+  PropTypes,
+  View,
+  TouchableHighlight,
+  StyleSheet,
+  Dimensions,
+  LayoutAnimation,
+} from &apos;react-native&apos;;
+import Button from &apos;react-native-button&apos;;
+import EmojiInput from &apos;./EmojiInput.js&apos;;
+import EmojiKeys from &apos;./EmojiKeys.js&apos;;
+import emojiData from &apos;../assets/emojifile_array.js&apos;;
+import Emoji from &apos;./Emoji.js&apos;;
+
+const { height } = Dimensions.get(&apos;window&apos;);
+const containerStyle = {
+  flex: 1,
+  justifyContent: &apos;flex-start&apos;,
+  backgroundColor: &apos;#c4c4c4&apos;,
+  padding: 5,
+  position: &apos;absolute&apos;,
+  top: height - 55,
+};
+
+const styles = StyleSheet.create({
+  buttonBar: {
+    flex: 1,
+    flexDirection: &apos;row&apos;,
+    justifyContent: &apos;flex-end&apos;,
+  },
+  button: {
+    backgroundColor: &apos;#FFFFFF&apos;,
+    width: 100,
+    marginLeft: 20,
+    borderColor: &apos;black&apos;,
+    borderWidth: 1,
+    borderRadius: 5,
+  },
+});
+
+/**
+ * This is the top-level component for rendering the custom emoji-only keyboard.
+ * @param {function} onSend - the callback function for when the user presses send.  It receives the array of tuples as it&apos;s argument when invoked.
+ */
+class EmojiKeyboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputView: [],
+      input: [],
+      hidden: true,
+      containerStyle,
+    };
+  }
+
+  updateInput(input) {
+    this.setState({
+      input: this.state.input.concat([input]),
+    });
+    this.setState({
+      inputView: this.inputView(),
+    });
+  }
+
+  inputView() {
+    return this.state.input.map(([sheet_x, sheet_y], index) =&gt; &lt;Emoji key={index} x={sheet_x} y={sheet_y} /&gt;);
+  }
+
+  removeInput() {
+    if (this.state.input.length) {
+      this.setState({ input: this.state.input.slice(0, this.state.input.length - 1) });
+      this.setState({
+        inputView: this.inputView(),
+      });
+    }
+  }
+  toggleKeyboard() {
+    this.setState({ hidden: !this.state.hidden });
+    LayoutAnimation.configureNext({
+      duration: 10,
+      update: {
+        type: LayoutAnimation.Types.linear,
+      },
+    });
+    if (this.state.hidden) {
+      this.setState({
+        containerStyle: {
+          ...containerStyle,
+          top: height - 55,
+        },
+      });
+    } else {
+      this.setState({
+        containerStyle: {
+          ...containerStyle,
+          top: height - 355,
+        },
+      });
+    }
+  }
+  render() {
+    return (&lt;View style={StyleSheet.create({ container: this.state.containerStyle }).container}&gt;
+      &lt;TouchableHighlight onPress={() =&gt; this.toggleKeyboard()}&gt;
+        &lt;View&gt;
+          &lt;EmojiInput emojiElements={this.state.inputView} /&gt;
+        &lt;/View&gt;
+      &lt;/TouchableHighlight&gt;
+      &lt;View&gt;
+        &lt;EmojiKeys
+          emojiData={emojiData}
+          updateInput={(input) =&gt; this.updateInput(input)}
+        /&gt;
+      &lt;/View&gt;
+      &lt;View style={styles.buttonBar}&gt;
+        &lt;Button style={styles.button} onPress={() =&gt; this.removeInput()}&gt;Backspace&lt;/Button&gt;
+        &lt;Button className=&quot;sendButton&quot; style={styles.button} onPress={() =&gt; this.props.onSend(this.state.input)}&gt;Send&lt;/Button&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;);
+  }
+}
+
+EmojiKeyboard.propTypes = {
+  onSend: PropTypes.func.isRequired,
+};
+
+export default EmojiKeyboard;
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.7)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

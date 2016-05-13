@@ -1,14 +1,14 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 1465,
+  "end": 1601,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 44,
+      "line": 46,
       "column": 0
     }
   },
@@ -817,22 +817,22 @@
         "trailingComments": [
           {
             "type": "Block",
-            "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
-            "start": 735,
-            "end": 819,
+            "value": "*\n * Server->Client: dealer receives prompt from the server\n ",
+            "start": 734,
+            "end": 799,
             "loc": {
               "start": {
-                "line": 22,
+                "line": 21,
                 "column": 0
               },
               "end": {
-                "line": 24,
+                "line": 23,
                 "column": 3
               }
             },
             "range": [
-              735,
-              819
+              734,
+              799
             ]
           }
         ]
@@ -864,80 +864,428 @@
       "trailingComments": [
         {
           "type": "Block",
-          "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
-          "start": 735,
-          "end": 819,
+          "value": "*\n * Server->Client: dealer receives prompt from the server\n ",
+          "start": 734,
+          "end": 799,
           "loc": {
             "start": {
-              "line": 22,
+              "line": 21,
               "column": 0
             },
             "end": {
-              "line": 24,
+              "line": 23,
               "column": 3
             }
           },
           "range": [
-            735,
-            819
+            734,
+            799
           ]
         }
       ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 820,
-      "end": 880,
+      "start": 800,
+      "end": 875,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 24,
           "column": 0
         },
         "end": {
-          "line": 25,
+          "line": 24,
+          "column": 75
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 807,
+        "end": 875,
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 7
+          },
+          "end": {
+            "line": 24,
+            "column": 75
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 813,
+            "end": 874,
+            "loc": {
+              "start": {
+                "line": 24,
+                "column": 13
+              },
+              "end": {
+                "line": 24,
+                "column": 74
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 813,
+              "end": 841,
+              "loc": {
+                "start": {
+                  "line": 24,
+                  "column": 13
+                },
+                "end": {
+                  "line": 24,
+                  "column": 41
+                }
+              },
+              "name": "SOCKET_DEALER_RECEIVE_PROMPT",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 844,
+              "end": 874,
+              "loc": {
+                "start": {
+                  "line": 24,
+                  "column": 44
+                },
+                "end": {
+                  "line": 24,
+                  "column": 74
+                }
+              },
+              "value": "SOCKET_DEALER_RECEIVE_PROMPT",
+              "rawValue": "SOCKET_DEALER_RECEIVE_PROMPT",
+              "raw": "'SOCKET_DEALER_RECEIVE_PROMPT'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client: dealer receives prompt from the server\n ",
+            "start": 734,
+            "end": 799,
+            "loc": {
+              "start": {
+                "line": 21,
+                "column": 0
+              },
+              "end": {
+                "line": 23,
+                "column": 3
+              }
+            },
+            "range": [
+              734,
+              799
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client->Client: fetch the user associated with the deviceid from an api endpoint\n ",
+            "start": 876,
+            "end": 975,
+            "loc": {
+              "start": {
+                "line": 25,
+                "column": 0
+              },
+              "end": {
+                "line": 27,
+                "column": 3
+              }
+            },
+            "range": [
+              876,
+              975
+            ]
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client: dealer receives prompt from the server\n ",
+          "start": 734,
+          "end": 799,
+          "loc": {
+            "start": {
+              "line": 21,
+              "column": 0
+            },
+            "end": {
+              "line": 23,
+              "column": 3
+            }
+          },
+          "range": [
+            734,
+            799
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client->Client: fetch the user associated with the deviceid from an api endpoint\n ",
+          "start": 876,
+          "end": 975,
+          "loc": {
+            "start": {
+              "line": 25,
+              "column": 0
+            },
+            "end": {
+              "line": 27,
+              "column": 3
+            }
+          },
+          "range": [
+            876,
+            975
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 976,
+      "end": 1029,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 53
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 983,
+        "end": 1029,
+        "loc": {
+          "start": {
+            "line": 28,
+            "column": 7
+          },
+          "end": {
+            "line": 28,
+            "column": 53
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 989,
+            "end": 1028,
+            "loc": {
+              "start": {
+                "line": 28,
+                "column": 13
+              },
+              "end": {
+                "line": 28,
+                "column": 52
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 989,
+              "end": 1006,
+              "loc": {
+                "start": {
+                  "line": 28,
+                  "column": 13
+                },
+                "end": {
+                  "line": 28,
+                  "column": 30
+                }
+              },
+              "name": "UPDATE_USER_STATE",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "Literal",
+              "start": 1009,
+              "end": 1028,
+              "loc": {
+                "start": {
+                  "line": 28,
+                  "column": 33
+                },
+                "end": {
+                  "line": 28,
+                  "column": 52
+                }
+              },
+              "value": "UPDATE_USER_STATE",
+              "rawValue": "UPDATE_USER_STATE",
+              "raw": "'UPDATE_USER_STATE'"
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Server->Client->Client: fetch the user associated with the deviceid from an api endpoint\n ",
+            "start": 876,
+            "end": 975,
+            "loc": {
+              "start": {
+                "line": 25,
+                "column": 0
+              },
+              "end": {
+                "line": 27,
+                "column": 3
+              }
+            },
+            "range": [
+              876,
+              975
+            ]
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
+            "start": 1031,
+            "end": 1115,
+            "loc": {
+              "start": {
+                "line": 30,
+                "column": 0
+              },
+              "end": {
+                "line": 32,
+                "column": 3
+              }
+            },
+            "range": [
+              1031,
+              1115
+            ]
+          }
+        ]
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Server->Client->Client: fetch the user associated with the deviceid from an api endpoint\n ",
+          "start": 876,
+          "end": 975,
+          "loc": {
+            "start": {
+              "line": 25,
+              "column": 0
+            },
+            "end": {
+              "line": 27,
+              "column": 3
+            }
+          },
+          "range": [
+            876,
+            975
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
+          "start": 1031,
+          "end": 1115,
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 0
+            },
+            "end": {
+              "line": 32,
+              "column": 3
+            }
+          },
+          "range": [
+            1031,
+            1115
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 1116,
+      "end": 1176,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 0
+        },
+        "end": {
+          "line": 33,
           "column": 60
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 827,
-        "end": 880,
+        "start": 1123,
+        "end": 1176,
         "loc": {
           "start": {
-            "line": 25,
+            "line": 33,
             "column": 7
           },
           "end": {
-            "line": 25,
+            "line": 33,
             "column": 60
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 833,
-            "end": 879,
+            "start": 1129,
+            "end": 1175,
             "loc": {
               "start": {
-                "line": 25,
+                "line": 33,
                 "column": 13
               },
               "end": {
-                "line": 25,
+                "line": 33,
                 "column": 59
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 833,
-              "end": 851,
+              "start": 1129,
+              "end": 1147,
               "loc": {
                 "start": {
-                  "line": 25,
+                  "line": 33,
                   "column": 13
                 },
                 "end": {
-                  "line": 25,
+                  "line": 33,
                   "column": 31
                 }
               },
@@ -946,15 +1294,15 @@
             },
             "init": {
               "type": "Literal",
-              "start": 854,
-              "end": 879,
+              "start": 1150,
+              "end": 1175,
               "loc": {
                 "start": {
-                  "line": 25,
+                  "line": 33,
                   "column": 34
                 },
                 "end": {
-                  "line": 25,
+                  "line": 33,
                   "column": 59
                 }
               },
@@ -970,21 +1318,21 @@
           {
             "type": "Block",
             "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
-            "start": 735,
-            "end": 819,
+            "start": 1031,
+            "end": 1115,
             "loc": {
               "start": {
-                "line": 22,
+                "line": 30,
                 "column": 0
               },
               "end": {
-                "line": 24,
+                "line": 32,
                 "column": 3
               }
             },
             "range": [
-              735,
-              819
+              1031,
+              1115
             ]
           }
         ],
@@ -992,21 +1340,21 @@
           {
             "type": "Block",
             "value": "*\n * Client->Server: sent to server when the dealer wants to broadcast a clue\n ",
-            "start": 881,
-            "end": 964,
+            "start": 1177,
+            "end": 1260,
             "loc": {
               "start": {
-                "line": 26,
+                "line": 34,
                 "column": 0
               },
               "end": {
-                "line": 28,
+                "line": 36,
                 "column": 3
               }
             },
             "range": [
-              881,
-              964
+              1177,
+              1260
             ]
           }
         ]
@@ -1017,21 +1365,21 @@
         {
           "type": "Block",
           "value": "*\n * Client->Server: sent to server when the client wants to broadcast a guess\n ",
-          "start": 735,
-          "end": 819,
+          "start": 1031,
+          "end": 1115,
           "loc": {
             "start": {
-              "line": 22,
+              "line": 30,
               "column": 0
             },
             "end": {
-              "line": 24,
+              "line": 32,
               "column": 3
             }
           },
           "range": [
-            735,
-            819
+            1031,
+            1115
           ]
         }
       ],
@@ -1039,79 +1387,79 @@
         {
           "type": "Block",
           "value": "*\n * Client->Server: sent to server when the dealer wants to broadcast a clue\n ",
-          "start": 881,
-          "end": 964,
+          "start": 1177,
+          "end": 1260,
           "loc": {
             "start": {
-              "line": 26,
+              "line": 34,
               "column": 0
             },
             "end": {
-              "line": 28,
+              "line": 36,
               "column": 3
             }
           },
           "range": [
-            881,
-            964
+            1177,
+            1260
           ]
         }
       ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 965,
-      "end": 1023,
+      "start": 1261,
+      "end": 1319,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 37,
           "column": 0
         },
         "end": {
-          "line": 29,
+          "line": 37,
           "column": 58
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 972,
-        "end": 1023,
+        "start": 1268,
+        "end": 1319,
         "loc": {
           "start": {
-            "line": 29,
+            "line": 37,
             "column": 7
           },
           "end": {
-            "line": 29,
+            "line": 37,
             "column": 58
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 978,
-            "end": 1022,
+            "start": 1274,
+            "end": 1318,
             "loc": {
               "start": {
-                "line": 29,
+                "line": 37,
                 "column": 13
               },
               "end": {
-                "line": 29,
+                "line": 37,
                 "column": 57
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 978,
-              "end": 995,
+              "start": 1274,
+              "end": 1291,
               "loc": {
                 "start": {
-                  "line": 29,
+                  "line": 37,
                   "column": 13
                 },
                 "end": {
-                  "line": 29,
+                  "line": 37,
                   "column": 30
                 }
               },
@@ -1120,15 +1468,15 @@
             },
             "init": {
               "type": "Literal",
-              "start": 998,
-              "end": 1022,
+              "start": 1294,
+              "end": 1318,
               "loc": {
                 "start": {
-                  "line": 29,
+                  "line": 37,
                   "column": 33
                 },
                 "end": {
-                  "line": 29,
+                  "line": 37,
                   "column": 57
                 }
               },
@@ -1144,21 +1492,21 @@
           {
             "type": "Block",
             "value": "*\n * Client->Server: sent to server when the dealer wants to broadcast a clue\n ",
-            "start": 881,
-            "end": 964,
+            "start": 1177,
+            "end": 1260,
             "loc": {
               "start": {
-                "line": 26,
+                "line": 34,
                 "column": 0
               },
               "end": {
-                "line": 28,
+                "line": 36,
                 "column": 3
               }
             },
             "range": [
-              881,
-              964
+              1177,
+              1260
             ]
           }
         ],
@@ -1166,21 +1514,21 @@
           {
             "type": "Block",
             "value": "*\n * Client->Server: sent to server when the player wants to join a random game\n ",
-            "start": 1024,
-            "end": 1109,
+            "start": 1320,
+            "end": 1405,
             "loc": {
               "start": {
-                "line": 30,
+                "line": 38,
                 "column": 0
               },
               "end": {
-                "line": 32,
+                "line": 40,
                 "column": 3
               }
             },
             "range": [
-              1024,
-              1109
+              1320,
+              1405
             ]
           }
         ]
@@ -1191,21 +1539,21 @@
         {
           "type": "Block",
           "value": "*\n * Client->Server: sent to server when the dealer wants to broadcast a clue\n ",
-          "start": 881,
-          "end": 964,
+          "start": 1177,
+          "end": 1260,
           "loc": {
             "start": {
-              "line": 26,
+              "line": 34,
               "column": 0
             },
             "end": {
-              "line": 28,
+              "line": 36,
               "column": 3
             }
           },
           "range": [
-            881,
-            964
+            1177,
+            1260
           ]
         }
       ],
@@ -1213,79 +1561,79 @@
         {
           "type": "Block",
           "value": "*\n * Client->Server: sent to server when the player wants to join a random game\n ",
-          "start": 1024,
-          "end": 1109,
+          "start": 1320,
+          "end": 1405,
           "loc": {
             "start": {
-              "line": 30,
+              "line": 38,
               "column": 0
             },
             "end": {
-              "line": 32,
+              "line": 40,
               "column": 3
             }
           },
           "range": [
-            1024,
-            1109
+            1320,
+            1405
           ]
         }
       ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 1110,
-      "end": 1166,
+      "start": 1406,
+      "end": 1462,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 41,
           "column": 0
         },
         "end": {
-          "line": 33,
+          "line": 41,
           "column": 56
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 1117,
-        "end": 1166,
+        "start": 1413,
+        "end": 1462,
         "loc": {
           "start": {
-            "line": 33,
+            "line": 41,
             "column": 7
           },
           "end": {
-            "line": 33,
+            "line": 41,
             "column": 56
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 1123,
-            "end": 1165,
+            "start": 1419,
+            "end": 1461,
             "loc": {
               "start": {
-                "line": 33,
+                "line": 41,
                 "column": 13
               },
               "end": {
-                "line": 33,
+                "line": 41,
                 "column": 55
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 1123,
-              "end": 1139,
+              "start": 1419,
+              "end": 1435,
               "loc": {
                 "start": {
-                  "line": 33,
+                  "line": 41,
                   "column": 13
                 },
                 "end": {
-                  "line": 33,
+                  "line": 41,
                   "column": 29
                 }
               },
@@ -1294,15 +1642,15 @@
             },
             "init": {
               "type": "Literal",
-              "start": 1142,
-              "end": 1165,
+              "start": 1438,
+              "end": 1461,
               "loc": {
                 "start": {
-                  "line": 33,
+                  "line": 41,
                   "column": 32
                 },
                 "end": {
-                  "line": 33,
+                  "line": 41,
                   "column": 55
                 }
               },
@@ -1318,21 +1666,21 @@
           {
             "type": "Block",
             "value": "*\n * Client->Server: sent to server when the player wants to join a random game\n ",
-            "start": 1024,
-            "end": 1109,
+            "start": 1320,
+            "end": 1405,
             "loc": {
               "start": {
-                "line": 30,
+                "line": 38,
                 "column": 0
               },
               "end": {
-                "line": 32,
+                "line": 40,
                 "column": 3
               }
             },
             "range": [
-              1024,
-              1109
+              1320,
+              1405
             ]
           }
         ],
@@ -1340,21 +1688,21 @@
           {
             "type": "Block",
             "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
-            "start": 1167,
-            "end": 1260,
+            "start": 1463,
+            "end": 1556,
             "loc": {
               "start": {
-                "line": 34,
+                "line": 42,
                 "column": 0
               },
               "end": {
-                "line": 36,
+                "line": 44,
                 "column": 3
               }
             },
             "range": [
-              1167,
-              1260
+              1463,
+              1556
             ]
           }
         ]
@@ -1365,21 +1713,21 @@
         {
           "type": "Block",
           "value": "*\n * Client->Server: sent to server when the player wants to join a random game\n ",
-          "start": 1024,
-          "end": 1109,
+          "start": 1320,
+          "end": 1405,
           "loc": {
             "start": {
-              "line": 30,
+              "line": 38,
               "column": 0
             },
             "end": {
-              "line": 32,
+              "line": 40,
               "column": 3
             }
           },
           "range": [
-            1024,
-            1109
+            1320,
+            1405
           ]
         }
       ],
@@ -1387,79 +1735,79 @@
         {
           "type": "Block",
           "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
-          "start": 1167,
-          "end": 1260,
+          "start": 1463,
+          "end": 1556,
           "loc": {
             "start": {
-              "line": 34,
+              "line": 42,
               "column": 0
             },
             "end": {
-              "line": 36,
+              "line": 44,
               "column": 3
             }
           },
           "range": [
-            1167,
-            1260
+            1463,
+            1556
           ]
         }
       ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 1261,
-      "end": 1304,
+      "start": 1557,
+      "end": 1600,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 45,
           "column": 0
         },
         "end": {
-          "line": 37,
+          "line": 45,
           "column": 43
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 1268,
-        "end": 1304,
+        "start": 1564,
+        "end": 1600,
         "loc": {
           "start": {
-            "line": 37,
+            "line": 45,
             "column": 7
           },
           "end": {
-            "line": 37,
+            "line": 45,
             "column": 43
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 1274,
-            "end": 1303,
+            "start": 1570,
+            "end": 1599,
             "loc": {
               "start": {
-                "line": 37,
+                "line": 45,
                 "column": 13
               },
               "end": {
-                "line": 37,
+                "line": 45,
                 "column": 42
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 1274,
-              "end": 1283,
+              "start": 1570,
+              "end": 1579,
               "loc": {
                 "start": {
-                  "line": 37,
+                  "line": 45,
                   "column": 13
                 },
                 "end": {
-                  "line": 37,
+                  "line": 45,
                   "column": 22
                 }
               },
@@ -1468,15 +1816,15 @@
             },
             "init": {
               "type": "Literal",
-              "start": 1286,
-              "end": 1303,
+              "start": 1582,
+              "end": 1599,
               "loc": {
                 "start": {
-                  "line": 37,
+                  "line": 45,
                   "column": 25
                 },
                 "end": {
-                  "line": 37,
+                  "line": 45,
                   "column": 42
                 }
               },
@@ -1492,195 +1840,21 @@
           {
             "type": "Block",
             "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
-            "start": 1167,
-            "end": 1260,
+            "start": 1463,
+            "end": 1556,
             "loc": {
               "start": {
-                "line": 34,
-                "column": 0
-              },
-              "end": {
-                "line": 36,
-                "column": 3
-              }
-            },
-            "range": [
-              1167,
-              1260
-            ]
-          }
-        ],
-        "trailingComments": [
-          {
-            "type": "Block",
-            "value": "*\n * Client->Client: sent from the view to update parts of the ui state being tracked in\n * the store.\n ",
-            "start": 1306,
-            "end": 1414,
-            "loc": {
-              "start": {
-                "line": 39,
-                "column": 0
-              },
-              "end": {
                 "line": 42,
-                "column": 3
-              }
-            },
-            "range": [
-              1306,
-              1414
-            ]
-          }
-        ]
-      },
-      "specifiers": [],
-      "source": null,
-      "leadingComments": [
-        {
-          "type": "Block",
-          "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
-          "start": 1167,
-          "end": 1260,
-          "loc": {
-            "start": {
-              "line": 34,
-              "column": 0
-            },
-            "end": {
-              "line": 36,
-              "column": 3
-            }
-          },
-          "range": [
-            1167,
-            1260
-          ]
-        }
-      ],
-      "trailingComments": [
-        {
-          "type": "Block",
-          "value": "*\n * Client->Client: sent from the view to update parts of the ui state being tracked in\n * the store.\n ",
-          "start": 1306,
-          "end": 1414,
-          "loc": {
-            "start": {
-              "line": 39,
-              "column": 0
-            },
-            "end": {
-              "line": 42,
-              "column": 3
-            }
-          },
-          "range": [
-            1306,
-            1414
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ExportNamedDeclaration",
-      "start": 1415,
-      "end": 1464,
-      "loc": {
-        "start": {
-          "line": 43,
-          "column": 0
-        },
-        "end": {
-          "line": 43,
-          "column": 49
-        }
-      },
-      "declaration": {
-        "type": "VariableDeclaration",
-        "start": 1422,
-        "end": 1464,
-        "loc": {
-          "start": {
-            "line": 43,
-            "column": 7
-          },
-          "end": {
-            "line": 43,
-            "column": 49
-          }
-        },
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "start": 1428,
-            "end": 1463,
-            "loc": {
-              "start": {
-                "line": 43,
-                "column": 13
-              },
-              "end": {
-                "line": 43,
-                "column": 48
-              }
-            },
-            "id": {
-              "type": "Identifier",
-              "start": 1428,
-              "end": 1443,
-              "loc": {
-                "start": {
-                  "line": 43,
-                  "column": 13
-                },
-                "end": {
-                  "line": 43,
-                  "column": 28
-                }
-              },
-              "name": "UPDATE_UI_STATE",
-              "leadingComments": null
-            },
-            "init": {
-              "type": "Literal",
-              "start": 1446,
-              "end": 1463,
-              "loc": {
-                "start": {
-                  "line": 43,
-                  "column": 31
-                },
-                "end": {
-                  "line": 43,
-                  "column": 48
-                }
-              },
-              "value": "UPDATE_UI_STATE",
-              "rawValue": "UPDATE_UI_STATE",
-              "raw": "'UPDATE_UI_STATE'"
-            },
-            "leadingComments": null
-          }
-        ],
-        "kind": "const",
-        "leadingComments": [
-          {
-            "type": "Block",
-            "value": "*\n * Client->Client: sent from the view to update parts of the ui state being tracked in\n * the store.\n ",
-            "start": 1306,
-            "end": 1414,
-            "loc": {
-              "start": {
-                "line": 39,
                 "column": 0
               },
               "end": {
-                "line": 42,
+                "line": 44,
                 "column": 3
               }
             },
             "range": [
-              1306,
-              1414
+              1463,
+              1556
             ]
           }
         ],
@@ -1691,22 +1865,22 @@
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\n * Client->Client: sent from the view to update parts of the ui state being tracked in\n * the store.\n ",
-          "start": 1306,
-          "end": 1414,
+          "value": "*\n * Client->Server: sent to server when the player wants to join a specific game by ID\n ",
+          "start": 1463,
+          "end": 1556,
           "loc": {
             "start": {
-              "line": 39,
+              "line": 42,
               "column": 0
             },
             "end": {
-              "line": 42,
+              "line": 44,
               "column": 3
             }
           },
           "range": [
-            1306,
-            1414
+            1463,
+            1556
           ]
         }
       ]

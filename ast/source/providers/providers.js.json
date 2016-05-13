@@ -1,14 +1,14 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 5604,
+  "end": 6405,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 96,
+      "line": 125,
       "column": 0
     }
   },
@@ -10584,7 +10584,28 @@
             ]
           }
         ],
-        "trailingComments": []
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": " mapDealerPrompt below is built out with dummy data\nin the same format as game data is expected to come in.\nThis has been done for testing purposes.\nSee comments inside mapStateToProps function for more detail\nas to how function will need to be modified once we have\ndata coming from the server\n",
+            "start": 5604,
+            "end": 5903,
+            "loc": {
+              "start": {
+                "line": 96,
+                "column": 0
+              },
+              "end": {
+                "line": 102,
+                "column": 2
+              }
+            },
+            "range": [
+              5604,
+              5903
+            ]
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
@@ -10607,6 +10628,855 @@
           "range": [
             5390,
             5417
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": " mapDealerPrompt below is built out with dummy data\nin the same format as game data is expected to come in.\nThis has been done for testing purposes.\nSee comments inside mapStateToProps function for more detail\nas to how function will need to be modified once we have\ndata coming from the server\n",
+          "start": 5604,
+          "end": 5903,
+          "loc": {
+            "start": {
+              "line": 96,
+              "column": 0
+            },
+            "end": {
+              "line": 102,
+              "column": 2
+            }
+          },
+          "range": [
+            5604,
+            5903
+          ]
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 5904,
+      "end": 6021,
+      "loc": {
+        "start": {
+          "line": 103,
+          "column": 0
+        },
+        "end": {
+          "line": 108,
+          "column": 2
+        }
+      },
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 5910,
+          "end": 6020,
+          "loc": {
+            "start": {
+              "line": 103,
+              "column": 6
+            },
+            "end": {
+              "line": 108,
+              "column": 1
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 5910,
+            "end": 5914,
+            "loc": {
+              "start": {
+                "line": 103,
+                "column": 6
+              },
+              "end": {
+                "line": 103,
+                "column": 10
+              }
+            },
+            "name": "game",
+            "leadingComments": null
+          },
+          "init": {
+            "type": "ObjectExpression",
+            "start": 5917,
+            "end": 6020,
+            "loc": {
+              "start": {
+                "line": 103,
+                "column": 13
+              },
+              "end": {
+                "line": 108,
+                "column": 1
+              }
+            },
+            "properties": [
+              {
+                "type": "Property",
+                "start": 5921,
+                "end": 5932,
+                "loc": {
+                  "start": {
+                    "line": 104,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 104,
+                    "column": 13
+                  }
+                },
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 5921,
+                  "end": 5929,
+                  "loc": {
+                    "start": {
+                      "line": 104,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 104,
+                      "column": 10
+                    }
+                  },
+                  "name": "dealerid"
+                },
+                "value": {
+                  "type": "Literal",
+                  "start": 5931,
+                  "end": 5932,
+                  "loc": {
+                    "start": {
+                      "line": 104,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 104,
+                      "column": 13
+                    }
+                  },
+                  "value": 5,
+                  "rawValue": 5,
+                  "raw": "5"
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "start": 5936,
+                "end": 5970,
+                "loc": {
+                  "start": {
+                    "line": 105,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 105,
+                    "column": 36
+                  }
+                },
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 5936,
+                  "end": 5942,
+                  "loc": {
+                    "start": {
+                      "line": 105,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 105,
+                      "column": 8
+                    }
+                  },
+                  "name": "prompt"
+                },
+                "value": {
+                  "type": "Literal",
+                  "start": 5944,
+                  "end": 5970,
+                  "loc": {
+                    "start": {
+                      "line": 105,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 105,
+                      "column": 36
+                    }
+                  },
+                  "value": "Like Water for Chocolate",
+                  "rawValue": "Like Water for Chocolate",
+                  "raw": "'Like Water for Chocolate'"
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "start": 5974,
+                "end": 5992,
+                "loc": {
+                  "start": {
+                    "line": 106,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 106,
+                    "column": 20
+                  }
+                },
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 5974,
+                  "end": 5982,
+                  "loc": {
+                    "start": {
+                      "line": 106,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 106,
+                      "column": 10
+                    }
+                  },
+                  "name": "category"
+                },
+                "value": {
+                  "type": "Literal",
+                  "start": 5984,
+                  "end": 5992,
+                  "loc": {
+                    "start": {
+                      "line": 106,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 106,
+                      "column": 20
+                    }
+                  },
+                  "value": "Movies",
+                  "rawValue": "Movies",
+                  "raw": "'Movies'"
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "start": 5996,
+                "end": 6017,
+                "loc": {
+                  "start": {
+                    "line": 107,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 107,
+                    "column": 23
+                  }
+                },
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 5996,
+                  "end": 6007,
+                  "loc": {
+                    "start": {
+                      "line": 107,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 107,
+                      "column": 13
+                    }
+                  },
+                  "name": "initialClue"
+                },
+                "value": {
+                  "type": "Literal",
+                  "start": 6009,
+                  "end": 6017,
+                  "loc": {
+                    "start": {
+                      "line": 107,
+                      "column": 15
+                    },
+                    "end": {
+                      "line": 107,
+                      "column": 23
+                    }
+                  },
+                  "value": "👽🏰🎍",
+                  "rawValue": "👽🏰🎍",
+                  "raw": "'👽🏰🎍'"
+                },
+                "kind": "init"
+              }
+            ]
+          },
+          "leadingComments": null
+        }
+      ],
+      "kind": "const",
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " mapDealerPrompt below is built out with dummy data\nin the same format as game data is expected to come in.\nThis has been done for testing purposes.\nSee comments inside mapStateToProps function for more detail\nas to how function will need to be modified once we have\ndata coming from the server\n",
+          "start": 5604,
+          "end": 5903,
+          "loc": {
+            "start": {
+              "line": 96,
+              "column": 0
+            },
+            "end": {
+              "line": 102,
+              "column": 2
+            }
+          },
+          "range": [
+            5604,
+            5903
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": " DealerPrompt Providers",
+          "start": 6023,
+          "end": 6050,
+          "loc": {
+            "start": {
+              "line": 110,
+              "column": 0
+            },
+            "end": {
+              "line": 110,
+              "column": 27
+            }
+          },
+          "range": [
+            6023,
+            6050
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 6051,
+      "end": 6404,
+      "loc": {
+        "start": {
+          "line": 111,
+          "column": 0
+        },
+        "end": {
+          "line": 124,
+          "column": 2
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 6058,
+        "end": 6404,
+        "loc": {
+          "start": {
+            "line": 111,
+            "column": 7
+          },
+          "end": {
+            "line": 124,
+            "column": 2
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 6064,
+            "end": 6403,
+            "loc": {
+              "start": {
+                "line": 111,
+                "column": 13
+              },
+              "end": {
+                "line": 124,
+                "column": 1
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 6064,
+              "end": 6079,
+              "loc": {
+                "start": {
+                  "line": 111,
+                  "column": 13
+                },
+                "end": {
+                  "line": 111,
+                  "column": 28
+                }
+              },
+              "name": "mapDealerPrompt",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "start": 6082,
+              "end": 6403,
+              "loc": {
+                "start": {
+                  "line": 111,
+                  "column": 31
+                },
+                "end": {
+                  "line": 124,
+                  "column": 1
+                }
+              },
+              "properties": [
+                {
+                  "type": "Property",
+                  "start": 6086,
+                  "end": 6355,
+                  "loc": {
+                    "start": {
+                      "line": 112,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 120,
+                      "column": 3
+                    }
+                  },
+                  "method": true,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 6086,
+                    "end": 6101,
+                    "loc": {
+                      "start": {
+                        "line": 112,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 112,
+                        "column": 17
+                      }
+                    },
+                    "name": "mapStateToProps"
+                  },
+                  "kind": "init",
+                  "value": {
+                    "type": "FunctionExpression",
+                    "start": 6101,
+                    "end": 6355,
+                    "loc": {
+                      "start": {
+                        "line": 112,
+                        "column": 17
+                      },
+                      "end": {
+                        "line": 120,
+                        "column": 3
+                      }
+                    },
+                    "id": null,
+                    "generator": false,
+                    "expression": false,
+                    "async": false,
+                    "params": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "start": 6104,
+                      "end": 6355,
+                      "loc": {
+                        "start": {
+                          "line": 112,
+                          "column": 20
+                        },
+                        "end": {
+                          "line": 120,
+                          "column": 3
+                        }
+                      },
+                      "body": [
+                        {
+                          "type": "ReturnStatement",
+                          "start": 6110,
+                          "end": 6351,
+                          "loc": {
+                            "start": {
+                              "line": 113,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 119,
+                              "column": 6
+                            }
+                          },
+                          "argument": {
+                            "type": "ObjectExpression",
+                            "start": 6117,
+                            "end": 6350,
+                            "loc": {
+                              "start": {
+                                "line": 113,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 119,
+                                "column": 5
+                              }
+                            },
+                            "properties": [
+                              {
+                                "type": "Property",
+                                "start": 6324,
+                                "end": 6343,
+                                "loc": {
+                                  "start": {
+                                    "line": 118,
+                                    "column": 6
+                                  },
+                                  "end": {
+                                    "line": 118,
+                                    "column": 25
+                                  }
+                                },
+                                "method": false,
+                                "shorthand": false,
+                                "computed": false,
+                                "key": {
+                                  "type": "Identifier",
+                                  "start": 6324,
+                                  "end": 6330,
+                                  "loc": {
+                                    "start": {
+                                      "line": 118,
+                                      "column": 6
+                                    },
+                                    "end": {
+                                      "line": 118,
+                                      "column": 12
+                                    }
+                                  },
+                                  "name": "prompt",
+                                  "leadingComments": null
+                                },
+                                "value": {
+                                  "type": "MemberExpression",
+                                  "start": 6332,
+                                  "end": 6343,
+                                  "loc": {
+                                    "start": {
+                                      "line": 118,
+                                      "column": 14
+                                    },
+                                    "end": {
+                                      "line": 118,
+                                      "column": 25
+                                    }
+                                  },
+                                  "object": {
+                                    "type": "Identifier",
+                                    "start": 6332,
+                                    "end": 6336,
+                                    "loc": {
+                                      "start": {
+                                        "line": 118,
+                                        "column": 14
+                                      },
+                                      "end": {
+                                        "line": 118,
+                                        "column": 18
+                                      }
+                                    },
+                                    "name": "game"
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "start": 6337,
+                                    "end": 6343,
+                                    "loc": {
+                                      "start": {
+                                        "line": 118,
+                                        "column": 19
+                                      },
+                                      "end": {
+                                        "line": 118,
+                                        "column": 25
+                                      }
+                                    },
+                                    "name": "prompt"
+                                  },
+                                  "computed": false
+                                },
+                                "kind": "init",
+                                "leadingComments": [
+                                  {
+                                    "type": "CommentLine",
+                                    "value": " Code below needs to be replaced as outlined",
+                                    "start": 6125,
+                                    "end": 6171,
+                                    "loc": {
+                                      "start": {
+                                        "line": 114,
+                                        "column": 6
+                                      },
+                                      "end": {
+                                        "line": 114,
+                                        "column": 52
+                                      }
+                                    },
+                                    "range": [
+                                      6125,
+                                      6171
+                                    ]
+                                  },
+                                  {
+                                    "type": "CommentLine",
+                                    "value": " there is integratin with state",
+                                    "start": 6178,
+                                    "end": 6211,
+                                    "loc": {
+                                      "start": {
+                                        "line": 115,
+                                        "column": 6
+                                      },
+                                      "end": {
+                                        "line": 115,
+                                        "column": 39
+                                      }
+                                    },
+                                    "range": [
+                                      6178,
+                                      6211
+                                    ]
+                                  },
+                                  {
+                                    "type": "CommentLine",
+                                    "value": " line 113 becomes: mapStateToProps(state) {",
+                                    "start": 6218,
+                                    "end": 6263,
+                                    "loc": {
+                                      "start": {
+                                        "line": 116,
+                                        "column": 6
+                                      },
+                                      "end": {
+                                        "line": 116,
+                                        "column": 51
+                                      }
+                                    },
+                                    "range": [
+                                      6218,
+                                      6263
+                                    ]
+                                  },
+                                  {
+                                    "type": "CommentLine",
+                                    "value": " line 119 becomes: prompt: state.game.prompt,",
+                                    "start": 6270,
+                                    "end": 6317,
+                                    "loc": {
+                                      "start": {
+                                        "line": 117,
+                                        "column": 6
+                                      },
+                                      "end": {
+                                        "line": 117,
+                                        "column": 53
+                                      }
+                                    },
+                                    "range": [
+                                      6270,
+                                      6317
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "Property",
+                  "start": 6359,
+                  "end": 6400,
+                  "loc": {
+                    "start": {
+                      "line": 121,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 123,
+                      "column": 3
+                    }
+                  },
+                  "method": true,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 6359,
+                    "end": 6377,
+                    "loc": {
+                      "start": {
+                        "line": 121,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 121,
+                        "column": 20
+                      }
+                    },
+                    "name": "mapDispatchToProps"
+                  },
+                  "kind": "init",
+                  "value": {
+                    "type": "FunctionExpression",
+                    "start": 6377,
+                    "end": 6400,
+                    "loc": {
+                      "start": {
+                        "line": 121,
+                        "column": 20
+                      },
+                      "end": {
+                        "line": 123,
+                        "column": 3
+                      }
+                    },
+                    "id": null,
+                    "generator": false,
+                    "expression": false,
+                    "async": false,
+                    "params": [],
+                    "body": {
+                      "type": "BlockStatement",
+                      "start": 6380,
+                      "end": 6400,
+                      "loc": {
+                        "start": {
+                          "line": 121,
+                          "column": 23
+                        },
+                        "end": {
+                          "line": 123,
+                          "column": 3
+                        }
+                      },
+                      "body": [
+                        {
+                          "type": "ReturnStatement",
+                          "start": 6386,
+                          "end": 6396,
+                          "loc": {
+                            "start": {
+                              "line": 122,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 122,
+                              "column": 14
+                            }
+                          },
+                          "argument": {
+                            "type": "ObjectExpression",
+                            "start": 6393,
+                            "end": 6395,
+                            "loc": {
+                              "start": {
+                                "line": 122,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 122,
+                                "column": 13
+                              }
+                            },
+                            "properties": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": " DealerPrompt Providers",
+            "start": 6023,
+            "end": 6050,
+            "loc": {
+              "start": {
+                "line": 110,
+                "column": 0
+              },
+              "end": {
+                "line": 110,
+                "column": 27
+              }
+            },
+            "range": [
+              6023,
+              6050
+            ]
+          }
+        ],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": " DealerPrompt Providers",
+          "start": 6023,
+          "end": 6050,
+          "loc": {
+            "start": {
+              "line": 110,
+              "column": 0
+            },
+            "end": {
+              "line": 110,
+              "column": 27
+            }
+          },
+          "range": [
+            6023,
+            6050
           ]
         }
       ]

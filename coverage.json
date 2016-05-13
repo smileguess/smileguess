@@ -1,9 +1,39 @@
 {
   "coverage": "100%",
-  "expectCount": 23,
-  "actualCount": 23,
+  "expectCount": 29,
+  "actualCount": 29,
   "files": {
+    "app/App.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
     "app/components/ChatsList.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "app/components/CustomNav.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "app/components/Emoji.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "app/components/EmojiInput.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "app/components/EmojiKeyboard.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "app/components/EmojiKeys.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
@@ -19,8 +49,8 @@
       "undocumentLines": []
     },
     "app/action_types/actionTypes.js": {
-      "expectCount": 10,
-      "actualCount": 10,
+      "expectCount": 11,
+      "actualCount": 11,
       "undocumentLines": []
     },
     "app/components/Message.js": {
@@ -28,12 +58,12 @@
       "actualCount": 1,
       "undocumentLines": []
     },
-    "app/screens/Screens.js": {
+    "app/screens/StatsScreen.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "app/screens/StatsScreen.js": {
+    "app/components/Toast.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
@@ -44,11 +74,6 @@
       "undocumentLines": []
     },
     "app/actions/dealer.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "app/actions/ui.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
