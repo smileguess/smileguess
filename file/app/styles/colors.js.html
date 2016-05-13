@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">EmojiKeyboard | API Document</title>
+  <title data-ice="title">app/styles/colors.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -61,57 +61,24 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import EmojiKeyboard from &apos;<span><a href="file/app/components/EmojiKeyboard.js.html#lineNumber46">./app/components/EmojiKeyboard.js</a></span>&apos;</code></pre></div>
-  <span data-ice="access">public</span>
-  <span data-ice="kind">class</span>
-  
-  
-  
-  <span data-ice="source">| <span><a href="file/app/components/EmojiKeyboard.js.html#lineNumber46">source</a></span></span>
-</div>
+<div class="content" data-ice="content"><h1 data-ice="title">app/styles/colors.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc The app&apos;s color palette is based on this Adobe color theme:
+https://color.adobe.com/Color-Theme-4-color-theme-8030401/edit/?copy=true
+It consists of the five colors below:
+darkBlue, midBlue, lightBlue, caramel, cream
 
-<div class="self-detail detail">
-  <h1 data-ice="name">EmojiKeyboard</h1>
-
-  
-
-  
-  
-  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span>react-native~React.Component</span> &#x2192; EmojiKeyboard</div></div>
-  
-  
-  
-  
-  
-  
-
-  
-  
-  <div class="description" data-ice="description"><p>This is the top-level component for rendering the custom emoji-only keyboard.</p>
-</div>
-
-  
-
-  
-
-  
-
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+To access colors in any other file, import colors object
+and access individual colors as properties
+ */
+export const colors = {
+  primary1: &apos;#5979A8&apos;, // darkBlue
+  primary2: &apos;#A2C2EB&apos;, // midBlue
+  secondary1: &apos;#FFFCE9&apos;, // cream
+  secondary2: &apos;#CFE5FC&apos;, // lightBlue
+  neutral: &apos;#F1D4C2&apos;, // caramel
+};
+</code></pre>
 
 </div>
 

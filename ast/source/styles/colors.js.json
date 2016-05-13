@@ -1,0 +1,505 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 536,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 17,
+      "column": 0
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 335,
+      "end": 535,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 2
+        }
+      },
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 342,
+        "end": 535,
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 7
+          },
+          "end": {
+            "line": 16,
+            "column": 2
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 348,
+            "end": 534,
+            "loc": {
+              "start": {
+                "line": 10,
+                "column": 13
+              },
+              "end": {
+                "line": 16,
+                "column": 1
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 348,
+              "end": 354,
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 13
+                },
+                "end": {
+                  "line": 10,
+                  "column": 19
+                }
+              },
+              "name": "colors",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "start": 357,
+              "end": 534,
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 22
+                },
+                "end": {
+                  "line": 16,
+                  "column": 1
+                }
+              },
+              "properties": [
+                {
+                  "type": "Property",
+                  "start": 361,
+                  "end": 380,
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 21
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 361,
+                    "end": 369,
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 10
+                      }
+                    },
+                    "name": "primary1"
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "start": 371,
+                    "end": 380,
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 21
+                      }
+                    },
+                    "value": "#5979A8",
+                    "rawValue": "#5979A8",
+                    "raw": "'#5979A8'"
+                  },
+                  "kind": "init"
+                },
+                {
+                  "type": "Property",
+                  "start": 396,
+                  "end": 415,
+                  "loc": {
+                    "start": {
+                      "line": 12,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 21
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 396,
+                    "end": 404,
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 10
+                      }
+                    },
+                    "name": "primary2",
+                    "leadingComments": null
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "start": 406,
+                    "end": 415,
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 21
+                      }
+                    },
+                    "value": "#A2C2EB",
+                    "rawValue": "#A2C2EB",
+                    "raw": "'#A2C2EB'"
+                  },
+                  "kind": "init",
+                  "leadingComments": [
+                    {
+                      "type": "CommentLine",
+                      "value": " darkBlue",
+                      "start": 382,
+                      "end": 393,
+                      "loc": {
+                        "start": {
+                          "line": 11,
+                          "column": 23
+                        },
+                        "end": {
+                          "line": 11,
+                          "column": 34
+                        }
+                      },
+                      "range": [
+                        382,
+                        393
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "start": 430,
+                  "end": 451,
+                  "loc": {
+                    "start": {
+                      "line": 13,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 23
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 430,
+                    "end": 440,
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 12
+                      }
+                    },
+                    "name": "secondary1",
+                    "leadingComments": null
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "start": 442,
+                    "end": 451,
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 23
+                      }
+                    },
+                    "value": "#FFFCE9",
+                    "rawValue": "#FFFCE9",
+                    "raw": "'#FFFCE9'"
+                  },
+                  "kind": "init",
+                  "leadingComments": [
+                    {
+                      "type": "CommentLine",
+                      "value": " midBlue",
+                      "start": 417,
+                      "end": 427,
+                      "loc": {
+                        "start": {
+                          "line": 12,
+                          "column": 23
+                        },
+                        "end": {
+                          "line": 12,
+                          "column": 33
+                        }
+                      },
+                      "range": [
+                        417,
+                        427
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "start": 464,
+                  "end": 485,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 23
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 464,
+                    "end": 474,
+                    "loc": {
+                      "start": {
+                        "line": 14,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 12
+                      }
+                    },
+                    "name": "secondary2",
+                    "leadingComments": null
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "start": 476,
+                    "end": 485,
+                    "loc": {
+                      "start": {
+                        "line": 14,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 23
+                      }
+                    },
+                    "value": "#CFE5FC",
+                    "rawValue": "#CFE5FC",
+                    "raw": "'#CFE5FC'"
+                  },
+                  "kind": "init",
+                  "leadingComments": [
+                    {
+                      "type": "CommentLine",
+                      "value": " cream",
+                      "start": 453,
+                      "end": 461,
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 25
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 33
+                        }
+                      },
+                      "range": [
+                        453,
+                        461
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "start": 502,
+                  "end": 520,
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 20
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 502,
+                    "end": 509,
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 9
+                      }
+                    },
+                    "name": "neutral",
+                    "leadingComments": null
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "start": 511,
+                    "end": 520,
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 11
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 20
+                      }
+                    },
+                    "value": "#F1D4C2",
+                    "rawValue": "#F1D4C2",
+                    "raw": "'#F1D4C2'"
+                  },
+                  "kind": "init",
+                  "leadingComments": [
+                    {
+                      "type": "CommentLine",
+                      "value": " lightBlue",
+                      "start": 487,
+                      "end": 499,
+                      "loc": {
+                        "start": {
+                          "line": 14,
+                          "column": 25
+                        },
+                        "end": {
+                          "line": 14,
+                          "column": 37
+                        }
+                      },
+                      "range": [
+                        487,
+                        499
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * @desc The app's color palette is based on this Adobe color theme:\nhttps://color.adobe.com/Color-Theme-4-color-theme-8030401/edit/?copy=true\nIt consists of the five colors below:\ndarkBlue, midBlue, lightBlue, caramel, cream\n\nTo access colors in any other file, import colors object\nand access individual colors as properties\n ",
+            "start": 0,
+            "end": 334,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
+                "column": 3
+              }
+            },
+            "range": [
+              0,
+              334
+            ]
+          }
+        ],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @desc The app's color palette is based on this Adobe color theme:\nhttps://color.adobe.com/Color-Theme-4-color-theme-8030401/edit/?copy=true\nIt consists of the five colors below:\ndarkBlue, midBlue, lightBlue, caramel, cream\n\nTo access colors in any other file, import colors object\nand access individual colors as properties\n ",
+          "start": 0,
+          "end": 334,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 9,
+              "column": 3
+            }
+          },
+          "range": [
+            0,
+            334
+          ]
+        }
+      ]
+    }
+  ]
+}

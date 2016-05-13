@@ -834,7 +834,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "// import components\nimport React, { Component } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  PropTypes,\n} from 'react-native';\nimport { connect } from 'react-redux';\n\n// import provider\nimport { mapDealerPrompt } from '../providers/providers.js';\n\n\nconst styles = StyleSheet.create({\n  prompt: {\n    flex: 1,\n    height: 30,\n    backgroundColor: '#5979A8',\n    color: '#FFFCE9',\n    fontWeight: 'bold',\n    borderColor: '#CFE5FC',\n    borderWidth: 2,\n    padding: 5,\n    paddingLeft: 15,\n    paddingRight: 15,\n    textAlign: 'center',\n  },\n});\n\nconst DealerPrompt = ({ prompt }) => <Text style={styles.prompt}> {prompt} </Text>;\n\nDealerPrompt.propTypes = {\n  prompt: PropTypes.string.isRequired,\n};\n\nconst DealerPromptContainer = connect(\n  mapDealerPrompt.mapStateToProps,\n  mapDealerPrompt.mapDispatchToProps\n)(DealerPrompt);\n\nexport default DealerPromptContainer;\n"
+    "content": "// import components\nimport React, { Component } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  PropTypes,\n} from 'react-native';\nimport { connect } from 'react-redux';\n\n// import provider\nimport { mapDealerPrompt } from '../providers/providers.js';\nimport { baseComponent } from '../styles/styles.js';\n\nconst styles = StyleSheet.create({\n  prompt: Object.assign({}, baseComponent, {\n    flex: 1, \n    height: 30,\n    padding: 5,\n    paddingLeft: 15,\n    paddingRight: 15,\n    textAlign: 'center',\n  })\n});\n\nconst DealerPrompt = ({ prompt }) => <Text style={styles.prompt}> {prompt} </Text>;\n\nDealerPrompt.propTypes = {\n  prompt: PropTypes.string.isRequired,\n};\n\nconst DealerPromptContainer = connect(\n  mapDealerPrompt.mapStateToProps,\n  mapDealerPrompt.mapDispatchToProps\n)(DealerPrompt);\n\nexport default DealerPromptContainer;\n"
   },
   {
     "__docId__": 40,
@@ -870,7 +870,7 @@
     "importPath": "./app/components/DealerPrompt.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 30,
+    "lineNumber": 25,
     "undocument": true,
     "type": {
       "types": [
@@ -891,7 +891,7 @@
     "importPath": "./app/components/DealerPrompt.js",
     "importStyle": "DealerPromptContainer",
     "description": null,
-    "lineNumber": 36,
+    "lineNumber": 31,
     "undocument": true,
     "type": {
       "types": [
@@ -2335,7 +2335,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import React, { Component } from 'react';\nimport { View,\n  Text,\n  StyleSheet }\n  from 'react-native';\nimport Button from 'react-native-button';\nimport { Actions } from 'react-native-router-flux';\n\nimport DealerPrompt from '../components/DealerPrompt.js';\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: '#FFFCE9',\n  },\n  button: {\n    color: '#5979A8',\n    fontSize: 14,\n  },\n  text: {\n    color: 'black',\n    textAlign: 'center',\n  },\n});\n\nclass DealerChangeScreen extends Component {\n  render() {\n    return (\n      <View style={styles.container}>\n        <Text style={styles.text} numberOfLines={2}>Congratulations, now you rule the game!\n        {\"\\n\"}\n        Be ready to emojify:\n        {\"\\n\"}\n        </Text>\n        <View>\n          <DealerPrompt />\n        </View>\n        <Text style={styles.text} numberOfLines={2}>\n        {\"\\n\"}\n        </Text>\n        <Button style={styles.button} onPress={Actions.pop}>Close to start game!</Button>\n      </View>\n    );\n  }\n}\n\nexport default DealerChangeScreen;\n"
+    "content": "import React, { Component } from 'react';\nimport { View,\n  Text,\n  StyleSheet }\n  from 'react-native';\nimport Button from 'react-native-button';\nimport { Actions } from 'react-native-router-flux';\n\nimport DealerPrompt from '../components/DealerPrompt.js';\n\nimport { baseButton, baseContainer } from '../styles/styles.js';\nimport { colors } from '../styles/colors.js';\n\nconst styles = StyleSheet.create({\n  container: Object.assign({}, baseContainer, {\n    backgroundColor: colors.secondary1,\n  }), \n  button: baseButton,\n  text: {\n    color: 'black',\n    textAlign: 'center',\n  },\n});\n\nclass DealerChangeScreen extends Component {\n  render() {\n    return (\n      <View style={styles.container}>\n        <Text style={styles.text} numberOfLines={2}>Congratulations, now you rule the game!\n        {\"\\n\"}\n        Be ready to emojify:\n        {\"\\n\"}\n        </Text>\n        <View>\n          <DealerPrompt />\n        </View>\n        <Text style={styles.text} numberOfLines={2}>\n        {\"\\n\"}\n        </Text>\n        <Button style={styles.button} onPress={Actions.pop}>Close to start game!</Button>\n      </View>\n    );\n  }\n}\n\nexport default DealerChangeScreen;\n"
   },
   {
     "__docId__": 115,
@@ -2350,7 +2350,7 @@
     "importPath": "./app/screens/DealerChangeScreen.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 11,
+    "lineNumber": 14,
     "undocument": true,
     "type": {
       "types": [
@@ -2371,7 +2371,7 @@
     "importPath": "./app/screens/DealerChangeScreen.js",
     "importStyle": "DealerChangeScreen",
     "description": null,
-    "lineNumber": 28,
+    "lineNumber": 25,
     "undocument": true,
     "interface": false,
     "extends": [
@@ -2388,7 +2388,7 @@
     "longname": "app/screens/DealerChangeScreen.js~DealerChangeScreen#render",
     "access": null,
     "description": null,
-    "lineNumber": 29,
+    "lineNumber": 26,
     "undocument": true,
     "params": [],
     "return": {
@@ -3115,6 +3115,115 @@
     "kind": "file",
     "static": true,
     "variation": null,
+    "name": "app/styles/colors.js",
+    "memberof": null,
+    "longname": "app/styles/colors.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/**\n * @desc The app's color palette is based on this Adobe color theme:\nhttps://color.adobe.com/Color-Theme-4-color-theme-8030401/edit/?copy=true\nIt consists of the five colors below:\ndarkBlue, midBlue, lightBlue, caramel, cream\n\nTo access colors in any other file, import colors object\nand access individual colors as properties\n */\nexport const colors = {\n  primary1: '#5979A8', // darkBlue\n  primary2: '#A2C2EB', // midBlue\n  secondary1: '#FFFCE9', // cream\n  secondary2: '#CFE5FC', // lightBlue\n  neutral: '#F1D4C2', // caramel\n};\n"
+  },
+  {
+    "__docId__": 155,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "colors",
+    "memberof": "app/styles/colors.js",
+    "longname": "app/styles/colors.js~colors",
+    "access": null,
+    "export": true,
+    "importPath": "./app/styles/colors.js",
+    "importStyle": "{colors}",
+    "description": "The app's color palette is based on this Adobe color theme:\nhttps://color.adobe.com/Color-Theme-4-color-theme-8030401/edit/?copy=true\nIt consists of the five colors below:\ndarkBlue, midBlue, lightBlue, caramel, cream\n\nTo access colors in any other file, import colors object\nand access individual colors as properties",
+    "lineNumber": 10,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 156,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/styles/styles.js",
+    "memberof": null,
+    "longname": "app/styles/styles.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/**\n * This file defines standard formatting for elements\n which can be reused across the application's files.\n To extend with additional properties within files,\n refer to the following example syntax:\n Object.assign({}, baseButton, {\n  flex: 1,\n  backgroundColor: colors.caramel,\n })\n */\nimport { colors } from './colors.js';\n\nexport const baseButton = {\n  'color': colors.primary1,\n  'fontSize': 14,\n};\n\nexport const baseComponent = {\n  'fontSize': 14,\n  'color': colors.secondary1,\n  'backgroundColor': colors.primary1,\n  'borderColor': colors.secondary2,\n  'borderWidth': 4,\n};\n\nexport const baseContainer = {\n  'flex': 1, \n  'justifyContent': 'center',\n  'alignItems': 'center',\n};\n\n"
+  },
+  {
+    "__docId__": 157,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "baseButton",
+    "memberof": "app/styles/styles.js",
+    "longname": "app/styles/styles.js~baseButton",
+    "access": null,
+    "export": true,
+    "importPath": "./app/styles/styles.js",
+    "importStyle": "{baseButton}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 158,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "baseComponent",
+    "memberof": "app/styles/styles.js",
+    "longname": "app/styles/styles.js~baseComponent",
+    "access": null,
+    "export": true,
+    "importPath": "./app/styles/styles.js",
+    "importStyle": "{baseComponent}",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "baseContainer",
+    "memberof": "app/styles/styles.js",
+    "longname": "app/styles/styles.js~baseContainer",
+    "access": null,
+    "export": true,
+    "importPath": "./app/styles/styles.js",
+    "importStyle": "{baseContainer}",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "file",
+    "static": true,
+    "variation": null,
     "name": "app/testdata/dummyData.js",
     "memberof": null,
     "longname": "app/testdata/dummyData.js",
@@ -3124,7 +3233,7 @@
     "content": "export const fakeMessages = [\n  {\n    userid: 1,\n    type: 'guess',\n    message: 'I dont know.',\n  },\n  {\n    userid: 2,\n    type: 'guess',\n    message: 'I dont know.',\n  },\n  {\n    userid: 3,\n    type: 'clue',\n    message: 'I dont know.',\n  },\n  {\n    userid: 4,\n    type: 'guess',\n    message: 'I dont know.',\n  },\n  {\n    userid: 1,\n    type: 'guess',\n    message: 'I dont know.',\n  },\n];\n"
   },
   {
-    "__docId__": 155,
+    "__docId__": 161,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -3145,7 +3254,7 @@
     }
   },
   {
-    "__docId__": 157,
+    "__docId__": 163,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3158,7 +3267,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 158,
+    "__docId__": 164,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3171,7 +3280,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 159,
+    "__docId__": 165,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3184,7 +3293,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 160,
+    "__docId__": 166,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3197,7 +3306,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 161,
+    "__docId__": 167,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3210,7 +3319,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 162,
+    "__docId__": 168,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3223,7 +3332,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 163,
+    "__docId__": 169,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3236,7 +3345,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 164,
+    "__docId__": 170,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3249,7 +3358,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 165,
+    "__docId__": 171,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3262,7 +3371,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 166,
+    "__docId__": 172,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3275,7 +3384,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 167,
+    "__docId__": 173,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3288,7 +3397,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 168,
+    "__docId__": 174,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3301,7 +3410,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 169,
+    "__docId__": 175,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3314,7 +3423,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 170,
+    "__docId__": 176,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3327,7 +3436,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 171,
+    "__docId__": 177,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3340,7 +3449,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 172,
+    "__docId__": 178,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3353,7 +3462,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 173,
+    "__docId__": 179,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3366,7 +3475,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 174,
+    "__docId__": 180,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3379,7 +3488,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 175,
+    "__docId__": 181,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3392,7 +3501,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 176,
+    "__docId__": 182,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3405,7 +3514,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 177,
+    "__docId__": 183,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3418,7 +3527,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 178,
+    "__docId__": 184,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3431,7 +3540,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 179,
+    "__docId__": 185,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3444,7 +3553,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 180,
+    "__docId__": 186,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3457,7 +3566,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 181,
+    "__docId__": 187,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3470,7 +3579,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 182,
+    "__docId__": 188,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3483,7 +3592,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 183,
+    "__docId__": 189,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3496,7 +3605,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 184,
+    "__docId__": 190,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3509,7 +3618,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 185,
+    "__docId__": 191,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3522,7 +3631,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 186,
+    "__docId__": 192,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3535,7 +3644,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 187,
+    "__docId__": 193,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3548,7 +3657,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 188,
+    "__docId__": 194,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3561,7 +3670,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 189,
+    "__docId__": 195,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3574,7 +3683,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 190,
+    "__docId__": 196,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3587,7 +3696,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 191,
+    "__docId__": 197,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3600,7 +3709,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 192,
+    "__docId__": 198,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3613,7 +3722,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 193,
+    "__docId__": 199,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3626,7 +3735,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 194,
+    "__docId__": 200,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3639,7 +3748,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 195,
+    "__docId__": 201,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3652,7 +3761,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 196,
+    "__docId__": 202,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3665,7 +3774,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 197,
+    "__docId__": 203,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3678,7 +3787,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 198,
+    "__docId__": 204,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3691,7 +3800,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 199,
+    "__docId__": 205,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3704,7 +3813,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 200,
+    "__docId__": 206,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3717,7 +3826,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 201,
+    "__docId__": 207,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3730,7 +3839,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 202,
+    "__docId__": 208,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3743,7 +3852,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 203,
+    "__docId__": 209,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3756,7 +3865,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 205,
+    "__docId__": 211,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3769,7 +3878,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 206,
+    "__docId__": 212,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3782,7 +3891,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 207,
+    "__docId__": 213,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3795,7 +3904,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 208,
+    "__docId__": 214,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3808,7 +3917,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 209,
+    "__docId__": 215,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3821,7 +3930,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 210,
+    "__docId__": 216,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3834,7 +3943,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 211,
+    "__docId__": 217,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3847,7 +3956,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 212,
+    "__docId__": 218,
     "kind": "external",
     "static": true,
     "variation": null,

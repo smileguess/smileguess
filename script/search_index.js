@@ -126,6 +126,12 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "./app/styles/colors.js~colors",
+    "variable/index.html#static-variable-colors",
+    "<span>colors</span> <span class=\"search-result-import-path\">./app/styles/colors.js</span>",
+    "variable"
+  ],
+  [
     "./app/actions/user.js~dequeuememo",
     "variable/index.html#static-variable-dequeueMemo",
     "<span>dequeueMemo</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
@@ -717,6 +723,18 @@ window.esdocSearchIndex = [
     "app/store/configurestore.js",
     "file/app/store/configureStore.js.html",
     "app/store/configureStore.js",
+    "file"
+  ],
+  [
+    "app/styles/colors.js",
+    "file/app/styles/colors.js.html",
+    "app/styles/colors.js",
+    "file"
+  ],
+  [
+    "app/styles/styles.js",
+    "file/app/styles/styles.js.html",
+    "app/styles/styles.js",
     "file"
   ],
   [

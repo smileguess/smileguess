@@ -56,6 +56,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StatsScreenContainer">StatsScreenContainer</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">styles</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-colors">colors</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -72,22 +73,17 @@ import { connect } from &apos;react-redux&apos;;
 
 // import provider
 import { mapDealerPrompt } from &apos;../providers/providers.js&apos;;
-
+import { baseComponent } from &apos;../styles/styles.js&apos;;
 
 const styles = StyleSheet.create({
-  prompt: {
-    flex: 1,
+  prompt: Object.assign({}, baseComponent, {
+    flex: 1, 
     height: 30,
-    backgroundColor: &apos;#5979A8&apos;,
-    color: &apos;#FFFCE9&apos;,
-    fontWeight: &apos;bold&apos;,
-    borderColor: &apos;#CFE5FC&apos;,
-    borderWidth: 2,
     padding: 5,
     paddingLeft: 15,
     paddingRight: 15,
     textAlign: &apos;center&apos;,
-  },
+  })
 });
 
 const DealerPrompt = ({ prompt }) =&gt; &lt;Text style={styles.prompt}&gt; {prompt} &lt;/Text&gt;;

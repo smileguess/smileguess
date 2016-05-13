@@ -56,6 +56,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreen">HomeScreen</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-HomeScreenContainer">HomeScreenContainer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StatsScreenContainer">StatsScreenContainer</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">styles</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-colors">colors</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -71,17 +72,14 @@ import { Actions } from &apos;react-native-router-flux&apos;;
 
 import DealerPrompt from &apos;../components/DealerPrompt.js&apos;;
 
+import { baseButton, baseContainer } from &apos;../styles/styles.js&apos;;
+import { colors } from &apos;../styles/colors.js&apos;;
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: &apos;center&apos;,
-    alignItems: &apos;center&apos;,
-    backgroundColor: &apos;#FFFCE9&apos;,
-  },
-  button: {
-    color: &apos;#5979A8&apos;,
-    fontSize: 14,
-  },
+  container: Object.assign({}, baseContainer, {
+    backgroundColor: colors.secondary1,
+  }), 
+  button: baseButton,
   text: {
     color: &apos;black&apos;,
     textAlign: &apos;center&apos;,

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">EmojiKeyboard | API Document</title>
+  <title data-ice="title">app/styles/styles.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -61,57 +61,39 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import EmojiKeyboard from &apos;<span><a href="file/app/components/EmojiKeyboard.js.html#lineNumber46">./app/components/EmojiKeyboard.js</a></span>&apos;</code></pre></div>
-  <span data-ice="access">public</span>
-  <span data-ice="kind">class</span>
-  
-  
-  
-  <span data-ice="source">| <span><a href="file/app/components/EmojiKeyboard.js.html#lineNumber46">source</a></span></span>
-</div>
+<div class="content" data-ice="content"><h1 data-ice="title">app/styles/styles.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * This file defines standard formatting for elements
+ which can be reused across the application&apos;s files.
+ To extend with additional properties within files,
+ refer to the following example syntax:
+ Object.assign({}, baseButton, {
+  flex: 1,
+  backgroundColor: colors.caramel,
+ })
+ */
+import { colors } from &apos;./colors.js&apos;;
 
-<div class="self-detail detail">
-  <h1 data-ice="name">EmojiKeyboard</h1>
+export const baseButton = {
+  &apos;color&apos;: colors.primary1,
+  &apos;fontSize&apos;: 14,
+};
 
-  
+export const baseComponent = {
+  &apos;fontSize&apos;: 14,
+  &apos;color&apos;: colors.secondary1,
+  &apos;backgroundColor&apos;: colors.primary1,
+  &apos;borderColor&apos;: colors.secondary2,
+  &apos;borderWidth&apos;: 4,
+};
 
-  
-  
-  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span>react-native~React.Component</span> &#x2192; EmojiKeyboard</div></div>
-  
-  
-  
-  
-  
-  
+export const baseContainer = {
+  &apos;flex&apos;: 1, 
+  &apos;justifyContent&apos;: &apos;center&apos;,
+  &apos;alignItems&apos;: &apos;center&apos;,
+};
 
-  
-  
-  <div class="description" data-ice="description"><p>This is the top-level component for rendering the custom emoji-only keyboard.</p>
-</div>
-
-  
-
-  
-
-  
-
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</code></pre>
 
 </div>
 

@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 24,
-  "actualCount": 24,
+  "expectCount": 25,
+  "actualCount": 25,
   "files": {
     "app/App.js": {
       "expectCount": 1,
@@ -64,6 +64,11 @@
       "undocumentLines": []
     },
     "app/components/Toast.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "app/styles/colors.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
