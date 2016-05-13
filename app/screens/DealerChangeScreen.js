@@ -8,17 +8,14 @@ import { Actions } from 'react-native-router-flux';
 
 import DealerPrompt from '../components/DealerPrompt.js';
 
+import { baseButton, baseContainer } from '../styles/styles.js';
+import { colors } from '../styles/colors.js';
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFCE9',
-  },
-  button: {
-    color: '#5979A8',
-    fontSize: 14,
-  },
+  container: Object.assign({}, baseContainer, {
+    backgroundColor: colors.secondary1,
+  }), 
+  button: baseButton,
   text: {
     color: 'black',
     textAlign: 'center',
