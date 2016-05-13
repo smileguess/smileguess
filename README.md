@@ -1,4 +1,4 @@
-# SmileGuess 
+# SmileGuess
 Emoji guessing game
 
 ## Environment Setup
@@ -6,6 +6,12 @@ Emoji guessing game
 Instructions for setting up your react-native development environment:
 
 https://facebook.github.io/react-native/docs/getting-started.html
+
+Install Dependencies
+```bash
+npm install -g rnpm //sudo may be required for this
+rnpm link
+```
 
 Once your development environment is set up, start the ios emulator with `react-native run-ios`
 
@@ -89,4 +95,3 @@ https://smileguess.github.io/smileguess-server/
 1.  React-Native
 2.  Redux
 3.  socket.io
-

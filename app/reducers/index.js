@@ -3,7 +3,6 @@ import players from './players.js';
 import messages from './messages.js';
 import game from './game.js';
 import routes from './routes.js';
-import ui from './ui.js';
 import user from './user.js';
 
 const rootReducer = combineReducers({
@@ -11,7 +10,6 @@ const rootReducer = combineReducers({
   messages,
   game,
   routes,
-  ui,
   user,
 });
 

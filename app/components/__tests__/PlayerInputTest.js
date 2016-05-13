@@ -16,12 +16,22 @@ import PlayerInput from '../PlayerInput.js';
 const submitGuess = jest.genMockFunction();
 const onFocus = jest.genMockFunction();
 
+/* Setup mock data */
+const screenSize = {
+  width: 300,
+  height: 600,
+};
+
 describe('PlayerInput', () => {
   let output;
 
   beforeEach(() => {
     const renderer = TestUtils.createRenderer();
-    renderer.render(<PlayerInput onSubmitEditing={submitGuess} onFocus={onFocus} />);
+    renderer.render(<PlayerInput
+      onSubmitEditing={submitGuess}
+      onFocus={onFocus}
+      screenSize={screenSize}
+    />);
     output = renderer.getRenderOutput();
   });
 
