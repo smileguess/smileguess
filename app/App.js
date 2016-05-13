@@ -38,6 +38,9 @@ fetch(`http://localhost:1234/api/user/${DeviceInfo.getUniqueID()}`)
       type: 'UPDATE_USER_STATE',
       user,
     });
+  })
+  .catch((error) => {
+    throw error;
   });
 
 /* Set up router */
@@ -80,6 +83,11 @@ const scenes = Actions.create(
   </Scene>
 );
 
+/**
+ * App is the entrypoint for both the ios and (in the future) Android versions
+ * of the app. It is rendered only once when the app is loaded and instantiates
+ * all of the applicaiton routes, the store and the provider.
+ */
 const App = () => (
   <Provider store={store} >
     <RouterWithRedux scenes={scenes} screenSize={screenSize} />

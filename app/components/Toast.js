@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 });
 
 /**
- * Toast is a React functional component designed to provide modal notifications
+ * Toast is a React class component designed to provide modal notifications
  * across the application.
  * @param {string} props.message - text body of the message.
  */
