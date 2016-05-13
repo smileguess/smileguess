@@ -8,11 +8,10 @@ import React, { Text } from 'react-native'; // <rootdir>/app/__mocks__/react-nat
 /* Must be mocked explicitly because set as an unmocked module in package.json */
 jest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js
 jest.mock('react-native-blur');
-import BlurView from 'react-native-blur';
 
-/* Unmock Toast for unit testing */
-jest.unmock('../Toast.js');
-import Toast from '../Toast.js';
+/* Unmock CustomNav for unit testing */
+jest.unmock('../CustomNav.js');
+import CustomNav from '../CustomNav.js';
 
 /* Set up mock data */
 const screenSize = {
@@ -20,13 +19,12 @@ const screenSize = {
   height: 600,
 };
 
-describe('Toast', () => {
+describe('CustomNav', () => {
   let output;
 
   beforeEach(() => {
     const renderer = TestUtils.createRenderer();
-    renderer.render(<Toast
-      toastMessage="Player has won!"
+    renderer.render(<CustomNav
       screenSize={screenSize}
     />);
     output = renderer.getRenderOutput();
@@ -38,9 +36,5 @@ describe('Toast', () => {
 
   it('should render', () => {
     expect(output).toBeDefined();
-  });
-
-  xit('should have a Text component', () => {
-    expect(findAllWithType(output, BlurView)).toBe(2);
   });
 });
