@@ -42,6 +42,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "./app/action_types/actiontypes.js~game_memo",
+    "variable/index.html#static-variable-GAME_MEMO",
+    "<span>GAME_MEMO</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
     "./app/screens/gamescreen.js~gamescreen",
     "class/app/screens/GameScreen.js~GameScreen.html",
     "<span>GameScreen</span> <span class=\"search-result-import-path\">./app/screens/GameScreen.js</span>",
@@ -66,18 +72,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "./app/action_types/actiontypes.js~join_game",
-    "variable/index.html#static-variable-JOIN_GAME",
-    "<span>JOIN_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
-    "./app/action_types/actiontypes.js~join_random_game",
-    "variable/index.html#static-variable-JOIN_RANDOM_GAME",
-    "<span>JOIN_RANDOM_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
     "./app/components/message.js~message",
     "variable/index.html#static-variable-Message",
     "<span>Message</span> <span class=\"search-result-import-path\">./app/components/Message.js</span>",
@@ -96,42 +90,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "./app/action_types/actiontypes.js~socket_clue_message",
-    "variable/index.html#static-variable-SOCKET_CLUE_MESSAGE",
-    "<span>SOCKET_CLUE_MESSAGE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
-    "./app/action_types/actiontypes.js~socket_dealer_receive_prompt",
-    "variable/index.html#static-variable-SOCKET_DEALER_RECEIVE_PROMPT",
-    "<span>SOCKET_DEALER_RECEIVE_PROMPT</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
-    "./app/action_types/actiontypes.js~socket_declare_winner",
-    "variable/index.html#static-variable-SOCKET_DECLARE_WINNER",
-    "<span>SOCKET_DECLARE_WINNER</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
-    "./app/action_types/actiontypes.js~socket_guess_message",
-    "variable/index.html#static-variable-SOCKET_GUESS_MESSAGE",
-    "<span>SOCKET_GUESS_MESSAGE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
-    "./app/action_types/actiontypes.js~socket_player_join_game",
-    "variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME",
-    "<span>SOCKET_PLAYER_JOIN_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
-    "./app/action_types/actiontypes.js~socket_player_leave_game",
-    "variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME",
-    "<span>SOCKET_PLAYER_LEAVE_GAME</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
-    "variable"
-  ],
-  [
     "./app/screens/statsscreen.js~statsscreencontainer",
     "variable/index.html#static-variable-StatsScreenContainer",
     "<span>StatsScreenContainer</span> <span class=\"search-result-import-path\">./app/screens/StatsScreen.js</span>",
@@ -144,27 +102,33 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "./app/action_types/actiontypes.js~update_game_state",
+    "variable/index.html#static-variable-UPDATE_GAME_STATE",
+    "<span>UPDATE_GAME_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "./app/action_types/actiontypes.js~update_message_state",
+    "variable/index.html#static-variable-UPDATE_MESSAGE_STATE",
+    "<span>UPDATE_MESSAGE_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
+    "./app/action_types/actiontypes.js~update_ui_state",
+    "variable/index.html#static-variable-UPDATE_UI_STATE",
+    "<span>UPDATE_UI_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
+    "variable"
+  ],
+  [
     "./app/action_types/actiontypes.js~update_user_state",
     "variable/index.html#static-variable-UPDATE_USER_STATE",
     "<span>UPDATE_USER_STATE</span> <span class=\"search-result-import-path\">./app/action_types/actionTypes.js</span>",
     "variable"
   ],
   [
-    "./app/actions/user.js~joingame",
-    "variable/index.html#static-variable-joinGame",
-    "<span>joinGame</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
-    "variable"
-  ],
-  [
-    "./app/actions/user.js~joinrandomgame",
-    "variable/index.html#static-variable-joinRandomGame",
-    "<span>joinRandomGame</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
-    "variable"
-  ],
-  [
-    "./app/actions/dealer.js~submitclue",
+    "./app/actions/user.js~submitclue",
     "variable/index.html#static-variable-submitClue",
-    "<span>submitClue</span> <span class=\"search-result-import-path\">./app/actions/dealer.js</span>",
+    "<span>submitClue</span> <span class=\"search-result-import-path\">./app/actions/user.js</span>",
     "variable"
   ],
   [
@@ -516,27 +480,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "app/actions/__tests__/dealer.js",
-    "file/app/actions/__tests__/dealer.js.html",
-    "app/actions/__tests__/dealer.js",
-    "file"
-  ],
-  [
-    "app/actions/__tests__/players.js",
-    "file/app/actions/__tests__/players.js.html",
-    "app/actions/__tests__/players.js",
-    "file"
-  ],
-  [
     "app/actions/__tests__/user.js",
     "file/app/actions/__tests__/user.js.html",
     "app/actions/__tests__/user.js",
-    "file"
-  ],
-  [
-    "app/actions/dealer.js",
-    "file/app/actions/dealer.js.html",
-    "app/actions/dealer.js",
     "file"
   ],
   [
@@ -684,24 +630,6 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "app/reducers/__tests__/game.js",
-    "file/app/reducers/__tests__/game.js.html",
-    "app/reducers/__tests__/game.js",
-    "file"
-  ],
-  [
-    "app/reducers/__tests__/messages.js",
-    "file/app/reducers/__tests__/messages.js.html",
-    "app/reducers/__tests__/messages.js",
-    "file"
-  ],
-  [
-    "app/reducers/__tests__/players.js",
-    "file/app/reducers/__tests__/players.js.html",
-    "app/reducers/__tests__/players.js",
-    "file"
-  ],
-  [
     "app/reducers/game.js",
     "file/app/reducers/game.js.html",
     "app/reducers/game.js",
@@ -717,12 +645,6 @@ window.esdocSearchIndex = [
     "app/reducers/messages.js",
     "file/app/reducers/messages.js.html",
     "app/reducers/messages.js",
-    "file"
-  ],
-  [
-    "app/reducers/players.js",
-    "file/app/reducers/players.js.html",
-    "app/reducers/players.js",
     "file"
   ],
   [

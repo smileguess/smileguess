@@ -1,14 +1,14 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 732,
+  "end": 510,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 31,
+      "line": 23,
       "column": 0
     }
   },
@@ -17,7 +17,7 @@
     {
       "type": "ImportDeclaration",
       "start": 0,
-      "end": 97,
+      "end": 87,
       "loc": {
         "start": {
           "line": 1,
@@ -25,14 +25,14 @@
         },
         "end": {
           "line": 1,
-          "column": 97
+          "column": 87
         }
       },
       "specifiers": [
         {
           "type": "ImportSpecifier",
           "start": 9,
-          "end": 25,
+          "end": 26,
           "loc": {
             "start": {
               "line": 1,
@@ -40,13 +40,13 @@
             },
             "end": {
               "line": 1,
-              "column": 25
+              "column": 26
             }
           },
           "imported": {
             "type": "Identifier",
             "start": 9,
-            "end": 25,
+            "end": 26,
             "loc": {
               "start": {
                 "line": 1,
@@ -54,15 +54,15 @@
               },
               "end": {
                 "line": 1,
-                "column": 25
+                "column": 26
               }
             },
-            "name": "JOIN_RANDOM_GAME"
+            "name": "SEND_CLUE_MESSAGE"
           },
           "local": {
             "type": "Identifier",
             "start": 9,
-            "end": 25,
+            "end": 26,
             "loc": {
               "start": {
                 "line": 1,
@@ -70,101 +70,54 @@
               },
               "end": {
                 "line": 1,
-                "column": 25
+                "column": 26
               }
             },
-            "name": "JOIN_RANDOM_GAME"
+            "name": "SEND_CLUE_MESSAGE"
           }
         },
         {
           "type": "ImportSpecifier",
-          "start": 27,
-          "end": 36,
+          "start": 28,
+          "end": 46,
           "loc": {
             "start": {
               "line": 1,
-              "column": 27
+              "column": 28
             },
             "end": {
               "line": 1,
-              "column": 36
+              "column": 46
             }
           },
           "imported": {
             "type": "Identifier",
-            "start": 27,
-            "end": 36,
+            "start": 28,
+            "end": 46,
             "loc": {
               "start": {
                 "line": 1,
-                "column": 27
+                "column": 28
               },
               "end": {
                 "line": 1,
-                "column": 36
-              }
-            },
-            "name": "JOIN_GAME"
-          },
-          "local": {
-            "type": "Identifier",
-            "start": 27,
-            "end": 36,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 27
-              },
-              "end": {
-                "line": 1,
-                "column": 36
-              }
-            },
-            "name": "JOIN_GAME"
-          }
-        },
-        {
-          "type": "ImportSpecifier",
-          "start": 38,
-          "end": 56,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 38
-            },
-            "end": {
-              "line": 1,
-              "column": 56
-            }
-          },
-          "imported": {
-            "type": "Identifier",
-            "start": 38,
-            "end": 56,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 38
-              },
-              "end": {
-                "line": 1,
-                "column": 56
+                "column": 46
               }
             },
             "name": "SEND_GUESS_MESSAGE"
           },
           "local": {
             "type": "Identifier",
-            "start": 38,
-            "end": 56,
+            "start": 28,
+            "end": 46,
             "loc": {
               "start": {
                 "line": 1,
-                "column": 38
+                "column": 28
               },
               "end": {
                 "line": 1,
-                "column": 56
+                "column": 46
               }
             },
             "name": "SEND_GUESS_MESSAGE"
@@ -174,16 +127,16 @@
       "importKind": "value",
       "source": {
         "type": "Literal",
-        "start": 64,
-        "end": 96,
+        "start": 54,
+        "end": 86,
         "loc": {
           "start": {
             "line": 1,
-            "column": 64
+            "column": 54
           },
           "end": {
             "line": 1,
-            "column": 96
+            "column": 86
           }
         },
         "value": "../action_types/actionTypes.js",
@@ -193,33 +146,33 @@
       "trailingComments": [
         {
           "type": "Block",
-          "value": "*\n * Creates an action for joining a specific game by ID\n * This action is handled by the server\n * @param {number} gameid The ID of the game to join\n ",
-          "start": 99,
-          "end": 254,
+          "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
+          "start": 89,
+          "end": 194,
           "loc": {
             "start": {
               "line": 3,
               "column": 0
             },
             "end": {
-              "line": 7,
+              "line": 6,
               "column": 3
             }
           },
           "range": [
-            99,
-            254
+            89,
+            194
           ]
         }
       ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 255,
-      "end": 333,
+      "start": 195,
+      "end": 298,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 7,
           "column": 0
         },
         "end": {
@@ -229,11 +182,11 @@
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 262,
-        "end": 333,
+        "start": 202,
+        "end": 298,
         "loc": {
           "start": {
-            "line": 8,
+            "line": 7,
             "column": 7
           },
           "end": {
@@ -244,11 +197,11 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 268,
-            "end": 332,
+            "start": 208,
+            "end": 297,
             "loc": {
               "start": {
-                "line": 8,
+                "line": 7,
                 "column": 13
               },
               "end": {
@@ -258,29 +211,29 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 268,
-              "end": 276,
+              "start": 208,
+              "end": 219,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 7,
                   "column": 13
                 },
                 "end": {
-                  "line": 8,
-                  "column": 21
+                  "line": 7,
+                  "column": 24
                 }
               },
-              "name": "joinGame",
+              "name": "submitGuess",
               "leadingComments": null
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 279,
-              "end": 332,
+              "start": 222,
+              "end": 297,
               "loc": {
                 "start": {
-                  "line": 8,
-                  "column": 24
+                  "line": 7,
+                  "column": 27
                 },
                 "end": {
                   "line": 11,
@@ -293,63 +246,46 @@
               "async": false,
               "params": [
                 {
-                  "type": "AssignmentPattern",
-                  "start": 280,
-                  "end": 293,
+                  "type": "Identifier",
+                  "start": 223,
+                  "end": 229,
                   "loc": {
                     "start": {
-                      "line": 8,
-                      "column": 25
+                      "line": 7,
+                      "column": 28
                     },
                     "end": {
-                      "line": 8,
-                      "column": 38
+                      "line": 7,
+                      "column": 34
                     }
                   },
-                  "left": {
-                    "type": "Identifier",
-                    "start": 280,
-                    "end": 286,
-                    "loc": {
-                      "start": {
-                        "line": 8,
-                        "column": 25
-                      },
-                      "end": {
-                        "line": 8,
-                        "column": 31
-                      }
+                  "name": "userid"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 231,
+                  "end": 238,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 36
                     },
-                    "name": "gameId"
+                    "end": {
+                      "line": 7,
+                      "column": 43
+                    }
                   },
-                  "right": {
-                    "type": "Literal",
-                    "start": 289,
-                    "end": 293,
-                    "loc": {
-                      "start": {
-                        "line": 8,
-                        "column": 34
-                      },
-                      "end": {
-                        "line": 8,
-                        "column": 38
-                      }
-                    },
-                    "value": null,
-                    "rawValue": null,
-                    "raw": "null"
-                  }
+                  "name": "message"
                 }
               ],
               "body": {
                 "type": "ObjectExpression",
-                "start": 299,
-                "end": 331,
+                "start": 244,
+                "end": 296,
                 "loc": {
                   "start": {
-                    "line": 8,
-                    "column": 44
+                    "line": 7,
+                    "column": 49
                   },
                   "end": {
                     "line": 11,
@@ -359,16 +295,16 @@
                 "properties": [
                   {
                     "type": "Property",
-                    "start": 303,
-                    "end": 318,
+                    "start": 248,
+                    "end": 272,
                     "loc": {
                       "start": {
-                        "line": 9,
+                        "line": 8,
                         "column": 2
                       },
                       "end": {
-                        "line": 9,
-                        "column": 17
+                        "line": 8,
+                        "column": 26
                       }
                     },
                     "method": false,
@@ -376,15 +312,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 303,
-                      "end": 307,
+                      "start": 248,
+                      "end": 252,
                       "loc": {
                         "start": {
-                          "line": 9,
+                          "line": 8,
                           "column": 2
                         },
                         "end": {
-                          "line": 9,
+                          "line": 8,
                           "column": 6
                         }
                       },
@@ -392,33 +328,33 @@
                     },
                     "value": {
                       "type": "Identifier",
-                      "start": 309,
-                      "end": 318,
+                      "start": 254,
+                      "end": 272,
                       "loc": {
                         "start": {
-                          "line": 9,
+                          "line": 8,
                           "column": 8
                         },
                         "end": {
-                          "line": 9,
-                          "column": 17
+                          "line": 8,
+                          "column": 26
                         }
                       },
-                      "name": "JOIN_GAME"
+                      "name": "SEND_GUESS_MESSAGE"
                     },
                     "kind": "init"
                   },
                   {
                     "type": "Property",
-                    "start": 322,
-                    "end": 328,
+                    "start": 276,
+                    "end": 282,
                     "loc": {
                       "start": {
-                        "line": 10,
+                        "line": 9,
                         "column": 2
                       },
                       "end": {
-                        "line": 10,
+                        "line": 9,
                         "column": 8
                       }
                     },
@@ -427,25 +363,59 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 322,
-                      "end": 328,
+                      "start": 276,
+                      "end": 282,
                       "loc": {
                         "start": {
-                          "line": 10,
+                          "line": 9,
                           "column": 2
                         },
                         "end": {
-                          "line": 10,
+                          "line": 9,
                           "column": 8
                         }
                       },
-                      "name": "gameId"
+                      "name": "userid"
                     },
                     "kind": "init",
                     "value": {
                       "type": "Identifier",
-                      "start": 322,
-                      "end": 328,
+                      "start": 276,
+                      "end": 282,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 8
+                        }
+                      },
+                      "name": "userid"
+                    }
+                  },
+                  {
+                    "type": "Property",
+                    "start": 286,
+                    "end": 293,
+                    "loc": {
+                      "start": {
+                        "line": 10,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 9
+                      }
+                    },
+                    "method": false,
+                    "shorthand": true,
+                    "computed": false,
+                    "key": {
+                      "type": "Identifier",
+                      "start": 286,
+                      "end": 293,
                       "loc": {
                         "start": {
                           "line": 10,
@@ -453,10 +423,27 @@
                         },
                         "end": {
                           "line": 10,
-                          "column": 8
+                          "column": 9
                         }
                       },
-                      "name": "gameId"
+                      "name": "message"
+                    },
+                    "kind": "init",
+                    "value": {
+                      "type": "Identifier",
+                      "start": 286,
+                      "end": 293,
+                      "loc": {
+                        "start": {
+                          "line": 10,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 9
+                        }
+                      },
+                      "name": "message"
                     }
                   }
                 ],
@@ -470,31 +457,31 @@
         "leadingComments": [
           {
             "type": "Block",
-            "value": "*\n * Creates an action for joining a specific game by ID\n * This action is handled by the server\n * @param {number} gameid The ID of the game to join\n ",
-            "start": 99,
-            "end": 254,
+            "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
+            "start": 89,
+            "end": 194,
             "loc": {
               "start": {
                 "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 7,
+                "line": 6,
                 "column": 3
               }
             },
             "range": [
-              99,
-              254
+              89,
+              194
             ]
           }
         ],
         "trailingComments": [
           {
             "type": "Block",
-            "value": "*\n * Creates an action for joining a random game chosen by the server\n * This action is handled by the server\n ",
-            "start": 335,
-            "end": 450,
+            "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
+            "start": 300,
+            "end": 406,
             "loc": {
               "start": {
                 "line": 13,
@@ -506,8 +493,8 @@
               }
             },
             "range": [
-              335,
-              450
+              300,
+              406
             ]
           }
         ]
@@ -517,31 +504,31 @@
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\n * Creates an action for joining a specific game by ID\n * This action is handled by the server\n * @param {number} gameid The ID of the game to join\n ",
-          "start": 99,
-          "end": 254,
+          "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
+          "start": 89,
+          "end": 194,
           "loc": {
             "start": {
               "line": 3,
               "column": 0
             },
             "end": {
-              "line": 7,
+              "line": 6,
               "column": 3
             }
           },
           "range": [
-            99,
-            254
+            89,
+            194
           ]
         }
       ],
       "trailingComments": [
         {
           "type": "Block",
-          "value": "*\n * Creates an action for joining a random game chosen by the server\n * This action is handled by the server\n ",
-          "start": 335,
-          "end": 450,
+          "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
+          "start": 300,
+          "end": 406,
           "loc": {
             "start": {
               "line": 13,
@@ -553,328 +540,83 @@
             }
           },
           "range": [
-            335,
-            450
+            300,
+            406
           ]
         }
       ]
     },
     {
       "type": "ExportNamedDeclaration",
-      "start": 451,
-      "end": 519,
+      "start": 407,
+      "end": 508,
       "loc": {
         "start": {
           "line": 17,
           "column": 0
         },
         "end": {
-          "line": 19,
+          "line": 21,
           "column": 3
         }
       },
       "declaration": {
         "type": "VariableDeclaration",
-        "start": 458,
-        "end": 519,
+        "start": 414,
+        "end": 508,
         "loc": {
           "start": {
             "line": 17,
             "column": 7
           },
           "end": {
-            "line": 19,
+            "line": 21,
             "column": 3
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 464,
-            "end": 518,
+            "start": 420,
+            "end": 507,
             "loc": {
               "start": {
                 "line": 17,
                 "column": 13
               },
               "end": {
-                "line": 19,
-                "column": 2
-              }
-            },
-            "id": {
-              "type": "Identifier",
-              "start": 464,
-              "end": 478,
-              "loc": {
-                "start": {
-                  "line": 17,
-                  "column": 13
-                },
-                "end": {
-                  "line": 17,
-                  "column": 27
-                }
-              },
-              "name": "joinRandomGame",
-              "leadingComments": null
-            },
-            "init": {
-              "type": "ArrowFunctionExpression",
-              "start": 481,
-              "end": 518,
-              "loc": {
-                "start": {
-                  "line": 17,
-                  "column": 30
-                },
-                "end": {
-                  "line": 19,
-                  "column": 2
-                }
-              },
-              "id": null,
-              "generator": false,
-              "expression": true,
-              "async": false,
-              "params": [],
-              "body": {
-                "type": "ObjectExpression",
-                "start": 488,
-                "end": 517,
-                "loc": {
-                  "start": {
-                    "line": 17,
-                    "column": 37
-                  },
-                  "end": {
-                    "line": 19,
-                    "column": 1
-                  }
-                },
-                "properties": [
-                  {
-                    "type": "Property",
-                    "start": 492,
-                    "end": 514,
-                    "loc": {
-                      "start": {
-                        "line": 18,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 18,
-                        "column": 24
-                      }
-                    },
-                    "method": false,
-                    "shorthand": false,
-                    "computed": false,
-                    "key": {
-                      "type": "Identifier",
-                      "start": 492,
-                      "end": 496,
-                      "loc": {
-                        "start": {
-                          "line": 18,
-                          "column": 2
-                        },
-                        "end": {
-                          "line": 18,
-                          "column": 6
-                        }
-                      },
-                      "name": "type"
-                    },
-                    "value": {
-                      "type": "Identifier",
-                      "start": 498,
-                      "end": 514,
-                      "loc": {
-                        "start": {
-                          "line": 18,
-                          "column": 8
-                        },
-                        "end": {
-                          "line": 18,
-                          "column": 24
-                        }
-                      },
-                      "name": "JOIN_RANDOM_GAME"
-                    },
-                    "kind": "init"
-                  }
-                ],
-                "parenthesizedExpression": true
-              }
-            },
-            "leadingComments": null
-          }
-        ],
-        "kind": "const",
-        "leadingComments": [
-          {
-            "type": "Block",
-            "value": "*\n * Creates an action for joining a random game chosen by the server\n * This action is handled by the server\n ",
-            "start": 335,
-            "end": 450,
-            "loc": {
-              "start": {
-                "line": 13,
-                "column": 0
-              },
-              "end": {
-                "line": 16,
-                "column": 3
-              }
-            },
-            "range": [
-              335,
-              450
-            ]
-          }
-        ],
-        "trailingComments": [
-          {
-            "type": "Block",
-            "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
-            "start": 521,
-            "end": 626,
-            "loc": {
-              "start": {
                 "line": 21,
-                "column": 0
-              },
-              "end": {
-                "line": 24,
-                "column": 3
-              }
-            },
-            "range": [
-              521,
-              626
-            ]
-          }
-        ]
-      },
-      "specifiers": [],
-      "source": null,
-      "leadingComments": [
-        {
-          "type": "Block",
-          "value": "*\n * Creates an action for joining a random game chosen by the server\n * This action is handled by the server\n ",
-          "start": 335,
-          "end": 450,
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 0
-            },
-            "end": {
-              "line": 16,
-              "column": 3
-            }
-          },
-          "range": [
-            335,
-            450
-          ]
-        }
-      ],
-      "trailingComments": [
-        {
-          "type": "Block",
-          "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
-          "start": 521,
-          "end": 626,
-          "loc": {
-            "start": {
-              "line": 21,
-              "column": 0
-            },
-            "end": {
-              "line": 24,
-              "column": 3
-            }
-          },
-          "range": [
-            521,
-            626
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ExportNamedDeclaration",
-      "start": 627,
-      "end": 730,
-      "loc": {
-        "start": {
-          "line": 25,
-          "column": 0
-        },
-        "end": {
-          "line": 29,
-          "column": 3
-        }
-      },
-      "declaration": {
-        "type": "VariableDeclaration",
-        "start": 634,
-        "end": 730,
-        "loc": {
-          "start": {
-            "line": 25,
-            "column": 7
-          },
-          "end": {
-            "line": 29,
-            "column": 3
-          }
-        },
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "start": 640,
-            "end": 729,
-            "loc": {
-              "start": {
-                "line": 25,
-                "column": 13
-              },
-              "end": {
-                "line": 29,
                 "column": 2
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 640,
-              "end": 651,
+              "start": 420,
+              "end": 430,
               "loc": {
                 "start": {
-                  "line": 25,
+                  "line": 17,
                   "column": 13
                 },
                 "end": {
-                  "line": 25,
-                  "column": 24
+                  "line": 17,
+                  "column": 23
                 }
               },
-              "name": "submitGuess",
+              "name": "submitClue",
               "leadingComments": null
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 654,
-              "end": 729,
+              "start": 433,
+              "end": 507,
               "loc": {
                 "start": {
-                  "line": 25,
-                  "column": 27
+                  "line": 17,
+                  "column": 26
                 },
                 "end": {
-                  "line": 29,
+                  "line": 21,
                   "column": 2
                 }
               },
@@ -885,32 +627,32 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 655,
-                  "end": 661,
+                  "start": 434,
+                  "end": 440,
                   "loc": {
                     "start": {
-                      "line": 25,
-                      "column": 28
+                      "line": 17,
+                      "column": 27
                     },
                     "end": {
-                      "line": 25,
-                      "column": 34
+                      "line": 17,
+                      "column": 33
                     }
                   },
                   "name": "userid"
                 },
                 {
                   "type": "Identifier",
-                  "start": 663,
-                  "end": 670,
+                  "start": 442,
+                  "end": 449,
                   "loc": {
                     "start": {
-                      "line": 25,
-                      "column": 36
+                      "line": 17,
+                      "column": 35
                     },
                     "end": {
-                      "line": 25,
-                      "column": 43
+                      "line": 17,
+                      "column": 42
                     }
                   },
                   "name": "message"
@@ -918,31 +660,31 @@
               ],
               "body": {
                 "type": "ObjectExpression",
-                "start": 676,
-                "end": 728,
+                "start": 455,
+                "end": 506,
                 "loc": {
                   "start": {
-                    "line": 25,
-                    "column": 49
+                    "line": 17,
+                    "column": 48
                   },
                   "end": {
-                    "line": 29,
+                    "line": 21,
                     "column": 1
                   }
                 },
                 "properties": [
                   {
                     "type": "Property",
-                    "start": 680,
-                    "end": 704,
+                    "start": 459,
+                    "end": 482,
                     "loc": {
                       "start": {
-                        "line": 26,
+                        "line": 18,
                         "column": 2
                       },
                       "end": {
-                        "line": 26,
-                        "column": 26
+                        "line": 18,
+                        "column": 25
                       }
                     },
                     "method": false,
@@ -950,15 +692,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 680,
-                      "end": 684,
+                      "start": 459,
+                      "end": 463,
                       "loc": {
                         "start": {
-                          "line": 26,
+                          "line": 18,
                           "column": 2
                         },
                         "end": {
-                          "line": 26,
+                          "line": 18,
                           "column": 6
                         }
                       },
@@ -966,33 +708,33 @@
                     },
                     "value": {
                       "type": "Identifier",
-                      "start": 686,
-                      "end": 704,
+                      "start": 465,
+                      "end": 482,
                       "loc": {
                         "start": {
-                          "line": 26,
+                          "line": 18,
                           "column": 8
                         },
                         "end": {
-                          "line": 26,
-                          "column": 26
+                          "line": 18,
+                          "column": 25
                         }
                       },
-                      "name": "SEND_GUESS_MESSAGE"
+                      "name": "SEND_CLUE_MESSAGE"
                     },
                     "kind": "init"
                   },
                   {
                     "type": "Property",
-                    "start": 708,
-                    "end": 714,
+                    "start": 486,
+                    "end": 492,
                     "loc": {
                       "start": {
-                        "line": 27,
+                        "line": 19,
                         "column": 2
                       },
                       "end": {
-                        "line": 27,
+                        "line": 19,
                         "column": 8
                       }
                     },
@@ -1001,15 +743,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 708,
-                      "end": 714,
+                      "start": 486,
+                      "end": 492,
                       "loc": {
                         "start": {
-                          "line": 27,
+                          "line": 19,
                           "column": 2
                         },
                         "end": {
-                          "line": 27,
+                          "line": 19,
                           "column": 8
                         }
                       },
@@ -1018,15 +760,15 @@
                     "kind": "init",
                     "value": {
                       "type": "Identifier",
-                      "start": 708,
-                      "end": 714,
+                      "start": 486,
+                      "end": 492,
                       "loc": {
                         "start": {
-                          "line": 27,
+                          "line": 19,
                           "column": 2
                         },
                         "end": {
-                          "line": 27,
+                          "line": 19,
                           "column": 8
                         }
                       },
@@ -1035,15 +777,15 @@
                   },
                   {
                     "type": "Property",
-                    "start": 718,
-                    "end": 725,
+                    "start": 496,
+                    "end": 503,
                     "loc": {
                       "start": {
-                        "line": 28,
+                        "line": 20,
                         "column": 2
                       },
                       "end": {
-                        "line": 28,
+                        "line": 20,
                         "column": 9
                       }
                     },
@@ -1052,15 +794,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 718,
-                      "end": 725,
+                      "start": 496,
+                      "end": 503,
                       "loc": {
                         "start": {
-                          "line": 28,
+                          "line": 20,
                           "column": 2
                         },
                         "end": {
-                          "line": 28,
+                          "line": 20,
                           "column": 9
                         }
                       },
@@ -1069,15 +811,15 @@
                     "kind": "init",
                     "value": {
                       "type": "Identifier",
-                      "start": 718,
-                      "end": 725,
+                      "start": 496,
+                      "end": 503,
                       "loc": {
                         "start": {
-                          "line": 28,
+                          "line": 20,
                           "column": 2
                         },
                         "end": {
-                          "line": 28,
+                          "line": 20,
                           "column": 9
                         }
                       },
@@ -1095,22 +837,22 @@
         "leadingComments": [
           {
             "type": "Block",
-            "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
-            "start": 521,
-            "end": 626,
+            "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
+            "start": 300,
+            "end": 406,
             "loc": {
               "start": {
-                "line": 21,
+                "line": 13,
                 "column": 0
               },
               "end": {
-                "line": 24,
+                "line": 16,
                 "column": 3
               }
             },
             "range": [
-              521,
-              626
+              300,
+              406
             ]
           }
         ],
@@ -1121,22 +863,22 @@
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\n * Creates an action for submitting a guess to the server\n * This action is handled by the server\n ",
-          "start": 521,
-          "end": 626,
+          "value": "*\n * This creates an action for the dealer to submit a clue\n * This action is handeled by the server\n ",
+          "start": 300,
+          "end": 406,
           "loc": {
             "start": {
-              "line": 21,
+              "line": 13,
               "column": 0
             },
             "end": {
-              "line": 24,
+              "line": 16,
               "column": 3
             }
           },
           "range": [
-            521,
-            626
+            300,
+            406
           ]
         }
       ]

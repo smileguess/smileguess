@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 325,
+  "end": 328,
   "loc": {
     "start": {
       "line": 1,
@@ -122,7 +122,7 @@
     {
       "type": "ExportDefaultDeclaration",
       "start": 134,
-      "end": 324,
+      "end": 327,
       "loc": {
         "start": {
           "line": 6,
@@ -136,7 +136,7 @@
       "declaration": {
         "type": "ArrowFunctionExpression",
         "start": 149,
-        "end": 323,
+        "end": 326,
         "loc": {
           "start": {
             "line": 6,
@@ -252,7 +252,7 @@
         "body": {
           "type": "BlockStatement",
           "start": 178,
-          "end": 323,
+          "end": 326,
           "loc": {
             "start": {
               "line": 6,
@@ -267,7 +267,7 @@
             {
               "type": "SwitchStatement",
               "start": 182,
-              "end": 321,
+              "end": 324,
               "loc": {
                 "start": {
                   "line": 7,
@@ -330,7 +330,7 @@
                 {
                   "type": "SwitchCase",
                   "start": 209,
-                  "end": 284,
+                  "end": 287,
                   "loc": {
                     "start": {
                       "line": 8,
@@ -338,14 +338,14 @@
                     },
                     "end": {
                       "line": 9,
-                      "column": 51
+                      "column": 54
                     }
                   },
                   "consequent": [
                     {
                       "type": "ReturnStatement",
                       "start": 239,
-                      "end": 284,
+                      "end": 287,
                       "loc": {
                         "start": {
                           "line": 9,
@@ -353,13 +353,13 @@
                         },
                         "end": {
                           "line": 9,
-                          "column": 51
+                          "column": 54
                         }
                       },
                       "argument": {
                         "type": "CallExpression",
                         "start": 246,
-                        "end": 283,
+                        "end": 286,
                         "loc": {
                           "start": {
                             "line": 9,
@@ -367,7 +367,7 @@
                           },
                           "end": {
                             "line": 9,
-                            "column": 50
+                            "column": 53
                           }
                         },
                         "callee": {
@@ -454,7 +454,7 @@
                           {
                             "type": "MemberExpression",
                             "start": 271,
-                            "end": 282,
+                            "end": 285,
                             "loc": {
                               "start": {
                                 "line": 9,
@@ -462,7 +462,7 @@
                               },
                               "end": {
                                 "line": 9,
-                                "column": 49
+                                "column": 52
                               }
                             },
                             "object": {
@@ -484,7 +484,7 @@
                             "property": {
                               "type": "Identifier",
                               "start": 278,
-                              "end": 282,
+                              "end": 285,
                               "loc": {
                                 "start": {
                                   "line": 9,
@@ -492,10 +492,10 @@
                                 },
                                 "end": {
                                   "line": 9,
-                                  "column": 49
+                                  "column": 52
                                 }
                               },
-                              "name": "user"
+                              "name": "payload"
                             },
                             "computed": false
                           }
@@ -522,8 +522,8 @@
                 },
                 {
                   "type": "SwitchCase",
-                  "start": 289,
-                  "end": 317,
+                  "start": 292,
+                  "end": 320,
                   "loc": {
                     "start": {
                       "line": 10,
@@ -537,8 +537,8 @@
                   "consequent": [
                     {
                       "type": "ReturnStatement",
-                      "start": 304,
-                      "end": 317,
+                      "start": 307,
+                      "end": 320,
                       "loc": {
                         "start": {
                           "line": 11,
@@ -551,8 +551,8 @@
                       },
                       "argument": {
                         "type": "Identifier",
-                        "start": 311,
-                        "end": 316,
+                        "start": 314,
+                        "end": 319,
                         "loc": {
                           "start": {
                             "line": 11,

@@ -33,20 +33,14 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-App">App</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_GAME">JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_RANDOM_GAME">JOIN_RANDOM_GAME</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GAME_MEMO">GAME_MEMO</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_CLUE_MESSAGE">SEND_CLUE_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DEALER_RECEIVE_PROMPT">SOCKET_DEALER_RECEIVE_PROMPT</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_GAME_STATE">UPDATE_GAME_STATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_MESSAGE_STATE">UPDATE_MESSAGE_STATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_USER_STATE">UPDATE_USER_STATE</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/ChatsList.js~ChatsList.html">ChatsList</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/CustomNav.js~CustomNav.html">CustomNav</a></span></span></li>
@@ -160,6 +154,33 @@ of the app.</p>
     <td>
       <div>
         <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-GAME_MEMO">GAME_MEMO</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Server-&gt;Client: conveys a game event to be displayed to the user
+in the ui and/or as a notification.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
            <span data-ice="name"><span><a href="variable/index.html#static-variable-GameScreenContainer">GameScreenContainer</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
@@ -221,58 +242,6 @@ actions creators of GameScreen to the store and dispatcher, respectively.</p>
         
         <div data-ice="description"><p>HomeScreenContainer is a &apos;container component&apos; which binds the props and
 actions creators of HomeScreen to the store and dispatcher, respectively.</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_GAME">JOIN_GAME</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Client-&gt;Server: sent to server when the player wants to join a specific game by ID</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_RANDOM_GAME">JOIN_RANDOM_GAME</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Client-&gt;Server: sent to server when the player wants to join a random game</p>
 </div>
       </div>
     </td>
@@ -370,162 +339,6 @@ actions creators of HomeScreen to the store and dispatcher, respectively.</p>
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Server-&gt;Client: sent from the server when the dealer sends a clue message</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DEALER_RECEIVE_PROMPT">SOCKET_DEALER_RECEIVE_PROMPT</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Server-&gt;Client: dealer receives prompt from the server</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Server-&gt;Client: sent from the server when a winner is declared</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player sends a guess message</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player joins in on the current game</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player leaves the current game</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
            <span data-ice="name"><span><a href="variable/index.html#static-variable-StatsScreenContainer">StatsScreenContainer</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
@@ -553,67 +366,92 @@ actions creators of StatsScreen to the store and dispatcher, respectively.</p>
     <td>
       <div>
         <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_GAME_STATE">UPDATE_GAME_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Server-&gt;Client: integrates <code>action.payload</code> into the game part of the store</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_MESSAGE_STATE">UPDATE_MESSAGE_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Server-&gt;Client: integrates <code>action.payload</code> into the message part of the store</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
+the store.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
            <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_USER_STATE">UPDATE_USER_STATE</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Server-&gt;Client-&gt;Client: fetch the user associated with the deviceid from an api endpoint</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span><span data-ice="signature">(gameid: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Creates an action for joining a specific game by ID
-This action is handled by the server</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span><span data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Creates an action for joining a random game chosen by the server
-This action is handled by the server</p>
+        <div data-ice="description"><p>Server-&gt;Client: integrates <code>action.payload</code> into the user part of the store</p>
 </div>
       </div>
     </td>
@@ -810,6 +648,48 @@ it renders them in a little white box.</p>
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-GAME_MEMO">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">GAME_MEMO</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber17">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {GAME_MEMO} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber17">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>Server-&gt;Client: conveys a game event to be displayed to the user
+in the ui and/or as a notification.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-variable-GameScreenContainer">
     <span class="access" data-ice="access">public</span>
     
@@ -939,88 +819,6 @@ for documentation purposes.</p>
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-JOIN_GAME">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">JOIN_GAME</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber45">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {JOIN_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber45">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Client-&gt;Server: sent to server when the player wants to join a specific game by ID</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-JOIN_RANDOM_GAME">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">JOIN_RANDOM_GAME</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber41">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {JOIN_RANDOM_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber41">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Client-&gt;Server: sent to server when the player wants to join a random game</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-variable-Message">
     <span class="access" data-ice="access">public</span>
     
@@ -1073,11 +871,11 @@ It renders a single message with useful metadata.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber37">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber26">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SEND_CLUE_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber37">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SEND_CLUE_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber26">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Client-&gt;Server: sent to server when the dealer wants to broadcast a clue</p>
@@ -1114,260 +912,14 @@ It renders a single message with useful metadata.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber33">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SEND_GUESS_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber33">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SEND_GUESS_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber22">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Client-&gt;Server: sent to server when the client wants to broadcast a guess</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-SOCKET_CLUE_MESSAGE">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">SOCKET_CLUE_MESSAGE</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber4">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_CLUE_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber4">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Server-&gt;Client: sent from the server when the dealer sends a clue message</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-SOCKET_DEALER_RECEIVE_PROMPT">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">SOCKET_DEALER_RECEIVE_PROMPT</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber24">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_DEALER_RECEIVE_PROMPT} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber24">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Server-&gt;Client: dealer receives prompt from the server</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-SOCKET_DECLARE_WINNER">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">SOCKET_DECLARE_WINNER</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber12">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_DECLARE_WINNER} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber12">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Server-&gt;Client: sent from the server when a winner is declared</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-SOCKET_GUESS_MESSAGE">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">SOCKET_GUESS_MESSAGE</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber8">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_GUESS_MESSAGE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber8">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player sends a guess message</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-SOCKET_PLAYER_JOIN_GAME">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">SOCKET_PLAYER_JOIN_GAME</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber16">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_PLAYER_JOIN_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber16">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player joins in on the current game</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-SOCKET_PLAYER_LEAVE_GAME">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">SOCKET_PLAYER_LEAVE_GAME</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber20">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {SOCKET_PLAYER_LEAVE_GAME} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber20">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Server-&gt;Client: sent from the server when a player leaves the current game</p>
 </div>
 
   
@@ -1435,6 +987,130 @@ for documentation purposes.</p>
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-UPDATE_GAME_STATE">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">UPDATE_GAME_STATE</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber12">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {UPDATE_GAME_STATE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber12">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>Server-&gt;Client: integrates <code>action.payload</code> into the game part of the store</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-UPDATE_MESSAGE_STATE">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">UPDATE_MESSAGE_STATE</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber4">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {UPDATE_MESSAGE_STATE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber4">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>Server-&gt;Client: integrates <code>action.payload</code> into the message part of the store</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-variable-UPDATE_UI_STATE">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    <span data-ice="name">UPDATE_UI_STATE</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber32">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {UPDATE_UI_STATE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber32">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>Client-&gt;Client: sent from the view to update parts of the ui state being tracked in
+the store.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-variable-UPDATE_USER_STATE">
     <span class="access" data-ice="access">public</span>
     
@@ -1445,98 +1121,14 @@ for documentation purposes.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber28">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/action_types/actionTypes.js.html#lineNumber8">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {UPDATE_USER_STATE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber28">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {UPDATE_USER_STATE} from &apos;<span><a href="file/app/action_types/actionTypes.js.html#lineNumber8">./app/action_types/actionTypes.js</a></span>&apos;</code></pre></div>
   
   
-  <div data-ice="description"><p>Server-&gt;Client-&gt;Client: fetch the user associated with the deviceid from an api endpoint</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-joinGame">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">joinGame</span><span data-ice="signature">(gameid: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber8">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {joinGame} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber8">./app/actions/user.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Creates an action for joining a specific game by ID
-This action is handled by the server</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-joinRandomGame">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">joinRandomGame</span><span data-ice="signature">: <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber17">source</a></span></span>
-    </span>
-  </h3>
-
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {joinRandomGame} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber17">./app/actions/user.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Creates an action for joining a random game chosen by the server
-This action is handled by the server</p>
+  <div data-ice="description"><p>Server-&gt;Client: integrates <code>action.payload</code> into the user part of the store</p>
 </div>
 
   
@@ -1570,11 +1162,11 @@ This action is handled by the server</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/actions/dealer.js.html#lineNumber7">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitClue} from &apos;<span><a href="file/app/actions/dealer.js.html#lineNumber7">./app/actions/dealer.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitClue} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber17">./app/actions/user.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>This creates an action for the dealer to submit a clue
@@ -1612,11 +1204,11 @@ This action is handeled by the server</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/app/actions/user.js.html#lineNumber7">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitGuess} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber25">./app/actions/user.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {submitGuess} from &apos;<span><a href="file/app/actions/user.js.html#lineNumber7">./app/actions/user.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates an action for submitting a guess to the server

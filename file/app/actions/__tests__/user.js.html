@@ -33,20 +33,14 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-App">App</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_GAME">JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JOIN_RANDOM_GAME">JOIN_RANDOM_GAME</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">action_types</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GAME_MEMO">GAME_MEMO</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_CLUE_MESSAGE">SEND_CLUE_MESSAGE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_GUESS_MESSAGE">SEND_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_CLUE_MESSAGE">SOCKET_CLUE_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DEALER_RECEIVE_PROMPT">SOCKET_DEALER_RECEIVE_PROMPT</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_DECLARE_WINNER">SOCKET_DECLARE_WINNER</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_GUESS_MESSAGE">SOCKET_GUESS_MESSAGE</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_JOIN_GAME">SOCKET_PLAYER_JOIN_GAME</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SOCKET_PLAYER_LEAVE_GAME">SOCKET_PLAYER_LEAVE_GAME</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_GAME_STATE">UPDATE_GAME_STATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_MESSAGE_STATE">UPDATE_MESSAGE_STATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_UI_STATE">UPDATE_UI_STATE</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_USER_STATE">UPDATE_USER_STATE</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitClue">submitClue</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinGame">joinGame</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-joinRandomGame">joinRandomGame</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-submitGuess">submitGuess</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/ChatsList.js~ChatsList.html">ChatsList</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/app/components/CustomNav.js~CustomNav.html">CustomNav</a></span></span></li>
@@ -67,45 +61,17 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">app/actions/__tests__/user.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">jest.unmock(&apos;../user.js&apos;);
-import { joinGame, joinRandomGame, submitGuess } from &apos;../user.js&apos;;
-import { JOIN_RANDOM_GAME, JOIN_GAME, SEND_GUESS_MESSAGE } from &apos;../../action_types/actionTypes.js&apos;;
+import { submitGuess, submitClue } from &apos;../user.js&apos;;
+import { SEND_GUESS_MESSAGE, SEND_CLUE_MESSAGE } from &apos;../../action_types/actionTypes.js&apos;;
 
 describe(&apos;User Action Types&apos;, () =&gt; {
-  it(&apos;should have an action type JOIN_GAME&apos;, () =&gt; {
-    expect(JOIN_GAME).toBeDefined();
-    expect(JOIN_GAME).toMatch(&apos;server/joinGame&apos;);
-  });
-  it(&apos;should have an action type JOIN_RANDOM_GAME&apos;, () =&gt; {
-    expect(JOIN_RANDOM_GAME).toBeDefined();
-    expect(JOIN_RANDOM_GAME).toMatch(&apos;server/joinRandomGame&apos;);
-  });
   it(&apos;should have an action type SEND_GUESS_MESSAGE&apos;, () =&gt; {
     expect(SEND_GUESS_MESSAGE).toBeDefined();
     expect(SEND_GUESS_MESSAGE).toMatch(&apos;server/sendGuessMessage&apos;);
   });
-});
-
-describe(&apos;joinGame Action Creator&apos;, () =&gt; {
-  it(&apos;should be a function&apos;, () =&gt; {
-    expect(typeof joinGame).toEqual(&apos;function&apos;);
-  });
-  it(&apos;should return an object&apos;, () =&gt; {
-    expect(typeof joinGame(6)).toEqual(&apos;object&apos;);
-  });
-  it(&apos;should have a type property of JOIN_GAME&apos;, () =&gt; {
-    expect(joinGame(6).type).toEqual(JOIN_GAME);
-  });
-});
-
-describe(&apos;joinRandomGame Action Creator&apos;, () =&gt; {
-  it(&apos;should be a function&apos;, () =&gt; {
-    expect(typeof joinRandomGame).toEqual(&apos;function&apos;);
-  });
-  it(&apos;should return an object&apos;, () =&gt; {
-    expect(typeof joinRandomGame()).toEqual(&apos;object&apos;);
-  });
-  it(&apos;should have a type property of JOIN_GAME&apos;, () =&gt; {
-    expect(joinRandomGame().type).toEqual(JOIN_RANDOM_GAME);
+  it(&apos;should have an action type SEND_CLUE_MESSAGE&apos;, () =&gt; {
+    expect(SEND_CLUE_MESSAGE).toBeDefined();
+    expect(SEND_CLUE_MESSAGE).toMatch(&apos;server/sendClueMessage&apos;);
   });
 });
 
@@ -123,6 +89,22 @@ describe(&apos;submitGuess Action Creator&apos;, () =&gt; {
     expect(submitGuess(6, &apos;tree&apos;).message).toEqual(&apos;tree&apos;);
   });
 });
+
+describe(&apos;submitClue Action Creator&apos;, () =&gt; {
+  it(&apos;should be a function&apos;, () =&gt; {
+    expect(typeof submitClue).toEqual(&apos;function&apos;);
+  });
+  it(&apos;should return an object&apos;, () =&gt; {
+    expect(typeof submitClue(6, &apos;leaf&apos;)).toEqual(&apos;object&apos;);
+  });
+  it(&apos;should have a type property of SEND_CLUE_MESSAGE&apos;, () =&gt; {
+    expect(submitClue(6, &apos;leaf&apos;).type).toEqual(SEND_CLUE_MESSAGE);
+  });
+  it(&apos;should have a hint property of passed in hint&apos;, () =&gt; {
+    expect(submitClue(6, &apos;leaf&apos;).message).toEqual(&apos;leaf&apos;);
+  });
+});
+
 </code></pre>
 
 </div>
