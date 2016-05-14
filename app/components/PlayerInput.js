@@ -43,7 +43,16 @@ const styles = StyleSheet.create({
   },
 });
 
-const PlayerInput = ({ onSubmitEditing, screenSize }) => (
+
+/**
+ * PlayerInput is a funcitonal react component which renders a styled text
+ * input which triggers the native keyboard when in focus.
+ * @param {Object} props - props for GameScreen component.
+ * @param {Object} props.screenSize - dimensions of the device screen.
+ * @param {function()} props.onSend - handler to be called to when user
+ * enters input and hits send.
+ */
+const PlayerInput = ({ onSend, screenSize }) => (
   <View
     style={[
       styles.container,
@@ -58,7 +67,7 @@ const PlayerInput = ({ onSubmitEditing, screenSize }) => (
         style={styles.inputField}
         placeholder="Input your guess"
         returnKeyType="send"
-        onSubmitEditing={(event) => (onSubmitEditing(event.nativeEvent.text))}
+        onSubmitEditing={(event) => (onSend(event.nativeEvent.text))}
       />
       <Button
         style={styles.send}
@@ -72,7 +81,8 @@ const PlayerInput = ({ onSubmitEditing, screenSize }) => (
 );
 
 PlayerInput.propTypes = {
-  onSubmitEditing: PropTypes.func.isRequired,
+  onSend: PropTypes.func.isRequired,
+  screenSize: PropTypes.object.isRequired,
 };
 
 export default PlayerInput;

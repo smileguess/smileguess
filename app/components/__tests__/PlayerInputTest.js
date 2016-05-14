@@ -28,7 +28,7 @@ describe('PlayerInput', () => {
   beforeEach(() => {
     const renderer = TestUtils.createRenderer();
     renderer.render(<PlayerInput
-      onSubmitEditing={submitGuess}
+      onSend={submitGuess}
       onFocus={onFocus}
       screenSize={screenSize}
     />);

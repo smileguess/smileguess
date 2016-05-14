@@ -1,5 +1,5 @@
 jest.unmock('../user.js');
-import { submitGuess, submitClue } from '../user.js';
+import { sendGuess, sendClue } from '../user.js';
 import { SEND_GUESS_MESSAGE, SEND_CLUE_MESSAGE } from '../../action_types/actionTypes.js';
 
 describe('User Action Types', () => {
@@ -13,33 +13,32 @@ describe('User Action Types', () => {
   });
 });
 
-describe('submitGuess Action Creator', () => {
+describe('sendGuess Action Creator', () => {
   it('should be a function', () => {
-    expect(typeof submitGuess).toEqual('function');
+    expect(typeof sendGuess).toEqual('function');
   });
   it('should return an object', () => {
-    expect(typeof submitGuess(6, 'tree')).toEqual('object');
+    expect(typeof sendGuess(6, 'tree')).toEqual('object');
   });
   it('should have a type property of SUBMIT_GUESS', () => {
-    expect(submitGuess(6, 'tree').type).toEqual(SEND_GUESS_MESSAGE);
+    expect(sendGuess(6, 'tree').type).toEqual(SEND_GUESS_MESSAGE);
   });
   it('should have a guess property of passed in guess', () => {
-    expect(submitGuess(6, 'tree').message).toEqual('tree');
+    expect(sendGuess(6, 'tree').message).toEqual('tree');
   });
 });
 
-describe('submitClue Action Creator', () => {
+describe('sendClue Action Creator', () => {
   it('should be a function', () => {
-    expect(typeof submitClue).toEqual('function');
+    expect(typeof sendClue).toEqual('function');
   });
   it('should return an object', () => {
-    expect(typeof submitClue(6, 'leaf')).toEqual('object');
+    expect(typeof sendClue(6, 'leaf')).toEqual('object');
   });
   it('should have a type property of SEND_CLUE_MESSAGE', () => {
-    expect(submitClue(6, 'leaf').type).toEqual(SEND_CLUE_MESSAGE);
+    expect(sendClue(6, 'leaf').type).toEqual(SEND_CLUE_MESSAGE);
   });
   it('should have a hint property of passed in hint', () => {
-    expect(submitClue(6, 'leaf').message).toEqual('leaf');
+    expect(sendClue(6, 'leaf').message).toEqual('leaf');
   });
 });
-

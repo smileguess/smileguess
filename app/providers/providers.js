@@ -1,5 +1,5 @@
 /* Import Actions */
-import { submitGuess, dequeueMemo } from '../actions/user.js';
+import { sendGuess, sendClue, dequeueMemo } from '../actions/user.js';
 import { Actions } from 'react-native-router-flux';
 
 
@@ -27,17 +27,25 @@ export const mapHomeScreen = {
 /* Game Screen Providers*/
 export const mapGameScreen = {
   mapStateToProps(state) {
+    const isDealer = state.game.dealerId === state.user.id;
     return {
       messages: state.messages,
+      isDealer,
     };
   },
   mapDispatchToProps(dispatch) {
     return {
-      onSubmitGuess: (message) => {
+      onSendGuess: (message) => {
         /**
          * TODO: remove hardcoded userid
          */
-        dispatch(submitGuess(6, message));
+        dispatch(sendGuess(6, message));
+      },
+      onSendClue: (message) => {
+        /**
+         * TODO: remove hardcoded userid
+         */
+        dispatch(sendClue(6, message));
       },
     };
   },

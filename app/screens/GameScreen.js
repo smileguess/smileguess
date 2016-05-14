@@ -16,6 +16,7 @@ import React, {
 } from 'react-native';
 import PlayerInput from '../components/PlayerInput.js';
 import ChatsList from '../components/ChatsList.js';
+import EmojiKeyboard from '../components/EmojiKeyboard';
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 
@@ -30,17 +31,20 @@ const styles = StyleSheet.create({
   },
 });
 
-/* eslint-disable react/prefer-stateless-function */
 /**
  * GameScreen is a React class component.
  * It defines the game room players will see while playing the game.
  * It displays messages as well as allows for user input form either the dealer
  * or the players who are guessing.
  * @param {Object} props - props for GameScreen component.
- * @param {function()} props.onSubmitGuess - handler for receiving user input
+ * @param {function()} props.onSendGuess - handler for receiving players input
  * in the PlayerInput component.
  * @param {Array<Object>} props.messages - an array of message objects to be
  * rendered by the ChatsList component.
+ * @param {function()} props.onSendClue - handler for receiving dealer input.
+ * @param {bool} props.isDealer - indicates whether game screen should render
+ * in player or dealer mode.
+ *
  */
 export class GameScreen extends React.Component {
   constructor(props) {
@@ -83,31 +87,39 @@ export class GameScreen extends React.Component {
     DeviceEventEmitter.removeAllListeners('keyboardWillShow');
   }
 
+  renderKeyboardInput() {
+    return this.props.isDealer ? EmojiKeyboard : PlayerInput;
+  }
+
   /* We must calculate styles on each render in order to animate height
    * based on state changes
    */
   render() {
-    const { messages, onSubmitGuess, showToast, toastMessage, screenSize } = this.props;
+    const { messages, onSendGuess, onSendClue, screenSize } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
       },
     });
+    const KeyboardInput = this.renderKeyboardInput();
     return (
       <View style={[styles.container, localStyles.container]} >
         <ChatsList style={styles.chatContainer} messages={messages} />
-        <PlayerInput onSubmitEditing={onSubmitGuess} screenSize={screenSize} />
+        <KeyboardInput
+          onSend={this.props.isDealer ? onSendClue : onSendGuess}
+          screenSize={screenSize}
+        />
       </View>
     );
   }
 }
-/* eslint-enable react/prefer-stateless-function */
 
 GameScreen.propTypes = {
-  onSubmitGuess: PropTypes.func.isRequired,
+  onSendGuess: PropTypes.func.isRequired,
+  onSendClue: PropTypes.func.isRequired,
   messages: PropTypes.array.isRequired,
-  showToast: PropTypes.bool,
-  toastMessage: PropTypes.string,
+  isDealer: PropTypes.bool,
+  screenSize: PropTypes.object.isRequired,
 };
 
 /**

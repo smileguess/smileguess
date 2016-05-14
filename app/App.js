@@ -8,7 +8,6 @@ import DeviceInfo from 'react-native-device-info';
 import HomeScreen from './screens/HomeScreen.js';
 import GameScreen from './screens/GameScreen.js';
 import StatsScreen from './screens/StatsScreen.js';
-import DealerChangeScreen from './screens/DealerChangeScreen';
 import CustomNav from './components/CustomNav.js';
 
 
@@ -20,9 +19,9 @@ const store = configureStore({});
 import { fakeGameCreator } from './testdata/dummyData.js';
 store.dispatch(fakeGameCreator());
 
-/* Fetch user information */
+/* Fetch user information (REMOVE 'then' block for production)*/
 fetch(`http://localhost:1234/api/user/${DeviceInfo.getUniqueID()}`)
-  .then((res) => { // This `then` block should be removed when the server syncs up with ui development
+  .then((res) => {
     if (!res.ok) {
       return {
         id: 0,
