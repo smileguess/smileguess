@@ -16,6 +16,10 @@ import CustomNav from './components/CustomNav.js';
 import configureStore from './store/configureStore.js';
 const store = configureStore({});
 
+/* Setup store with fake game data REMOVE FOR PRODUCTION*/
+import { fakeGameCreator } from './testdata/dummyData.js';
+store.dispatch(fakeGameCreator());
+
 /* Fetch user information */
 fetch(`http://localhost:1234/api/user/${DeviceInfo.getUniqueID()}`)
   .then((res) => { // This `then` block should be removed when the server syncs up with ui development

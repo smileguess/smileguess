@@ -72,34 +72,11 @@ playerStats below will be replaced as follows:
   },
 */
 
-const playersById = ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'];
-const playersObj = {
-  11: { username: 'Will', points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: 'http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png' } },
-  12: { username: 'Travis', points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: 'http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w' } },
-  13: { username: 'Brandon', points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: 'http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif' } },
-  14: { username: 'Sylvia', points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: 'https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300' } },
-  15: { username: 'Will', points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: 'http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png' } },
-  16: { username: 'Travis', points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: 'http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w' } },
-  17: { username: 'Brandon', points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: 'http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif' } },
-  18: { username: 'Sylvia', points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: 'https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300' } },
-  19: { username: 'Will', points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: 'http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png' } },
-  20: { username: 'Travis', points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: 'http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w' } },
-  21: { username: 'Brandon', points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: 'http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif' } },
-  22: { username: 'Sylvia', points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: 'https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300' } },
-  23: { username: 'Will', points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: 'http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png' } },
-  24: { username: 'Travis', points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: 'http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w' } },
-  25: { username: 'Brandon', points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: 'http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif' } },
-  26: { username: 'Sylvia', points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: 'https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300' } },
-  27: { username: 'Will', points: 555, wins: 3, emojicoins: 3, picture: { thumbnail: 'http://cdn.photonesta.com/images/data.whicdn.com/images/127977939/original.png' } },
-  28: { username: 'Travis', points: 444, wins: 4, emojicoins: 4, picture: { thumbnail: 'http://static1.squarespace.com/static/5018d08ae4b0a463fb2fc659/t/546175abe4b011fe10901497/1418889965591/?format=1500w' } },
-  29: { username: 'Brandon', points: 444, wins: 5, emojicoins: 6, picture: { thumbnail: 'http://25.media.tumblr.com/ddba265a8e1538d5db940f2e3c95c8ad/tumblr_n1gqwc5egi1qhcd6po1_500.gif' } },
-  30: { username: 'Sylvia', points: 444, wins: 10, emojicoins: 10, picture: { thumbnail: 'https://lh3.googleusercontent.com/715fgXULvZkvaSfJ4G7D4TvFYcGEK2sPO0NosMh9IyD7LbXq9WqhCElbS46bDmjNXQ=w300' } },
-};
 /* Stats Screen Providers*/
 export const mapStatsScreen = {
-  mapStateToProps() {
+  mapStateToProps(state) {
     return {
-      playerStats: playersById.map(id => playersObj[id]),
+      playerStats: state.game.players.byId.map(id => state.game.players.all[id]),
     };
   },
   mapDispatchToProps() {

@@ -105,7 +105,7 @@ class StatsScreen extends Component {
     return (
       <View style={styles.container}>
         <Image
-          source={{ uri: player.picture.thumbnail }}
+          source={{ uri: player.picture }}
           style={styles.thumbnail}
         />
         <Text style={styles.username}>{player.username}</Text>
