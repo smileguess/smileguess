@@ -1,46 +1,58 @@
 import React, { Component } from 'react';
-import { View,
+import {
+  Modal,
+  StyleSheet,
   Text,
-  StyleSheet }
-  from 'react-native';
-import Button from 'react-native-button';
+  View,
+} from 'react-native';
+
 import { Actions } from 'react-native-router-flux';
-
+import Button from 'react-native-button';
 import DealerPrompt from '../components/DealerPrompt.js';
-
-import { baseButton, baseContainer } from '../styles/styles.js';
+import { baseContainer, baseButton } from '../styles/styles.js';
 import { colors } from '../styles/colors.js';
 
 const styles = StyleSheet.create({
   container: Object.assign({}, baseContainer, {
-    backgroundColor: colors.secondary1,
-  }), 
+    backgroundColor: 'rgba(241, 212, 194, 0.7)',
+  }),
   button: baseButton,
   text: {
-    color: 'black',
+    color: colors.primary1,
     textAlign: 'center',
+    fontWeight: 'bold',
+    lineHeight: 21,
+    fontSize: 14,
+  },
+  textEmptyLine: {
+    lineHeight: 10,
   },
 });
 
-class DealerChangeScreen extends Component {
-  render() {
-    return (
+
+const DealerChangeScreen = () => (
+  <View>
+    <Modal
+      animated={true}
+      transparent={true}
+      visible={true}
+    >
       <View style={styles.container}>
-        <Text style={styles.text} numberOfLines={2}>Congratulations, now you rule the game!
+        <Text style={styles.text} numberOfLines={2}>Congratulations, now YOU rule the game!
         {"\n"}
-        Be ready to emojify:
+        Get ready to 🐝🍃👝🎉🌲🏆👊👷🎿🏀🐩:
         {"\n"}
         </Text>
         <View>
           <DealerPrompt />
         </View>
-        <Text style={styles.text} numberOfLines={2}>
+        <Text style={styles.textEmptyLine} numberOfLines={2}>
         {"\n"}
         </Text>
-        <Button style={styles.button} onPress={Actions.pop}>Close to start game!</Button>
+        <Button style={styles.button} onPress={Actions.pop}>Close here to start game!</Button>
       </View>
-    );
-  }
-}
+    </Modal>
+  </View>
+);
 
 export default DealerChangeScreen;
