@@ -9,7 +9,7 @@ import HomeScreen from './screens/HomeScreen.js';
 import GameScreen from './screens/GameScreen.js';
 import StatsScreen from './screens/StatsScreen.js';
 import CustomNav from './components/CustomNav.js';
-
+import DealerChangeScreen from './screens/DealerChangeScreen.js';
 
 /* Import Store */
 import configureStore from './store/configureStore.js';

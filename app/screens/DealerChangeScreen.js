@@ -29,7 +29,12 @@ const styles = StyleSheet.create({
   },
 });
 
-
+/**
+ * DealerChange Screen is a React functional component.
+ * It triggers a Modal which is displayed to the new dealer which
+ * contains the new prompt for which the dealer will be giving clues.
+ * @desc onPress additionally triggers navigation to next screen
+ */
 const DealerChangeScreen = () => (
   <View>
     <Modal
