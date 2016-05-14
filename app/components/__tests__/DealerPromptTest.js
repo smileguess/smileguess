@@ -23,7 +23,7 @@ describe('DealerPrompt', () => {
 
   beforeEach(() => {
     const renderer = TestUtils.createRenderer();
-    renderer.render(<DealerPrompt prompt={game.prompt} />);
+    renderer.render(<DealerPrompt prompt={game.prompt} screenSize={{ height: 600, width: 300 }} />);
     output = renderer.getRenderOutput();
   });
 

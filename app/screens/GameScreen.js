@@ -17,6 +17,7 @@ import React, {
 import PlayerInput from '../components/PlayerInput.js';
 import ChatsList from '../components/ChatsList.js';
 import EmojiKeyboard from '../components/EmojiKeyboard';
+import DealerPrompt from '../components/DealerPrompt';
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 
@@ -44,6 +45,8 @@ const styles = StyleSheet.create({
  * @param {function()} props.onSendClue - handler for receiving dealer input.
  * @param {bool} props.isDealer - indicates whether game screen should render
  * in player or dealer mode.
+ * @param {string} props.dealerPrompt - prompt to be displayed to the dealer
+ * which other players must guess based on emoji clues.
  *
  */
 export class GameScreen extends React.Component {
@@ -91,19 +94,25 @@ export class GameScreen extends React.Component {
     return this.props.isDealer ? EmojiKeyboard : PlayerInput;
   }
 
+  renderTopDisplay() {
+    return this.props.isDealer ? DealerPrompt : View;
+  }
+
   /* We must calculate styles on each render in order to animate height
    * based on state changes
    */
   render() {
-    const { messages, onSendGuess, onSendClue, screenSize } = this.props;
+    const { messages, onSendGuess, onSendClue, screenSize, dealerPrompt } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
       },
     });
     const KeyboardInput = this.renderKeyboardInput();
+    const TopDisplay = this.renderTopDisplay();
     return (
       <View style={[styles.container, localStyles.container]} >
+        <TopDisplay screenSize={screenSize} prompt={dealerPrompt} />
         <ChatsList style={styles.chatContainer} messages={messages} />
         <KeyboardInput
           onSend={this.props.isDealer ? onSendClue : onSendGuess}
@@ -120,6 +129,7 @@ GameScreen.propTypes = {
   messages: PropTypes.array.isRequired,
   isDealer: PropTypes.bool,
   screenSize: PropTypes.object.isRequired,
+  dealerPrompt: PropTypes.string.isRequired,
 };
 
 /**

@@ -16,7 +16,6 @@ export const baseButton = {
 };
 
 export const baseComponent = {
-  'fontSize': 14,
   'color': colors.secondary1,
   'backgroundColor': colors.primary1,
   'borderColor': colors.secondary2,
@@ -24,8 +23,7 @@ export const baseComponent = {
 };
 
 export const baseContainer = {
-  'flex': 1, 
+  'flex': 1,
   'justifyContent': 'center',
   'alignItems': 'center',
 };
-
