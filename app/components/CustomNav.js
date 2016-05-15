@@ -25,7 +25,7 @@ export class CustomNav extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.notifications.length > 0) {
       this.setState({ navType: 'toast' });
-      this.headerProps = { toastMessage: nextProps.notifications[0].body };
+      this.setState({ headerProps: { toastMessage: nextProps.notifications[0].body } });
       return;
     }
     this.setState({ navType: 'nav' });
@@ -43,7 +43,7 @@ export class CustomNav extends React.Component {
   render() {
     const Header = this.renderNavigationBar();
     return (
-      <Header {...this.props} {...this.headerProps} />
+      <Header {...this.props} {...this.state.headerProps} />
     );
   }
 }

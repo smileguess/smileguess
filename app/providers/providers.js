@@ -56,7 +56,7 @@ export const mapGameScreen = {
 export const mapCustomNav = {
   mapStateToProps(state) {
     return {
-      notifications: state.routes.scene.notifications,
+      notifications: state.memos,
     };
   },
   mapDispatchToProps(dispatch) {
