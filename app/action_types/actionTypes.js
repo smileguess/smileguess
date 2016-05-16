@@ -1,7 +1,7 @@
 /**
  * Server->Client: integrates `action.payload` into the message part of the store
  */
-export const UPDATE_MESSAGE_STATE = 'UPDATE_MESSAGE_STATE';
+export const ADD_MESSAGE = 'ADD_MESSAGE';
 /**
  * Server->Client: integrates `action.payload` into the user part of the store
  */

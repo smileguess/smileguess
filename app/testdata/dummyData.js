@@ -1,30 +1,52 @@
-export const fakeMessages = [
-  {
-    userid: 1,
+const fakeMessages = {
+  5: {
+    userId: 2,
     type: 'guess',
-    message: 'I dont know.',
+    message: 'Blarney Stone',
   },
-  {
-    userid: 2,
+  4: {
+    userId: 0,
+    type: 'system',
+    message: 'Sylvia won the round!',
+  },
+  3: {
+    userId: 0,
+    type: 'system',
+    message: 'Brandon won the game!',
+  },
+  2: {
+    userId: 1,
     type: 'guess',
-    message: 'I dont know.',
+    message: 'Emerald',
   },
-  {
-    userid: 3,
+  1: {
+    userId: 4,
+    type: 'guess',
+    message: 'Is it a green rock?',
+  },
+  0: {
+    userId: 3,
     type: 'clue',
-    message: 'I dont know.',
+    message: '',
   },
-  {
-    userid: 4,
-    type: 'guess',
-    message: 'I dont know.',
-  },
-  {
-    userid: 1,
-    type: 'guess',
-    message: 'I dont know.',
-  },
-];
+};
+
+export const makeFakeMessageAdder = function makeFakeMessageAdder() {
+  let id = 0;
+
+  const fakeMessageAdder = function fakeMessageAdder() {
+    const fakeIndex = Math.floor(Math.random() * 5);
+    const fakeMessage = fakeMessages[fakeIndex];
+    fakeMessage.id = id++;
+    fakeMessage.time = Date.now();
+    return {
+      type: 'ADD_MESSAGE',
+      payload: fakeMessage,
+    };
+  };
+
+  return fakeMessageAdder;
+};
 
 export const fakeGameUpdate = {
   type: 'UPDATE_GAME_STATE',

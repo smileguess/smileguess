@@ -16,8 +16,13 @@ import configureStore from './store/configureStore.js';
 const store = configureStore({});
 
 /* Setup store with fake game data REMOVE FOR PRODUCTION*/
-import { fakeGameCreator } from './testdata/dummyData.js';
+import { fakeGameCreator, makeFakeMessageAdder } from './testdata/dummyData.js';
 store.dispatch(fakeGameCreator());
+
+/* Add fake messages to store every 10 seconds */
+const fakeMessageAdder = makeFakeMessageAdder();
+store.dispatch(fakeMessageAdder());
+setInterval(() => store.dispatch(fakeMessageAdder()), 10000);
 
 /* Fetch user information (REMOVE 'then' block for production)*/
 fetch(`http://localhost:1234/api/user/${DeviceInfo.getUniqueID()}`)
