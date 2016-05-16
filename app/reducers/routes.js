@@ -1,5 +1,4 @@
 export default function reducer(state = { scene: {} }, action = {}) {
-
   switch (action.type) {
     case 'focus':
       return {
