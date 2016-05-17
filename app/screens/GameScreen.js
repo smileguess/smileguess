@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     height: screenHeight,
     flexDirection: 'column',
     justifyContent: 'flex-end',
+    backgroundColor: 'white',
   },
   chatContainer: {
     width: screenWidth,

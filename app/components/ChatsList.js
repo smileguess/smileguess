@@ -6,8 +6,9 @@ import React, {
   Dimensions,
   View,
 } from 'react-native';
-import Message from './Message.js';
-import Event from './EventNotification.js';
+import GuessMessage from './GuessMessage.js';
+import SystemMessage from './SystemMessage.js';
+import ClueMessage from './ClueMessage.js';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -58,7 +59,7 @@ class ChatsList extends React.Component {
   renderRow(rowData = {}) {
     if (rowData.type === 'guess') {
       return (
-        <Message
+        <GuessMessage
           {...rowData}
           players={this.props.players}
           screenSize={this.props.screenSize}
@@ -67,7 +68,16 @@ class ChatsList extends React.Component {
       );
     } else if (rowData.type === 'system') {
       return (
-        <Event {...rowData} />
+        <SystemMessage {...rowData} />
+      );
+    } else if (rowData.type === 'clue') {
+      return (
+        <ClueMessage
+          {...rowData}
+          players={this.props.players}
+          screenSize={this.props.screenSize}
+          currentUser={this.props.user}
+        />
       );
     } else {
       return (<View />);

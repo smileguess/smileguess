@@ -18,15 +18,15 @@ const fakeMessage = {
 jest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js
 
 /* Unmock Message for unit testing */
-jest.unmock('../EventNotification.js');
-import Event from '../EventNotification.js';
+jest.unmock('../SystemMessage.js');
+import SystemMessage from '../SystemMessage.js';
 
-describe('Event', () => {
+describe('SystemMessage', () => {
   let output;
 
   beforeEach(() => {
     const renderer = TestUtils.createRenderer();
-    renderer.render(<Event
+    renderer.render(<SystemMessage
       id={fakeMessage.id}
       time={fakeMessage.time}
       userId={fakeMessage.userId}

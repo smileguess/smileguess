@@ -4,7 +4,7 @@ import { findAllWithType } from 'react-shallow-testutils';
 
 /* Import Mocks for Testing */
 import React from 'react-native'; // <rootdir>/app/__mocks__/react-native.js
-import Message from '../Message.js';
+import GuessMessage from '../GuessMessage.js';
 
 /* Setup Test Data */
 const fakeMessages = [
@@ -62,7 +62,7 @@ describe('ChatsList', () => {
   });
 
   xit('should have child Messages', () => {
-    const messages = findAllWithType(output, Message);
+    const messages = findAllWithType(output, GuessMessage);
     expect(messages.length).toBe(5);
   });
 });

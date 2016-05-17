@@ -13,4 +13,5 @@ export const colors = {
   secondary1: '#FFFCE9', // cream
   secondary2: '#CFE5FC', // lightBlue
   neutral: '#F1D4C2', // caramel
+  neutral2: '#b1abbf',
 };

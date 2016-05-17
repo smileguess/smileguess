@@ -31,17 +31,17 @@ const fakePlayers = {
 /* Must be mocked explicitly because set as an unmocked module in package.json */
 jest.mock('react-redux'); // <rootdir>/app/__mocks__/react-redux.js
 
-/* Unmock Message for unit testing */
-jest.unmock('../Message.js');
-import Message from '../Message.js';
+/* Unmock GuessMessage for unit testing */
+jest.unmock('../GuessMessage.js');
+import GuessMessage from '../GuessMessage.js';
 
-describe('Message', () => {
+describe('GuessMessage', () => {
   let output;
 
   beforeEach(() => {
     const renderer = TestUtils.createRenderer();
     renderer.render(
-      <Message
+      <GuessMessage
         message={fakeMessage.message}
         userId={fakeMessage.userId}
         currentUser={{ id: 1 }}

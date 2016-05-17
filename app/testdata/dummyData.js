@@ -2,32 +2,32 @@ const fakeMessages = {
   5: {
     userId: 2,
     type: 'guess',
-    message: 'Blarney Stone',
+    body: 'Blarney Stone',
   },
   4: {
     userId: 0,
     type: 'system',
-    message: 'Sylvia won the round!',
+    body: 'Sylvia won the round!',
   },
   3: {
     userId: 0,
     type: 'system',
-    message: 'Brandon won the game!',
+    body: 'Brandon won the game!',
   },
   2: {
     userId: 1,
     type: 'guess',
-    message: 'Emerald',
+    body: 'Emerald',
   },
   1: {
     userId: 2,
     type: 'guess',
-    message: 'Is it a green rock?',
+    body: 'Is it a green rock?',
   },
   0: {
     userId: 3,
     type: 'clue',
-    message: '',
+    body: [[0, 27], [1, 5], [1, 15]],
   },
 };
 

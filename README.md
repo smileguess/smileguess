@@ -31,6 +31,7 @@ let sampleState = {
    * The server will have pre-configured an action to be integrated wholesale into the store.
    */
    game: {
+     id: 1,
      /* There are two keys in the players portion of the store:
       * - players.all: This is an object where the userids map to key/value objects
       *   which represent players in the current game.
@@ -61,12 +62,12 @@ let sampleState = {
    * - messages.byId: This is an array of ids of all the messages in the game.
    */
   messages: {
-    all: { 
-      5: { id: 5, time: 123456, userId: 0, type: 'winner', message: 'Sylvia won the round!', },
-      4: { id: 4, time: 123455, userId: 1, type: 'guess', message: 'Home Alone', },
-      3: { id: 3, time: 123454, userId: 3, type: 'clue', message: '[Emojies...]', },
-      2: { id: 2, time: 123446, userId: 2, type: 'guess', message: 'SpIderman', },
-      1: { id: 1, time: 123443, userId: 1, type: 'guess', message: 'The Avengers', },
+    all: {
+      5: { id: 5, time: 123456, userId: 0, type: 'winner', body: 'Sylvia won the round!', },
+      4: { id: 4, time: 123455, userId: 1, type: 'guess', body: 'Home Alone', },
+      3: { id: 3, time: 123454, userId: 3, type: 'clue', body: '[Emojies...]', },
+      2: { id: 2, time: 123446, userId: 2, type: 'guess', body: 'SpIderman', },
+      1: { id: 1, time: 123443, userId: 1, type: 'guess', body: 'The Avengers', },
     },
     byId: [5, 4, 3, 2, 1],
   },

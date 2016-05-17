@@ -59,9 +59,9 @@ const styles = StyleSheet.create({
  * @param {number} props.userId - identifies the user who sent the message.
  * @param {string} props.time - UTC timestmap for displaying when message
  * was sent.
- * @param {string} props.message - text body of the message.
+ * @param {string} props.body - text body of the message.
  */
-const Message = ({ userId, time, message, currentUser, players, screenSize }) => {
+const Message = ({ userId, time, body, currentUser, players, screenSize }) => {
   const localStyles = StyleSheet.create({
     row: {
       width: screenSize.width,
@@ -93,7 +93,7 @@ const Message = ({ userId, time, message, currentUser, players, screenSize }) =>
             ]}
           >
             <Text style={styles.guessText} >
-              {message}
+              {body}
             </Text>
           </View>
         </View>
@@ -105,7 +105,7 @@ Message.propTypes = {
   type: PropTypes.string.isRequired,
   userId: PropTypes.number.isRequired,
   time: PropTypes.number.isRequired,
-  message: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
   screenSize: PropTypes.object.isRequired,
 };
 
