@@ -31,7 +31,7 @@ const ClueMessage = ({ userId, time, body, currentUser, players, screenSize }) =
 ClueMessage.propTypes = {
   userId: PropTypes.number.isRequired,
   time: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
+  body: PropTypes.array.isRequired,
   currentUser: PropTypes.object.isRequired,
   players: PropTypes.object.isRequired,
   screenSize: PropTypes.object.isRequired,

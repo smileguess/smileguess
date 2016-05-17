@@ -93,7 +93,7 @@ class Toast extends React.Component {
 Toast.propTypes = {
   toastMessage: PropTypes.string.isRequired,
   screenSize: PropTypes.object.isRequired,
-  dequeueMemo: PropTypes.func.isRequred,
+  dequeueMemo: PropTypes.func,
 };
 
 export default Toast;
