@@ -7,9 +7,24 @@ import React, { Text } from 'react-native'; // <rootdir>/app/__mocks__/react-nat
 
 /* Setup Test Data */
 const fakeMessage = {
-  userid: 1,
-  type: 'guess',
-  message: 'I dont know.',
+  id: 5,
+  time: 123456,
+  userId: 1,
+  type: 'winner',
+  message: 'Sylvia won the round!',
+};
+
+const fakePlayers = {
+  all: {
+    1: {
+      id: 5, // unique user id
+      username: 'bob', // username
+      points: 555, // points in current game
+      wins: 3, // wins in current game
+      emojicoins: 3, // total number of emojicoins across games
+      picture: 'http://cdn.photonesta.com/image.png', // user profile pic
+    },
+  },
 };
 
 
@@ -25,11 +40,15 @@ describe('Message', () => {
 
   beforeEach(() => {
     const renderer = TestUtils.createRenderer();
-    renderer.render(<Message
-      type={fakeMessage.type}
-      message={fakeMessage.message}
-      userid={fakeMessage.userid}
-    />);
+    renderer.render(
+      <Message
+        message={fakeMessage.message}
+        userId={fakeMessage.userId}
+        currentUser={{ id: 1 }}
+        players={fakePlayers}
+        screenSize={{ height: 600, width: 300 }}
+      />
+    );
     output = renderer.getRenderOutput();
   });
 
@@ -39,9 +58,5 @@ describe('Message', () => {
 
   it('should render', () => {
     expect(output).toBeDefined();
-  });
-
-  it('should have a Text component', () => {
-    expect(() => { findWithType(output, Text); }).not.toThrow();
   });
 });

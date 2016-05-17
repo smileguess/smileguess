@@ -20,7 +20,7 @@ const fakeMessages = {
     message: 'Emerald',
   },
   1: {
-    userId: 4,
+    userId: 2,
     type: 'guess',
     message: 'Is it a green rock?',
   },

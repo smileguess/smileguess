@@ -4,6 +4,7 @@ import React, {
   StyleSheet,
   PropTypes,
   Dimensions,
+  View,
 } from 'react-native';
 import Message from './Message.js';
 
@@ -36,6 +37,8 @@ class ChatsList extends React.Component {
     this.state = {
       dataSource: ds.cloneWithRows(this.props.messages),
     };
+
+    this.renderRow = this.renderRow.bind(this);
   }
 
   /* When component receives new props we need to manually update the ListView
@@ -52,9 +55,18 @@ class ChatsList extends React.Component {
    * the ListView
    */
   renderRow(rowData = {}) {
-    return (
-      <Message {...rowData} />
-    );
+    if (rowData.type === 'guess') {
+      return (
+        <Message
+          {...rowData}
+          players={this.props.players}
+          screenSize={this.props.screenSize}
+          currentUser={this.props.user}
+        />
+      );
+    } else {
+      return (<View />);
+    }
   }
 
   /* Renders the ListView component */
@@ -74,6 +86,9 @@ class ChatsList extends React.Component {
 
 ChatsList.propTypes = {
   messages: PropTypes.array.isRequired,
+  players: PropTypes.object.isRequired,
+  screenSize: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired,
 };
 
 export default ChatsList;

@@ -102,7 +102,7 @@ export class GameScreen extends React.Component {
    * based on state changes
    */
   render() {
-    const { messages, onSendGuess, onSendClue, screenSize, dealerPrompt } = this.props;
+    const { user, messages, players, onSendGuess, onSendClue, screenSize, dealerPrompt } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
@@ -113,7 +113,13 @@ export class GameScreen extends React.Component {
     return (
       <View style={[styles.container, localStyles.container]} >
         <TopDisplay screenSize={screenSize} prompt={dealerPrompt} />
-        <ChatsList style={styles.chatContainer} messages={messages} />
+        <ChatsList
+          style={styles.chatContainer}
+          messages={messages}
+          players={players}
+          screenSize={screenSize}
+          user={user}
+        />
         <KeyboardInput
           onSend={this.props.isDealer ? onSendClue : onSendGuess}
           screenSize={screenSize}
@@ -130,6 +136,8 @@ GameScreen.propTypes = {
   isDealer: PropTypes.bool,
   screenSize: PropTypes.object.isRequired,
   dealerPrompt: PropTypes.string.isRequired,
+  players: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired,
 };
 
 /**

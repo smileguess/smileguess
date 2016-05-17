@@ -32,6 +32,8 @@ export const mapGameScreen = {
       messages: state.messages,
       isDealer,
       dealerPrompt: state.game.prompt.forDisplay,
+      players: state.game.players,
+      user: state.user,
     };
   },
   mapDispatchToProps(dispatch) {
