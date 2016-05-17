@@ -18,13 +18,13 @@ describe('sendGuess Action Creator', () => {
     expect(typeof sendGuess).toEqual('function');
   });
   it('should return an object', () => {
-    expect(typeof sendGuess(6, 'tree')).toEqual('object');
+    expect(typeof sendGuess({ body: 'This is a guess' })).toEqual('object');
   });
   it('should have a type property of SUBMIT_GUESS', () => {
-    expect(sendGuess(6, 'tree').type).toEqual(SEND_GUESS_MESSAGE);
+    expect(sendGuess({ body: 'This is a guess' }).type).toEqual(SEND_GUESS_MESSAGE);
   });
-  it('should have a guess property of passed in guess', () => {
-    expect(sendGuess(6, 'tree').message).toEqual('tree');
+  it('should have a payload property of passed in payload', () => {
+    expect(sendGuess({ body: 'This is a guess' }).payload.body).toEqual('This is a guess');
   });
 });
 

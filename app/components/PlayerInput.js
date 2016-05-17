@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
  * @param {function()} props.onSend - handler to be called to when user
  * enters input and hits send.
  */
-const PlayerInput = ({ onSend, screenSize }) => (
+const PlayerInput = ({ onSend, screenSize, userId, gameId }) => (
   <View
     style={[
       styles.container,
@@ -67,14 +67,19 @@ const PlayerInput = ({ onSend, screenSize }) => (
         style={styles.inputField}
         placeholder="Input your guess"
         returnKeyType="send"
-        onSubmitEditing={(event) => (onSend(event.nativeEvent.text))}
+        onSubmitEditing={(event) => (onSend({
+          body: event.nativeEvent.text,
+          userId,
+          gameId,
+        }))}
       />
       <Button
         style={styles.send}
-        onPress={() => Actions.showGameScreen_toast({
-          navType: 'toast',
-          toastMessage: 'Sylvia has won the game!',
-        })}
+        onPress={(event) => (onSend({
+          body: event.nativeEvent.text,
+          userId,
+          gameId,
+        }))}
       >Send</Button>
     </BlurView>
   </View>

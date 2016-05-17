@@ -51,6 +51,7 @@ export const makeFakeMessageAdder = function makeFakeMessageAdder() {
 export const fakeGameUpdate = {
   type: 'UPDATE_GAME_STATE',
   payload: {
+    id: 1,
     players: {
       all: {
         1: {
@@ -90,3 +91,12 @@ export const fakeGameUpdate = {
 };
 
 export const fakeGameCreator = () => fakeGameUpdate;
+
+export const fakeUser = {
+  id: 5, // unique user id
+  username: 'bob', // username
+  points: 555, // points in current game
+  wins: 3, // wins in current game
+  emojicoins: 3, // total number of emojicoins across games
+  picture: 'http://cdn.photonesta.com/image.png', // user profile pic
+};

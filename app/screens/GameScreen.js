@@ -102,7 +102,7 @@ export class GameScreen extends React.Component {
    * based on state changes
    */
   render() {
-    const { user, messages, players, onSendGuess, onSendClue, screenSize, dealerPrompt } = this.props;
+    const { user, messages, players, onSendGuess, onSendClue, screenSize, game, dealerPrompt } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
@@ -123,6 +123,8 @@ export class GameScreen extends React.Component {
         <KeyboardInput
           onSend={this.props.isDealer ? onSendClue : onSendGuess}
           screenSize={screenSize}
+          userId={user.id}
+          gameId={game.id}
         />
       </View>
     );

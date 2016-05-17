@@ -34,21 +34,22 @@ export const mapGameScreen = {
       dealerPrompt: state.game.prompt.forDisplay,
       players: state.game.players,
       user: state.user,
+      game: state.game,
     };
   },
   mapDispatchToProps(dispatch) {
     return {
-      onSendGuess: (message) => {
+      onSendGuess: (payload) => {
         /**
          * TODO: remove hardcoded userid
          */
-        dispatch(sendGuess(6, message));
+        dispatch(sendGuess(payload));
       },
-      onSendClue: (message) => {
+      onSendClue: (payload) => {
         /**
          * TODO: remove hardcoded userid
          */
-        dispatch(sendClue(6, message));
+        dispatch(sendClue(payload));
       },
     };
   },

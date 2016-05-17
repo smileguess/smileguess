@@ -8,10 +8,9 @@ import {
  * Creates an action for submitting a guess to the server
  * This action is handled by the server
  */
-export const sendGuess = (userid, message) => ({
+export const sendGuess = (payload) => ({
   type: SEND_GUESS_MESSAGE,
-  userid,
-  message,
+  payload,
 });
 
 /**
