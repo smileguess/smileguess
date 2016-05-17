@@ -10,6 +10,7 @@ import GameScreen from './screens/GameScreen.js';
 import StatsScreen from './screens/StatsScreen.js';
 import CustomNav from './components/CustomNav.js';
 import DealerChangeScreen from './screens/DealerChangeScreen.js';
+import config from './utils/config.js';
 
 /* Import Store */
 import configureStore from './store/configureStore.js';
@@ -26,7 +27,7 @@ const store = configureStore({});
 
 /* Fetch user information (REMOVE 'then' block for production)*/
 const fetchUserInfo = () => {
-  fetch(`http://localhost:1234/api/user/${DeviceInfo.getUniqueID()}`)
+  fetch(`${config.serverUrl}/api/user/${DeviceInfo.getUniqueID()}`)
   .then((res) => {
     if (!res.ok) {
       throw error;

@@ -1,6 +1,7 @@
 /* Import Actions */
 import { sendGuess, sendClue, dequeueMemo } from '../actions/user.js';
 import { Actions } from 'react-native-router-flux';
+import config from '../utils/config.js'
 
 
 /* Home Screen Providers*/
@@ -13,7 +14,7 @@ export const mapHomeScreen = {
       onJoinRandomGame: () => {
         dispatch((dispatch, getState) => {
           const fetchGame = () => {
-            fetch('http://localhost:1234/api/game/')
+            fetch(`${config.serverUrl}/api/game/`)
             .then((res) => {
               if (!res.ok) {
                 throw error;
