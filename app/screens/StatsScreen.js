@@ -135,6 +135,7 @@ class StatsScreen extends Component {
         renderRow={this.renderPlayer}
         renderHeader={this.renderHeader}
         style={styles.listView}
+        enableEmptySections={true}
       />
     );
   }
