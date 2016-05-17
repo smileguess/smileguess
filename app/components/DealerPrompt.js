@@ -48,7 +48,7 @@ const DealerPrompt = ({ prompt, screenSize }) => {
 };
 
 DealerPrompt.propTypes = {
-  prompt: PropTypes.string.isRequired,
+  prompt: PropTypes.string,
   screenSize: PropTypes.object.isRequired,
 };
 
