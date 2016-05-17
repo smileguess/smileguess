@@ -64,7 +64,9 @@ class EmojiKeyboard extends React.Component {
   }
 
   inputView() {
-    return this.state.input.map(([sheet_x, sheet_y], index) => <Emoji key={index} x={sheet_x} y={sheet_y} />);
+    return this.state.input.map(
+      ([sheet_x, sheet_y], index) => <Emoji key={index} x={sheet_x} y={sheet_y} />
+    );
   }
 
   removeInput() {
@@ -100,6 +102,7 @@ class EmojiKeyboard extends React.Component {
     }
   }
   render() {
+    const { gameId, userId } = this.props;
     return (<View style={StyleSheet.create({ container: this.state.containerStyle }).container}>
       <TouchableHighlight onPress={() => this.toggleKeyboard()}>
         <View>
@@ -114,7 +117,17 @@ class EmojiKeyboard extends React.Component {
       </View>
       <View style={styles.buttonBar}>
         <Button style={styles.button} onPress={() => this.removeInput()}>Backspace</Button>
-        <Button className="sendButton" style={styles.button} onPress={() => this.props.onSend(this.state.input)}>Send</Button>
+        <Button
+          className="sendButton"
+          style={styles.button}
+          onPress={() => this.props.onSend({
+            body: this.state.input,
+            gameId,
+            userId,
+          })}
+        >
+          Send
+        </Button>
       </View>
     </View>);
   }
@@ -122,6 +135,8 @@ class EmojiKeyboard extends React.Component {
 
 EmojiKeyboard.propTypes = {
   onSend: PropTypes.func.isRequired,
+  gameId: PropTypes.number.isRequired,
+  userId: PropTypes.number.isRequired,
 };
 
 export default EmojiKeyboard;

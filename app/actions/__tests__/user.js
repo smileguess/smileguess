@@ -33,12 +33,12 @@ describe('sendClue Action Creator', () => {
     expect(typeof sendClue).toEqual('function');
   });
   it('should return an object', () => {
-    expect(typeof sendClue(6, 'leaf')).toEqual('object');
+    expect(typeof sendClue({ body: 'This is a clue' })).toEqual('object');
   });
   it('should have a type property of SEND_CLUE_MESSAGE', () => {
-    expect(sendClue(6, 'leaf').type).toEqual(SEND_CLUE_MESSAGE);
+    expect(sendClue({ body: 'This is a clue' }).type).toEqual(SEND_CLUE_MESSAGE);
   });
   it('should have a hint property of passed in hint', () => {
-    expect(sendClue(6, 'leaf').message).toEqual('leaf');
+    expect(sendClue({ body: 'This is a clue' }).payload.body).toEqual('This is a clue');
   });
 });

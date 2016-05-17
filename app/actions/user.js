@@ -17,10 +17,9 @@ export const sendGuess = (payload) => ({
  * This creates an action for the dealer to submit a clue
  * This action is handeled by the server
  */
-export const sendClue = (userid, message) => ({
+export const sendClue = (payload) => ({
   type: SEND_CLUE_MESSAGE,
-  userid,
-  message,
+  payload,
 });
 
 /**
