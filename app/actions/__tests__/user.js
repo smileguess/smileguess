@@ -5,11 +5,11 @@ import { SEND_GUESS_MESSAGE, SEND_CLUE_MESSAGE } from '../../action_types/action
 describe('User Action Types', () => {
   it('should have an action type SEND_GUESS_MESSAGE', () => {
     expect(SEND_GUESS_MESSAGE).toBeDefined();
-    expect(SEND_GUESS_MESSAGE).toMatch('server/sendGuessMessage');
+    expect(SEND_GUESS_MESSAGE).toMatch('server/sendMessage');
   });
   it('should have an action type SEND_CLUE_MESSAGE', () => {
     expect(SEND_CLUE_MESSAGE).toBeDefined();
-    expect(SEND_CLUE_MESSAGE).toMatch('server/sendClueMessage');
+    expect(SEND_CLUE_MESSAGE).toMatch('server/sendMessage');
   });
 });
 

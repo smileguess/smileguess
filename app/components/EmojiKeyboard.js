@@ -77,6 +77,7 @@ class EmojiKeyboard extends React.Component {
       });
     }
   }
+
   toggleKeyboard() {
     this.setState({ hidden: !this.state.hidden });
     LayoutAnimation.configureNext({
@@ -101,8 +102,23 @@ class EmojiKeyboard extends React.Component {
       });
     }
   }
-  render() {
+
+  sendInput(input) {
     const { gameId, userId } = this.props;
+    this.props.onSend({
+      body: input,
+      gameId,
+      userId,
+    });
+    this.setState({
+      input: [],
+    });
+    this.setState({
+      inputView: this.inputView(),
+    });
+  }
+
+  render() {
     return (<View style={StyleSheet.create({ container: this.state.containerStyle }).container}>
       <TouchableHighlight onPress={() => this.toggleKeyboard()}>
         <View>
@@ -119,15 +135,9 @@ class EmojiKeyboard extends React.Component {
         <Button style={styles.button} onPress={() => this.removeInput()}>Backspace</Button>
         <Button
           className="sendButton"
-          style={styles.button}
-          onPress={() => this.props.onSend({
-            body: this.state.input,
-            gameId,
-            userId,
-          })}
-        >
-          Send
-        </Button>
+          style={styles.button} 
+          onPress={() => this.sendInput(this.state.input)}
+        >Send</Button>
       </View>
     </View>);
   }

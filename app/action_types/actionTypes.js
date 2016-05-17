@@ -19,11 +19,11 @@ export const GAME_MEMO = 'GAME_MEMO';
 /**
  * Client->Server: sent to server when the client wants to broadcast a guess
  */
-export const SEND_GUESS_MESSAGE = 'server/sendGuessMessage';
+export const SEND_GUESS_MESSAGE = 'server/sendMessage';
 /**
  * Client->Server: sent to server when the dealer wants to broadcast a clue
  */
-export const SEND_CLUE_MESSAGE = 'server/sendClueMessage';
+export const SEND_CLUE_MESSAGE = 'server/sendMessage';
 
 /**
  * Client->Client: Indicates that the user has read the most recent notificaiton.

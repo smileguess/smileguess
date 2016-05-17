@@ -67,11 +67,13 @@ const PlayerInput = ({ onSend, screenSize, userId, gameId }) => (
         style={styles.inputField}
         placeholder="Input your guess"
         returnKeyType="send"
-        onSubmitEditing={(event) => (onSend({
-          body: event.nativeEvent.text,
-          userId,
-          gameId,
-        }))}
+        onSubmitEditing={(event) => {
+          onSend({
+            body: event.nativeEvent.text,
+            userId,
+            gameId,
+          });
+        }}
       />
       <Button
         style={styles.send}

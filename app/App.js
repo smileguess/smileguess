@@ -16,39 +16,40 @@ import configureStore from './store/configureStore.js';
 const store = configureStore({});
 
 /* Setup store with fake game data REMOVE FOR PRODUCTION*/
-import { fakeGameCreator, makeFakeMessageAdder } from './testdata/dummyData.js';
-store.dispatch(fakeGameCreator());
+// import { fakeGameCreator, makeFakeMessageAdder } from './testdata/dummyData.js';
+// store.dispatch(fakeGameCreator());
 
 /* Add fake messages to store every 10 seconds */
-const fakeMessageAdder = makeFakeMessageAdder();
-store.dispatch(fakeMessageAdder());
-setInterval(() => store.dispatch(fakeMessageAdder()), 10000);
+// const fakeMessageAdder = makeFakeMessageAdder();
+// store.dispatch(fakeMessageAdder());
+// setInterval(() => store.dispatch(fakeMessageAdder()), 10000);
 
 /* Fetch user information (REMOVE 'then' block for production)*/
-fetch(`http://localhost:1234/api/user/${DeviceInfo.getUniqueID()}`)
+const fetchUserInfo = () => {
+  fetch(`http://localhost:1234/api/user/${DeviceInfo.getUniqueID()}`)
   .then((res) => {
     if (!res.ok) {
-      return {
-        id: 0,
-        username: 'McFakerton',
-        points: 0,
-        wins: 0,
-        emojicoins: 0,
-        picture: '',
-      };
+      throw error;
     }
     return res;
   })
   .then((res) => res.json())
   .then((user) => {
-    store.dispatch({
-      type: 'UPDATE_USER_STATE',
-      user,
-    });
+    if (user) {
+      store.dispatch({
+        type: 'UPDATE_USER_STATE',
+        payload: user,
+      });
+    } else {
+      setTimeout(fetchUserInfo, 501);
+    }
   })
   .catch((error) => {
-    throw error;
-  });
+    console.warn('Check for user again in 501ms');
+    setTimeout(fetchUserInfo, 501);
+  }); // End Fetch Promise Block
+};
+fetchUserInfo();
 
 /* Set up router */
 const RouterWithRedux = connect()(Router);

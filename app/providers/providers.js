@@ -11,8 +11,39 @@ export const mapHomeScreen = {
   mapDispatchToProps(dispatch) {
     return {
       onJoinRandomGame: () => {
-        dispatch(() => {
-          Actions.showGameScreen();
+        dispatch((dispatch, getState) => {
+          const fetchGame = () => {
+            fetch('http://localhost:1234/api/game/')
+            .then((res) => {
+              if (!res.ok) {
+                throw error;
+              }
+              return res;
+            })
+            .then((res) => res.json())
+            .then((game) => {
+              if (game) {
+                dispatch({
+                  type: 'UPDATE_GAME_STATE',
+                  payload: game,
+                });
+                dispatch({
+                  type: 'server/joinGame',
+                  userId: getState().user.id, 
+                  gameId: getState().game.id,
+                });
+                Actions.showGameScreen();
+              } else {
+                setTimeout(fetchGame, 501);
+              }
+            })
+            .catch((error) => {
+              console.warn('Check for game again in 501ms');
+              console.warn('fetch: ', error.message);
+              setTimeout(fetchGame, 501);
+            }); // End Fetch Promise Block
+          }; // End fetchGame function
+          fetchGame();
         });
       },
       onJoinGame: () => {
