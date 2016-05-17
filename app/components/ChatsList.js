@@ -7,6 +7,7 @@ import React, {
   View,
 } from 'react-native';
 import Message from './Message.js';
+import Event from './EventNotification.js';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -63,6 +64,10 @@ class ChatsList extends React.Component {
           screenSize={this.props.screenSize}
           currentUser={this.props.user}
         />
+      );
+    } else if (rowData.type === 'system') {
+      return (
+        <Event {...rowData} />
       );
     } else {
       return (<View />);

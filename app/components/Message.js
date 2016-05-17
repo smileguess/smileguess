@@ -7,6 +7,8 @@ import React, {
   Image,
 } from 'react-native';
 
+import { colors } from '../styles/colors.js';
+
 const styles = StyleSheet.create({
   row: {
     paddingLeft: 20,
