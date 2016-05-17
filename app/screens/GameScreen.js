@@ -138,7 +138,7 @@ GameScreen.propTypes = {
   messages: PropTypes.array.isRequired,
   isDealer: PropTypes.bool,
   screenSize: PropTypes.object.isRequired,
-  dealerPrompt: PropTypes.string.isRequired,
+  dealerPrompt: PropTypes.any,
   players: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
 };
