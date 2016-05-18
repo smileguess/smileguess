@@ -2,6 +2,7 @@
 
 /* Import Dependencies */
 import { createStore, applyMiddleware, compose } from 'redux';
+import config from '../utils/config.js';
 
 /* Import Reducer */
 import rootReducer from '../reducers/index.js';
@@ -16,7 +17,7 @@ import devTools from 'remote-redux-devtools';
  */
 import './UserAgent';
 import io from 'socket.io-client/socket.io';
-const socket = io.connect('http://localhost:1234', {
+const socket = io.connect(config.serverUrl, {
   jsonp: false,
   transports: ['websocket'],
 });
