@@ -2,6 +2,8 @@ import {
   SEND_CLUE_MESSAGE,
   SEND_GUESS_MESSAGE,
   DEQUEUE_GAME_MEMO,
+  JOIN_GAME,
+  LEAVE_GAME,
 } from '../action_types/actionTypes.js';
 
 /**
@@ -28,4 +30,20 @@ export const sendClue = (payload) => ({
  */
 export const dequeueMemo = () => ({
   type: DEQUEUE_GAME_MEMO,
+});
+
+/**
+ * This creates an action which joins the user to a game room
+ */
+export const joinGame = (payload) => ({
+  type: JOIN_GAME,
+  payload,
+});
+
+/**
+ * This creates an action which leaves a user from a game room
+ */
+export const leaveGame = (payload) => ({
+  type: LEAVE_GAME,
+  payload,
 });

@@ -24,6 +24,15 @@ export const SEND_GUESS_MESSAGE = 'server/sendMessage';
  * Client->Server: sent to server when the dealer wants to broadcast a clue
  */
 export const SEND_CLUE_MESSAGE = 'server/sendMessage';
+/**
+ * Client->Server: sent to the server when user is joining
+ * a game
+ */
+export const JOIN_GAME = 'server/joinGame';
+/**
+ * Client->Server: sent to server when the user has left the game
+ */
+export const LEAVE_GAME = 'server/leaveGame';
 
 /**
  * Client->Client: Indicates that the user has read the most recent notificaiton.

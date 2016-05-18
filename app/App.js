@@ -1,5 +1,5 @@
 /* Import Dependencies */
-import React, { Dimensions } from 'react-native';
+import React, { Dimensions, Text } from 'react-native';
 import { Actions, Scene, Modal, Router } from 'react-native-router-flux';
 import { connect, Provider } from 'react-redux';
 import DeviceInfo from 'react-native-device-info';
@@ -9,15 +9,17 @@ import HomeScreen from './screens/HomeScreen.js';
 import GameScreen from './screens/GameScreen.js';
 import StatsScreen from './screens/StatsScreen.js';
 import CustomNav from './components/CustomNav.js';
-import DealerChangeScreen from './screens/DealerChangeScreen.js';
+
+/* Import utils and action creators */
 import config from './utils/config.js';
+import { leaveGame } from './actions/user.js';
 
 /* Import Store */
 import { socket, configureStore } from './store/configureStore.js';
 const store = configureStore({});
 
 socket.on('disconnect', () => {
-  // TODO: Add logic for figuring out whether you've intentionally 
+  // TODO: Add logic for figuring out whether you've intentionally
   // disconnected and if not, we should display error in toast so the
   // user knows why they've been dumped back in the home screen
   Actions.showHomeScreen();
@@ -85,6 +87,14 @@ const scenes = Actions.create(
         title="Your game!"
         onRight={() => Actions.showStatsScreen()}
         rightTitle="Stats"
+        onBack={() => {
+          store.dispatch((dispatch, getState) => {
+            dispatch(leaveGame({
+              userId: getState().user.id,
+              gameId: getState().game.id,
+            }));
+          });
+        }}
       >
         <Scene
           key="showGameScreen_default"
