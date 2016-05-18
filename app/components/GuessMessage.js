@@ -104,7 +104,7 @@ const Message = ({ userId, time, body, currentUser, players, screenSize }) => {
 Message.propTypes = {
   type: PropTypes.string.isRequired,
   userId: PropTypes.number.isRequired,
-  time: PropTypes.number.isRequired,
+  time: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   screenSize: PropTypes.object.isRequired,
 };
