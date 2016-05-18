@@ -13,8 +13,15 @@ import DealerChangeScreen from './screens/DealerChangeScreen.js';
 import config from './utils/config.js';
 
 /* Import Store */
-import configureStore from './store/configureStore.js';
+import { socket, configureStore } from './store/configureStore.js';
 const store = configureStore({});
+
+socket.on('disconnect', () => {
+  // TODO: Add logic for figuring out whether you've intentionally 
+  // disconnected and if not, we should display error in toast so the
+  // user knows why they've been dumped back in the home screen
+  Actions.showHomeScreen();
+});
 
 /* Setup store with fake game data REMOVE FOR PRODUCTION*/
 // import { fakeGameCreator, makeFakeMessageAdder } from './testdata/dummyData.js';

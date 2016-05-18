@@ -2,6 +2,7 @@
 
 /* Import Dependencies */
 import { createStore, applyMiddleware, compose } from 'redux';
+import { Actions } from 'react-native-router-flux';
 import config from '../utils/config.js';
 
 /* Import Reducer */
@@ -17,14 +18,15 @@ import devTools from 'remote-redux-devtools';
  */
 import './UserAgent';
 import io from 'socket.io-client/socket.io';
-const socket = io.connect(config.serverUrl, {
+export const socket = io.connect(config.serverUrl, {
   jsonp: false,
   transports: ['websocket'],
 });
+
 import createSocketIoMiddleware from 'redux-socket.io';
 const socketIoMiddleware = createSocketIoMiddleware(socket, 'server/');
 
-export default function configureStore(initialState) {
+export function configureStore(initialState) {
   const enhancer = compose(
     applyMiddleware(thunk, socketIoMiddleware),
     devTools({
@@ -36,3 +38,4 @@ export default function configureStore(initialState) {
   );
   return createStore(rootReducer, initialState, enhancer);
 }
+
