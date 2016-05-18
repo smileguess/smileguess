@@ -20,9 +20,10 @@ const styles = StyleSheet.create({
     paddingRight: 15,
     top: 62,
     right: 0,
-    backgroundColor: colors.secondary1,
+    backgroundColor: colors.primary2,
     justifyContent: 'center',
     flexDirection: 'row',
+    position: 'absolute',
   },
 });
 

@@ -1,4 +1,3 @@
-
 // /* Import Dependencies */
 import { connect } from 'react-redux';
 
@@ -113,7 +112,6 @@ export class GameScreen extends React.Component {
     const TopDisplay = this.renderTopDisplay();
     return (
       <View style={[styles.container, localStyles.container]} >
-        <TopDisplay screenSize={screenSize} prompt={dealerPrompt} />
         <ChatsList
           style={styles.chatContainer}
           messages={messages}
@@ -127,6 +125,7 @@ export class GameScreen extends React.Component {
           userId={user.id}
           gameId={game.id}
         />
+        <TopDisplay screenSize={screenSize} prompt={dealerPrompt} />
       </View>
     );
   }
