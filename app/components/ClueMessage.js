@@ -3,12 +3,29 @@ import React, {
   StyleSheet,
   View,
   PropTypes,
+  Text,
 } from 'react-native';
 import Emoji from './Emoji.js';
 
 const styles = StyleSheet.create({
   container: {
-
+    flexDirection: 'column',
+  },
+  body: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  messageMeta: {
+    flex: 1,
+  },
+  messageMetaFont: {
+    flex: 1,
+    color: 'grey',
+  },
+  messageBubble: {
+    padding: 15,
+    borderRadius: 4,
+    backgroundColor: '#EEEEEE',
   },
 });
 
@@ -20,11 +37,20 @@ const styles = StyleSheet.create({
 
 const ClueMessage = ({ userId, time, body, currentUser, players, screenSize }) => (
   <View style={styles.container}>
-    {
-      body.map(
-        ([sheetX, sheetY], index) => (<Emoji key={index} x={sheetX} y={sheetY} />)
-      )
-    }
+    <View style={styles.messageMeta}>
+      <Text style={styles.messageMetaFont}>
+      {userId === currentUser.id ? 'me' : players.all[userId].username}
+      </Text>
+    </View>
+    <View style={styles.messageBubble}>
+      <View style={styles.body}>
+        {
+          body.map(
+            ([sheetX, sheetY], index) => (<Emoji key={index} x={sheetX} y={sheetY} />)
+          )
+        }
+      </View>
+    </View>
   </View>
 );
 
