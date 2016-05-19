@@ -87,12 +87,14 @@ class ChatsList extends React.Component {
   render() {
     return (
       <ListView
+        ref="listView"
         style={[styles.container]}
         renderRow={this.renderRow}
         dataSource={this.state.dataSource}
         contentContainerStyle={[styles.contentContainer]}
         keyboardDismissMode="interactive"
         enableEmptySections
+        onEndReached={() => (this.refs.listView.scrollTo({ x: 0, y: 0, animated: true }))}
       />
     );
   }

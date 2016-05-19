@@ -65,6 +65,8 @@ export class GameScreen extends React.Component {
    * leveraging React's LayoutAnimation API.
    */
   componentDidMount() {
+    const listView = this.refs.chatsList.refs.listView;
+
     DeviceEventEmitter.addListener('keyboardWillShow', (e) => {
       LayoutAnimation.configureNext({
         duration: 250,
@@ -73,6 +75,7 @@ export class GameScreen extends React.Component {
         },
       });
       this.setState({ visibleHeight: this.state.screenHeight - e.endCoordinates.height });
+      listView.scrollTo({ x: 0, y: e.endCoordinates.height, animated: true });
     });
 
     DeviceEventEmitter.addListener('keyboardWillHide', () => {
@@ -83,6 +86,7 @@ export class GameScreen extends React.Component {
         },
       });
       this.setState({ visibleHeight: this.state.screenHeight });
+      listView.scrollTo({ x: 0, y: 0, animated: true });
     });
   }
 
@@ -115,6 +119,7 @@ export class GameScreen extends React.Component {
     return (
       <View style={[styles.container, localStyles.container]} >
         <ChatsList
+          ref="chatsList"
           style={styles.chatContainer}
           messages={messages}
           players={players}
