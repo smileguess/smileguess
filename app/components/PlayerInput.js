@@ -6,7 +6,6 @@ import React, {
   TextInput,
 } from 'react-native';
 import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
 import { BlurView } from 'react-native-blur';
 
 const styles = StyleSheet.create({
@@ -51,16 +50,24 @@ const styles = StyleSheet.create({
  * @param {Object} props.screenSize - dimensions of the device screen.
  * @param {function()} props.onSend - handler to be called to when user
  * enters input and hits send.
+ * @param {number} props.gameId
+ * @param {number} props.userId
  */
 class PlayerInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: '',
+    };
+  }
   render() {
     const { onSend, screenSize, userId, gameId } = this.props;
     return (
       <View
-      style={[
-        styles.container,
-        { width: screenSize.width },
-      ]}
+        style={[
+          styles.container,
+          { width: screenSize.width },
+        ]}
       >
         <BlurView
           style={styles.blurContainer}
@@ -79,14 +86,24 @@ class PlayerInput extends React.Component {
               });
               this.refs.textInput.clear();
             }}
+            onChange={(event) => {
+              this.setState({
+                text: event.nativeEvent.text,
+              });
+            }}
+            value={this.state.text}
+            blurOnSubmit={false}
           />
           <Button
             style={styles.send}
-            onPress={(event) => (onSend({
-              body: event.nativeEvent.text,
-              userId,
-              gameId,
-            }))}
+            onPress={() => {
+              onSend({
+                body: this.state.text,
+                userId,
+                gameId,
+              });
+              this.setState({ text: '' });
+            }}
           >Send</Button>
         </BlurView>
       </View>
@@ -97,6 +114,8 @@ class PlayerInput extends React.Component {
 PlayerInput.propTypes = {
   onSend: PropTypes.func.isRequired,
   screenSize: PropTypes.object.isRequired,
+  gameId: PropTypes.number.isRequired,
+  userId: PropTypes.number.isRequired,
 };
 
 export default PlayerInput;
