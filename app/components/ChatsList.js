@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
     padding: 6,
     alignItems: 'center',
     width: screenWidth,
-    marginTop: 70,
   },
 });
 

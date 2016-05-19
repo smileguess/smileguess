@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-end',
     backgroundColor: 'white',
+    paddingBottom: 40,
   },
   chatContainer: {
     width: screenWidth,
@@ -102,10 +103,11 @@ export class GameScreen extends React.Component {
    * based on state changes
    */
   render() {
-    const { user, messages, players, onSendGuess, onSendClue, screenSize, game, dealerPrompt } = this.props;
+    const { user, messages, players, onSendGuess, onSendClue, screenSize, game, dealerPrompt, isDealer } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
+        paddingTop: isDealer ? 80 : 70,
       },
     });
     const KeyboardInput = this.renderKeyboardInput();
@@ -120,7 +122,7 @@ export class GameScreen extends React.Component {
           user={user}
         />
         <KeyboardInput
-          onSend={this.props.isDealer ? onSendClue : onSendGuess}
+          onSend={isDealer ? onSendClue : onSendGuess}
           screenSize={screenSize}
           userId={user.id}
           gameId={game.id}
