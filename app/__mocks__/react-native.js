@@ -34,6 +34,7 @@ View.propTypes = {
 };
 
 class TextInput extends React.Component {
+  clear() { return null; }
   render() { return false; }
 }
 

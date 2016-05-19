@@ -52,40 +52,47 @@ const styles = StyleSheet.create({
  * @param {function()} props.onSend - handler to be called to when user
  * enters input and hits send.
  */
-const PlayerInput = ({ onSend, screenSize, userId, gameId }) => (
-  <View
-    style={[
-      styles.container,
-      { width: screenSize.width },
-    ]}
-  >
-    <BlurView
-      style={styles.blurContainer}
-      blurType="light"
-    >
-      <TextInput
-        style={styles.inputField}
-        placeholder="Input your guess"
-        returnKeyType="send"
-        onSubmitEditing={(event) => {
-          onSend({
-            body: event.nativeEvent.text,
-            userId,
-            gameId,
-          });
-        }}
-      />
-      <Button
-        style={styles.send}
-        onPress={(event) => (onSend({
-          body: event.nativeEvent.text,
-          userId,
-          gameId,
-        }))}
-      >Send</Button>
-    </BlurView>
-  </View>
-);
+class PlayerInput extends React.Component {
+  render() {
+    const { onSend, screenSize, userId, gameId } = this.props;
+    return (
+      <View
+      style={[
+        styles.container,
+        { width: screenSize.width },
+      ]}
+      >
+        <BlurView
+          style={styles.blurContainer}
+          blurType="light"
+        >
+          <TextInput
+            ref="textInput"
+            style={styles.inputField}
+            placeholder="Input your guess"
+            returnKeyType="send"
+            onSubmitEditing={(event) => {
+              onSend({
+                body: event.nativeEvent.text,
+                userId,
+                gameId,
+              });
+              this.refs.textInput.clear();
+            }}
+          />
+          <Button
+            style={styles.send}
+            onPress={(event) => (onSend({
+              body: event.nativeEvent.text,
+              userId,
+              gameId,
+            }))}
+          >Send</Button>
+        </BlurView>
+      </View>
+    );
+  }
+}
 
 PlayerInput.propTypes = {
   onSend: PropTypes.func.isRequired,
