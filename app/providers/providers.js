@@ -99,6 +99,11 @@ export const mapCustomNav = {
       dequeueMemo: () => {
         dispatch(dequeueMemo());
       },
+      timeoutToast: () => {
+        setTimeout(() => {
+          dispatch(dequeueMemo());
+        }, 2000);
+      }
     };
   },
 };

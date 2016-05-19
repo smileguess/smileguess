@@ -114,6 +114,7 @@ export class CustomNav extends React.Component {
       case 'nav':
         return NavBar;
       case 'toast':
+        this.props.timeoutToast();
         return Toast;
       default:
         return NavBar;
@@ -138,7 +139,7 @@ CustomNav.propTypes = {
   onBack: PropTypes.func,
   backButtonImage: PropTypes.number,
   navigationState: PropTypes.object,
-
+  timeoutToast: PropTypes.func,
 };
 
 CustomNav.defaultProps = {
