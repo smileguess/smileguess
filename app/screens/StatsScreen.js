@@ -109,8 +109,8 @@ class StatsScreen extends Component {
           style={styles.thumbnail}
         />
         <Text style={styles.username}>{player.username}</Text>
-        <Text style={styles.points}>{player.points}</Text>
-        <Text style={styles.wins}>{player.wins}</Text>
+        <Text style={styles.points}>{player.roundsWon}</Text>
+        <Text style={styles.wins}>{player.gamesWon}</Text>
         <Text style={styles.emojicoins}>{player.emojicoins}</Text>
       </View>
     );
