@@ -18,6 +18,7 @@ import ChatsList from '../components/ChatsList.js';
 import EmojiKeyboard from '../components/EmojiKeyboard';
 import DealerPrompt from '../components/DealerPrompt';
 
+import { colors } from '../styles/colors.js';
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
@@ -99,15 +100,18 @@ export class GameScreen extends React.Component {
     return this.props.isDealer ? EmojiKeyboard : PlayerInput;
   }
 
-  renderTopDisplay() {
-    return this.props.isDealer ? DealerPrompt : View;
+  topDisplay() {
+    const prompt = this.props.isDealer ? this.props.dealerPrompt : this.props.category;
+    const color = this.props.isDealer ? colors.primary2 : colors.primary1;
+
+    return <DealerPrompt backgroundColor={color} screenSize={this.props.screenSize} prompt={prompt} />;
   }
 
   /* We must calculate styles on each render in order to animate height
    * based on state changes
    */
   render() {
-    const { user, messages, players, onSendGuess, onSendClue, screenSize, game, dealerPrompt, isDealer } = this.props;
+    const { user, messages, players, onSendGuess, onSendClue, game, dealerPrompt, screenSize, isDealer } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
@@ -115,7 +119,6 @@ export class GameScreen extends React.Component {
       },
     });
     const KeyboardInput = this.renderKeyboardInput();
-    const TopDisplay = this.renderTopDisplay();
     return (
       <View style={[styles.container, localStyles.container]} >
         <ChatsList
@@ -132,7 +135,7 @@ export class GameScreen extends React.Component {
           userId={user.id}
           gameId={game.id}
         />
-        <TopDisplay screenSize={screenSize} prompt={dealerPrompt} />
+        {this.topDisplay()}
       </View>
     );
   }
@@ -145,6 +148,7 @@ GameScreen.propTypes = {
   isDealer: PropTypes.bool,
   screenSize: PropTypes.object.isRequired,
   dealerPrompt: PropTypes.any,
+  category: PropTypes.any,
   players: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
 };

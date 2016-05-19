@@ -35,10 +35,11 @@ const styles = StyleSheet.create({
 * render correctly.
 * @param {string} props.prompt - prompt text to be displayed to the dealer.
 */
-const DealerPrompt = ({ prompt, screenSize }) => {
+const DealerPrompt = ({ prompt, screenSize, backgroundColor }) => {
   const localStyles = StyleSheet.create({
     container: {
       width: screenSize.width,
+      backgroundColor,
     },
   });
   return (
@@ -51,6 +52,7 @@ const DealerPrompt = ({ prompt, screenSize }) => {
 DealerPrompt.propTypes = {
   prompt: PropTypes.string,
   screenSize: PropTypes.object.isRequired,
+  backgroundColor: PropTypes.any,
 };
 
 export default DealerPrompt;
