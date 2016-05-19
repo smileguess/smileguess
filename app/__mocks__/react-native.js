@@ -33,6 +33,10 @@ View.propTypes = {
   style: React.PropTypes.any,
 };
 
+class Image extends React.Component {
+  render() { return false; }
+};
+
 class TextInput extends React.Component {
   clear() { return null; }
   render() { return false; }

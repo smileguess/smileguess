@@ -9,8 +9,13 @@ import React, {
   View,
   StyleSheet,
   PropTypes,
+  Image,
+  Text,
+  Dimensions,
 } from 'react-native';
 import Button from 'react-native-button';
+
+const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
@@ -19,8 +24,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
   },
-  buttonContainer: {
-    flex: 0,
+  button: {
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    color: 'grey',
+    fontWeight: 'bold',
+  },
+  emptyText: {
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    fontSize: 32,
+  },
+  backgroundImage: {
+    width: screenWidth,
+    height: screenHeight,
   },
 });
 
@@ -32,18 +47,27 @@ const styles = StyleSheet.create({
  * @desc onPress additionally triggers navigation to GameScreen
  */
 export const HomeScreen = ({ onJoinRandomGame }) => (
-  <View style={styles.container}>
-    <View style={styles.buttonContainer}>
-      <Button
-        onPress={onJoinRandomGame}
-      >Go to Game Screen!</Button>
-    </View>
+  <View>
+    <Image source={require('../assets/background.jpg')} style={styles.backgroundImage}>
+      <View style={styles.container}>
+        <Text style={styles.emptyText}> {"\n"} {"\n"} {"\n"} </Text>
+        <View>
+          <Image source={require('../assets/logo.png')} />
+        </View>
+        <Text style={styles.emptyText}> {"\n"} </Text>
+        <Button
+          style={styles.button}
+          onPress={onJoinRandomGame}
+        >Click to play now! </Button>
+      </View>
+    </Image>
   </View>
 );
 
 HomeScreen.propTypes = {
   onJoinRandomGame: PropTypes.func.isRequired,
 };
+
 
 /**
  * HomeScreenContainer is a 'container component' which binds the props and

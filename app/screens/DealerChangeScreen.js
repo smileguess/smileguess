@@ -8,7 +8,6 @@ import {
 
 import { Actions } from 'react-native-router-flux';
 import Button from 'react-native-button';
-import DealerPrompt from '../components/DealerPrompt.js';
 import { baseContainer, baseButton } from '../styles/styles.js';
 import { colors } from '../styles/colors.js';
 
@@ -48,9 +47,6 @@ const DealerChangeScreen = () => (
         Get ready to 🐝🍃👝🎉🌲🏆👊👷🎿🏀🐩:
         {"\n"}
         </Text>
-        <View>
-          <DealerPrompt />
-        </View>
         <Text style={styles.textEmptyLine} numberOfLines={2}>
         {"\n"}
         </Text>

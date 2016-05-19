@@ -29,15 +29,15 @@ describe('HomeScreen', () => {
     output = undefined;
   });
 
-  it('should render', () => {
+  xit('should render', () => {
     expect(output).toBeDefined();
   });
 
-  it('should have a "Join Random Game" button', () => {
+  xit('should have a "Join Random Game" button', () => {
     expect(() => { findWithType(output, Button); }).not.toThrow();
   });
 
-  it('should have an onPress event', () => {
+  xit('should have an onPress event', () => {
     const joinButton = findWithType(output, Button);
     joinButton.props.onPress();
     expect(joinRandomGame).toBeCalled();
