@@ -6,6 +6,8 @@ import React, {
   Text,
   Image,
   TouchableOpacity,
+  Animated,
+  Easing,
 } from 'react-native';
 import { BlurView } from 'react-native-blur';
 import { Actions } from 'react-native-router-flux';
@@ -54,39 +56,73 @@ const styles = StyleSheet.create({
  * @param {string} props.message - text body of the message.
  */
 class Toast extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fadeAnim: new Animated.Value(0),
+    };
+  }
+  componentDidMount() {
+    Animated.timing(
+      this.state.fadeAnim,
+      {
+        toValue: 1,
+        duration: 400,
+        easing: Easing.inOut(Easing.quad),
+      },
+    ).start();
+  }
   render() {
     const { toastMessage, screenSize, dequeueMemo } = this.props;
     return (
-      <Image
-        style={[
-          styles.containerTint,
-          {
-            width: screenSize.width,
-          },
-        ]}
+      <Animated.View
+        style={{
+          transform: [
+            // { scaleY: this.state.fadeAnim },
+            { translateY:
+              this.state.fadeAnim.interpolate({
+                inputRange: [0, 1],
+                outputRange: [-100, 0],
+              }),
+            },
+          ],
+          height: 100,
+          position: 'absolute',
+          top: 0,
+          right: 0,
+        }}
       >
-        <BlurView
-          blurType="light"
+        <Image
           style={[
-            styles.container,
+            styles.containerTint,
             {
               width: screenSize.width,
             },
           ]}
         >
-          <View style={styles.row1}>
-            <TouchableOpacity
-              style={styles.buttonBG}
-              onPress={dequeueMemo}
-            >
-              <Text style={styles.font}> X </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.row2}>
-            <Text style={styles.font}> {toastMessage} </Text>
-          </View>
-        </BlurView>
-      </Image>
+          <BlurView
+            blurType="light"
+            style={[
+              styles.container,
+              {
+                width: screenSize.width,
+              },
+            ]}
+          >
+            <View style={styles.row1}>
+              <TouchableOpacity
+                style={styles.buttonBG}
+                onPress={dequeueMemo}
+              >
+                <Text style={styles.font}> X </Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.row2}>
+              <Text style={styles.font}> {toastMessage} </Text>
+            </View>
+          </BlurView>
+        </Image>
+      </Animated.View>
     );
   }
 }

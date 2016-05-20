@@ -65,12 +65,17 @@ export class GameScreen extends React.Component {
     this.onKeyboardHide = this.onKeyboardHide.bind(this);
   }
 
+
   /* Listen for the keyboard events and resize the component accordingly
    * leveraging React's LayoutAnimation API.
    */
   componentDidMount() {
     DeviceEventEmitter.addListener('keyboardWillShow', this.onKeyboardShow);
     DeviceEventEmitter.addListener('keyboardWillHide', this.onKeyboardHide);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    setTimeout(() => this.setState({ isDealer: nextProps.isDealer }), 1000);
   }
 
   componentWillUnmount() {
@@ -104,21 +109,21 @@ export class GameScreen extends React.Component {
 
 
   topDisplay() {
-    const prompt = this.props.isDealer ? this.props.dealerPrompt : this.props.hintForDisplay;
-    const color = this.props.isDealer ? colors.primary2 : colors.primary1;
+    const prompt = this.state.isDealer ? this.props.dealerPrompt : this.props.hintForDisplay;
+    const color = this.state.isDealer ? colors.primary2 : colors.primary1;
 
     return <DealerPrompt backgroundColor={color} screenSize={this.props.screenSize} prompt={prompt} />;
   }
 
   renderKeyboardInput() {
-    return this.props.isDealer ? EmojiKeyboard : PlayerInput;
+    return this.state.isDealer ? EmojiKeyboard : PlayerInput;
   }
 
   /* We must calculate styles on each render in order to animate height
    * based on state changes
    */
   render() {
-    const { user, messages, players, onSendGuess, onSendClue, game, dealerPrompt, screenSize, isDealer } = this.props;
+    const { user, messages, players, onSendGuess, onSendClue, game, dealerPrompt, screenSize } = this.props;
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
@@ -137,7 +142,7 @@ export class GameScreen extends React.Component {
           user={user}
         />
         <KeyboardInput
-          onSend={isDealer ? onSendClue : onSendGuess}
+          onSend={this.state.isDealer ? onSendClue : onSendGuess}
           screenSize={screenSize}
           userId={user.id}
           gameId={game.id}

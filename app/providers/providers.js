@@ -30,7 +30,7 @@ export const mapHomeScreen = {
                 });
                 dispatch({
                   type: 'server/joinGame',
-                  userId: getState().user.id, 
+                  userId: getState().user.id,
                   gameId: getState().game.id,
                 });
                 Actions.showGameScreen();
@@ -104,7 +104,7 @@ export const mapCustomNav = {
       timeoutToast: () => {
         setTimeout(() => {
           dispatch(dequeueMemo());
-        }, 2000);
+        }, 10000);
       }
     };
   },
