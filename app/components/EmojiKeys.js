@@ -98,9 +98,13 @@ class EmojiKeys extends React.Component {
     const pageSize = this.props.pageSize;
     const emojiPageArray = [];
 
-    for (let i = 0; i < emojiDataArray.length; i += pageSize) {
-      emojiPageArray.push(emojiDataArray.slice(i, i + pageSize));
-    }
+    this.props.emojiCategories.map((cat) => {
+      emojiPageArray.push(this.props.emojiData.filter((emoji) => emoji.category === cat));
+    });
+
+    // for (let i = 0; i < emojiDataArray.length; i += pageSize) {
+    //   emojiPageArray.push(emojiDataArray.slice(i, i + pageSize));
+    // }
 
     this.state = { emojiPageArray };
   }
@@ -133,6 +137,7 @@ class EmojiKeys extends React.Component {
 EmojiKeys.propTypes = {
   updateInput: PropTypes.func.isRequired,
   emojiData: PropTypes.array.isRequired,
+  emojiCategories: PropTypes.array.isRequired,
   pageSize: PropTypes.number,
 };
 

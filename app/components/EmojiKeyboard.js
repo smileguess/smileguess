@@ -10,7 +10,7 @@ import React, {
 import Button from 'react-native-button';
 import EmojiInput from './EmojiInput.js';
 import EmojiKeys from './EmojiKeys.js';
-import emojiData from '../assets/emojifile_array.js';
+import { emojiData, emojiCategories } from '../assets/emojifile_array.js';
 import Emoji from './Emoji.js';
 
 const { width } = Dimensions.get('window');
@@ -150,6 +150,7 @@ class EmojiKeyboard extends React.Component {
         this.state.renderKeyboard ?
         (<EmojiKeys
           emojiData={emojiData}
+          emojiCategories={emojiCategories}
           updateInput={(input) => this.updateInput(input)}
         />) : <View />
       }
