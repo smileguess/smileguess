@@ -60,35 +60,17 @@ export class GameScreen extends React.Component {
       visibleHeight: screenHeight,
       visibleWidth: screenWidth,
     };
+
+    this.onKeyboardShow = this.onKeyboardShow.bind(this);
+    this.onKeyboardHide = this.onKeyboardHide.bind(this);
   }
 
   /* Listen for the keyboard events and resize the component accordingly
    * leveraging React's LayoutAnimation API.
    */
   componentDidMount() {
-    const listView = this.refs.chatsList.refs.listView;
-
-    DeviceEventEmitter.addListener('keyboardWillShow', (e) => {
-      LayoutAnimation.configureNext({
-        duration: 250,
-        update: {
-          type: LayoutAnimation.Types.keyboard,
-        },
-      });
-      this.setState({ visibleHeight: this.state.screenHeight - e.endCoordinates.height });
-      listView.scrollTo({ x: 0, y: e.endCoordinates.height, animated: true });
-    });
-
-    DeviceEventEmitter.addListener('keyboardWillHide', () => {
-      LayoutAnimation.configureNext({
-        duration: 250,
-        update: {
-          type: LayoutAnimation.Types.keyboard,
-        },
-      });
-      this.setState({ visibleHeight: this.state.screenHeight });
-      listView.scrollTo({ x: 0, y: 0, animated: true });
-    });
+    DeviceEventEmitter.addListener('keyboardWillShow', this.onKeyboardShow);
+    DeviceEventEmitter.addListener('keyboardWillHide', this.onKeyboardHide);
   }
 
   componentWillUnmount() {
@@ -96,15 +78,40 @@ export class GameScreen extends React.Component {
     DeviceEventEmitter.removeAllListeners('keyboardWillShow');
   }
 
-  renderKeyboardInput() {
-    return this.props.isDealer ? EmojiKeyboard : PlayerInput;
+  onKeyboardShow(e) {
+    const listView = this.refs.chatsList.refs.listView;
+    LayoutAnimation.configureNext({
+      duration: 250,
+      update: {
+        type: LayoutAnimation.Types.keyboard,
+      },
+    });
+    this.setState({ visibleHeight: this.state.screenHeight - e.endCoordinates.height });
+    listView.scrollTo({ x: 0, y: e.endCoordinates.height, animated: true });
   }
+
+  onKeyboardHide() {
+    const listView = this.refs.chatsList.refs.listView;
+    LayoutAnimation.configureNext({
+      duration: 250,
+      update: {
+        type: LayoutAnimation.Types.keyboard,
+      },
+    });
+    this.setState({ visibleHeight: this.state.screenHeight });
+    listView.scrollTo({ x: 0, y: 0, animated: true });
+  }
+
 
   topDisplay() {
     const prompt = this.props.isDealer ? this.props.dealerPrompt : this.props.hintForDisplay;
     const color = this.props.isDealer ? colors.primary2 : colors.primary1;
 
     return <DealerPrompt backgroundColor={color} screenSize={this.props.screenSize} prompt={prompt} />;
+  }
+
+  renderKeyboardInput() {
+    return this.props.isDealer ? EmojiKeyboard : PlayerInput;
   }
 
   /* We must calculate styles on each render in order to animate height
@@ -134,6 +141,8 @@ export class GameScreen extends React.Component {
           screenSize={screenSize}
           userId={user.id}
           gameId={game.id}
+          onKeyboardShow={this.onKeyboardShow}
+          onKeyboardHide={this.onKeyboardHide}
         />
         {this.topDisplay()}
       </View>

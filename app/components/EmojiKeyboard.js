@@ -20,7 +20,7 @@ const containerStyle = {
   justifyContent: 'flex-start',
   backgroundColor: '#c4c4c4',
   position: 'absolute',
-  bottom: 0,
+  bottom: -255,
   width,
 };
 
@@ -84,23 +84,31 @@ class EmojiKeyboard extends React.Component {
   toggleKeyboard() {
     this.setState({ hidden: !this.state.hidden });
     LayoutAnimation.configureNext({
-      duration: 10,
+      duration: 250,
       update: {
-        type: LayoutAnimation.Types.linear,
+        type: LayoutAnimation.Types.keyboard,
       },
     });
     if (this.state.hidden) {
       this.setState({
         containerStyle: {
           ...containerStyle,
+          bottom: -255,
         },
       });
+      // setTimeout(() => {
+        this.props.onKeyboardHide();
+      // }, 50);
     } else {
       this.setState({
         containerStyle: {
           ...containerStyle,
+          bottom: -255,
         },
       });
+      // setTimeout(() => {
+        this.props.onKeyboardShow({ endCoordinates: { height: 255 } });
+      // }, 50);
     }
   }
 
@@ -164,6 +172,13 @@ EmojiKeyboard.propTypes = {
   gameId: PropTypes.number.isRequired,
   userId: PropTypes.number.isRequired,
   screenSize: PropTypes.object.isRequired,
+  onKeyboardShow: PropTypes.func,
+  onKeyboardHide: PropTypes.func,
+};
+
+EmojiKeyboard.defaultProps = {
+  onKeyboardShow: () => null,
+  onKeyboardHide: () => null,
 };
 
 export default EmojiKeyboard;

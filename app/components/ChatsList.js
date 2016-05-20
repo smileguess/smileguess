@@ -92,7 +92,7 @@ class ChatsList extends React.Component {
         renderRow={this.renderRow}
         dataSource={this.state.dataSource}
         contentContainerStyle={[styles.contentContainer]}
-        keyboardDismissMode="interactive"
+        keyboardDismissMode="on-drag"
         enableEmptySections
       />
     );
