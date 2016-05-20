@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 
 const SystemMessage = ({ id, time, userId, type, body }) => (
   <View style={styles.container}>
-    <Text style={styles.eventMessage}> 🏆 {body} 🏆 </Text>
+    <Text style={styles.eventMessage}>{body}</Text>
   </View>
 );
 
