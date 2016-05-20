@@ -44,6 +44,7 @@ class EmojiKeyboard extends React.Component {
       input: [],
       hidden: true,
       containerStyle,
+      renderKeyboard: false,
     };
 
     this.sendInput = this.sendInput.bind(this);
@@ -118,6 +119,12 @@ class EmojiKeyboard extends React.Component {
     });
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ renderKeyboard: true });
+    }, 100);
+  }
+
   render() {
     return (<View style={StyleSheet.create({ container: this.state.containerStyle }).container}>
       <TouchableHighlight onPress={() => this.toggleKeyboard()}>
@@ -139,10 +146,13 @@ class EmojiKeyboard extends React.Component {
         </View>
       </TouchableHighlight>
       <View>
-        <EmojiKeys
+      {
+        this.state.renderKeyboard ?
+        (<EmojiKeys
           emojiData={emojiData}
           updateInput={(input) => this.updateInput(input)}
-        />
+        />) : <View />
+      }
       </View>
     </View>);
   }

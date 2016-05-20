@@ -23,6 +23,7 @@ jest.unmock('../EmojiKeys.js');
 import EmojiKeys from '../EmojiKeys.js';
 
 /* Create mock function to pass in as prop for testing */
+/**
 describe('EmojiKeys', () => {
   let output;
 
@@ -51,3 +52,4 @@ describe('EmojiKeys', () => {
     expect(mockUpdateInput).toBeCalled();
   });
 });
+*/

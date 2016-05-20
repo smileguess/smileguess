@@ -94,7 +94,6 @@ class ChatsList extends React.Component {
         contentContainerStyle={[styles.contentContainer]}
         keyboardDismissMode="interactive"
         enableEmptySections
-        onEndReached={() => (this.refs.listView.scrollTo({ x: 0, y: 0, animated: true }))}
       />
     );
   }

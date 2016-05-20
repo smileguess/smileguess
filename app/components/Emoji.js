@@ -22,8 +22,8 @@ const Emoji = ({ x, y, scale = 1 }) => (
     <Image
       source={emojiSpriteMap}
       style={{
-        width: emojiSpriteMap.width * scale,
-        height: emojiSpriteMap.height * scale,
+        width: emojiSpriteMap.width * scale * 0.5,
+        height: emojiSpriteMap.height * scale * 0.5,
         left: -32 * x * scale,
         top: -32 * y * scale,
       }}

@@ -16,31 +16,74 @@ const styles = StyleSheet.create({
     height: 255,
     width,
     justifyContent: 'flex-start',
-    backgroundColor: '#c4c4c4',
+    backgroundColor: '#e7e2e2',
+    padding: 7,
   },
   scrollContainer: { // ContentContainerStyle
     flex: 1,
-    flexWrap: 'wrap',
-    flexDirection: 'column',
+    flexDirection: 'row',
   },
   touchable: {
     flex: 1,
-    borderColor: 'black',
     borderWidth: 0,
     overflow: 'hidden',
   },
   emojiButtonView: {
-    borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: '#AAAAAA',
     borderRadius: 5,
     width: 38,
     height: 38,
-    backgroundColor: '#ffffff',
-    margin: 2,
-    padding: 2,
+    margin: 1,
+  },
+  emojiPage: {
+    height: 255,
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    flex: 1,
   },
 });
+
+class EmojiPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      renderAsync: this.props.renderAsync,
+    };
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ renderAsync: false });
+    }, this.props.delay);
+  }
+  render() {
+    return (<View style={styles.emojiPage}>
+      {this.state.renderAsync ? <View /> : this.props.emojiPage.map((emoji, emojiIndex) => (
+        <View key={emojiIndex} style={styles.emojiButtonView}>
+          <TouchableHighlight
+            className="emojiButton"
+            style={styles.touchable}
+            onPress={() => this.props.updateInput([emoji.sheet_x, emoji.sheet_y])}
+          >
+            <View><Emoji x={emoji.sheet_x} y={emoji.sheet_y} /></View>
+          </TouchableHighlight>
+        </View>))
+      }
+    </View>);
+  }
+}
+
+EmojiPage.propTypes = {
+  renderAsync: PropTypes.bool,
+  updateInput: PropTypes.func.isRequired,
+  emojiPage: PropTypes.array.isRequired,
+  delay: PropTypes.number.isRequired,
+};
+
+EmojiPage.defaultProps = {
+  renderAsync: true,
+  delay: 100,
+};
+
 
 /**
  * This component creates the array of emoji keys that are pressable on the keyboard.  NOTE: this component does not re-render.
@@ -48,26 +91,39 @@ const styles = StyleSheet.create({
  * @param {array} emojiData - this is an array of objects which represent each emoji.  The essential part is that it have a `sheet_x` and `sheet_y` property to represent the emoji's x/y coordinate on the spritemap
  */
 class EmojiKeys extends React.Component {
+  constructor(props) {
+    super(props);
+
+    const emojiDataArray = this.props.emojiData;
+    const pageSize = this.props.pageSize;
+    const emojiPageArray = [];
+
+    for (let i = 0; i < emojiDataArray.length; i += pageSize) {
+      emojiPageArray.push(emojiDataArray.slice(i, i + pageSize));
+    }
+
+    this.state = { emojiPageArray };
+  }
   shouldComponentUpdate() {
     return false;
   }
   render() {
+    const { updateInput } = this.props;
     return (<View style={styles.container}>
       <ScrollView
         horizontal
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContainer}
+        overflow="hidden"
       >
-        {this.props.emojiData.map((emoji, emojiIndex) => (
-          <View key={emojiIndex} style={styles.emojiButtonView}>
-            <TouchableHighlight
-              className="emojiButton"
-              style={styles.touchable}
-              onPress={() => this.props.updateInput([emoji.sheet_x, emoji.sheet_y])}
-            >
-              <View><Emoji x={emoji.sheet_x} y={emoji.sheet_y} /></View>
-            </TouchableHighlight>
-          </View>))
+        {this.state.emojiPageArray.map((page, pageIndex) => (
+          <EmojiPage
+            key={pageIndex}
+            delay={pageIndex * 100}
+            updateInput={updateInput}
+            emojiPage={page}
+          />
+          ))
         }
       </ScrollView>
     </View>);
@@ -77,6 +133,11 @@ class EmojiKeys extends React.Component {
 EmojiKeys.propTypes = {
   updateInput: PropTypes.func.isRequired,
   emojiData: PropTypes.array.isRequired,
+  pageSize: PropTypes.number,
+};
+
+EmojiKeys.defaultProps = {
+  pageSize: 54,
 };
 
 export default EmojiKeys;
