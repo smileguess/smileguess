@@ -65,6 +65,7 @@ export const mapGameScreen = {
       isDealer,
       dealerPrompt: state.game.prompt.forDisplay,
       category: state.game.prompt.category,
+      hintForDisplay: state.game.prompt.hintForDisplay,
       players: state.game.players,
       user: state.user,
       game: state.game,

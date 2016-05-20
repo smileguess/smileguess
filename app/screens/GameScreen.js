@@ -101,7 +101,7 @@ export class GameScreen extends React.Component {
   }
 
   topDisplay() {
-    const prompt = this.props.isDealer ? this.props.dealerPrompt : this.props.category;
+    const prompt = this.props.isDealer ? this.props.dealerPrompt : this.props.hintForDisplay;
     const color = this.props.isDealer ? colors.primary2 : colors.primary1;
 
     return <DealerPrompt backgroundColor={color} screenSize={this.props.screenSize} prompt={prompt} />;
@@ -148,6 +148,7 @@ GameScreen.propTypes = {
   isDealer: PropTypes.bool,
   screenSize: PropTypes.object.isRequired,
   dealerPrompt: PropTypes.any,
+  hintForDisplay: PropTypes.any,
   category: PropTypes.any,
   players: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
