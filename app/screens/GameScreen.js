@@ -115,7 +115,7 @@ export class GameScreen extends React.Component {
     const localStyles = StyleSheet.create({
       container: {
         height: this.state.visibleHeight,
-        paddingTop: isDealer ? 80 : 70,
+        paddingTop: 80,
       },
     });
     const KeyboardInput = this.renderKeyboardInput();
