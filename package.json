@@ -32,7 +32,8 @@
       "./node_modules/react-dom",
       "./node_modules/redux",
       "./node_modules/react-redux",
-      "./app/action_types/actionTypes.js"
+      "./app/action_types/actionTypes.js",
+      "./node_modules/mocks_of_mocks"
     ]
   },
   "devDependencies": {
