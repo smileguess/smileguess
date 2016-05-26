@@ -12,6 +12,8 @@ Once your development environment is set up, start the ios emulator with `react-
 Our server code is in another repo:
 https://github.com/smileguess/smileguess-server
 
+Look, I added a line to this file.  Why do you ask?  Because, human.
+
 ## State Diagram
 
 ```javascript
